@@ -1,0 +1,102 @@
+2018-Feb-26 11:57:25,745 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.client.protocol.RequestAddCookies 
+  DEBUG CookieSpec selected: default
+2018-Feb-26 11:57:25,750 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.client.protocol.RequestAuthCache 
+  DEBUG Auth cache not set in the context
+2018-Feb-26 11:57:25,751 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection request: [route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2018-Feb-26 11:57:25,751 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-12 << "end of stream"
+2018-Feb-26 11:57:25,751 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.DefaultManagedHttpClientConnection 
+  DEBUG http-outgoing-12: Close connection
+2018-Feb-26 11:57:25,752 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection leased: [id: 13][route: {}->http://127.0.0.1:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2018-Feb-26 11:57:25,752 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Opening connection {}->http://127.0.0.1:4723
+2018-Feb-26 11:57:25,752 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 
+  DEBUG Connecting to /127.0.0.1:4723
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 
+  DEBUG Connection established 127.0.0.1:60459<->127.0.0.1:4723
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.DefaultManagedHttpClientConnection 
+  DEBUG http-outgoing-13: set socket timeout to 10800000
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Executing request DELETE /wd/hub/session/55193e1b-e107-48fa-9fdf-80ddf2bf68eb HTTP/1.1
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Target auth state: UNCHALLENGED
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Proxy auth state: UNCHALLENGED
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 >> DELETE /wd/hub/session/55193e1b-e107-48fa-9fdf-80ddf2bf68eb HTTP/1.1
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 >> Host: 127.0.0.1:4723
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 >> Connection: Keep-Alive
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_121)
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 >> Accept-Encoding: gzip,deflate
+2018-Feb-26 11:57:25,753 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "DELETE /wd/hub/session/55193e1b-e107-48fa-9fdf-80ddf2bf68eb HTTP/1.1[\r][\n]"
+2018-Feb-26 11:57:25,754 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "Host: 127.0.0.1:4723[\r][\n]"
+2018-Feb-26 11:57:25,754 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "Connection: Keep-Alive[\r][\n]"
+2018-Feb-26 11:57:25,754 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_121)[\r][\n]"
+2018-Feb-26 11:57:25,754 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-Feb-26 11:57:25,754 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 >> "[\r][\n]"
+2018-Feb-26 11:57:30,002 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "HTTP/1.1 200 OK[\r][\n]"
+2018-Feb-26 11:57:30,002 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "X-Powered-By: Express[\r][\n]"
+2018-Feb-26 11:57:30,002 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Access-Control-Allow-Origin: *[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Access-Control-Allow-Headers: origin, content-type, accept[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Content-Length: 76[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "ETag: W/"4c-eqJbn06ViT5ccCJW60hsn3OYwTo"[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Date: Mon, 26 Feb 2018 06:57:30 GMT[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "Connection: keep-alive[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "[\r][\n]"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.wire 
+  DEBUG http-outgoing-13 << "{"status":0,"value":null,"sessionId":"55193e1b-e107-48fa-9fdf-80ddf2bf68eb"}"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << HTTP/1.1 200 OK
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << X-Powered-By: Express
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Access-Control-Allow-Origin: *
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Access-Control-Allow-Headers: origin, content-type, accept
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Content-Type: application/json; charset=utf-8
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Content-Length: 76
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << ETag: W/"4c-eqJbn06ViT5ccCJW60hsn3OYwTo"
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Date: Mon, 26 Feb 2018 06:57:30 GMT
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.headers 
+  DEBUG http-outgoing-13 << Connection: keep-alive
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Connection can be kept alive indefinitely
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection [id: 13][route: {}->http://127.0.0.1:4723] can be kept alive indefinitely
+2018-Feb-26 11:57:30,003 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection released: [id: 13][route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2018-Feb-26 11:57:30,005 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Closing connections idle longer than 0 SECONDS
+2018-Feb-26 11:57:30,005 [Forwarding quit on session 55193e1b-e107-48fa-9fdf-80ddf2bf68eb to remote] org.apache.http.impl.conn.DefaultManagedHttpClientConnection 
+  DEBUG http-outgoing-13: Close connection

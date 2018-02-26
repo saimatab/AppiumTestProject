@@ -1,0 +1,7 @@
+
+/bin/
+/target/
+/.settings
+/test-output/Suite
+/test-output
+/apk/*.apk

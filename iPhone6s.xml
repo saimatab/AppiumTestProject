@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+		<parameter name="platform" value="PLATFORM_IOS"></parameter>
+		<parameter name="platform_name" value="iOS" />
+		
+		<parameter name="platform_version" value="9.3.4" />
+		<parameter name="device_name" value="TamjidPhone" /> <!-- iPhone/Simulator name -->
+		
+		<parameter name="app_path" value="ipa/MiracleMobileiOS.ipa" /> <!-- .ipa for real devices -->
+		
+		<parameter name="app_package" value="" />  <!--  for android use only-->
+		<parameter name="app_activity" value="" /> <!--  for android use only -->
+			
+		<parameter name="ud_id" value="0eaa781274f3a99eae26a0e0e65c660043f11258" /> <!-- for real device only -->
+		
+		<parameter name="bundle_id" value="co.miracletek.stg.miraclemobile1" /> <!-- application bundle id -->
+		
+		<parameter name="ip_address" value="0.0.0.0"></parameter>
+		<parameter name="port" value="4723"></parameter>
+		
+	
+	<test name="SmokeTests">
+		<classes>
+			<class name="au.com.miracletek.tests.SmokeTests" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

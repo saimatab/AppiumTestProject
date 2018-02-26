@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" >
+		<parameter name="platform" value="PLATFORM_ANDROID" />
+		<parameter name="platform_name" value="Android" />
+		<parameter name="platform_version" value="6.0.1" />
+		<parameter name="device_name" value="410099fbf21e917d" />
+		<parameter name="app_path" value="apk\\co.miracletek.stg.miraclemobile-Signed.apk" />
+		
+		
+		<parameter name="app_package" value="co.miracletek.stg.miraclemobile" />
+		<parameter name="app_activity" value="md50b81d9ce3614d1d05a797810cc564ab8.SplashActivity" />
+		
+		
+		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
+		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
+		
+		<parameter name="ip_address" value="0.0.0.0"></parameter>
+		<parameter name="port" value="4723"></parameter>
+		
+		
+	<test name="TestAppCode">
+		<classes>
+			<class name="au.com.miracletek.tests.AppCodeTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

@@ -1,0 +1,10 @@
+[JsonMessageSender] Sending message [TestResultMessage ==> suite:Suite, test:Demo, class:au.com.miracletek.tests.Demo2, method:Test01, parameters:]
+[BaseMessageSender] Admin message:>ACK
+[BaseMessageSender] Received ACK:>ACK
+[BaseMessageSender] Admin message:>ACK
+[BaseMessageSender] Received ACK:>ACK
+[JsonMessageSender] Sending message [TestResultMessage ==> suite:Suite, test:Demo, class:au.com.miracletek.tests.Demo2, method:Test02, parameters:]
+[BaseMessageSender] Admin message:>ACK
+[BaseMessageSender] Received ACK:>ACK
+[BaseMessageSender] Admin message:>ACK
+[BaseMessageSender] Received ACK:>ACK

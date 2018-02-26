@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" >
+		<parameter name="platform" value="PLATFORM_ANDROID" />
+		<parameter name="platform_name" value="Android" />
+		<parameter name="platform_version" value="6.0.1" />
+		<parameter name="device_name" value="0628a315002e172e" />
+		<parameter name="app_path" value="apk\\Miracle_A-1.0.35.3.apk" />
+		
+		<parameter name="app_package" value="co.miracletek.miracle.a" />
+		<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />
+		
+		
+		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
+		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
+		
+		<parameter name="ip_address" value="127.0.0.1"></parameter>
+		<parameter name="port" value="4723"></parameter>
+		
+		
+	<!--<test name="TestAppCode">
+		<classes>
+			<class name="au.com.miracletek.tests.AppCodeTest" />
+			
+		</classes>
+	</test>
+	<test name="TapToLogin">
+		<classes>
+			<class name="au.com.miracletek.tests.TaptoLoginTest" />
+		</classes>
+	</test> 
+		<test name="Login">
+		<classes>
+			<class name="au.com.miracletek.tests.LoginTest" />
+		</classes>
+	</test>-->
+	
+	
+		<test name="Demo">
+		<classes>
+			<class name="au.com.miracletek.tests.Demo2" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
