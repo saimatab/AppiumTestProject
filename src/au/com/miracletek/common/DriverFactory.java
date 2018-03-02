@@ -42,11 +42,11 @@ public class DriverFactory {
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, config.getDeviceName());
 			capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 			capabilities.setCapability(MobileCapabilityType.UDID, config.getUDId());
-             if(config.getPlatformVersion().contentEquals("10.2"))
+             if(config.getPlatformVersion().contentEquals("11.2"))
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 			//capabilities.setCapability("noReset", true);
 			//capabilities.setCapability("fullReset", false);
-			capabilities.setCapability("xcodeOrgId", "QB64SC98CV");
+			capabilities.setCapability("xcodeOrgId", "AR2U7GPFF6");
 			capabilities.setCapability("xcodeSigningId", "iPhone Developer");
 			capabilities.setCapability("bundleid", config.getBundleId());
 			

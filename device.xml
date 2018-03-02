@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+		<parameter name="platform" value="PLATFORM_IOS"></parameter>
+		<parameter name="platform_name" value="iOS" />
+		
+		<!-- <parameter name="platform_version" value="10.1" /> -->
+		<parameter name="platform_version" value="11.2"/>
+		
+		<parameter name="device_name" value="iPhone 6 Plus" /> <!-- iPhone/Simulator name -->
+		
+		<parameter name="app_path" value="ipa/MiracleAiOS.ipa" />
+		
+		<parameter name="app_package" value="" />  
+		<parameter name="app_activity" value="" ><!--  for android use only --></parameter> <!--  for android use only -->
+			
+		<parameter name="ud_id" value="f824304fc9cf9208760d3efcea4f2c90a3201e2a"></parameter> <!-- for real device only -->
+		
+		
+		<parameter name="ip_address" value="0.0.0.0"></parameter>
+		<parameter name="port" value="4723"></parameter>
+			
+		<parameter name="bundle_id" value="co.miracletek.miracle.a" /> <!-- application bundle id -->
+		
+	<test name="SmokeTests">
+		<classes>
+			<class name="au.com.miracletek.tests.Demo" />
+		</classes>
+	</test> <!-- Test -->
+</suite>

@@ -402,7 +402,7 @@ public void pickerByText(String text) throws Exception
     				
     		
     					
-    					((IOSDriver<MobileElement>)driver).swipe(0, scrollStart, 0,scrollEnd, 3000);
+    				//	((IOSDriver<MobileElement>)driver).swipe(0, scrollStart, 0,scrollEnd, 3000);
     					
     					if(((IOSDriver<MobileElement>)driver).findElement(By.id(test)).isDisplayed()==true)
     					{
@@ -474,7 +474,7 @@ public void pickerByText(String text) throws Exception
     
     public void swipe (){
     	
-    	((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
+    	//((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
     	
     }
     
