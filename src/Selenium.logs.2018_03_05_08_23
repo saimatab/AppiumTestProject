@@ -1,0 +1,124 @@
+2018-Mar-05 08:23:33,862 [Forwarding newSession on session null to remote] org.apache.http.client.protocol.RequestAddCookies 
+  DEBUG CookieSpec selected: default
+2018-Mar-05 08:23:33,906 [Forwarding newSession on session null to remote] org.apache.http.client.protocol.RequestAuthCache 
+  DEBUG Auth cache not set in the context
+2018-Mar-05 08:23:33,908 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection request: [route: {}->http://0.0.0.0:4723][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+2018-Mar-05 08:23:33,940 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection leased: [id: 0][route: {}->http://0.0.0.0:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2018-Mar-05 08:23:33,943 [Forwarding newSession on session null to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Opening connection {}->http://0.0.0.0:4723
+2018-Mar-05 08:23:33,944 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 
+  DEBUG Connecting to /0.0.0.0:4723
+2018-Mar-05 08:23:33,947 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 
+  DEBUG Connection established 192.168.9.169:49404<->192.168.9.169:4723
+2018-Mar-05 08:23:33,947 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.DefaultManagedHttpClientConnection 
+  DEBUG http-outgoing-0: set socket timeout to 10800000
+2018-Mar-05 08:23:33,947 [Forwarding newSession on session null to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Executing request POST /wd/hub/session HTTP/1.1
+2018-Mar-05 08:23:33,947 [Forwarding newSession on session null to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Target auth state: UNCHALLENGED
+2018-Mar-05 08:23:33,948 [Forwarding newSession on session null to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Proxy auth state: UNCHALLENGED
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> Content-Length: 774
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> Host: 0.0.0.0:4723
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> Connection: Keep-Alive
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-Mar-05 08:23:33,950 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "Content-Length: 774[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "Host: 0.0.0.0:4723[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "[\r][\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "{[\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "  "desiredCapabilities": {"app":"/Users/miracletek/Documents/GitHub/MiracleiOS.app","automationName":"XCUITest","bundleid":"co.miracletek.miracle.appstore","deviceName":"iPhone 6 Plus","platformName":"iOS","platformVersion":"11.2","udid":"f824304fc9cf9208760d3efcea4f2c90a3201e2a","xcodeOrgId":"AR2U7GPFF6","xcodeSigningId":"iPhone Developer"},[\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "  "capabilities": {[\n]"
+2018-Mar-05 08:23:33,951 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "    "desiredCapabilities": {"app":"/Users/miracletek/Documents/GitHub/MiracleiOS.app","automationName":"XCUITest","bundleid":"co.miracletek.miracle.appstore","deviceName":"iPhone 6 Plus","platformName":"iOS","platformVersion":"11.2","udid":"f824304fc9cf9208760d3efcea4f2c90a3201e2a","xcodeOrgId":"AR2U7GPFF6","xcodeSigningId":"iPhone Developer"},[\n]"
+2018-Mar-05 08:23:33,952 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "    "firstMatch": [[\n]"
+2018-Mar-05 08:23:33,952 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "      {"platformName":"ios"}[\n]"
+2018-Mar-05 08:23:33,952 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "    ][\n]"
+2018-Mar-05 08:23:33,952 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "  }[\n]"
+2018-Mar-05 08:23:33,952 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 >> "}"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "X-Powered-By: Express[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Access-Control-Allow-Headers: origin, content-type, accept[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Vary: X-HTTP-Method-Override[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2018-Mar-05 08:23:40,459 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Content-Length: 210[\r][\n]"
+2018-Mar-05 08:23:40,460 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "ETag: W/"d2-2BVeufjd5TRbai7dNMzdF/xDmbs"[\r][\n]"
+2018-Mar-05 08:23:40,460 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Date: Mon, 05 Mar 2018 03:23:40 GMT[\r][\n]"
+2018-Mar-05 08:23:40,460 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2018-Mar-05 08:23:40,460 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "[\r][\n]"
+2018-Mar-05 08:23:40,460 [Forwarding newSession on session null to remote] org.apache.http.wire 
+  DEBUG http-outgoing-0 << "{"status":13,"value":{"message":"An unknown server-side error occurred while processing the command. Original error: Could not find app at '/Users/miracletek/Documents/GitHub/MiracleiOS.app'"},"sessionId":null}"
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << X-Powered-By: Express
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Access-Control-Allow-Origin: *
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Access-Control-Allow-Headers: origin, content-type, accept
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Vary: X-HTTP-Method-Override
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Content-Type: application/json; charset=utf-8
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Content-Length: 210
+2018-Mar-05 08:23:40,499 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << ETag: W/"d2-2BVeufjd5TRbai7dNMzdF/xDmbs"
+2018-Mar-05 08:23:40,500 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Date: Mon, 05 Mar 2018 03:23:40 GMT
+2018-Mar-05 08:23:40,500 [Forwarding newSession on session null to remote] org.apache.http.headers 
+  DEBUG http-outgoing-0 << Connection: keep-alive
+2018-Mar-05 08:23:40,577 [Forwarding newSession on session null to remote] org.apache.http.impl.execchain.MainClientExec 
+  DEBUG Connection can be kept alive indefinitely
+2018-Mar-05 08:23:40,611 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection [id: 0][route: {}->http://0.0.0.0:4723] can be kept alive indefinitely
+2018-Mar-05 08:23:40,611 [Forwarding newSession on session null to remote] org.apache.http.impl.conn.PoolingHttpClientConnectionManager 
+  DEBUG Connection released: [id: 0][route: {}->http://0.0.0.0:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]

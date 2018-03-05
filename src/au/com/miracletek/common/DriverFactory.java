@@ -46,7 +46,7 @@ public class DriverFactory {
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 			//capabilities.setCapability("noReset", true);
 			//capabilities.setCapability("fullReset", false);
-			capabilities.setCapability("xcodeOrgId", "AR2U7GPFF6");
+			capabilities.setCapability("xcodeOrgId", "8X6MKF8VCN");
 			capabilities.setCapability("xcodeSigningId", "iPhone Developer");
 			capabilities.setCapability("bundleid", config.getBundleId());
 			

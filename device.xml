@@ -9,7 +9,7 @@
 		
 		<parameter name="device_name" value="iPhone 6 Plus" /> <!-- iPhone/Simulator name -->
 		
-		<parameter name="app_path" value="ipa/MiracleAiOS.ipa" />
+		<parameter name="app_path" value="ipa/MiracleMobile.ipa" />
 		
 		<parameter name="app_package" value="" />  
 		<parameter name="app_activity" value="" ><!--  for android use only --></parameter> <!--  for android use only -->
@@ -19,8 +19,8 @@
 		
 		<parameter name="ip_address" value="0.0.0.0"></parameter>
 		<parameter name="port" value="4723"></parameter>
-			
-		<parameter name="bundle_id" value="co.miracletek.miracle.a" /> <!-- application bundle id -->
+			s
+		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bundle id -->
 		
 	<test name="SmokeTests">
 		<classes>
