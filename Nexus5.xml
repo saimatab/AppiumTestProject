@@ -39,7 +39,7 @@
 	
 		<test name="Demo">
 		<classes>
-			<class name="au.com.miracletek.tests.Demo2" />
+			<class name="au.com.miracletek.tests.Demo5" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

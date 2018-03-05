@@ -151,7 +151,7 @@ public class Demo5 {
 			  	Thread.sleep(2000);
 		        formList.selectForm("dtimeupAuto",config);
 		        Thread.sleep(6000);
-  form.clickDatePicker(config, "datepicker1");
+  /*form.clickDatePicker(config, "datepicker1");
 	
 			    form.Date(config,"Apr","03","2018");
 			    Thread.sleep(3000);
@@ -185,8 +185,8 @@ public class Demo5 {
 		             form.autoComplete(config,"autocomplete1");
 		        Thread.sleep(6000);
 		        
-		        form.clickslider(config);
-		        form.clickswitch(config,"swSelectedId","2");
+		        form.clickslider(config);*/
+		        form.clickswitch(config,"switch1","0");
 		         form.submit();
 		        
 		    
