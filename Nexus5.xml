@@ -5,10 +5,11 @@
 		<parameter name="platform_name" value="Android" />
 		<parameter name="platform_version" value="6.0.1" />
 		<parameter name="device_name" value="0628a315002e172e" />
-		<parameter name="app_path" value="apk\\Miracle_A-1.0.35.3.apk" />
+		<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />
 		
-		<parameter name="app_package" value="co.miracletek.miracle.a" />
-		<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />
+		<parameter name="app_package" value="co.miracletek.miracle.prd" />
+		<!--<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />-->
+			<parameter name="app_activity" value="md5416f8fc9705f945d05f173ad9594b81d.SplashActivity" />
 		
 		
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
