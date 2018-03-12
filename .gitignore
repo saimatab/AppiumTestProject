@@ -52,3 +52,4 @@ Default test.pdf
 pom.xml
 src/log4j.xml
 *.xml
+*.properties
