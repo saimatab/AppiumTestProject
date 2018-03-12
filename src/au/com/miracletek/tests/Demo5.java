@@ -199,7 +199,7 @@ public class Demo5 {
 					shell.clickSync(config);
 				    sync.openPendingSubmittedForms("1",config);
 				    Thread.sleep(3000);
-				    subQueue.clickonsubmittedTab();
+				    subQueue.clickonsubmittedTab(config);
 					  subQueue.ViewsubmittedForms("1",config);
 					    Thread.sleep(3000);
 						form.navigateUp(config);
