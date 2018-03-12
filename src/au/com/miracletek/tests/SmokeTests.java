@@ -208,7 +208,7 @@ public class SmokeTests {
 			System.out.println("*************************TEST 11 START ********************************************");
 		    subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
 		    Thread.sleep(3000);
-		    subQueue.clickonsubmittedTab();
+		    subQueue.clickonsubmittedTab(config);
 		    subQueue.opensubmittedDetailInfoPage("1",config);
 		 
 			form.navigateUp(config);
@@ -270,7 +270,7 @@ public class SmokeTests {
 		    shell.clickSync(config);
 	       Thread.sleep(3000);
 		    sync.openPendingSubmittedForms("1",config);
-	        subQueue.clickonsubmittedTab();
+	        subQueue.clickonsubmittedTab(config);
 	        Thread.sleep(3000);
 	        subQueue.removeSubmittedForm("1",config);
 	        subQueue.popup1("Yes");
@@ -534,7 +534,7 @@ public class SmokeTests {
 
 
 			       settings.updateApp();
-			       settings.clickProceed();
+			       settings.clickProceedAndroid();
 				    Thread.sleep(40000);
 		   //     
 		    	System.out.println("*************************SETTINGS TEST STOP ********************************************");

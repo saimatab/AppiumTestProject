@@ -43,18 +43,12 @@ public class SubmissionQueuePage extends BasePage {
 				 
 			 submitpendingform =findElementByXpath("//android.widget.ListView[@index='0']//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonSubmitId']");
 			 
-			 if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-			
-			
-			
-			submitpendingform=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[1]");
-
-
+			 
 
 			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			
-			submitpendingform=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[1]");
+			submitpendingform=findElementByXpath("(//XCUIElementTypeButton[@name='buttonSubmitId'])");
 			submitpendingform.click();
 
 
@@ -77,16 +71,12 @@ public class SubmissionQueuePage extends BasePage {
 			 removependingform =findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonRemoveId']");
 		 
 	       
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-				
-				removependingform=
-						findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[2]");
-				
+	
 
 		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
 			
-			removependingform=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[2]");
-			    removependingform.click();
+			removependingform=
+			findElementByXpath("(//XCUIElementTypeButton[@name'buttonRemoveId']");
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -109,13 +99,15 @@ public class SubmissionQueuePage extends BasePage {
 				//new 
 			 peninfo =findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");
 			 
-			 else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-		peninfo=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell[1]");
-		
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
 			
-			peninfo=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]");
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			
+			//peninfo=findElementByXpath("/XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]");
+	
+				peninfo=findElementByXpath("//XCUIElementTypeCell");
+				//peninfo=findElementByXpath("XCUIElementTypeStaticText[@name='auto']");
+					 
+	
 			peninfo.click();
 			
 
@@ -128,14 +120,23 @@ public class SubmissionQueuePage extends BasePage {
 	}
 	
 	
-	public void clickonsubmittedTab() {
+	public void clickonsubmittedTab(DriverConfig config) {
 
 		try {
-			submitTab=findElementByXpath("//android.widget.TextView[@text='Submitted']");
-		  submitTab.click();
 			
-
-
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+			
+			
+			
+			 if (platformName.contentEquals("Android"))
+			submitTab=findElementByXpath("//android.widget.TextView[@text='Submitted']");
+		  
+			
+			 else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+					
+				 submitTab=findElementByXpath("//XCUIElementTypeButton[@name='Submitted']");
+			  submitTab.click();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -157,13 +158,9 @@ public class SubmissionQueuePage extends BasePage {
 				 subinfo =findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");
 			 
 		       
-		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-		subinfo=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell[1]");
 		
-			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-			subinfo=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]");
-			
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+			subinfo=findElementByXpath("//XCUIElementTypeCell");
 		
 			 subinfo.click();
 			
@@ -189,12 +186,8 @@ public class SubmissionQueuePage extends BasePage {
 				//new  
 				 editsubmittedform =findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonEditAsNewId']");
 			 
-		       	
-					
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-			editsubmittedform=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[1]");
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-			editsubmittedform=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[1]");
+		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+			editsubmittedform=findElementByXpath("//XCUIElementTypeButton[@name='buttonEditAsNewId']");
 		    
 			 editsubmittedform.click();
 			
@@ -221,13 +214,11 @@ public class SubmissionQueuePage extends BasePage {
 		 removesubmittedform =findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonRemoveId']");
 		 
 	       
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-			removesubmittedform=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[2]");
+		
 			
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-			
-			removesubmittedform=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[2]");
+			removesubmittedform=findElementByXpath("//XCUIElementTypeButton[@name='buttonRemoveId'][1]");
 		    
 			
 			
@@ -256,14 +247,11 @@ public class SubmissionQueuePage extends BasePage {
 		
 		}
 		 
-	       
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-				viewsubmittedform=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAScrollView[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[2]");
+
 			
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-			
-				viewsubmittedform=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[2]");
+				viewsubmittedform=findElementByXpath("(//XCUIElementTypeButton[@name='buttonViewFormId'])[1]");
 		    
 			
 			
@@ -286,9 +274,8 @@ public class SubmissionQueuePage extends BasePage {
 		String platformVersion=config.getPlatformVersion();
 			 if (platformName.contentEquals("Android"))
 			removeall=findElementById("btnRemoveAllAutomationId");
-				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
 			
-				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
 					
 			removeall.click();
 
@@ -337,6 +324,53 @@ public class SubmissionQueuePage extends BasePage {
              else
                 {
             	no=findElementByXpath("//*[@text='Cancel']");
+                no.click();
+                }		
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void popup1Ios(String response) {
+
+		try {
+			
+			
+			if (response.equals("Yes"))
+               {
+			yes=findElementById("Remove");
+			yes.click();
+               }
+             else
+                {
+            	no=findElementById("Cancel");
+                no.click();
+                }		
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public void popupIos(String response) {
+
+		try {
+			
+			
+			if (response.equals("Yes"))
+               {
+			yes=findElementById("Yes");
+			yes.click();
+               }
+             else
+                {
+            	no=findElementById("No");
                 no.click();
                 }		
 

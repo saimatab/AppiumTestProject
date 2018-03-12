@@ -160,7 +160,10 @@ public class CategoryPage extends BasePage{
 				           	 if (platformName.contentEquals("Android"))
 				            	btn_category=findElementByXpath("//android.widget.TextView[@text='test']");
 				         	
-				        
+				         	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+				            	btn_category=findElementByXpath("//XCUIElementTypeStaticText[@name='test']");
+							    
+				           
 									btn_category.click();
 							
 				                break;
@@ -294,7 +297,7 @@ public class CategoryPage extends BasePage{
 			search=findElementByXpath("//android.widget.LinearLayout[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='1']/android.view.ViewGroup[@index='0']/android.widget.EditText[@text='Search']");
 
 		if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
 		search.clear();
 	//	projCode.sendKeys("OneApp Test Project-TE");
 	     
@@ -311,7 +314,7 @@ public class CategoryPage extends BasePage{
     }
 
 
-    public void selectForm (String formname,DriverConfig config){
+    /*public void selectForm (String formname,DriverConfig config){
     	
     	String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
@@ -326,9 +329,12 @@ public class CategoryPage extends BasePage{
    		form=findElementByXpath("//android.widget.TextView[@text='" + Constants.DHIMobilePlant+ "']"); 
    		 
 
-	  		if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
-				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
-					
+	  		
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+   		form=findElementByXpath("//android.widget.TextView[@text='" + Constants.DHIMobilePlant+ "']"); 
+  		 
+
+  			
 	            	
    		 form.click();
    		 
@@ -341,7 +347,7 @@ public class CategoryPage extends BasePage{
 		}
     	
     	
-    }
+    }*/
 
     public boolean ElementDisplayed() {
 	

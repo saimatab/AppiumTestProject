@@ -77,11 +77,11 @@ public class AdvancedSettingsPage extends BasePage {
 	  		  xpath = "//UIAApplication[1]/UIAWindow[1]/UIAElement[6]/UIATableView[1]/UIATableCell[" +i+ "]";
             	
 	  		     	
-	    			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
+	    			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 	    					
 	            	
 	            	
-	            	xpath="//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[5]/XCUIElementTypeTable[1]/XCUIElementTypeCell[" +i+ "]";        	
+	            	xpath="(//XCUIElementTypeSwitch[@name='swSelectedId'])[" +i+ "]";        	
 	           
 	    MobileElement  xpath1=findElementByXpath(xpath);
 	            xpath1.click();

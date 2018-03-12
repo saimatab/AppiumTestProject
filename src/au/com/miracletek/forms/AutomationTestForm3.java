@@ -11,6 +11,7 @@ import au.com.miracletek.common.DriverConfig;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 ;
 
 public class AutomationTestForm3 extends BasePage{
@@ -66,7 +67,83 @@ public void fillForm(DriverConfig config) {
 		}
 
 	}
+public void fillForm1(DriverConfig config) {
+
 	
+	
+	
+
+	try {
+		
+	
+		String platformName = config.getPlatformName();
+		String platformVersion=config.getPlatformVersion();
+		
+		
+		
+	     gallary=waitForVisibilityOf(By.id("gallery_button2"));
+		 gallary.click();
+		  
+		
+		 (new TouchAction(((IOSDriver<MobileElement>)driver))).tap(49, 116).perform();
+		 (new TouchAction(((IOSDriver<MobileElement>)driver))).tap(50, 273).perform();
+		 (new TouchAction(((IOSDriver<MobileElement>)driver))).tap(53, 123).perform();
+		 acessCameraOk();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
+public void annotation1(DriverConfig config) {
+
+	
+	
+	
+
+	try {
+		
+	
+		String platformName = config.getPlatformName();
+		String platformVersion=config.getPlatformVersion();
+		
+		
+
+		findElementById("annotate_button3").click();
+             
+			findElementById("Pick Color").click();
+			(new TouchAction(driver)).tap(392, 697).perform();
+			(new TouchAction(driver)).tap(386, 151).perform();
+			(new TouchAction(driver)).tap(372, 45).perform();
+			
+			//findElementById("Save").click();
+			(new TouchAction(driver)).tap(123, 687).perform();
+			
+            /*((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.a:id/color_picker_view']")).click();
+            ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.a:id/new_color_panel']")).click();
+            Dimension size = ((AndroidDriver<MobileElement>)driver).manage ()
+            	    .window ()
+            	    .getSize ();
+            	int startX = size.getWidth () / 2;
+            	int startY = size.getHeight () / 2;
+            	int endX = 0;
+            	int endY = (int) (startY * -1 * 0.75);
+            	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver));
+            	action.press (startX, startY)
+            	    .moveTo (endX, endY)
+            	    .release ()
+            	    .perform ();
+            	
+            	
+            	((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@text='Save']")).click();
+	*/
+		
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
 public void annotation(DriverConfig config) {
 
 	
@@ -142,7 +219,20 @@ public void annotation(DriverConfig config) {
 	}
 	
 	
+	public void acessCameraOk() {
 
+		try {
+		
+		     submit=findElementById("OK");
+		 submit.click();
+   
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	
 	
 	public void submit() {

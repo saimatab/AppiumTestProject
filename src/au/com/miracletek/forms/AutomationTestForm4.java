@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-
+import io.appium.java_client.AppiumDriver;
 import au.com.miracletek.common.BasePage;
 import au.com.miracletek.common.Constants;
 import au.com.miracletek.common.DriverConfig;
@@ -45,7 +45,24 @@ public void signature(DriverConfig config) {
 		}
 
 	}
+public void signatureIos(DriverConfig config) {
+
 	
+	
+	
+
+	try {
+		
+	
+signIos();
+	
+		
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
 
 	public void navigateUp(DriverConfig config) {
 
@@ -64,7 +81,8 @@ public void signature(DriverConfig config) {
 				}
 				else
 				{
-				
+					navup=findElementById("test");
+					navup.click();
 				}
 
 			
@@ -99,6 +117,9 @@ public void signature(DriverConfig config) {
 				}
 				else
 				{
+					
+					(new TouchAction(driver)).tap(105, 671).perform();
+
 				
 				}
 
@@ -143,7 +164,22 @@ public void signature(DriverConfig config) {
 
 	}
 	
-	
+	public void clickSignIos() {
+
+		try {
+			 
+		
+			MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("Sign");
+			el1.click();
+
+   
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void saveDraft() {
 
 		try {
@@ -151,6 +187,9 @@ public void signature(DriverConfig config) {
 		
 			   savedraft=findElementByXpath("//*[@content-desc='Save Draft']");
 			   savedraft.click();
+			   
+			   
+			 //XCUIElementTypeNavigationBar[@name="testsig"]/XCUIElementTypeButton[2]
    
 			
 		} catch (Exception e) {
@@ -160,6 +199,21 @@ public void signature(DriverConfig config) {
 
 	}
 	
+	public void saveDraftIos() {
 
+		try {
+			 
+		
+			   savedraft=findElementByXpath("//XCUIElementTypeNavigationBar[@name='testsig']/XCUIElementTypeButton[2]");
+			   savedraft.click();
+		
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
 	
 }

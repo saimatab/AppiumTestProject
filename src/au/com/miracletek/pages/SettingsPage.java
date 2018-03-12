@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebElement;
 import au.com.miracletek.common.BasePage;
 import au.com.miracletek.common.Constants;
+import au.com.miracletek.common.DriverConfig;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -102,17 +103,6 @@ public class SettingsPage extends BasePage {
 
 	}
 	
-	public void clickProceed() {
-
-		try {
-			proceed= findElementByXpath("//android.widget.Button[@text='" + Constants.proceed + "']");
-			proceed.click();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
 	
 	
 	public void clickOK() {
@@ -151,7 +141,7 @@ public class SettingsPage extends BasePage {
 		}
 
 	}
-	public void clickCancel() {
+	public void clickCancelAndroid() {
 
 		try {
 			cancel= findElementByXpath("//android.widget.Button[@text='" + Constants.cancel + "']");
@@ -203,13 +193,19 @@ public class SettingsPage extends BasePage {
 		}
 
 	}
-	public void sureLogout() {
+	public void sureLogout(DriverConfig config) {
 
 		try {
-			 
-		
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+			if (platformName.contentEquals("Android")){
 			   log=findElementByXpath("//android.widget.Button[@text='Log out']");
-			   log.click();
+			   log.click();}
+			else{
+				
+				   log=findElementById("Log out");
+				   log.click();
+			}
    
 			
 		} catch (Exception e) {
@@ -219,6 +215,28 @@ public class SettingsPage extends BasePage {
 
 	}
 	
+	public void sureCancel(DriverConfig config) {
 
+		try {
+			 
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+			if (platformName.contentEquals("Android")){
+			   log=findElementByXpath("//android.widget.Button[@text='Cancel']");
+			   log.click();}
+			else{
+				
+				   log=findElementById("Cancel");
+				   log.click();}	
+				
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
 	
 }

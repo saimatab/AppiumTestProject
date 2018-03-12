@@ -53,6 +53,7 @@ import java.util.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.extras.*;
 import  io.appium.java_client.android.Connection;
+import io.appium.java_client.ios.IOSDriver;
 @Listeners(JyperionListener.class)
 
 public class Demo7 {
@@ -159,10 +160,12 @@ public class Demo7 {
 				  shell.clickSettings(config);
 
 				settings.Logout();
-				settings.sureLogout();
+				settings.sureLogout(config);
 				AndroidDriver  d=((AndroidDriver<MobileElement>)manager.getDriver());
 		    	d.setConnection(Connection.NONE);
-	
+		    	
+		    	
+		    	
 				loginPage.Login1("abc","abc");
 AndroidDriver  d1=((AndroidDriver<MobileElement>)manager.getDriver());
 			  	d1.setConnection(Connection.WIFI);

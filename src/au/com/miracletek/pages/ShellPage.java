@@ -33,8 +33,9 @@ public class ShellPage extends BasePage {
 			notification.click();
 			}
 			
-			else{notification = findElementById(Constants.iosnotification);
-			notification.click();
+			else{
+				notification = findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[2");
+					notification.click();
 			}
 				
 		} catch (Exception e) {
@@ -58,7 +59,7 @@ public class ShellPage extends BasePage {
 			}
 			else
 			{
-			draft = findElementById(Constants.iosdraft);
+			draft = findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[3]");
 			draft.click();
 			}
 		} catch (Exception e) {
@@ -80,7 +81,7 @@ public class ShellPage extends BasePage {
 			sync.click();
 			}
 			else
-			{sync = findElementById(Constants.iossync);
+			{sync = findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[4]");
 			sync.click();}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -102,7 +103,7 @@ public class ShellPage extends BasePage {
 			}
 			else
 			{
-				settings = findElementById(Constants.iossettings);
+				settings = findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[5]");
 				settings.click();
 			}
 			
@@ -125,7 +126,7 @@ public class ShellPage extends BasePage {
 			}
 			else
 			{
-				search= findElementById(Constants.search);
+				search= findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[6]");
 				search.click();
 			}
 			

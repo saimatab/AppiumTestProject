@@ -35,9 +35,14 @@ public class FormListPageBlankApp extends BasePage{
 			            		 Thread.sleep(3000);
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.Auto+ "']");
 			            	 }
+			            	 
 			        		
-			    		
-						    form.click();
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='AUTO']");
+				            	
+			            	 
+			            	 
+			            	 form.click();
 			                break;
 			                
 			                
@@ -49,8 +54,12 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.cam+ "']");
 			            	 }
 			        		
-			    		
-						    form.click();
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+						    
+			         		form=findElementByXpath("//XCUIElementTypeStaticText[@label='CAMERA']");
+			            	 
+			            	 
+			            	 form.click();
 			                break; 
 			                
 			            case "gallery":
@@ -59,8 +68,8 @@ public class FormListPageBlankApp extends BasePage{
 			            		 Thread.sleep(3000);
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.gal+ "']");
 			            	 }
-			        		
-			    		
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='GALLARY']");
 						    form.click();
 			                break;  
 			                
@@ -73,8 +82,12 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.sig1+ "']");
 			            	 }
 			        		
-			    		
-						    form.click();
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='TESTSIG']");
+								   
+			            	 
+			            	 
+			            	 form.click();
 			                break;  
 			                
 			                
@@ -85,8 +98,11 @@ public class FormListPageBlankApp extends BasePage{
 			            		 Thread.sleep(3000);
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.DatTimeUploadAuto+ "']");
 			            	 }
-			        		
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
 			    		
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='UPLOAD_DATETIME_AUTOCOM']");
+								    
+			            	 
 						    form.click();
 			                break;     
 			                
@@ -98,11 +114,28 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']");
 			            	 }
 			        		
-			    		
-						    form.click();
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+						    
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='REPPAGER']");
+								   
+			            	 
+			            	 form.click();
 			                break;     
 			                  
-			                 
+			            case "scroll":
+			            	 if (platformName.contentEquals("Android"))
+			            	 {
+			            		 Thread.sleep(3000);
+			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']");
+			            	 }
+			        		
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+						    
+			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='SCROLL']");
+								   
+			            	 
+			            	 form.click();
+			                break;     
 			            default:
 			                System.out.println("do none");
 			         } 

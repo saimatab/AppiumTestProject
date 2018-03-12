@@ -237,7 +237,7 @@ public class Demo {
 	
 		    subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
 		    Thread.sleep(3000);
-		    subQueue.clickonsubmittedTab();
+		    subQueue.clickonsubmittedTab(config);
 		    subQueue.opensubmittedDetailInfoPage("1",config);
 		 
 			form.navigateUp(config);
@@ -297,7 +297,7 @@ public class Demo {
 		    shell.clickSync(config);
 	       Thread.sleep(3000);
 		    sync.openPendingSubmittedForms("1",config);
-	        subQueue.clickonsubmittedTab();
+	        subQueue.clickonsubmittedTab(config);
 	        Thread.sleep(3000);
 	        subQueue.removeSubmittedForm("1",config);
 	        subQueue.popup1("Yes");
@@ -413,7 +413,7 @@ public class Demo {
 		     Thread.sleep(4000);
 		     subQueue.submitPendingForm("1", config);   
 			 Thread.sleep(4000);     
-		     subQueue.clickonsubmittedTab();  
+		     subQueue.clickonsubmittedTab(config);  
 		     Thread.sleep(3000);
 		     subQueue.opensubmittedDetailInfoPage("2", config);     
 	       	 form.navigateUp(config);

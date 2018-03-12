@@ -43,15 +43,26 @@ public class AutomationTestForm extends BasePage{
 			
 			if(platformName.contentEquals("Android"))
 			
-  
+			{
 		 text=findElementById(Constants.text);
 		 text.setValue("demo1");     
          MobileElement a=  findElementById("label1");
          a.click();
 			
          findElementByXpath("//*[@text='Part2']").click();
-         
-     
+			}
+		 else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+		 {
+			 
+			 text=findElementById(Constants.text);
+			 text.setValue("demo1");     
+	         MobileElement a=  findElementById("label1");
+	         a.click();
+				
+	         findElementByXpath("//XCUIElementTypeButton[@name='Part1']").click();
+			 
+			 
+		 }
 
 
 			
@@ -122,6 +133,8 @@ public class AutomationTestForm extends BasePage{
 			   savedraft=findElementByXpath("//*[@content-desc='Save Draft']");
 			   savedraft.click();
    
+			   
+			
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -130,12 +143,29 @@ public class AutomationTestForm extends BasePage{
 
 	}
 	
+	public void saveDraftIos() {
+
+		try {
+			 
+		
+			   savedraft=findElementByXpath("//XCUIElementTypeNavigationBar[@name='auto']/XCUIElementTypeButton[2]");
+			   savedraft.click();
+   
+			   
+			  
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public void takescreenshot1() {
 
 		try {
 			 
-		
+			takeSnapShotIos() ;
 	
    
 			

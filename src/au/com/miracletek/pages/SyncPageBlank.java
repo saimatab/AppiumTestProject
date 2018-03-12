@@ -35,7 +35,9 @@ public class SyncPageBlank extends BasePage {
 			  
 				 sync=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonSyncId']");
 			 
-		   
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			 sync=findElementByXpath("//XCUIElementTypeButton[@name='buttonSyncId'][1]");
+			 
 		       sync.click();
 			
 			
@@ -62,7 +64,9 @@ public class SyncPageBlank extends BasePage {
 		 
 				 sync=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonSyncId']");
 				
-			
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			 sync=findElementByXpath("(//XCUIElementTypeButton[@name='buttonSyncId'])[2]");
+			 
 			sync.click();
 
 			
@@ -90,13 +94,11 @@ public class SyncPageBlank extends BasePage {
 			pending=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonPendingId']");
 		
 	      
-		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-	     pending=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[2]");
-		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
+		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 		
 		
-		pending=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[2]");
-			    
+	pending=findElementByXpath("(//XCUIElementTypeButton[@name='buttonPendingId'])[1]");
+		  
 	     
 	     pending.click();
 		
@@ -120,10 +122,12 @@ public class SyncPageBlank extends BasePage {
 			
 		  
 			 sync=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonSyncId']");
-	             sync.click();
-
+	            
 			
-			
+	         	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+		 sync=findElementByXpath("(//XCUIElementTypeButton[@name='buttonSyncId'])[3]");
+		 
+		 sync.click();
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

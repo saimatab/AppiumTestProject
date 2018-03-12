@@ -17,14 +17,15 @@
 		<parameter name="ud_id" value="f824304fc9cf9208760d3efcea4f2c90a3201e2a"></parameter> <!-- for real device only -->
 		
 		
+		
 		<parameter name="ip_address" value="0.0.0.0"></parameter>
 		<parameter name="port" value="4723"></parameter>
-			s
+			
 		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bundle id -->
 		
 	<test name="SmokeTests">
 		<classes>
-			<class name="au.com.miracletek.tests.Demo" />
+			<class name="au.com.miracletek.tests.Demo5ios" />
 		</classes>
 	</test> <!-- Test -->
 </suite>

@@ -70,7 +70,43 @@ public class AutomationTestForm2 extends BasePage{
 
 	}
 	
-	
+public void fillForm1(DriverConfig config) {
+
+		
+		
+		
+
+		try {
+			
+		
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+			  log.info("Entered Username......");
+			
+			
+		     camera=waitForVisibilityOf(By.id("camera_button1"));
+			  camera.click();
+			  acessCameraOk();
+			  Thread.sleep(5000);
+			  capPhoto=waitForVisibilityOf(By.id("PhotoCapture"));
+			     capPhoto.click();
+
+				  Thread.sleep(5000);
+			  done=waitForVisibilityOf(By.id("Use Photo"));
+			  done.click();
+			  acessCameraOk();
+		
+         
+     
+
+
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void navigateUp(DriverConfig config) {
 
 		try {
@@ -103,6 +139,20 @@ public class AutomationTestForm2 extends BasePage{
 	
 	
 
+	public void acessCameraOk() {
+
+		try {
+		
+		     submit=findElementById("OK");
+		 submit.click();
+   
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	
 	
 	public void submit() {
@@ -119,7 +169,23 @@ public class AutomationTestForm2 extends BasePage{
 		}
 
 	}
-	
+	public void saveDraftIos() {
+
+		try {
+			 
+		
+			   savedraft=findElementByXpath("//XCUIElementTypeNavigationBar[@name='auto']/XCUIElementTypeButton[2]");
+			   savedraft.click();
+   
+			   
+			  
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void saveDraft() {
 
 		try {

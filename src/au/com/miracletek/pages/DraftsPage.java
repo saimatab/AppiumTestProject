@@ -37,15 +37,10 @@ public class DraftsPage extends BasePage {
 				 edit=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonEditId']");
 			 
 		       
-			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-		       
-		       edit=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAElement[1]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[1]");
-		 	
+		
 				
-				
-				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-				edit=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[1]");
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+				edit=findElementByXpath("//XCUIElementTypeButton[@name='buttonEditId']");
 
 			    
 		      
@@ -75,16 +70,13 @@ public class DraftsPage extends BasePage {
 			 
 		        
 			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-			  
-		     remove=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAElement[1]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]/UIAButton[2]");
-			  
+		 
 				
-				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
+				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 				
-				remove=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]/XCUIElementTypeButton[2]");
+				remove=findElementByXpath("//XCUIElementTypeTable[@name='listViewId']/XCUIElementTypeCell/XCUIElementTypeButton[@name='buttonRemoveId']");
 
-		      
+			 //remove=findElementByXpath("//XCUIElementTypeButton[@name='buttonRemoveId']");     
 		   remove.click();
 
 
@@ -110,17 +102,13 @@ public class DraftsPage extends BasePage {
 			 info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");
 				
 			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-				info=findElementByXpath("//UIAApplication[1]/UIAWindow[2]/UIAElement[1]/UIATableView[1]/UIATableCell["+linearLayoutIndex+"]");
-			  
+		
 			
 			
 			
-			
-			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
-			info=findElementByXpath("//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell["+linearLayoutIndex+"]");
-			    
-				
+			else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+			info=findElementByXpath("//XCUIElementTypeCell");
+
 			
 			info.click();
 			
