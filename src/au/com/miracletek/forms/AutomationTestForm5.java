@@ -89,7 +89,7 @@ public class AutomationTestForm5 extends BasePage{
 			String platformVersion=config.getPlatformVersion();
 			if(platformName.contentEquals("Android"))
 			{
-				switch1=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='swSelectedId']");
+				switch1=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='" +switchId+"']");
 				switch1.click();
 			}
 			else
