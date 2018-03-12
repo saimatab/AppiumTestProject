@@ -18,7 +18,7 @@
 		<appender name="RollingAppender1" class="org.apache.log4j.DailyRollingFileAppender">
 
 		<param name="Append" value="true"/>
-		<param name="file" value="C:\\Users\\stabassum\\workspace\\AppiumTest\\src\\Manual.logs"/>
+		<param name="file" value="//Users//miracletek//Documents//GitHub//AppiumTestProject//src//Manual.logs"/>
   <appendToFile value="true" />
 
 
@@ -38,7 +38,7 @@
 	<appender name="RollingAppender" class="org.apache.log4j.DailyRollingFileAppender">
 
 		<param name="Append" value="true"/>
-		<param name="file" value="C:\\Users\\stabassum\\workspace\\AppiumTest\\src\\Selenium.logs"/>
+		<param name="file" value="//Users//miracletek//Documents//GitHub//AppiumTestProject//src//Selenium.logs"/>
   <appendToFile value="true" />
 
 

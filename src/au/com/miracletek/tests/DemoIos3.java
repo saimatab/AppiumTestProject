@@ -40,9 +40,9 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-public class Demo {
+public class DemoIos3 {
 	
-//v
+	//
 	private DriverManager manager;
 	private DriverConfig config;
 	private AppiumDriverLocalService appiumService;
@@ -59,7 +59,7 @@ public class Demo {
 	SettingsPage  settings;
 	AdvancedSettingsPage advSettings;
 	NotificationsPage  notify;
-	
+	///shfjg
 	@BeforeSuite     
 	@Parameters({ "platform", "platform_name", "platform_version", "device_name", "app_path", "app_package",
 		"app_activity", "ud_id", "bundle_id", "ip_address", "port" })
@@ -137,17 +137,46 @@ public class Demo {
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
 				loginPage.Login1("abc","abc");
 				Thread.sleep(5000);
-				form.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
+				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
 			    catPage.selectCategoryListView("test",config);
 			  	Thread.sleep(2000);
 		        formList.selectForm("auto",config);
 		        Thread.sleep(3000);
 		     	form.takescreenshot1();
 	            form.fillForm(config);
-	        	form.saveDraft();
-	        
+	            form.saveDraftIos();
+	            
+		        
+				form.findElementById("test").click();
 				form.navigateUp(config);
-				form.navigateUp(config);
+		 
+	     
+		  	/*shell.clickDrafts(config);
+		  	drafts.Edit("1", config);
+		  	form.findElementById("Drafts").click();
+		  	drafts.Remove("1", config);
+		  	sync.openPendingSubmittedForms("1", config);
+		  	 Thread.sleep(3000); 
+			    subQueue.openPendingDetailInfoPage("1",config);
+			  
+				subQueue.submitPendingForm("1",config);
+			    Thread.sleep(6000);
+		  	
+		  	subQueue.clickonsubmittedTab(config);
+		    //subQueue.opensubmittedDetailInfoPage("1",config);
+			 
+			
+				  subQueue.ViewsubmittedForms("1",config);
+				    Thread.sleep(3000);
+
+					form.findElementById("Submission Queue").click();
+					   subQueue.editSubmittedForm("1",config);
+					   form.findElementById("Submission Queue").click();
+						   subQueue.removeSubmittedForm("1",config);
+					        subQueue.popup1Ios("Yes");
+					        Thread.sleep(3000);
+							
+							   form.findElementById("Sync").click();*/
 			
 		} catch (Exception e) {
 
@@ -158,7 +187,7 @@ public class Demo {
 	
 	//------------------Drafts - Edit form and Submit--------------------
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test02() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -178,7 +207,7 @@ public class Demo {
 	
 	//------------------Sync - Pending List - Form Status Info Page--------------------
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test03() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -206,7 +235,7 @@ public class Demo {
 	
 	//------------------Sync - Pending List - Form Submission--------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test04() {
 	
 	try{
@@ -225,7 +254,7 @@ public class Demo {
 	
 	//------------------Sync - Submitted Form List - Form Status Info Page---------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test05() {
 		try {
 			
@@ -255,7 +284,7 @@ public class Demo {
 	
 	//-----------------Sync - Submitted Form List - Save Submitted form as Draft and Submit-------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test06() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -285,7 +314,7 @@ public class Demo {
 	
 	//----------------Sync - Submitted Form List - Remove  submitted Forms------------------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test07() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -313,7 +342,7 @@ public class Demo {
 	
 	//----------------Sync -  Forms------------------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test08() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -336,7 +365,7 @@ public class Demo {
 	
 	//---------------Sync -  Role--------------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test09() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -357,7 +386,7 @@ public class Demo {
 	
 	//----------------Sync -User -------------------
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test10() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
@@ -427,7 +456,7 @@ public class Demo {
 	}
 	
 	//----------------Test settings  -------------------
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test11() {
 		try {
 			shell=new ShellPage(manager.getDriver(), config.getPlatform());
