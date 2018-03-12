@@ -151,7 +151,7 @@ public class Demo5 {
 			  	Thread.sleep(2000);
 		        formList.selectForm("dtimeupAuto",config);
 		        Thread.sleep(6000);
-  /*form.clickDatePicker(config, "datepicker1");
+  form.clickDatePicker(config, "datepicker1");
 	
 			    form.Date(config,"Apr","03","2018");
 			    Thread.sleep(3000);
@@ -185,11 +185,27 @@ public class Demo5 {
 		             form.autoComplete(config,"autocomplete1");
 		        Thread.sleep(6000);
 		        
-		        form.clickslider(config);*/
+		        form.clickslider(config);
 		        form.clickswitch(config,"switch1","0");
 		         form.submit();
 		        
-		    
+		         form.navigateUp(config);
+					shell.clickSync(config);
+			        Thread.sleep(3000);
+			
+				    sync.syncForms("1",config);
+				    Thread.sleep(3000);
+				    form.navigateUp(config);
+					shell.clickSync(config);
+				    sync.openPendingSubmittedForms("1",config);
+				    Thread.sleep(3000);
+				    subQueue.clickonsubmittedTab();
+					  subQueue.ViewsubmittedForms("1",config);
+					    Thread.sleep(3000);
+						form.navigateUp(config);
+						
+					
+				    
 			
 		} catch (Exception e) {
 
