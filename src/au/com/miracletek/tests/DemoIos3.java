@@ -142,7 +142,7 @@ public class DemoIos3 {
 			  	Thread.sleep(2000);
 		        formList.selectForm("auto",config);
 		        Thread.sleep(3000);
-		     	form.takescreenshot1();
+		     	form.takescreenshot1Ios();
 	            form.fillForm(config);
 	            form.saveDraftIos();
 	            
@@ -194,7 +194,7 @@ public class DemoIos3 {
 			form=new AutomationTestForm(manager.getDriver(), config.getPlatform());
 		    drafts=new  DraftsPage(manager.getDriver(), config.getPlatform());
 			shell.clickDrafts(config);
-		 	form.takescreenshot1();
+			form.takescreenshot1Ios();
 			drafts.Edit("1",config);
 			form.submit();
 			form.navigateUp(config);

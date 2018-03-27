@@ -161,6 +161,7 @@ public class CategoryPage extends BasePage{
 				            	btn_category=findElementByXpath("//android.widget.TextView[@text='test']");
 				         	
 				         	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
+				         	
 				            	btn_category=findElementByXpath("//XCUIElementTypeStaticText[@name='test']");
 							    
 				           

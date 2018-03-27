@@ -113,8 +113,16 @@ public class Demo8 {
 	@AfterTest
 	public void stopDriver() {
 		BasePage bp=new 	BasePage();
+		try
+		{
 		bp.sendPDFReportByGMail("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "");
 		manager.stopDriver();
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 	

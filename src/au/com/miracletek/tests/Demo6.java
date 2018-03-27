@@ -27,6 +27,7 @@ import au.com.miracletek.pages.CategoryPage;
 import au.com.miracletek.pages.DraftsPage;
 import au.com.miracletek.pages.FormListPage;
 import au.com.miracletek.pages.LoginPage;
+import au.com.miracletek.pages.Mytasks;
 import au.com.miracletek.pages.NotificationsPage;
 import au.com.miracletek.pages.SettingsPage;
 import au.com.miracletek.pages.ShellPage;
@@ -69,7 +70,7 @@ public class Demo6 {
 	CategoryPage catPage;
 	FormListPageBlankApp formList;
 	AutomationTestForm6  form;
-
+	Mytasks mytask;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -111,8 +112,16 @@ public class Demo6 {
 	@AfterTest
 	public void stopDriver() {
 		BasePage bp=new 	BasePage();
+		try
+		{
 		bp.sendPDFReportByGMail("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "");
 		manager.stopDriver();
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
@@ -139,21 +148,85 @@ public class Demo6 {
 			catPage=new CategoryPage(manager.getDriver(), config.getPlatform());
 		    form=new AutomationTestForm6(manager.getDriver(), config.getPlatform());
 		    sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());
+		    mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
 		    subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
-		  
+		    notify=new NotificationsPage(manager.getDriver(), config.getPlatform());
 		        appCodePage.enterAppCodeAndProceed("automation");
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
 				loginPage.Login1("abc","abc");
 				Thread.sleep(5000);
-				form.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
+			//form.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
 				Thread.sleep(5000);
-			    catPage.selectCategoryListView("test",config);
-			  	Thread.sleep(2000);
-		        formList.selectForm("reppager",config);
-		        Thread.sleep(3000);
+		/////////////////////notifcaiton
+				
+				shell.clickNotifications(config);
+				
+			notify.Remove("2", config);
+			notify.popup("Yes");
+				   Thread.sleep(5000); 
+				notify.RemoveAll(config);
+				notify.popup("Yes");
+				   Thread.sleep(5000); 
+			
 	
-		        
+				   
+				
+				/////////////////////mytasks 
+				
+				/*shell.clickmyTasks(config);
+				
+				mytask.openTask("2", config);
+				   Thread.sleep(5000); 
+				mytask.Completetasks(config);
+				   Thread.sleep(5000); 
+				mytask.openTask("1", config);
+				   Thread.sleep(5000); 
+				mytask.CompleteFormtasks(config);
+				   Thread.sleep(5000); 
+			
+	
+				   Thread.sleep(5000); 
+				   mytask.showCompletedTasks(config);
+				   
+
+				   Thread.sleep(5000); 
+                mytask.Refresh(config);
+                
+   
+                mytask.clearCompletedtasks( config);
+                mytask.searchTasks(config);*/
+		
+        		
+				
+
+		        //////////////////////////******************************search**********************************************////////
+				/*shell.clickSearch(config);
+				form.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']")).sendKeys("re");;
+			        form.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
+			        form.navigateUp(config);
+			        form.findElementByXpath("//android.widget.Button[@index='0']").click();
+			     	MobileElement btn_category=form.findElementByXpath("//android.widget.TextView[@text='test']");
+				btn_category.click();
+					form.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']")).sendKeys("re");
+					
+				    form.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
+			        form.navigateUp(config);*/
+			        
+			        
+			        
+			        
+			        
+			        //////////////////////////******************************search**********************************************////////
+			        
+			        //////////////////////******************************pager repeater **********************************************
+			        
+			        
+		/*  catPage.selectCategoryListView("test",config);
+			  	Thread.sleep(2000);
+			  	
+		   formList.selectForm("reppager",config);
+	
 		        form.clickRepeaterSelectSwitch(config,"pagerview1","repeater1","0","switch1");
 		        Thread.sleep(3000);
 		    	
@@ -161,8 +234,26 @@ public class Demo6 {
 		        form.clickTab(config, "Tab1");
               form.clicktextbox(config, "textbox1");
               form.clickTab(config, "Tab");
-		         form.submit();
+		         form.submit();*/
 		        
+		         
+		         
+				 /*formList.selectForm("scroll",config);
+					form.findElementById("picker3").click();
+				  //  form.findElementByXpath("//android.widget.NumberPicker[@index='0']").sendKeys("mango");
+				    form.findElementByXpath("//android.widget.NumberPicker[@index='0']").setValue("mango");
+			     form.scrollAND("mango");*/
+			
+
+			//	form.ok();
+				  	
+			////////////////scrolling 	  	
+				   
+			        Thread.sleep(3000);
+		          
+		      ///        form.scrollAND("Label");
+		      //        form.scrollAND("Label");
+		      //        form.scrollAND("Label");
 		    
 			
 		} catch (Exception e) {

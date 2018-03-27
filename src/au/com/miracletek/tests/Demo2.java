@@ -88,7 +88,7 @@ public class Demo2 {
 		 String dtime =df.format(new Date());
 		appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
 				.usingPort(port).usingDriverExecutable(new File(Constants.APPIUM_NODE_PATH))
-				.withAppiumJS(new File(Constants.APPIUM_JS_PATH)).withLogFile(new  File("C:\\Users\\stabassum\\workspace\\AppiumTest\\src\\appiumServer_logs_"+dtime+".log")));
+				.withAppiumJS(new File(Constants.APPIUM_JS_PATH)).withLogFile(new  File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\src\\appiumServer_logs_"+dtime+".log")));
 		appiumService.start();
 	
 		config = new DriverConfig(platform, platform_name, platform_version, device_name, app_path, app_package,
@@ -113,8 +113,16 @@ public class Demo2 {
 	@AfterTest
 	public void stopDriver() {
 		BasePage bp=new 	BasePage();
+		try
+		{
 		bp.sendPDFReportByGMail("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "");
 		manager.stopDriver();
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 	

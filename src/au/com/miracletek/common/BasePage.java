@@ -1,6 +1,8 @@
 package au.com.miracletek.common;
 import io.appium.java_client.MultiTouchAction;
 import java.io.File;
+import org.openqa.selenium.support.ui.FluentWait;
+import javax.activation.FileDataSource;
 import org.openqa.selenium.mobile.NetworkConnection;
 import org.openqa.selenium.mobile.NetworkConnection.ConnectionType;
 import org.openqa.selenium.remote.*;
@@ -32,7 +34,7 @@ import io.appium.java_client.events.api.general.*;
 import java.util.concurrent.TimeUnit;
 import java.util.*;
 import java.util.stream.*;
-
+import au.com.miracletek.tests.Demo;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -69,6 +71,7 @@ import org.openqa.selenium.interactions.Actions;
 public class BasePage {
 	protected MobileDriver driver;
 	protected String platform;
+    MobileElement mob;
 	int  start;
 	int end;
 	public  BasePage(){
@@ -520,17 +523,192 @@ public void pickerByText(String text) throws Exception
 	
 	 
 	 	}
+ 
+ public boolean isElementFoundANDPICKER( String text1) {
+   
+   try
+   {MobileElement text2=  ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.EditText[@index='0']"));
+   String text23= text2.getText();
+    System.out.println("isElementFound CHEC &&&&&&&&&&&HGG : true :"+text23 + "true");
+    
+    if(text23.contentEquals(text1))
+    {
+         System.out.println("isElementFound : true :"+text1 + "true");
+         
+         return true;    
+         
+    }
+     
+     
+    else
+    {
+         System.out.println("isElementFound : false :"+text1);
+      	
+
+         int pressX = driver.manage().window().getSize().width / 2;
+  	    // 4/5 of the screen as the bottom finger-press point
+  	    int bottomY = driver.manage().window().getSize().height * 1/5;
+  	    // just non zero point, as it didn't scroll to zero normally
+  	    int topY = driver.manage().window().getSize().height / 8;
+  	    TouchAction touchAction = new TouchAction(driver);
+  	    touchAction.longPress(pressX, bottomY).moveTo(pressX, topY ).release().perform();
+
+         
+
+         return false;
+     }
+
+     
+   }
+   
+   catch(Exception e){
+	   return false;
+   }
+     
+     
+     
+     
+ }
+ 
+ public void ANDPICK1(String test) {
+	  
+		
+
+try{
+
+	Dimension size = driver.manage().window().getSize();
+
+	//int pressX = driver.manage().window().getSize().width / 2;
+	    // 4/5 of the screen as the bottom finger-press point
+	//    int bottomY = driver.manage().window().getSize().height * 4/5;
+	    // just non zero point, as it didn't scroll to zero normally
+	  //  int topY = driver.manage().window().getSize().height / 8;
+	   // TouchAction touchAction = new TouchAction(driver);
+	    //touchAction.longPress(400, 1111).moveTo(400, 500).release().perform();
+     
+     
+		((AndroidDriver<MobileElement>)driver).swipe(400, 1111, 400, 500, 327);
+  
+          	
+}
+catch(Exception e){
+}
+	
+}
+ public void ANDPICK(String test) {
+	  
+	
+	 boolean done=false;
+	 //SOlution 1:
+	 //	Dimension  size = driver.manage().window().getSize();
+	 	//((AndroidDriver<MobileElement>)driver).swipe(size.width - 10, size.height* 6 / 8, size.width - 10, size.height / 8, 500);
+	 
+	 //Solution 2findElementByXpath("//android.widget.TextView[@text='" + Constants.DHIMobilePlant+ "']");
+
+try{
+	 while(!done){
+	
+		
+		 
+		if(isElementFoundANDPICKER(test))
+		{
+			
+			done=true;
+		    
+		}	
+		else
+			isElementFoundANDPICKER(test);
+	 }
+}
+catch(Exception e){
+}
+	
+}
+ 
+ public boolean isElementFound( String text) {
+     try{
+      ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.TextView[@text='"+text+"']"));
+         System.out.println("isElementFound : true :"+text + "true");
+     }catch(Exception e){
+         System.out.println("isElementFound : false :"+text);
+      	
+         	 int pressX = driver.manage().window().getSize().width / 2;
+         	    // 4/5 of the screen as the bottom finger-press point
+         	    int bottomY = driver.manage().window().getSize().height * 4/5;
+         	    // just non zero point, as it didn't scroll to zero normally
+         	    int topY = driver.manage().window().getSize().height / 8;
+         	    TouchAction touchAction = new TouchAction(driver);
+         	    touchAction.longPress(pressX, bottomY).moveTo(pressX, topY ).release().perform();
+
+
+         
+
+         return false;
+     }
+     return true;
+     
+     
+     
+     
+     
+     
+     
+ }
+ 
+ public void scrollAND(String test) {
+  
+	 boolean done=false;
+	 //SOlution 1:
+	 //	Dimension  size = driver.manage().window().getSize();
+	 	//((AndroidDriver<MobileElement>)driver).swipe(size.width - 10, size.height* 6 / 8, size.width - 10, size.height / 8, 500);
+	 
+	 //Solution 2findElementByXpath("//android.widget.TextView[@text='" + Constants.DHIMobilePlant+ "']");
+	 
+		int pressX = driver.manage().window().getSize().width / 2;
+ 	    // 4/5 of the screen as the bottom finger-press point
+ 	    int bottomY = driver.manage().window().getSize().height * 1/5;
+ 	    // just non zero point, as it didn't scroll to zero normally
+ 	    int topY = driver.manage().window().getSize().height / 8;
+ 	    TouchAction touchAction = new TouchAction(driver);
+ 	    touchAction.longPress(pressX, bottomY).moveTo(pressX, topY ).release().perform();
+
+try{
+	/* while(!done){
+	
+		
+		 
+		if(isElementFound(test))
+		{
+			int pressX = driver.manage().window().getSize().width / 2;
+     	    // 4/5 of the screen as the bottom finger-press point
+     	    int bottomY = driver.manage().window().getSize().height * 1/5;
+     	    // just non zero point, as it didn't scroll to zero normally
+     	    int topY = driver.manage().window().getSize().height / 8;
+     	    TouchAction touchAction = new TouchAction(driver);
+     	    touchAction.longPress(pressX, bottomY).moveTo(pressX, topY ).release().perform();
+			done=true;
+		    
+		}	
+		else
+			isElementFound(test);
+	 }*/
+}
+catch(Exception e){
+	
+	
+}
+
+
+	 
+	 	}
  public void scrollIos(String test) {
 	    
-	 	
 	 
-		
-		
 	 	
 	 JavascriptExecutor js = (JavascriptExecutor) driver;
  	HashMap scrollObject = new HashMap();
  	scrollObject.put("direction", "down");
- 	scrollObject.put("name",test);
+ scrollObject.put("name",test);
  	js.executeScript("mobile: scroll", scrollObject);
      
 	 	  
@@ -593,7 +771,7 @@ public void pickerwheelIos(){
     					}
     				
     			} while (true);*/
-    	//RemoteWebElement element = (RemoteWebElement)driver.findElementByClassName(“android.widget.ListView”);
+    	//RemoteWebElement element = (RemoteWebElement)driver.findElementByClassName(â€œandroid.widget.ListViewâ€�);
     	//MobileElement n=(((IOSDriver<MobileElement>)driver).findElementByName(test));
     	//String widId = ((MobileElement) n).getId();
     	//n.tap(1, 1000);
@@ -676,7 +854,7 @@ public void pickerwheelIos(){
     
     public void swipe (){
     	
-    	//((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
+    	((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
     	
     }
     
@@ -690,8 +868,8 @@ public void pickerwheelIos(){
     	}
     }
     
-    public void takeSnapShot() throws Exception {
-    	
+    public void takeSnapShotAndroid() throws Exception {
+        String scrFolder = System.getProperty("scr.folder");
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
@@ -706,7 +884,11 @@ public void pickerwheelIos(){
       
        // String date =  new SimpleDateFormat("yyyyMMddhhmmss'").format(new Date());
 		//FileUtils.copyFile(scrFile, new File("/screenshots/automationTest-snapshot.jpg"));
-    	FileUtils.copyFile(scrFile, new File("C:\\screenshots\\"+fileName+".jpg"));
+    	//final FileUtils.copyFile(scrFile, new File("C:\\screenshots\\"+fileName+".jpg"));
+  
+FileUtils.copyFile(scrFile, new File(scrFolder   + "/" +fileName+".jpg"));
+      
+      
     }
 public void takeSnapShotIos() throws Exception {
     	
@@ -764,7 +946,8 @@ public void takeSnapShotIos() throws Exception {
             
 
     }
-   public void sendPDFReportByGMail(String from, String pass, String to, String subject, String body) {
+    
+    public void sendPDFReportByGMail1(String from, String pass, String to, String subject, String body,String file)throws Exception {
 
     	Properties props = System.getProperties();
 
@@ -787,6 +970,138 @@ public void takeSnapShotIos() throws Exception {
     	MimeMessage message = new MimeMessage(session);
 
     	try {
+    		//Thread.sleep(180000);
+
+    	    //Set from address
+
+    	message.setFrom(new InternetAddress(from));
+
+    	message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+    	//Set subject
+
+    	message.setSubject(subject);
+
+    	message.setText(body);
+
+    	BodyPart objMessageBodyPart = new MimeBodyPart();
+    	BodyPart objMessageBodyPart2 = new MimeBodyPart();
+    	BodyPart objMessageBodyPart3 = new MimeBodyPart();
+    	
+    	objMessageBodyPart.setText("Please Find The Attached Report File!");
+
+    	Multipart multipart = new MimeMultipart();
+
+    
+
+    
+
+       String  var=Demo.fileName;
+         // System.out.println("#######################################################"+var);
+    
+    	String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
+
+    	//Create data source to attach the file in mail
+
+    	FileDataSource source = new FileDataSource(filename1);
+
+    	objMessageBodyPart.setDataHandler(new DataHandler(source));
+
+    	objMessageBodyPart.setFileName(filename1);
+
+    	multipart.addBodyPart(objMessageBodyPart);
+    	
+    	////////////////////////////////
+    	
+    	objMessageBodyPart2.setText("Please Find The Attached Report File2!");
+
+   
+
+    
+
+    	//
+    	
+
+   
+         // System.out.println("#######################################################"+var);
+    
+    	String var1="STMExtentReport";
+    	String filename2 = System.getProperty("user.dir")+"\\" +var1+ ".html";
+
+    	//Create data source to attach the file in mail
+
+    	FileDataSource source2 = new FileDataSource(filename2);
+
+    	objMessageBodyPart2.setDataHandler(new DataHandler(source2));
+
+    	objMessageBodyPart2.setFileName(filename2);
+
+    	multipart.addBodyPart(objMessageBodyPart2);
+
+    
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+
+    	message.setContent(multipart);
+
+    	Transport transport = session.getTransport("smtp");
+
+    	transport.connect(host, from, pass);
+
+
+    	transport.sendMessage(message, message.getAllRecipients());
+
+    	transport.close();
+
+    	}
+
+    	catch (AddressException ae) {
+
+    	ae.printStackTrace();
+
+    	}
+
+    	catch (MessagingException me) {
+
+    	me.printStackTrace();
+
+    	}
+    	catch (Exception me1) {
+
+        	me1.printStackTrace();
+
+        	}
+    	} 
+    
+   public void sendPDFReportByGMail (String from, String pass, String to, String subject, String body)throws Exception {
+
+    	Properties props = System.getProperties();
+
+    	String host = "smtp.gmail.com";
+
+    	props.put("mail.smtp.starttls.enable", "true");
+
+    	props.put("mail.smtp.host", host);
+
+    	props.put("mail.smtp.user", from);
+
+    	props.put("mail.smtp.password", pass);
+
+    	props.put("mail.smtp.port", "587");
+
+    	props.put("mail.smtp.auth", "true");
+
+    	Session session = Session.getDefaultInstance(props);
+
+    	MimeMessage message = new MimeMessage(session);
+
+    	try {
+    		//Thread.sleep(180000);
 
     	    //Set from address
 
@@ -811,16 +1126,21 @@ public void takeSnapShotIos() throws Exception {
     	objMessageBodyPart = new MimeBodyPart();
 
     	//Set path to the pdf report file
+    //	JyperionListener j=new JyperionListener();
+    	
 
-    	String filename = System.getProperty("user.dir")+"\\Default test.pdf";
+       String  var=Demo.fileName;
+         // System.out.println("#######################################################"+var);
+    
+    	String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
 
     	//Create data source to attach the file in mail
 
-    	DataSource source = new FileDataSource(filename);
+    	DataSource source = new FileDataSource(filename1);
 
     	objMessageBodyPart.setDataHandler(new DataHandler(source));
 
-    	objMessageBodyPart.setFileName(filename);
+    	objMessageBodyPart.setFileName(filename1);
 
     	multipart.addBodyPart(objMessageBodyPart);
 
@@ -829,6 +1149,7 @@ public void takeSnapShotIos() throws Exception {
     	Transport transport = session.getTransport("smtp");
 
     	transport.connect(host, from, pass);
+
 
     	transport.sendMessage(message, message.getAllRecipients());
 
@@ -847,7 +1168,11 @@ public void takeSnapShotIos() throws Exception {
     	me.printStackTrace();
 
     	}
+    	catch (Exception me1) {
 
+        	me1.printStackTrace();
+
+        	}
     	}
    
    public void sendPDFReportByGMailIos(String from, String pass, String to, String subject, String body) {
@@ -869,7 +1194,7 @@ public void takeSnapShotIos() throws Exception {
    	props.put("mail.smtp.auth", "true");
 
    	Session session = Session.getDefaultInstance(props);
-
+  
    	MimeMessage message = new MimeMessage(session);
 
    	try {
@@ -898,8 +1223,9 @@ public void takeSnapShotIos() throws Exception {
 
    	//Set path to the pdf report file
    	
-
-   	String filename = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Default test.pdf";
+	JyperionListener j=new JyperionListener();
+    
+   	String filename = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + Demo.fileName+ ".pdf";
 
    	//Create data source to attach the file in mail
 

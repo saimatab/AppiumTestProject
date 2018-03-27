@@ -15,7 +15,8 @@ public class NotificationsPage extends BasePage {
 	MobileElement remove;
 	MobileElement info;
 	MobileElement removeall;
-
+	MobileElement yes;
+	MobileElement no;
 	public NotificationsPage(RemoteWebDriver driver, String platform) throws Exception {
 		super(driver, platform);
 	}
@@ -28,11 +29,9 @@ public class NotificationsPage extends BasePage {
 			
 			// nned to generate xpth 
 	     	 if (platformName.contentEquals("Android"))
-			info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
-			 
-			//new  info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[last()]");
+			info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");//new  info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[last()]");
 	     	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
-	     		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
+	     		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
 	     			 
 			
 		info.click();
@@ -46,7 +45,30 @@ public class NotificationsPage extends BasePage {
 
 	}
 	
-	public void RemoveAll(String linearLayoutIndex,DriverConfig config) {
+	public void popup(String response) {
+
+		try {
+			
+			if (response.equals("Yes"))
+            {
+			yes=findElementByXpath("//*[@text='Yes']");
+			yes.click();
+            }
+          else
+             {
+         	no=findElementByXpath("//*[@text='No']");
+             no.click();
+             }		
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void RemoveAll(DriverConfig config) {
 
 		try {String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
@@ -54,10 +76,10 @@ public class NotificationsPage extends BasePage {
 		 		
 			 // removeall=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
 			  //new removeall=findElementByXpath("//*[@content-desc='btnRemoveAllId']");
-				 
-			  removeall.click();
+		  		  removeall=findElementById("btnRemoveAllId");
+		
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
-		     	
+		  	  removeall.click(); 	
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

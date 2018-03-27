@@ -19,27 +19,15 @@
 		<parameter name="port" value="4723"></parameter>
 		
 		
-	<!--<test name="TestAppCode">
-		<classes>
-			<class name="au.com.miracletek.tests.AppCodeTest" />
-			
-		</classes>
-	</test>
-	<test name="TapToLogin">
-		<classes>
-			<class name="au.com.miracletek.tests.TaptoLoginTest" />
-		</classes>
-	</test> 
-		<test name="Login">
-		<classes>
-			<class name="au.com.miracletek.tests.LoginTest" />
-		</classes>
-	</test>-->
-	
+
+	<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
 	
 		<test name="Demo">
 		<classes>
-			<class name="au.com.miracletek.tests.Demo5" />
+			<class name="au.com.miracletek.tests.FinalSmokeTests" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

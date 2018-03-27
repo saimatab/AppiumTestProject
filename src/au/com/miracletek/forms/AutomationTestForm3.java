@@ -162,8 +162,8 @@ public void annotation(DriverConfig config) {
              
             ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@text='Annotate']")).click();
             ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@text='Pick Color']")).click();
-            ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.a:id/color_picker_view']")).click();
-            ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.a:id/new_color_panel']")).click();
+            ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.prd:id/color_picker_view']")).click();
+            ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@resource-id='co.miracletek.miracle.prd:id/new_color_panel']")).click();
             Dimension size = ((AndroidDriver<MobileElement>)driver).manage ()
             	    .window ()
             	    .getSize ();
@@ -177,7 +177,8 @@ public void annotation(DriverConfig config) {
             	    .release ()
             	    .perform ();
             	
-            	
+            	(new TouchAction(driver)).tap(392, 697).perform();
+    			(new TouchAction(driver)).tap(386, 151).perform();
             	((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@text='Save']")).click();
 	
 		

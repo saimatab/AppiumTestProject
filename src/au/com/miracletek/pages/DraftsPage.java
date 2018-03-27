@@ -15,7 +15,8 @@ public class DraftsPage extends BasePage {
 	MobileElement edit;
 	MobileElement remove;
 	MobileElement info;
-
+	MobileElement yes;
+	MobileElement no;
 
 	public DraftsPage(RemoteWebDriver driver, String platform) throws Exception {
 		super(driver, platform);
@@ -86,6 +87,30 @@ public class DraftsPage extends BasePage {
 		}
 
 	}
+	public void popup1(String response) {
+
+		try {
+			
+			
+			if (response.equals("Yes"))
+               {
+			yes=findElementByXpath("//*[@text='Remove']");
+			yes.click();
+               }
+             else
+                {
+            	no=findElementByXpath("//*[@text='Cancel']");
+                no.click();
+                }		
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
 	
 	public void openDetailInfoPage(String linearLayoutIndex,DriverConfig config) {
 

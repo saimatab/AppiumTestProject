@@ -17,6 +17,7 @@ public class ShellPage extends BasePage {
 
 	MobileElement settings;
 	MobileElement search;
+	MobileElement task;
 	public ShellPage(RemoteWebDriver driver, String platform) throws Exception {
 		super(driver, platform);
 	}
@@ -123,6 +124,28 @@ public class ShellPage extends BasePage {
 			{
 			search= findElementById(Constants.search);
 			search.click();
+			}
+			else
+			{
+				search= findElementByXpath("//XCUIElementTypeNavigationBar[@name='Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingView']/XCUIElementTypeButton[6]");
+				search.click();
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void clickmyTasks(DriverConfig config) {
+
+		try {
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+			//settings = findElementById(Constants.settings);
+			if(platformName.contentEquals("Android"))
+			{
+			task= findElementById(Constants.tasks);
+			task.click();
 			}
 			else
 			{

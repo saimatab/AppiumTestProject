@@ -81,7 +81,21 @@ public class AutomationTestForm6 extends BasePage{
 		}
 
 	}
-	
+	public void ok() {
+
+		try {
+			 
+		
+			   savedraft=findElementByXpath("//*[@text='OK']");
+			   savedraft.click();
+   
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public void clickRepeaterSelectSwitch(DriverConfig config, String pagerid, String repeaterid, String cellindex,String switchid) {
 
@@ -95,7 +109,7 @@ public class AutomationTestForm6 extends BasePage{
 				
 				
 
-				  add=findElementById("add_button1");
+				  add=findElementById("add_button2");
 					 add.click();
 					// android.widget.Switch[@content-desc='" +switchid+"']
 			   

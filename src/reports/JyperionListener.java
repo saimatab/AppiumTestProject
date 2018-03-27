@@ -1,5 +1,5 @@
 package reports;
-
+import au.com.miracletek.tests.Demo;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -42,11 +42,12 @@ import com.lowagie.text.pdf.PdfWriter;
  * @author janaudy at jyperion dot org
  */
 public class JyperionListener  implements ITestListener {
-	/**
-	 * Document
-	 */
+	
 	private Document document = null;
 	
+	// public String fileName;
+	
+	   //fileName=context.getName()+"_"+date;
 	/**
 	 * PdfPTables
 	 */
@@ -75,8 +76,6 @@ public class JyperionListener  implements ITestListener {
 	}
 	
 
-	/*
-	 */
 	public void onTestSuccess(ITestResult result) {
 		log("onTestSuccess("+result+")");
 		
@@ -218,9 +217,10 @@ public class JyperionListener  implements ITestListener {
 	public void onStart(ITestContext context) {
 		log("onStart("+context+")");
 		try {
-		      String date= new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
-		      String fileName=context.getName()+"_"+date;
-			PdfWriter.getInstance(this.document, new FileOutputStream(fileName+".pdf"));
+		    String date= new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
+		   Demo.fileName=context.getName()+"-"+date;
+			PdfWriter.getInstance(this.document, new FileOutputStream(Demo.fileName+".pdf"));
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -301,10 +301,7 @@ public class JyperionListener  implements ITestListener {
 		this.document.close();
 	}
 	
-	/**
-	 * log
-	 * @param o
-	 */
+	
 	public static void log(Object o) {
 		//System.out.println("[JyperionListener] " + o);
 	}

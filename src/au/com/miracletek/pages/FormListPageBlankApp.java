@@ -37,7 +37,7 @@ public class FormListPageBlankApp extends BasePage{
 			            	 }
 			            	 
 			        		
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='AUTO']");
 				            	
 			            	 
@@ -54,7 +54,7 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.cam+ "']");
 			            	 }
 			        		
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 						    
 			         		form=findElementByXpath("//XCUIElementTypeStaticText[@label='CAMERA']");
 			            	 
@@ -68,7 +68,7 @@ public class FormListPageBlankApp extends BasePage{
 			            		 Thread.sleep(3000);
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.gal+ "']");
 			            	 }
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='GALLARY']");
 						    form.click();
 			                break;  
@@ -82,7 +82,7 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.sig1+ "']");
 			            	 }
 			        		
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='TESTSIG']");
 								   
 			            	 
@@ -98,7 +98,7 @@ public class FormListPageBlankApp extends BasePage{
 			            		 Thread.sleep(3000);
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.DatTimeUploadAuto+ "']");
 			            	 }
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 			    		
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='UPLOAD_DATETIME_AUTOCOM']");
 								    
@@ -114,7 +114,7 @@ public class FormListPageBlankApp extends BasePage{
 			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']");
 			            	 }
 			        		
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 						    
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='REPPAGER']");
 								   
@@ -126,10 +126,10 @@ public class FormListPageBlankApp extends BasePage{
 			            	 if (platformName.contentEquals("Android"))
 			            	 {
 			            		 Thread.sleep(3000);
-			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']");
+			    			form=findElementByXpath("//android.widget.TextView[@text='" + Constants.scroll+ "']");
 			            	 }
 			        		
-			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
+			            		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
 						    
 			            		form=findElementByXpath("//XCUIElementTypeStaticText[@label='SCROLL']");
 								   

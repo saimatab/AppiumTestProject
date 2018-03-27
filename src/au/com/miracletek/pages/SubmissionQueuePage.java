@@ -75,8 +75,9 @@ public class SubmissionQueuePage extends BasePage {
 
 		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"))
 			
-			removependingform=
-			findElementByXpath("(//XCUIElementTypeButton[@name'buttonRemoveId']");
+			removependingform=findElementByXpath("(//XCUIElementTypeButton[@name'buttonRemoveId']");
+		 
+		 removependingform.click();
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -273,11 +274,13 @@ public class SubmissionQueuePage extends BasePage {
 		try {	String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
 			 if (platformName.contentEquals("Android"))
-			removeall=findElementById("btnRemoveAllAutomationId");
-			
+			 {
+			removeall=findElementById("btnRemoveAllId");
+			removeall.click();
+			 }
 				else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"));
 					
-			removeall.click();
+			 {	removeall.click();}
 
 
 		} catch (Exception e) {

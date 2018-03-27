@@ -60,7 +60,7 @@ public class AutomationTestForm extends BasePage{
 	         a.click();
 				
 	         findElementByXpath("//XCUIElementTypeButton[@name='Part1']").click();
-			 
+	       
 			 
 		 }
 
@@ -161,7 +161,7 @@ public class AutomationTestForm extends BasePage{
 
 	}
 
-	public void takescreenshot1() {
+	public void takescreenshot1Ios() {
 
 		try {
 			 
@@ -177,5 +177,18 @@ public class AutomationTestForm extends BasePage{
 	}
 	
 
+	public void takescreenshotAndroid() {
+
+		try {
+			 
+			takeSnapShotAndroid();
 	
+   
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 }

@@ -16,15 +16,15 @@ public class Constants {
 //public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
 //final
 	
-	//public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
-//public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+	public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
+public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
 
 	// mac setup
 	
 	// final IOS
 
-	public static final String APPIUM_NODE_PATH="/usr/local/bin/node";
-	public static final String APPIUM_JS_PATH="/usr/local/lib/node_modules/appium/build/lib/main.js";
+	//*public static final String APPIUM_NODE_PATH="/usr/local/bin/node";
+	//*public static final String APPIUM_JS_PATH="/usr/local/lib/node_modules/appium/build/lib/main.js";
 
 
 	//taptoLogin
@@ -76,6 +76,7 @@ public class Constants {
 		public static final String sig1 = "TESTSIG";
 		public static final String DatTimeUploadAuto = "UPLOAD_DATETIME_AUTOCOM";
 		public static final String repager = "REPPAGER";
+		public static final String scroll = "SCROLL";
 	//Form Fields
 		
 		public static final String projCode= "Project Name - Code*";	
@@ -104,6 +105,7 @@ public class Constants {
 		public static final String iosnotification= "icon notification";
 		public static final String iossettings= "icon settings";
 		public static final String search= "Search";
+		public static final String tasks= "My Tasks";
 		public static final String updateAppbtn= "updateButtonId";
 		public static final String switchbtn= "switchButtonId";
 		public static final String advancedbtn= "advanceButtonId";
