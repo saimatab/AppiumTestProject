@@ -176,14 +176,16 @@ public class FinalSmokeTests {
            
            }
         		   
-      
-		
+     
 		
 		
 		
 		
 		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "",files[0].getName());
-		extent.endTest(extlogger);
+		extent.flush();
+        
+        extent.close();
+     
 		appiumService.stop();
 		
 	}
