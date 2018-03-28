@@ -1,0 +1,177 @@
+2018-03-28 07:21:44:056 - info: [Appium] Welcome to Appium v1.7.2
+2018-03-28 07:21:44:058 - info: [Appium] Non-default server args:
+2018-03-28 07:21:44:058 - info: [Appium]   address: 127.0.0.1
+2018-03-28 07:21:44:058 - info: [Appium]   log: C:\Users\stabassum\Documents\GitHub\AppiumTestProject\Logs\Appium\appiumServer_logs_28 Mar 2018 12_21_40.log
+2018-03-28 07:21:44:072 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2018-03-28 07:21:44:111 - info: [HTTP] --> GET /wd/hub/status {}
+2018-03-28 07:21:44:113 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2018-03-28 07:21:44:142 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.7.2","revision":null}}
+2018-03-28 07:21:44:147 - info: [HTTP] <-- GET /wd/hub/status 200 34 ms - 72 
+2018-03-28 07:21:44:588 - info: [HTTP] --> POST /wd/hub/session {"capabilities":{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}},"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}}
+2018-03-28 07:21:44:589 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},{},{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}}]
+2018-03-28 07:21:44:590 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1522221704589 (12:21:44 GMT+0500 (Pakistan Standard Time))
+2018-03-28 07:21:44:590 - info: [Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"C:\\Users\\staba... into desiredCapabilities object {"app":"C:\\Users\\stabassum\\Documents\\GitHub...
+2018-03-28 07:21:44:593 - info: [Appium] Creating new AndroidDriver (v1.37.0) session
+2018-03-28 07:21:44:594 - info: [Appium] Capabilities:
+2018-03-28 07:21:44:594 - info: [Appium]   app: C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk
+2018-03-28 07:21:44:594 - info: [Appium]   appPackage: co.miracletek.miracle.prd
+2018-03-28 07:21:44:594 - info: [Appium]   appActivity: md5416f8fc9705f945d05f173ad9594b81d.SplashActivity
+2018-03-28 07:21:44:594 - info: [Appium]   platformVersion: 6.0.1
+2018-03-28 07:21:44:594 - info: [Appium]   platformName: Android
+2018-03-28 07:21:44:594 - info: [Appium]   deviceName: 0628a315002e172e
+2018-03-28 07:21:44:604 - info: [BaseDriver] Session created with session id: eae251ba-a3a9-4898-abd8-98260f7e9c8c
+2018-03-28 07:21:44:604 - info: [debug] [AndroidDriver] Getting Java version
+2018-03-28 07:21:44:682 - info: [AndroidDriver] Java version is: 1.8.0_121
+2018-03-28 07:21:44:685 - info: [ADB] Checking whether adb is present
+2018-03-28 07:21:44:694 - info: [ADB] Using adb.exe from C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe
+2018-03-28 07:21:44:694 - info: [AndroidDriver] Retrieving device list
+2018-03-28 07:21:44:694 - info: [debug] [ADB] Trying to find a connected android device
+2018-03-28 07:21:44:695 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:48:768 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:48:769 - info: [AndroidDriver] Looking for a device with Android '6.0.1'
+2018-03-28 07:21:48:770 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:21:48:771 - info: [ADB] Getting device platform version
+2018-03-28 07:21:48:773 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:48:793 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:48:795 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.build.version.release"]
+2018-03-28 07:21:48:903 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-28 07:21:48:904 - info: [AndroidDriver] Using device: 0628a315002e172e
+2018-03-28 07:21:48:904 - info: [ADB] Checking whether adb is present
+2018-03-28 07:21:48:905 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:21:48:906 - info: [BaseDriver] Using local app 'C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk'
+2018-03-28 07:21:48:907 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-03-28 07:21:48:907 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-03-28 07:21:48:908 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:48:929 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:48:929 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","am","force-stop","io.appium.unlock"]
+2018-03-28 07:21:49:912 - info: [debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2018-03-28 07:21:49:914 - error: [MJSONWP] Encountered internal error running command: Error: The application at 'C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk' does not exist or is not accessible
+    at Object.configureApp$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\helpers.js:39:13)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+2018-03-28 07:21:49:916 - info: [HTTP] <-- POST /wd/hub/session 500 5327 ms - 290 
+2018-03-28 07:21:49:931 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}}
+2018-03-28 07:21:49:931 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},{},null]
+2018-03-28 07:21:49:932 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1522221709932 (12:21:49 GMT+0500 (Pakistan Standard Time))
+2018-03-28 07:21:49:932 - info: [Appium] Creating new AndroidDriver (v1.37.0) session
+2018-03-28 07:21:49:932 - info: [Appium] Capabilities:
+2018-03-28 07:21:49:932 - info: [Appium]   app: C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk
+2018-03-28 07:21:49:932 - info: [Appium]   appPackage: co.miracletek.miracle.prd
+2018-03-28 07:21:49:932 - info: [Appium]   appActivity: md5416f8fc9705f945d05f173ad9594b81d.SplashActivity
+2018-03-28 07:21:49:933 - info: [Appium]   platformVersion: 6.0.1
+2018-03-28 07:21:49:933 - info: [Appium]   platformName: Android
+2018-03-28 07:21:49:933 - info: [Appium]   deviceName: 0628a315002e172e
+2018-03-28 07:21:49:935 - info: [BaseDriver] Session created with session id: d7e31901-9e70-4382-a331-6aa9e51b3cf8
+2018-03-28 07:21:49:936 - info: [debug] [AndroidDriver] Getting Java version
+2018-03-28 07:21:50:011 - info: [AndroidDriver] Java version is: 1.8.0_121
+2018-03-28 07:21:50:012 - info: [ADB] Checking whether adb is present
+2018-03-28 07:21:50:012 - info: [AndroidDriver] Retrieving device list
+2018-03-28 07:21:50:012 - info: [debug] [ADB] Trying to find a connected android device
+2018-03-28 07:21:50:012 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:50:031 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:50:032 - info: [AndroidDriver] Looking for a device with Android '6.0.1'
+2018-03-28 07:21:50:032 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:21:50:032 - info: [ADB] Getting device platform version
+2018-03-28 07:21:50:032 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:50:051 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:50:052 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.build.version.release"]
+2018-03-28 07:21:50:149 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-28 07:21:50:149 - info: [AndroidDriver] Using device: 0628a315002e172e
+2018-03-28 07:21:50:149 - info: [ADB] Checking whether adb is present
+2018-03-28 07:21:50:150 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:21:50:150 - info: [BaseDriver] Using local app 'C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk'
+2018-03-28 07:21:50:150 - info: [debug] [AndroidDriver] Shutting down Android driver
+2018-03-28 07:21:50:150 - info: [debug] [AndroidDriver] Called deleteSession but bootstrap wasn't active
+2018-03-28 07:21:50:151 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:21:50:170 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:21:50:170 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","am","force-stop","io.appium.unlock"]
+2018-03-28 07:21:51:049 - info: [debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2018-03-28 07:21:51:050 - error: [MJSONWP] Encountered internal error running command: Error: The application at 'C:\Users\stabassum\Documents\GitHub\AppiumTestProject\co.miracletek.miracle.prd-Signed.apk' does not exist or is not accessible
+    at Object.configureApp$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\helpers.js:39:13)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+2018-03-28 07:21:51:050 - info: [HTTP] <-- POST /wd/hub/session 500 1119 ms - 290 
+2018-03-28 07:21:51:052 - info: [HTTP] --> POST /wd/hub/session {"capabilities":{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}}}
+2018-03-28 07:21:51:052 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [null,null,{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\co.miracletek.miracle.prd-Signed.apk","appPackage":"co.miracletek.miracle.prd","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","platformVersion":"6.0.1","platformName":"Android","deviceName":"0628a315002e172e"},"requiredCapabilities":{}}]
+2018-03-28 07:21:51:053 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1522221711052 (12:21:51 GMT+0500 (Pakistan Standard Time))
+2018-03-28 07:21:51:053 - info: [Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"C:\\Users\\staba... into desiredCapabilities object {}
+2018-03-28 07:21:51:077 - error: [MJSONWP] Encountered internal error running command: Error: You must include a platformName capability
+    at AppiumDriver.getDriverForCaps (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\lib\appium.js:66:13)
+    at AppiumDriver.createSession$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\lib\appium.js:192:28)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (<anonymous>)
+    at new F (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at AppiumDriver.createSession (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\build\lib\appium.js:290:34)
+    at AppiumDriver.executeCommand$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\driver.js:264:27)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (<anonymous>)
+    at new F (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at AppiumDriver.executeCommand (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\basedriver\driver.js:245:34)
+    at AppiumDriver.executeCommand$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\lib\appium.js:26:19)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (<anonymous>)
+    at new F (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at AppiumDriver.executeCommand (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\build\lib\appium.js:617:34)
+    at asyncHandler$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\mjsonwp\mjsonwp.js:278:48)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (<anonymous>)
+    at new F (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\mjsonwp\mjsonwp.js:349:32)
+    at C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\mjsonwp\mjsonwp.js:356:15
+    at Layer.handle [as handle_request] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1055:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2018-03-28 07:21:51:078 - info: [HTTP] <-- POST /wd/hub/session 500 25 ms - 179 

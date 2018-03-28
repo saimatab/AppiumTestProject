@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 11.349 sec <<< FAILURE! - in TestSuite
+getResult(au.com.miracletek.tests.FinalSmokeTests)  Time elapsed: 0.021 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at au.com.miracletek.tests.FinalSmokeTests.getResult(FinalSmokeTests.java:150)
+

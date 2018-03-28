@@ -1,0 +1,403 @@
+2018-03-28 07:27:30:408 - info: [Appium] Welcome to Appium v1.7.2
+2018-03-28 07:27:30:409 - info: [Appium] Non-default server args:
+2018-03-28 07:27:30:410 - info: [Appium]   address: 127.0.0.1
+2018-03-28 07:27:30:410 - info: [Appium]   log: C:\Users\stabassum\Documents\GitHub\AppiumTestProject\Logs\Appium\appiumServer_logs_28 Mar 2018 12_27_17.log
+2018-03-28 07:27:30:422 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2018-03-28 07:27:30:550 - info: [HTTP] --> GET /wd/hub/status {}
+2018-03-28 07:27:30:551 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2018-03-28 07:27:30:585 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.7.2","revision":null}}
+2018-03-28 07:27:30:588 - info: [HTTP] <-- GET /wd/hub/status 200 37 ms - 72 
+2018-03-28 07:27:31:334 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"Android","platformVersion":"6.0.1"},"capabilities":{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"Android","platformVersion":"6.0.1"},"firstMatch":[{"platformName":"android"}]}}
+2018-03-28 07:27:31:335 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"Android","platformVersion":"6.0.1"},null,{"desiredCapabilities":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"Android","platformVersion":"6.0.1"},"firstMatch":[{"platformName":"android"}]}]
+2018-03-28 07:27:31:336 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1522222051335 (12:27:31 GMT+0500 (Pakistan Standard Time))
+2018-03-28 07:27:31:336 - info: [Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"C:\\Users\\staba... into desiredCapabilities object {"app":"C:\\Users\\stabassum\\Documents\\GitHub...
+2018-03-28 07:27:31:339 - info: [Appium] Creating new AndroidDriver (v1.37.0) session
+2018-03-28 07:27:31:339 - info: [Appium] Capabilities:
+2018-03-28 07:27:31:339 - info: [Appium]   app: C:\Users\stabassum\Documents\GitHub\AppiumTestProject\apk\co.miracletek.miracle.prd-Signed.apk
+2018-03-28 07:27:31:339 - info: [Appium]   appActivity: md5416f8fc9705f945d05f173ad9594b81d.SplashActivity
+2018-03-28 07:27:31:339 - info: [Appium]   appPackage: co.miracletek.miracle.prd
+2018-03-28 07:27:31:339 - info: [Appium]   deviceName: 0628a315002e172e
+2018-03-28 07:27:31:339 - info: [Appium]   platformName: android
+2018-03-28 07:27:31:340 - info: [Appium]   platformVersion: 6.0.1
+2018-03-28 07:27:31:346 - info: [BaseDriver] Session created with session id: 9d935fd6-5e02-4e77-9db6-02ccabfe8c10
+2018-03-28 07:27:31:346 - info: [debug] [AndroidDriver] Getting Java version
+2018-03-28 07:27:31:457 - info: [AndroidDriver] Java version is: 1.8.0_121
+2018-03-28 07:27:31:459 - info: [ADB] Checking whether adb is present
+2018-03-28 07:27:31:467 - info: [ADB] Using adb.exe from C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe
+2018-03-28 07:27:31:467 - info: [AndroidDriver] Retrieving device list
+2018-03-28 07:27:31:468 - info: [debug] [ADB] Trying to find a connected android device
+2018-03-28 07:27:31:468 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:35:619 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:35:619 - info: [AndroidDriver] Looking for a device with Android '6.0.1'
+2018-03-28 07:27:35:619 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:27:35:620 - info: [ADB] Getting device platform version
+2018-03-28 07:27:35:620 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:35:641 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:35:642 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.build.version.release"]
+2018-03-28 07:27:35:763 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-28 07:27:35:764 - info: [AndroidDriver] Using device: 0628a315002e172e
+2018-03-28 07:27:35:765 - info: [ADB] Checking whether adb is present
+2018-03-28 07:27:35:766 - info: [debug] [ADB] Setting device id to 0628a315002e172e
+2018-03-28 07:27:35:768 - info: [BaseDriver] Using local app 'C:\Users\stabassum\Documents\GitHub\AppiumTestProject\apk\co.miracletek.miracle.prd-Signed.apk'
+2018-03-28 07:27:35:770 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2018-03-28 07:27:35:773 - info: [AndroidDriver] Starting Android session
+2018-03-28 07:27:35:775 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","wait-for-device"]
+2018-03-28 07:27:35:812 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:35:833 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:35:833 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","echo","ping"]
+2018-03-28 07:27:35:864 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-03-28 07:27:35:864 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-03-28 07:27:35:865 - info: [debug] [Logcat] Starting logcat capture
+2018-03-28 07:27:35:903 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-03-28 07:27:35:904 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-03-28 07:27:35:904 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:35:928 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:35:929 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","list","packages","io.appium.settings"]
+2018-03-28 07:27:36:661 - info: [debug] [ADB] App is not installed
+2018-03-28 07:27:36:661 - info: [debug] [ADB] App 'C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk' not installed. Installing
+2018-03-28 07:27:36:662 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","install","C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\io.appium.settings\\app\\build\\outputs\\apk\\settings_apk-debug.apk"]
+2018-03-28 07:27:37:619 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:37:640 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:37:640 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.build.version.sdk"]
+2018-03-28 07:27:37:696 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 23
+2018-03-28 07:27:37:696 - info: [debug] [ADB] Device API level: 23
+2018-03-28 07:27:37:696 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:37:717 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:37:717 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","dumpsys","package","io.appium.settings"]
+2018-03-28 07:27:37:776 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:37:795 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:37:796 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","dump","io.appium.settings"]
+2018-03-28 07:27:39:049 - info: [debug] [ADB] Got the following command chunks to execute: pm,grant,io.appium.settings,android.permission.WRITE_SETTINGS,;,pm,grant,io.appium.settings,android.permission.ACCESS_MOCK_LOCATION,;
+2018-03-28 07:27:39:049 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:39:070 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:39:070 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","grant","io.appium.settings","android.permission.WRITE_SETTINGS",";","pm","grant","io.appium.settings","android.permission.ACCESS_MOCK_LOCATION",";"]
+2018-03-28 07:27:40:442 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:40:464 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:40:464 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","ps"]
+2018-03-28 07:27:40:619 - info: [debug] [ADB] Device API level: 23
+2018-03-28 07:27:40:620 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:40:641 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:40:642 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","am","start","-W","-n","io.appium.settings/.Settings","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-03-28 07:27:41:534 - error: [ADB] Error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity
+    at Object.wrappedLogger.errorAndThrow (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-support\lib\logging.js:69:13)
+    at ADB.callee$0$0$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\tools\apk-utils.js:89:13)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+ Error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity
+    at Object.wrappedLogger.errorAndThrow (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-support\lib\logging.js:69:13)
+    at ADB.callee$0$0$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\tools\apk-utils.js:89:13)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+2018-03-28 07:27:41:535 - error: [ADB] Error: Error occured while starting App. Original error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity
+    at Object.wrappedLogger.errorAndThrow (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-support\lib\logging.js:69:13)
+    at ADB.callee$0$0$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\tools\apk-utils.js:101:9)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+ Error: Error occured while starting App. Original error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity
+    at Object.wrappedLogger.errorAndThrow (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-support\lib\logging.js:69:13)
+    at ADB.callee$0$0$ (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\tools\apk-utils.js:101:9)
+    at tryCatch (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (C:\Users\stabassum\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at <anonymous>
+2018-03-28 07:27:41:535 - warn: [AndroidDriver] Failed to launch settings app: Error occured while starting App. Original error: Activity used to start app doesn't exist or cannot be launched! Make sure it exists and is a launchable activity
+2018-03-28 07:27:41:536 - info: [debug] [ADB] Device API level: 23
+2018-03-28 07:27:41:536 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:41:557 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:41:557 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","appops","set","io.appium.settings","android:mock_location","allow"]
+2018-03-28 07:27:42:443 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-03-28 07:27:42:443 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-03-28 07:27:42:443 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:42:464 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:42:465 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","list","packages","io.appium.unlock"]
+2018-03-28 07:27:43:233 - info: [debug] [ADB] App is installed
+2018-03-28 07:27:43:233 - info: [debug] [ADB] Getting package info for io.appium.unlock
+2018-03-28 07:27:43:233 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:43:255 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:43:255 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","dumpsys","package","io.appium.unlock"]
+2018-03-28 07:27:43:330 - info: [ADB] Checking whether aapt is present
+2018-03-28 07:27:43:344 - info: [ADB] Using aapt.exe from C:\Users\stabassum\AppData\Local\Android\sdk\build-tools\25.0.2\aapt.exe
+2018-03-28 07:27:43:362 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade (2 >= 2)
+2018-03-28 07:27:43:363 - info: [ADB] Getting device platform version
+2018-03-28 07:27:43:363 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:43:384 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:43:384 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.build.version.release"]
+2018-03-28 07:27:43:454 - info: [debug] [ADB] Current device property 'ro.build.version.release': 6.0.1
+2018-03-28 07:27:43:454 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:43:476 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:43:476 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","wm","size"]
+2018-03-28 07:27:44:482 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:44:501 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:44:501 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.product.model"]
+2018-03-28 07:27:44:567 - info: [debug] [ADB] Current device property 'ro.product.model': Nexus 5
+2018-03-28 07:27:44:568 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:44:598 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:44:598 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","ro.product.manufacturer"]
+2018-03-28 07:27:44:707 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': LGE
+2018-03-28 07:27:44:968 - info: [AndroidDriver] Remote apk path is /data/local/tmp/2868753962f0ad8ddedea02a50e59358.apk
+2018-03-28 07:27:44:969 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:45:023 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:45:023 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","ls","/data/local/tmp/2868753962f0ad8ddedea02a50e59358.apk"]
+2018-03-28 07:27:45:131 - info: [debug] [AndroidDriver] Checking if app is installed
+2018-03-28 07:27:45:131 - info: [debug] [ADB] Getting install status for co.miracletek.miracle.prd
+2018-03-28 07:27:45:132 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:45:165 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:45:166 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","list","packages","co.miracletek.miracle.prd"]
+2018-03-28 07:27:45:877 - info: [debug] [ADB] App is installed
+2018-03-28 07:27:45:877 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2018-03-28 07:27:45:879 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2018-03-28 07:27:45:879 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:45:909 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:45:909 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","am","force-stop","co.miracletek.miracle.prd"]
+2018-03-28 07:27:46:842 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:46:863 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:46:864 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","pm","clear","co.miracletek.miracle.prd"]
+2018-03-28 07:27:47:636 - info: [debug] [AndroidDriver] Extracting strings from apk C:\Users\stabassum\Documents\GitHub\AppiumTestProject\apk\co.miracletek.miracle.prd-Signed.apk null C:\Users\STABAS~1\AppData\Local\Temp\co.miracletek.miracle.prd
+2018-03-28 07:27:47:637 - info: [debug] [ADB] Extracting strings for language: default
+2018-03-28 07:27:47:637 - info: [debug] [ADB] Device API level: 23
+2018-03-28 07:27:47:637 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:47:656 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:47:656 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","getprop","persist.sys.locale"]
+2018-03-28 07:27:47:707 - info: [debug] [ADB] Current device property 'persist.sys.locale': en-US
+2018-03-28 07:27:48:390 - info: [debug] [ADB] No strings.xml for language 'en', getting default strings.xml
+2018-03-28 07:27:49:051 - info: [debug] [ADB] Reading strings from converted strings.json
+2018-03-28 07:27:49:053 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","push","C:\\Users\\STABAS~1\\AppData\\Local\\Temp\\co.miracletek.miracle.prd\\strings.json","/data/local/tmp"]
+2018-03-28 07:27:49:090 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2018-03-28 07:27:49:091 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2018-03-28 07:27:49:091 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","forward","tcp:4724","tcp:4724"]
+2018-03-28 07:27:49:095 - info: [debug] [UiAutomator] Starting UiAutomator
+2018-03-28 07:27:49:095 - info: [debug] [UiAutomator] Moving to state 'starting'
+2018-03-28 07:27:49:095 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2018-03-28 07:27:49:096 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2018-03-28 07:27:49:096 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","push","C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2018-03-28 07:27:49:153 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2018-03-28 07:27:49:154 - info: [debug] [ADB] Getting all processes with uiautomator
+2018-03-28 07:27:49:154 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:49:175 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:49:175 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","ps"]
+2018-03-28 07:27:49:330 - info: [ADB] No uiautomator process found to kill, continuing...
+2018-03-28 07:27:49:330 - info: [debug] [UiAutomator] Starting UIAutomator
+2018-03-28 07:27:49:330 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","0628a315002e172e","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","co.miracletek.miracle.prd","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2018-03-28 07:27:50:138 - info: [debug] [UiAutomator] Moving to state 'online'
+2018-03-28 07:27:50:139 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2018-03-28 07:27:50:141 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2018-03-28 07:27:50:142 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2018-03-28 07:27:50:143 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:50:147 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2018-03-28 07:27:50:165 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:50:165 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","dumpsys","window"]
+2018-03-28 07:27:50:243 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2018-03-28 07:27:50:244 - info: [debug] [ADB] Device API level: 23
+2018-03-28 07:27:50:244 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:50:264 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:50:265 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","am","start","-W","-n","co.miracletek.miracle.prd/md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2018-03-28 07:27:54:291 - info: [Appium] New AndroidDriver session created successfully, session 9d935fd6-5e02-4e77-9db6-02ccabfe8c10 added to master session list
+2018-03-28 07:27:54:292 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1522222074291 (12:27:54 GMT+0500 (Pakistan Standard Time))
+2018-03-28 07:27:54:292 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1"},"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1","deviceUDID":"0628a315002e172e","deviceScreenSize":"1080x1920","deviceModel":"Nexus 5","deviceManufacturer":"LGE"}
+2018-03-28 07:27:54:292 - info: [HTTP] <-- POST /wd/hub/session 200 22958 ms - 995 
+2018-03-28 07:27:54:328 - info: [HTTP] --> GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10 {}
+2018-03-28 07:27:54:328 - info: [debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:54:333 - info: [debug] [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1"},"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1","deviceUDID":"0628a315002e172e","deviceScreenSize":"1080x1920","deviceModel":"Nexus 5","deviceManufacturer":"LGE"}
+2018-03-28 07:27:54:333 - info: [HTTP] <-- GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10 200 4 ms - 995 
+2018-03-28 07:27:54:340 - info: [HTTP] --> GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10 {}
+2018-03-28 07:27:54:340 - info: [debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:54:342 - info: [debug] [MJSONWP] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1"},"app":"C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\apk\\co.miracletek.miracle.prd-Signed.apk","appActivity":"md5416f8fc9705f945d05f173ad9594b81d.SplashActivity","appPackage":"co.miracletek.miracle.prd","deviceName":"0628a315002e172e","platformName":"android","platformVersion":"6.0.1","deviceUDID":"0628a315002e172e","deviceScreenSize":"1080x1920","deviceModel":"Nexus 5","deviceManufacturer":"LGE"}
+2018-03-28 07:27:54:342 - info: [HTTP] <-- GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10 200 3 ms - 995 
+2018-03-28 07:27:54:386 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/timeouts {"type":"implicit","ms":10000}
+2018-03-28 07:27:54:386 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",10000,"9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:54:387 - info: [debug] [BaseDriver] Set implicit wait to 10000ms
+2018-03-28 07:27:54:388 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2018-03-28 07:27:54:389 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/timeouts 200 3 ms - 76 
+2018-03-28 07:27:54:667 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element {"using":"id","value":"appEntryId"}
+2018-03-28 07:27:54:667 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","appEntryId","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:54:668 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:27:54:668 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:27:54:669 - info: [debug] [BaseDriver] Waiting up to 10000 ms for condition
+2018-03-28 07:27:54:670 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:54:673 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:54:673 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:54:673 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:27:54:673 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:54:673 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:54:675 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:54:677 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:54:715 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:54:720 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2018-03-28 07:27:54:721 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:54:722 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:54:725 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:54:727 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:54:729 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:54:740 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"No element found"}
+2018-03-28 07:27:54:741 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:54:743 - info: [debug] [BaseDriver] Waited for 74 ms so far
+2018-03-28 07:27:55:246 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:55:250 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:55:250 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:55:251 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:27:55:251 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:55:252 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:55:263 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:55:272 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:55:279 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:55:286 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2018-03-28 07:27:55:287 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:55:287 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:55:294 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:55:301 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:55:308 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:55:315 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"No element found"}
+2018-03-28 07:27:55:316 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:55:316 - info: [debug] [BaseDriver] Waited for 647 ms so far
+2018-03-28 07:27:55:817 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:55:827 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:55:828 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:55:828 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:27:55:829 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:55:829 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:55:867 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:55:896 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:55:925 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:55:960 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2018-03-28 07:27:55:961 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:55:963 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:55:973 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:55:986 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:55:997 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:56:003 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"No element found"}
+2018-03-28 07:27:56:003 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:56:004 - info: [debug] [BaseDriver] Waited for 1334 ms so far
+2018-03-28 07:27:56:506 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:56:510 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"appEntryId","context":"","multiple":false}}
+2018-03-28 07:27:56:510 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:56:511 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:27:56:511 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'appEntryId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:56:512 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/appEntryId]
+2018-03-28 07:27:58:208 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/appEntryId]
+2018-03-28 07:27:58:701 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=appEntryId]
+2018-03-28 07:27:58:799 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=appEntryId, INSTANCE=0]
+2018-03-28 07:27:58:814 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+2018-03-28 07:27:58:815 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:58:817 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"1"}
+2018-03-28 07:27:58:819 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element 200 4152 ms - 87 
+2018-03-28 07:27:58:825 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element {"using":"id","value":"proceedButtonId"}
+2018-03-28 07:27:58:826 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","proceedButtonId","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:58:826 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:27:58:826 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:27:58:826 - info: [debug] [BaseDriver] Waiting up to 10000 ms for condition
+2018-03-28 07:27:58:826 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"proceedButtonId","context":"","multiple":false}}
+2018-03-28 07:27:58:830 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"proceedButtonId","context":"","multiple":false}}
+2018-03-28 07:27:58:830 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:58:830 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:27:58:830 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'proceedButtonId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:27:58:830 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/proceedButtonId]
+2018-03-28 07:27:58:838 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/proceedButtonId]
+2018-03-28 07:27:58:863 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=proceedButtonId]
+2018-03-28 07:27:58:963 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=proceedButtonId, INSTANCE=0]
+2018-03-28 07:27:58:991 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+2018-03-28 07:27:58:992 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:58:993 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"2"}
+2018-03-28 07:27:58:995 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element 200 168 ms - 87 
+2018-03-28 07:27:59:002 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/appium/element/1/value {"id":"1","value":"automation"}
+2018-03-28 07:27:59:003 - info: [debug] [MJSONWP] Calling AppiumDriver.setValueImmediate() with args: ["automation","1","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:27:59:004 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+2018-03-28 07:27:59:006 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+2018-03-28 07:27:59:006 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:27:59:006 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-28 07:27:59:188 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-28 07:27:59:188 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:27:59:190 - info: [debug] [ADB] Getting connected devices...
+2018-03-28 07:27:59:217 - info: [debug] [ADB] 1 device(s) connected
+2018-03-28 07:27:59:217 - info: [debug] [ADB] Running 'C:\Users\stabassum\AppData\Local\Android\sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","0628a315002e172e","shell","input","text","automation"]
+2018-03-28 07:28:00:349 - info: [debug] [MJSONWP] Responding to client with driver.setValueImmediate() result: null
+2018-03-28 07:28:00:349 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/appium/element/1/value 200 1348 ms - 76 
+2018-03-28 07:28:00:353 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element {"using":"id","value":"logoImageId"}
+2018-03-28 07:28:00:353 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","logoImageId","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:28:00:353 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:28:00:354 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:28:00:354 - info: [debug] [BaseDriver] Waiting up to 10000 ms for condition
+2018-03-28 07:28:00:354 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"logoImageId","context":"","multiple":false}}
+2018-03-28 07:28:00:356 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"logoImageId","context":"","multiple":false}}
+2018-03-28 07:28:00:356 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:28:00:356 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:28:00:356 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'logoImageId' using 'ID' with the contextId: '' multiple: false
+2018-03-28 07:28:00:356 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/logoImageId]
+2018-03-28 07:28:00:635 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/logoImageId]
+2018-03-28 07:28:00:666 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=logoImageId]
+2018-03-28 07:28:00:754 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=logoImageId, INSTANCE=0]
+2018-03-28 07:28:00:802 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
+2018-03-28 07:28:00:802 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:28:00:804 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"3"}
+2018-03-28 07:28:00:805 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element 200 452 ms - 87 
+2018-03-28 07:28:00:812 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/3/click {"id":"3"}
+2018-03-28 07:28:00:813 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:28:00:814 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
+2018-03-28 07:28:00:817 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
+2018-03-28 07:28:00:817 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:28:00:818 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-28 07:28:01:053 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-28 07:28:01:058 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:28:01:059 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2018-03-28 07:28:01:061 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/3/click 200 248 ms - 76 
+2018-03-28 07:28:01:070 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/elements {"using":"id","value":"proceedButtonId"}
+2018-03-28 07:28:01:071 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","proceedButtonId","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:28:01:071 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:28:01:071 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-03-28 07:28:01:071 - info: [debug] [BaseDriver] Waiting up to 10000 ms for condition
+2018-03-28 07:28:01:072 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"proceedButtonId","context":"","multiple":true}}
+2018-03-28 07:28:01:075 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"proceedButtonId","context":"","multiple":true}}
+2018-03-28 07:28:01:076 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:28:01:077 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2018-03-28 07:28:01:078 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'proceedButtonId' using 'ID' with the contextId: '' multiple: true
+2018-03-28 07:28:01:078 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=co.miracletek.miracle.prd:id/proceedButtonId]
+2018-03-28 07:28:01:078 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=co.miracletek.miracle.prd:id/proceedButtonId]
+2018-03-28 07:28:01:078 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2018-03-28 07:28:01:079 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=co.miracletek.miracle.prd:id/proceedButtonId]
+2018-03-28 07:28:01:693 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=android:id/proceedButtonId]
+2018-03-28 07:28:01:693 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=android:id/proceedButtonId]
+2018-03-28 07:28:01:694 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2018-03-28 07:28:01:694 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=android:id/proceedButtonId]
+2018-03-28 07:28:01:809 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=proceedButtonId]
+2018-03-28 07:28:01:810 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=proceedButtonId]
+2018-03-28 07:28:01:810 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2018-03-28 07:28:01:827 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=proceedButtonId]
+2018-03-28 07:28:01:840 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[DESCRIPTION=proceedButtonId]
+2018-03-28 07:28:01:840 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[DESCRIPTION=proceedButtonId]
+2018-03-28 07:28:01:840 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2018-03-28 07:28:01:841 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=proceedButtonId, INSTANCE=0]
+2018-03-28 07:28:01:861 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2018-03-28 07:28:01:861 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[DESCRIPTION=proceedButtonId, INSTANCE=1]
+2018-03-28 07:28:01:881 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"4"}]}
+2018-03-28 07:28:01:881 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:28:01:882 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"4"}]
+2018-03-28 07:28:01:883 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/elements 200 813 ms - 89 
+2018-03-28 07:28:01:897 - info: [HTTP] --> GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/4/displayed {}
+2018-03-28 07:28:01:898 - info: [debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["4","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:28:01:899 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
+2018-03-28 07:28:01:902 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
+2018-03-28 07:28:01:903 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:28:01:903 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+2018-03-28 07:28:01:953 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
+2018-03-28 07:28:01:953 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:28:01:954 - info: [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
+2018-03-28 07:28:01:954 - info: [HTTP] <-- GET /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/4/displayed 200 57 ms - 76 
+2018-03-28 07:28:01:958 - info: [HTTP] --> POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/4/click {"id":"4"}
+2018-03-28 07:28:01:958 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","9d935fd6-5e02-4e77-9db6-02ccabfe8c10"]
+2018-03-28 07:28:01:958 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2018-03-28 07:28:01:961 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2018-03-28 07:28:01:961 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2018-03-28 07:28:01:961 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2018-03-28 07:28:02:429 - info: [debug] [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2018-03-28 07:28:02:429 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2018-03-28 07:28:02:430 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2018-03-28 07:28:02:430 - info: [HTTP] <-- POST /wd/hub/session/9d935fd6-5e02-4e77-9db6-02ccabfe8c10/element/4/click 200 472 ms - 76 
