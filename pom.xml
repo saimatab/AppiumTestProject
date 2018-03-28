@@ -221,7 +221,7 @@
               <suiteXmlFiles>
                 <suiteXmlFile>Nexus5.xml</suiteXmlFile>
               </suiteXmlFiles>
-              <reportsDirectory>./test-output/report_${maven.build.timestamp}</reportsDirectory>
+              <reportsDirectory>test-output/report_${maven.build.timestamp}</reportsDirectory>
             </configuration>
           </execution>
         </executions>
