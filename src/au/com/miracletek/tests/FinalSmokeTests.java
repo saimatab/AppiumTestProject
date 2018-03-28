@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 import java.io.File;
 import static org.apache.commons.io.comparator.LastModifiedFileComparator.*;
 
+import java.util.Map;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -110,10 +111,28 @@ public class FinalSmokeTests {
 			String bundle_id, String ip_address, int port) {
 		 SimpleDateFormat  df = new SimpleDateFormat("dd MMM yyyy HH_mm_ss");
 		 String dtime =df.format(new Date());
+		 
+		String nodepath =System.getenv("APPIUM_NODE_PATH");
+		
+		System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +nodepath);
+		 
+		String jspath =System.getenv("APPIUM_JS_PATH");
+		
+		System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +jspath);
+
+		
+	/*	appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
+				.usingPort(port).usingDriverExecutable(new File(nodepath))
+				.withAppiumJS(new File(jspath)).withLogFile(new  File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\Logs\\Appium\\appiumServer_logs_"+dtime+".log")));
+			appiumService.start();*/
+	 String appiumlog= System.getProperty("user.dir")+"\\Logs\\Appium\\appiumServer_logs_" +dtime+".log";
+		
 		appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
-				.usingPort(port).usingDriverExecutable(new File(Constants.APPIUM_NODE_PATH))
-				.withAppiumJS(new File(Constants.APPIUM_JS_PATH)).withLogFile(new  File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\Logs\\Appium\\appiumServer_logs_"+dtime+".log")));
+				.usingPort(port).usingDriverExecutable(new File(nodepath))
+				.withAppiumJS(new File(jspath)).withLogFile(new  File(appiumlog)));
 		appiumService.start();
+		
+		
 		config = new DriverConfig(platform, platform_name, platform_version, device_name, app_path, app_package,
 				app_activity, ud_id, bundle_id, ip_address, port);
 	}
@@ -136,9 +155,12 @@ public class FinalSmokeTests {
 		
 		try{
 		BasePage bp=new 	BasePage();
+		 String testout= System.getProperty("user.dir")+"\\test-output";
+			
+			
 		
-		
-		   File dir = new File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\test-output");
+		//   File dir = new File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\test-output");
+		 File dir = new File(testout);
            File[] files = dir.listFiles();
           
            System.out.println("Descending order.");
@@ -259,9 +281,17 @@ public class FinalSmokeTests {
 			 log1.debug("DEBBGUG" );
 				log.info("***********************************************************************************************************************************Entered Username......");
 				      log.info("***********************************************************************************************************************************Entered Username......");
-			      String scrFolder = "C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\ScreenShots\\"
+			     /* String scrFolder = "C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\ScreenShots\\"
 			              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
-			                      Calendar.getInstance().getTime()).toString();
+			                      Calendar.getInstance().getTime()).toString();*/
+			      
+			      
+			      
+			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
+					
+			 	   String scrFolder = scshot
+				              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
+				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
 		        appCodePage.enterAppCodeAndProceed("automation");

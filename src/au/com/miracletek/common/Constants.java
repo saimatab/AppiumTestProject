@@ -9,15 +9,18 @@ public class Constants {
 	public static final String appCodeEntry = "appEntryId";
 	public static final String proceedButton = "proceedButtonId";
 	
-	//public static final String APPIUM_SERVER_URL = "http://0.0.0.0:4723/wd/hub";
-	
-	// windows setup
-	///public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
-//public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+
 //final
 	
-	public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
+	//public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
+//public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+
+
+public static final String APPIUM_NODE_PATH="C:\\Program Files\\nodejs\\node.exe";
 public static final String APPIUM_JS_PATH="C:\\Users\\stabassum\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+
+
+
 
 	// mac setup
 	
