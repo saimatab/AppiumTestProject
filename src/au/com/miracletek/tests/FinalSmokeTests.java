@@ -734,6 +734,55 @@ public class FinalSmokeTests {
 	
 	
 	
+	@Test(enabled = true)
+	public void Test02() throws Exception 
+	{
+		
+			shell=new ShellPage(manager.getDriver(), config.getPlatform());
+			form1=new AutomationTestForm(manager.getDriver(), config.getPlatform());
+		    drafts=new  DraftsPage(manager.getDriver(), config.getPlatform());
+		    sync=new  	SyncPageBlank(manager.getDriver(), config.getPlatform());
+		    settings  =new SettingsPage(manager.getDriver(), config.getPlatform());
+			 advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());
+			  notify=new  NotificationsPage(manager.getDriver(), config.getPlatform());
+		        extlogger = extent.startTest("Test02");
+			 form1.navigateUp(config);
+		     Thread.sleep(2000);
+		    shell.clickSettings(config);
+
+		    settings.clickAdvanced();   
+		 	advSettings.SelectPageToUpdateAndroid("2",config);
+		 	advSettings.updateSelectedPage();
+		    String actualValue3=form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='3/3 pages updated successfully']")).getText();
+
+				
+		    Thread.sleep(3000);
+		    advSettings.updateMetaData();
+		  
+			Thread.sleep(4000);
+			
+		    form1.navigateUp(config);
+			settings.updateApp();
+			settings.clickProceedAndroid();
+		
+			
+					Thread.sleep(5000);
+		    settings.deviceBack();
+		    Thread.sleep(5000);
+		   	 //shell.clickNotifications(config);
+			 //notify.Remove("1", config);
+			 s_assert.assertEquals(actualValue3, "3/3 pages updated successfully");
+			extlogger.log(LogStatus.FAIL, "Test Case Failed");
+			extent.endTest(extlogger);
+	        
+		//} 
+			/*catch (Exception e) {
+
+			e.printStackTrace();
+			extlogger.log(LogStatus.PASS, "Test Case Failed is Test11");
+		}*/
+	}
+	
 	
 
 }
