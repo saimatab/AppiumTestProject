@@ -148,8 +148,7 @@ public class FinalSmokeTests {
 		}
 		// ending test
 		//endTest(logger) : It ends the current test and prepares to create HTML report
-		extent.flush();
-		extent.close();
+	
 	}
 
 	@AfterSuite
@@ -711,7 +710,7 @@ public class FinalSmokeTests {
 					         	
 				         	
 		         	
-		        extlogger = extent.startTest("Test01");
+		
 		String actualValue =form1.findElementByXpath("//android.widget.TextView[@text='dd']").getText();
 		        s_assert.assertEquals(actualValue, "dd");
 				//Assert.assertTrue(true);
