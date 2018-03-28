@@ -1,0 +1,19 @@
+<assembly>
+    <id>resources</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+<includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <!-- Take everything inside the directories folder -->
+         			<directory>test-output\report_${timestamp}\html</directory>
+         			        <excludes>
+          <exclude>**/*.js</exclude>
+  
+        </excludes>
+            <!-- And place it inside the root of the zip file -->
+          <outputDirectory>crunch-output</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

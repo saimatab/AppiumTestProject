@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Demo"
+           tests="6"
+           failures="1"
+           errors="0"
+           skipped="5"
+           time="0.001">
+  <properties />
+            <testcase name="setupDriverConfigAndStartAppiumServer" time="0.000" classname="au.com.miracletek.tests.FinalSmokeTests">
+                <failure type="java.lang.IllegalStateException"
+                  message="The driver executable is a directory: C:\Program Files\Java\jdk1.8.0_121"
+              >
+<![CDATA[java.lang.IllegalStateException: The driver executable is a directory: C:\Program Files\Java\jdk1.8.0_121
+  com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+  org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:138)
+  org.openqa.selenium.remote.service.DriverService$Builder.usingDriverExecutable(DriverService.java:265)
+  io.appium.java_client.service.local.AppiumServiceBuilder.usingDriverExecutable(AppiumServiceBuilder.java:444)
+  au.com.miracletek.tests.FinalSmokeTests.setupDriverConfigAndStartAppiumServer(FinalSmokeTests.java:131)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:298)
+  org.testng.SuiteRunner.run(SuiteRunner.java:261)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+  org.testng.TestNG.run(TestNG.java:1048)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="setupDriver" time="0.0" classname="au.com.miracletek.tests.FinalSmokeTests">
+          <skipped />
+    </testcase>
+            <testcase name="getResult" time="0.0" classname="au.com.miracletek.tests.FinalSmokeTests">
+          <skipped />
+    </testcase>
+            <testcase name="stopDriver" time="0.0" classname="au.com.miracletek.tests.FinalSmokeTests">
+          <skipped />
+    </testcase>
+            <testcase name="closeAppiumServer" time="0.0" classname="au.com.miracletek.tests.FinalSmokeTests">
+          <skipped />
+    </testcase>
+            <testcase name="Test01" time="0.0" classname="au.com.miracletek.tests.FinalSmokeTests">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

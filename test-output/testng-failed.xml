@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="device_name" value="0628a315002e172e"/>
+  <parameter name="platform_version" value="6.0.1"/>
+  <parameter name="ud_id" value=""/>
+  <parameter name="port" value="4723"/>
+  <parameter name="app_package" value="co.miracletek.miracle.prd"/>
+  <parameter name="bundle_id" value=""/>
+  <parameter name="platform_name" value="Android"/>
+  <parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk"/>
+  <parameter name="ip_address" value="127.0.0.1"/>
+  <parameter name="app_activity" value="md5416f8fc9705f945d05f173ad9594b81d.SplashActivity"/>
+  <parameter name="platform" value="PLATFORM_ANDROID"/>
+  <test name="Demo(failed)">
+    <classes>
+      <class name="au.com.miracletek.tests.Demo">
+        <methods>
+          <include name="Test11"/>
+          <include name="setupDriver"/>
+          <include name="closeAppiumServer"/>
+          <include name="setupDriverConfigAndStartAppiumServer"/>
+          <include name="stopDriver"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- au.com.miracletek.tests.Demo -->
+    </classes>
+  </test> <!-- Demo(failed) -->
+</suite> <!-- Failed suite [Suite] -->

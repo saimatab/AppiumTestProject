@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="114327" started-at="2018-03-28T05:26:35Z" finished-at="2018-03-28T05:28:30Z">
+    <groups>
+    </groups>
+    <test name="Demo" duration-ms="114327" started-at="2018-03-28T05:26:35Z" finished-at="2018-03-28T05:28:30Z">
+      <class name="au.com.miracletek.tests.FinalSmokeTests">
+        <test-method status="PASS" signature="setupDriverConfigAndStartAppiumServer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="setupDriverConfigAndStartAppiumServer" is-config="true" duration-ms="4983" started-at="2018-03-28T10:26:30Z" finished-at="2018-03-28T10:26:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PLATFORM_ANDROID]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6.0.1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0628a315002e172e]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[co.miracletek.miracle.prd-Signed.apk]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[co.miracletek.miracle.prd]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[md5416f8fc9705f945d05f173ad9594b81d.SplashActivity]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[127.0.0.1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4723]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriverConfigAndStartAppiumServer -->
+        <test-method status="PASS" signature="setupDriver()[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="setupDriver" is-config="true" duration-ms="26069" started-at="2018-03-28T10:26:35Z" finished-at="2018-03-28T10:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method status="PASS" signature="Test01()[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="Test01" duration-ms="84725" started-at="2018-03-28T10:27:02Z" finished-at="2018-03-28T10:28:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test01 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="getResult" is-config="true" duration-ms="2" started-at="2018-03-28T10:28:26Z" finished-at="2018-03-28T10:28:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Test01 status=SUCCESS method=FinalSmokeTests.Test01()[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="stopDriver" is-config="true" duration-ms="3400" started-at="2018-03-28T10:28:26Z" finished-at="2018-03-28T10:28:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDriver -->
+        <test-method status="PASS" signature="closeAppiumServer()[pri:0, instance:au.com.miracletek.tests.FinalSmokeTests@627551fb]" name="closeAppiumServer" is-config="true" duration-ms="23225" started-at="2018-03-28T10:28:30Z" finished-at="2018-03-28T10:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAppiumServer -->
+      </class> <!-- au.com.miracletek.tests.FinalSmokeTests -->
+    </test> <!-- Demo -->
+  </suite> <!-- Suite -->
+</testng-results>
