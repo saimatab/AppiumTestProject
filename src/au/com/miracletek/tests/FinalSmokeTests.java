@@ -14,6 +14,7 @@ import java.util.Date;
 import org.testng.asserts.SoftAssert;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -147,7 +148,8 @@ public class FinalSmokeTests {
 		}
 		// ending test
 		//endTest(logger) : It ends the current test and prepares to create HTML report
-		extent.endTest(extlogger);
+		extent.flush();
+		extent.close();
 	}
 
 	@AfterSuite
