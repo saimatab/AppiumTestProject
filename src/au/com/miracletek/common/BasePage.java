@@ -450,7 +450,7 @@ public void pickerByText(String text) throws Exception
     	int scrollStart = screenHeightStart.intValue();
     	Double screenHeightEnd = dimensions.getHeight() * 0.6;
     	int scrollEnd = screenHeightEnd.intValue();
-    	((AndroidDriver<MobileElement>) driver).swipe(0,scrollStart,0,scrollEnd,3000);
+    	//((AndroidDriver<MobileElement>) driver).swipe(0,scrollStart,0,scrollEnd,3000);
     	}
     }
     
@@ -587,7 +587,7 @@ try{
 	    //touchAction.longPress(400, 1111).moveTo(400, 500).release().perform();
      
      
-		((AndroidDriver<MobileElement>)driver).swipe(400, 1111, 400, 500, 327);
+		//((AndroidDriver<MobileElement>)driver).swipe(400, 1111, 400, 500, 327);
   
           	
 }
@@ -854,7 +854,7 @@ public void pickerwheelIos(){
     
     public void swipe (){
     	
-    	((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
+    	//((AndroidDriver<MobileElement>)driver).swipe(560, 817, 588, 964, 327);
     	
     }
     
@@ -920,7 +920,7 @@ public void takeSnapShotIos() throws Exception {
 	}
     
     public void clickHomeButtonIos(){
-    	((IOSDriver) driver).runAppInBackground(5);
+    	//((IOSDriver) driver).runAppInBackground(5);
     	
     
 	}
