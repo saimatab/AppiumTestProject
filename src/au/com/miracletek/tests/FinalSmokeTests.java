@@ -181,9 +181,10 @@ public class FinalSmokeTests {
 		
 		
 		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "",files[0].getName());
-		extent.flush();
-        
-        extent.close();
+		 extent.flush();
+         
+         extent.close();
+      
      
 		appiumService.stop();
 		
@@ -217,10 +218,7 @@ public class FinalSmokeTests {
 	
 		try
 		{
-			  extent.flush();
-          
-              extent.close();
-           
+			 
               
            
 		manager.stopDriver();
