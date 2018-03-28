@@ -272,7 +272,7 @@ public class FinalSmokeTests {
 		    sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());
 		    subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
 		    extlogger = extent.startTest("Test started");
-			log.info("***********************************************************************************************************************************Entered Username......");
+			//log.info("***********************************************************************************************************************************Entered Username......");
 			 log1.debug("DEBBGUG" );
 			 log1.debug("DEBBGUG" );
 			 log1.debug("DEBBGUG" );
