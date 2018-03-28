@@ -746,7 +746,7 @@ public class FinalSmokeTests {
 			 advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());
 			  notify=new  NotificationsPage(manager.getDriver(), config.getPlatform());
 		        extlogger = extent.startTest("Test02");
-			 form1.navigateUp(config);
+		;
 		     Thread.sleep(2000);
 		    shell.clickSettings(config);
 
