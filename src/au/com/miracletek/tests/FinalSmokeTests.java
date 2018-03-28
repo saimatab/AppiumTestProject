@@ -715,6 +715,7 @@ public class FinalSmokeTests {
 				//Assert.assertTrue(true);
 				//To generate the log when the test case is passed
 				extlogger.log(LogStatus.PASS, "Test Case Passed is Test01");
+				extent.endTest(extlogger);
 			
 		} catch (Exception e) {
 
