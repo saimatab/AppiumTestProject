@@ -870,6 +870,7 @@ public void pickerwheelIos(){
     
     public void takeSnapShotAndroid() throws Exception {
         String scrFolder = System.getProperty("scr.folder");
+        System.out.println("SCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDER"+scrFolder );
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
@@ -887,7 +888,7 @@ public void pickerwheelIos(){
     	//final FileUtils.copyFile(scrFile, new File("C:\\screenshots\\"+fileName+".jpg"));
   
 FileUtils.copyFile(scrFile, new File(scrFolder   + "/" +fileName+".jpg"));
-      
+System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".jpg" );
       
     }
 public void takeSnapShotIos() throws Exception {
