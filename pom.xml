@@ -407,7 +407,7 @@
 					<fileSets>
 					<fileSet>
 						<!-- Report directory Path -->
-						<directory>./target</directory>
+						<directory>target</directory>
 						<includes>
 							<!-- Report file name -->
 							<include>test-output_report-resources.zip</include>
