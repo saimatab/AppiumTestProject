@@ -301,7 +301,7 @@ public class FinalSmokeTests {
 				loginPage.Login1("abc","abc");
 				Thread.sleep(5000);
 				
-				/*
+			
 				
 				form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
 			    catPage.selectCategoryListView("test",config);
@@ -432,13 +432,13 @@ public class FinalSmokeTests {
 				         	
 				         	shell.clickSync(config);   // sync all forms 
 				         	Thread.sleep(3000);
-				         	sync.syncForms("1", config);*/
+				         	sync.syncForms("1", config);
 					        
 				         	
 				      
-				         	//WebDriverWait wait = new WebDriverWait(manager.getDriver(), 300);
-				         	//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
-				        	/*Thread.sleep(3000);
+				         	WebDriverWait wait = new WebDriverWait(manager.getDriver(), 300);
+				         	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
+				        	Thread.sleep(3000);
 					        sync.openPendingSubmittedForms("1", config);
 					    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
 							
@@ -641,8 +641,8 @@ public class FinalSmokeTests {
 															  
 															  form1.navigateUp(config);
 															  form1.navigateUp(config);
-															     Thread.sleep(2000);*/
-															   /* shell.clickSettings(config);
+															     Thread.sleep(2000);
+															   shell.clickSettings(config);
 															    Thread.sleep(3000);
 															    settings.clickAdvanced();   
 															 	advSettings.SelectPageToUpdateAndroid("2",config);
@@ -660,7 +660,7 @@ public class FinalSmokeTests {
 																
 																		Thread.sleep(5000);
 											
-															    Thread.sleep(5000);*/
+															    Thread.sleep(5000);
 															  
 				AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
 		    	d.setConnection(Connection.AIRPLANE);
