@@ -236,6 +236,16 @@
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>2.5</version>
+		<configuration>
+        <filesets>
+            <fileset>
+                <directory>test-output</directory>
+                <includes>
+                    <include>**/report*/</include>
+                </includes>
+            </fileset>
+        </filesets>
+    </configuration>
         <executions>
           <execution>
             <id>default-clean</id>
