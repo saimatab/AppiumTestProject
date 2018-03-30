@@ -137,7 +137,7 @@ public class JyperionListener  implements ITestListener {
 
 		
 		log("onTestFailure("+result+")");
-		String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
+		//String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
 		try {
 			
 			 form=new 	AutomationTestForm2(manager.getDriver(), "PLATFORM_ANDROID");
