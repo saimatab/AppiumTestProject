@@ -33,7 +33,7 @@
 		
 	<test name="SmokeTests">
 		<classes>
-			<class name="au.com.miracletek.tests.Demo5ios" />
+			<class name="au.com.miracletek.tests.DemoIos" />
 		</classes>
 	</test> <!-- Test -->
 </suite>
