@@ -49,7 +49,7 @@ public class DriverFactory {
 			//capabilities.setCapability("xcodeOrgId", "8X6MKF8VCN");
 			//capabilities.setCapability("xcodeSigningId", "iPhone Developer");
 		//	capabilities.setCapability("bundleid", config.getBundleId());
-			
+			//
 			capabilities.setCapability("bundleid", config.getBundleId());
 			
 			capabilities.setCapability("xcodesigningId", config.getxcodesignId());
