@@ -1,7 +1,15 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import org.testng.asserts.SoftAssert;
+import com.relevantcodes.extentreports.LogStatus;
+
+import static org.apache.commons.io.comparator.LastModifiedFileComparator.LASTMODIFIED_REVERSE;
+
 import java.io.*;
 import org.openqa.selenium.logging.*;
 import java.util.*;
@@ -9,6 +17,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -46,7 +55,6 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import reports.JyperionListener;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.extras.*;
@@ -55,7 +63,7 @@ import org.apache.log4j.extras.*;
 
 public class Demo4ios1 {
 	
-	private static Logger log = Logger.getLogger("UserDefined");
+
 	//
 	  
 	private DriverManager manager;
@@ -69,7 +77,11 @@ public class Demo4ios1 {
 	CategoryPage catPage;
 	FormListPageBlankApp formList;
 	AutomationTestForm4  form;
+	private static Logger log = Logger.getLogger("testlogger");
+	ExtentReports extent;
 
+	SoftAssert  s_assert = new SoftAssert();
+	ExtentTest extlogger;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -92,10 +104,62 @@ public class Demo4ios1 {
 		config = new DriverConfig(platform, platform_name, platform_version, device_name, app_path, app_package,
 				app_activity, ud_id, bundle_id, ip_address, port);
 	}
-
+	@AfterMethod
+	public void getResult(ITestResult result){
+		if(result.getStatus() == ITestResult.FAILURE){
+			   extlogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
+			   extlogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
+		}else if(result.getStatus() == ITestResult.SKIP){
+			   extlogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
+		}
+		// ending test
+		//endTest(logger) : It ends the current test and prepares to create HTML report
+	
+	}
 	@AfterSuite
 	public void closeAppiumServer() {
+		
+		try{
+		BasePage bp=new 	BasePage();
+		 String testout= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/test-output";
+			
+			
+		
+		//   File dir = new File("C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\test-output");
+		 File dir = new File(testout);
+          File[] files = dir.listFiles();
+         
+          System.out.println("Descending order.");
+          Arrays.sort(files, LASTMODIFIED_REVERSE);
+     
+          for (int i=0 ;i<files.length;i++)
+          {File filea=files[i];
+          
+          System.out.println("i*^^^^^^^^^^^^^^^^^^^^^^"+i);
+          System.out.println("&&&^&*^^^^^^^^^^^^^^^^^^^^^^"+filea.getName());
+          
+          }
+       		   
+    
+		
+		
+		
+		
+		bp.sendPDFReportByGMailIos("saimatab2016@gmail.com", "Singapore3@", config.getToemail(), "PDF Report", "",files[0].getName());
+		 extent.flush();
+        
+        extent.close();
+     
+    
 		appiumService.stop();
+		
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	@BeforeTest
@@ -110,9 +174,7 @@ public class Demo4ios1 {
 
 	@AfterTest
 	public void stopDriver() {
-		BasePage bp=new 	BasePage();
-		bp.sendPDFReportByGMailIos("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "");
-		manager.stopDriver();
+	manager.stopDriver();
 		
 	}
 	
