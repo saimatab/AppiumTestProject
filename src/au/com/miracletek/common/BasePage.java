@@ -86,7 +86,7 @@ public class BasePage {
 		} else {
 			throw new Exception("Platform name is unrecognized.");
 		}
-	}
+	}//
 	
 	public MobileElement waitForVisibilityOf(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
