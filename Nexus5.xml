@@ -20,6 +20,12 @@
 		<parameter name="port" value="4723"></parameter>
 		
 		
+			<parameter name="appcode" value="Automation"></parameter>
+		<parameter name="username" value="abc"></parameter>
+			<parameter name="password" value="abc"></parameter>
+		
+		
+		
 
 	<listeners>
 <listener class-name="org.uncommons.reportng.HTMLReporter"/>

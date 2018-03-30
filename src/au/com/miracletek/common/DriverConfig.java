@@ -6,7 +6,10 @@ public class DriverConfig {
 	String platform_version;
 	String device_name;
 	String app_path;
-
+    String appcode;
+    String username;
+    String password;
+    
 	// android variables
 	String app_package;
 	String app_activity;
@@ -140,6 +143,47 @@ public class DriverConfig {
 		return automator2;
 	}
 
+	
+	public String getappcode() {
+		return appcode;
+	}
+
+	public void setappcode(String appcode) {
+		this.appcode = appcode;
+	}
+	
+	
+	public String getusername() {
+		return username;
+	}
+
+	public void setusername(String username) {
+		this.username = username;
+	}
+	
+	
+	public String getpassword() {
+		return password;
+	}
+
+	public void setpassword(String password) {
+		this.password = password;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public void setUiAutomator2(String auto2) {
 		this.automator2 = auto2;
 	}

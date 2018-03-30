@@ -295,10 +295,10 @@ public class FinalSmokeTests {
 				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
-		        appCodePage.enterAppCodeAndProceed("automation");
+		        appCodePage.enterAppCodeAndProceed(config.getappcode());
 		    	Thread.sleep(5000);
 
-				loginPage.Login1("abc","abc");
+				loginPage.Login1(config.getusername(),config.getpassword());
 				Thread.sleep(5000);
 				
 			
