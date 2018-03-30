@@ -23,9 +23,9 @@
 			
 		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bundle id -->
 		
-			<parameter name="xcodeorgId" value="8X6MKF8VCN" /> <!-- application bundle id -->
+		<parameter name="xcodeorgId" value="8X6MKF8VCN" /> <!-- application bundle id -->
 		
-			<parameter name="xcodesigningId" value="iPhone Developer" /> <!-- application bundle id -->
+		<parameter name="xcodesigningId" value="iPhone Developer" /> <!-- application bundle id -->
 		
 		
 		
