@@ -9,7 +9,7 @@ public class DriverConfig {
     String appcode;
     String username;
     String password;
-    
+    String Toemail;
 	// android variables
 	String app_package;
 	String app_activity;
@@ -171,6 +171,13 @@ public class DriverConfig {
 	}
 	
 	
+	public String getToemail() {
+		return Toemail;
+	}
+
+	public void setToemail(String Toemail) {
+		this.Toemail = Toemail;
+	}
 	
 	
 	

@@ -180,7 +180,7 @@ public class FinalSmokeTests {
 		
 		
 		
-		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", "saimatab2016@gmail.com", "PDF Report", "",files[0].getName());
+		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", config.getToemail(), "PDF Report", "",files[0].getName());
 		 extent.flush();
          
          extent.close();
