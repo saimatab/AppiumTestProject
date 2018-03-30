@@ -16,7 +16,9 @@ public class DriverConfig {
 	String bundle_id;
 	String automator2;
 	String appium_server_url;
-	
+	String xcodeorgId;
+
+	String xcodesignId;
 	public DriverConfig(String platform, String platform_name, String platform_version, String device_name, String app_path,
 			String app_package, String app_activity, String ud_id, String bundle_id, String ip_address, int port) {
 		this.platform = platform;
@@ -115,6 +117,24 @@ public class DriverConfig {
 	public void setBundleId(String bundle_id) {
 		this.bundle_id = bundle_id;
 	}
+	
+	public String getxcodeorgId() {
+		return xcodeorgId;
+	}
+
+
+	public String getxcodesignId() {
+		return xcodesignId;
+	}
+
+	public void setxcodsignId(String xcodesignId) {
+		this.xcodesignId = xcodesignId;
+	}
+	
+	public void setxcodeorgId(String xcodeorgId) {
+		this.xcodeorgId = xcodeorgId;
+	}
+	
 	
 	public String getUiAutomator2() {
 		return automator2;
