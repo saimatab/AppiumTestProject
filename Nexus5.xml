@@ -20,11 +20,7 @@
 		<parameter name="port" value="4723"></parameter>
 		
 		
-			<parameter name="appcode" value="Automation"></parameter>
-		<parameter name="username" value="abc"></parameter>
-			<parameter name="password" value="abc"></parameter>
-				<parameter name="Toemail" value="saimatab2016@gmail.com"></parameter>
-		
+
 		
 
 	<listeners>

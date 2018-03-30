@@ -6,7 +6,12 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.io.File;
 import static org.apache.commons.io.comparator.LastModifiedFileComparator.*;
-
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
 import java.util.Map;
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -177,10 +182,18 @@ public class FinalSmokeTests {
         		   
      
 		
+		      File file = new File("app.xml");
+				FileInputStream fileInput = new FileInputStream(file);
+				Properties properties = new Properties();
+				properties.loadFromXML(fileInput);
+				fileInput.close();
+
+				
+		
+				String toemail = properties.getProperty("toemail");
 		
 		
-		
-		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", config.getToemail(), "PDF Report", "",files[0].getName());
+		bp.sendPDFReportByGMail1("saimatab2016@gmail.com", "Singapore3@", toemail, "PDF Report", "",files[0].getName());
 		 extent.flush();
          
          extent.close();
@@ -287,7 +300,21 @@ public class FinalSmokeTests {
 			                      Calendar.getInstance().getTime()).toString();*/
 			      
 			      
-			      
+				      File file = new File("app.xml");
+						FileInputStream fileInput = new FileInputStream(file);
+						Properties properties = new Properties();
+						properties.loadFromXML(fileInput);
+						fileInput.close();
+
+						
+				
+						String appcode = properties.getProperty("appcode");
+						
+						String username = properties.getProperty("abc");
+						
+						String password = properties.getProperty("abc");
+						
+						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
 					
 			 	   String scrFolder = scshot
@@ -295,10 +322,10 @@ public class FinalSmokeTests {
 				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
-		        appCodePage.enterAppCodeAndProceed(config.getappcode());
+		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
 
-				loginPage.Login1(config.getusername(),config.getpassword());
+				loginPage.Login1(username,password);
 				Thread.sleep(5000);
 				
 			
