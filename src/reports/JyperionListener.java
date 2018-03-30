@@ -186,11 +186,11 @@ public class JyperionListener  implements ITestListener {
 			this.throwableMap.put(new Integer(throwable.hashCode()), throwable);
 			this.nbExceptions++;
 			
-			 Chunk imdb = new Chunk("[SCREEN SHOT]", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.UNDERLINE));
-		        imdb.setAction(new PdfAction("file:///"+file));
+			// Chunk imdb = new Chunk("[SCREEN SHOT]", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.UNDERLINE));
+		     //   imdb.setAction(new PdfAction("file:///"+file));
 		        Paragraph  excep = new Paragraph(
 		            throwable.toString());
-		        excep.add(imdb);
+		        //excep.add(imdb);
 		       
 			
 			
