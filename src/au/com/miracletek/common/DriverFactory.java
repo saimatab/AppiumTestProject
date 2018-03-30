@@ -20,7 +20,7 @@ public class DriverFactory {
 
 		File app = new File(config.getAppPath());
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		
+		//
 		switch (config.platform) {
 
 		case Constants.PLATFORM_ANDROID:

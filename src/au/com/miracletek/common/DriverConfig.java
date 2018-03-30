@@ -20,7 +20,7 @@ public class DriverConfig {
 	String automator2;
 	String appium_server_url;
 	String xcodeorgId;
-
+//
 	String xcodesignId;
 	public DriverConfig(String platform, String platform_name, String platform_version, String device_name, String app_path,
 			String app_package, String app_activity, String ud_id, String bundle_id, String ip_address, int port) {
