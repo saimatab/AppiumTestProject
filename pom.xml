@@ -248,7 +248,7 @@
 		     <fileset>
                 <directory>Logs/Appium</directory>
                 <includes>
-                    <include>**/appium_*/</include>
+                    <include>**/appium*/</include>
                 </includes>
             </fileset>
       
@@ -256,6 +256,13 @@
                 <directory>Screenshots</directory>
                 <includes>
                     <include>**/2018*/</include>
+                </includes>
+            </fileset>
+			
+			   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/Demo-*/</include>
                 </includes>
             </fileset>
         </filesets>
