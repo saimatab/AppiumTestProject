@@ -310,9 +310,9 @@ public class FinalSmokeTests {
 				
 						String appcode = properties.getProperty("appcode");
 						
-						String username = properties.getProperty("abc");
+						String username = properties.getProperty("username");
 						
-						String password = properties.getProperty("abc");
+						String password = properties.getProperty("password");
 						
 						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
