@@ -892,7 +892,7 @@ System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".j
       
     }
 public void takeSnapShotIos() throws Exception {
-    	
+    String scrFolder = System.getProperty("scr.folder");
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
@@ -905,10 +905,13 @@ public void takeSnapShotIos() throws Exception {
       
       int count=1;
       
-       // String date =  new SimpleDateFormat("yyyyMMddhhmmss'").format(new Date());
-		//FileUtils.copyFile(scrFile, new File("/screenshots/automationTest-snapshot.jpg"));
-    	FileUtils.copyFile(scrFile, new File("//Users//miracletek//Documents//GitHub//AppiumTestProject//"+fileName+".jpg"));
-    }
+      
+    	//FileUtils.copyFile(scrFile, new File("//Users//miracletek//Documents//GitHub//AppiumTestProject//"+fileName+".jpg"));
+      FileUtils.copyFile(scrFile, new File(scrFolder   + "/" +fileName+".jpg"));
+      System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".jpg" );
+
+
+}
     
     public void clickBackButton(){
     	((AndroidDriver) driver).pressKeyCode(AndroidKeyCode.BACK);
@@ -1176,9 +1179,9 @@ public void takeSnapShotIos() throws Exception {
         	}
     	}
    
-   public void sendPDFReportByGMailIos(String from, String pass, String to, String subject, String body) {
+   public void sendPDFReportByGMailIos  (String from, String pass, String to, String subject, String body,String file) throws Exception{
 
-   	Properties props = System.getProperties();
+   /*	Properties props = System.getProperties();
 
    	String host = "smtp.gmail.com";
 
@@ -1262,5 +1265,164 @@ public void takeSnapShotIos() throws Exception {
 
    	}
 
+   	}*/
+   
+   
+   
+   ////
+   
+   
+   Properties props = System.getProperties();
+
+	String host = "smtp.gmail.com";
+
+	props.put("mail.smtp.starttls.enable", "true");
+
+	props.put("mail.smtp.host", host);
+
+	props.put("mail.smtp.user", from);
+
+	props.put("mail.smtp.password", pass);
+
+	props.put("mail.smtp.port", "587");
+
+	props.put("mail.smtp.auth", "true");
+
+	Session session = Session.getDefaultInstance(props);
+
+	MimeMessage message = new MimeMessage(session);
+
+	try {
+		//Thread.sleep(180000);
+
+	    //Set from address
+
+	message.setFrom(new InternetAddress(from));
+
+	message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+	//Set subject
+
+	message.setSubject(subject);
+
+	message.setText(body);
+
+	BodyPart objMessageBodyPart = new MimeBodyPart();
+	BodyPart objMessageBodyPart2 = new MimeBodyPart();
+	BodyPart objMessageBodyPart3 = new MimeBodyPart();
+	
+	objMessageBodyPart.setText("Please Find The Attached Report File!");
+
+	Multipart multipart = new MimeMultipart();
+
+
+
+
+
+  String  var=Demo.fileName;
+    // System.out.println("#######################################################"+var);
+	String filename1 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + Demo.fileName+ ".pdf";
+
+
+	//Create data source to attach the file in mail
+
+	FileDataSource source = new FileDataSource(filename1);
+
+	objMessageBodyPart.setDataHandler(new DataHandler(source));
+
+	objMessageBodyPart.setFileName(filename1);
+
+	multipart.addBodyPart(objMessageBodyPart);
+	
+	////////////////////////////////
+	
+	objMessageBodyPart2.setText("Please Find The Attached Report File2!");
+
+
+
+
+
+	//
+	
+
+
+    // System.out.println("#######################################################"+var);
+
+	String var1="STMExtentReport";
+	
+ 	String filename2 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + var1+ ".html";
+	//Create data source to attach the file in mail
+
+	FileDataSource source2 = new FileDataSource(filename2);
+
+	objMessageBodyPart2.setDataHandler(new DataHandler(source2));
+
+	objMessageBodyPart2.setFileName(filename2);
+
+	multipart.addBodyPart(objMessageBodyPart2);
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	message.setContent(multipart);
+
+	Transport transport = session.getTransport("smtp");
+
+	transport.connect(host, from, pass);
+
+
+	transport.sendMessage(message, message.getAllRecipients());
+
+	transport.close();
+
+	}
+
+	catch (AddressException ae) {
+
+	ae.printStackTrace();
+
+	}
+
+	catch (MessagingException me) {
+
+	me.printStackTrace();
+
+	}
+	catch (Exception me1) {
+
+   	me1.printStackTrace();
+
    	}
+   
+   
+   
+   
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }
