@@ -245,6 +245,21 @@
                 </includes>
             </fileset>
         </filesets>
+		     <fileset>
+                <directory>Logs/Appium</directory>
+                <includes>
+                    <include>**/appium_*/</include>
+                </includes>
+            </fileset>
+        </filesets>
+		 </filesets>
+		     <fileset>
+                <directory>Screenshots</directory>
+                <includes>
+                    <include>**/2018*/</include>
+                </includes>
+            </fileset>
+        </filesets>
     </configuration>
         <executions>
           <execution>
