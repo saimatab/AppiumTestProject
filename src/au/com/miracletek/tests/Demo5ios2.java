@@ -223,55 +223,55 @@ public class Demo5ios2 {
 		      formb.takescreenshot1();
 		        //formb.controlcenterIOs();
 		        //form.findElementById("picker2").click();
-		        //form.uploader(config,"Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
+		       // formb.uploader(config,"Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
  			    
 		        
 		        Thread.sleep(3000);
 		        //form.pickerwheelIos();
 		        //form.scrollToTextIos("label2");
-  /*form.clickDatePicker(config, "datepicker1");
+             formb.clickDatePicker(config, "datepicker1");
 	
-			    form.Date(config,"April","08","2019");
+			    formb.Date(config,"April","08","2019");
 			    Thread.sleep(3000);
-				form.doneios();
+				formb.doneios();
 			      Thread.sleep(3000);
-			        form.clickTimePicker(config, "timepicker1");
+			        formb.clickTimePicker(config, "timepicker1");
 			 
-			        form.Time(config,"1","01","PM");
-					form.doneios();
+			        formb.Time(config,"1","01","PM");
+					formb.doneios();
 				    Thread.sleep(3000);
 				
 				
 			
-			    form.dateTime("datetimepicker1",config,"April","08","2019","4","54","PM");
+			    formb.dateTime("datetimepicker1",config,"April","08","2019","4","54","PM");
 			 
-		*/
-			    //form.autoComplete(config,"autocomplete1");
+		
+			    formb.autoComplete(config,"autocomplete1");
 		        //Thread.sleep(6000);
 		        
-		     //  form.clickslider(config);//
+		     formb.clickslider(config);
 		        
 		        
-		   //     form.clickswitch(config,"swSelectedId","2");
+		   formb.clickswitch(config,"swSelectedId","2");
 		        
 		        
 		        
-				/*form.clickDateTimePickerTime(config, "datetimepicker1");
+				formb.clickDateTimePickerTime(config, "datetimepicker1");
 			        Thread.sleep(3000);
-			    form.Time(config,"1","01","PM");
-				form.doneios();
+			    formb.Time(config,"1","01","PM");
+				formb.doneios();
 			 
 			    Thread.sleep(3000);
 	      
 	      
-		         form.fileUploaderios("Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
+		         formb.fileUploaderios("Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
 		         			    Thread.sleep(3000);
-		             form.autoComplete(config,"autocomplete1");
+		             formb.autoComplete(config,"autocomplete1");
 		        Thread.sleep(6000);
 		        
-		        form.clickslider(config);
-		        form.clickswitch(config,"swSelectedId","2");
-		         form.submit();*/
+		        formb.clickslider(config);
+		        formb.clickswitch(config,"swSelectedId","2");
+		         formb.submit();
 		        
 		    
 			
