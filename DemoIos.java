@@ -101,8 +101,9 @@ public class DemoIos {
 		 SimpleDateFormat  df = new SimpleDateFormat("dd MMM yyyy HH_mm_ss");
 		 String dtime =df.format(new Date());
 		
-		 String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
-		
+		// String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
+		 String appiumlog= System.getProperty("user.home")+"\\Logs\\Appium\\appiumServer_logs_" +dtime+".log";
+			
 		
 			appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
 					.usingPort(port).usingDriverExecutable(new File(nodepath))

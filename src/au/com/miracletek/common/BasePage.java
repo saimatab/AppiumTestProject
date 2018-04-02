@@ -893,6 +893,7 @@ System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".j
     }
 public void takeSnapShotIos() throws Exception {
     String scrFolder = System.getProperty("scr.folder");
+    System.out.println("SCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFIOSSOLDERSCRFOLDERSCRFOLDERSCRFOLDERIOS"+scrFolder );
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
