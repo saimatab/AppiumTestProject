@@ -9,12 +9,15 @@ import com.relevantcodes.extentreports.LogStatus;
 import static org.apache.commons.io.comparator.LastModifiedFileComparator.LASTMODIFIED_REVERSE;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -90,13 +93,13 @@ public class DemoIos {
 
 		
 		
-		String nodepath =System.getenv("APPIUM_NODE_PATH");
+		//String nodepath =System.getenv("APPIUM_NODE_PATH");
 		
-		System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +nodepath);
+		//System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +nodepath);
 		 
-		String jspath =System.getenv("APPIUM_JS_PATH");
+	//	String jspath =System.getenv("APPIUM_JS_PATH");
 		
-		System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +jspath);
+	//	System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHH" +jspath);
 
 		 SimpleDateFormat  df = new SimpleDateFormat("dd MMM yyyy HH_mm_ss");
 		 String dtime =df.format(new Date());
@@ -169,12 +172,17 @@ public class DemoIos {
           
           }
        		   
-    
+          File file = new File("app.xml");
+			FileInputStream fileInput = new FileInputStream(file);
+			Properties properties = new Properties();
+			properties.loadFromXML(fileInput);
+			fileInput.close();
 		
 		
+			String toemail = properties.getProperty("toemail");
+			
 		
-		
-		bp.sendPDFReportByGMailIos("saimatab2016@gmail.com", "Singapore3@", config.getToemail(), "PDF Report", "",files[0].getName());
+		bp.sendPDFReportByGMailIos("saimatab2016@gmail.com", "Singapore3@", toemail, "PDF Report", "",files[0].getName());
 		 extent.flush();
         
         extent.close();
@@ -291,9 +299,20 @@ public class DemoIos {
 					      new File(scrFolder).mkdir();
 					      System.setProperty("scr.folder", scrFolder);
 		    
+					      File file = new File("app.xml");
+							FileInputStream fileInput = new FileInputStream(file);
+							Properties properties = new Properties();
+							properties.loadFromXML(fileInput);
+							fileInput.close();
+
 		    
-		    
-		    
+
+							String appcode = properties.getProperty("appcode");
+							
+							String username = properties.getProperty("username");
+							
+							String password = properties.getProperty("password");
+							
 		    
 		    
 		    

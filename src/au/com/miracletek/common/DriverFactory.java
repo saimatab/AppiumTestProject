@@ -46,15 +46,15 @@ public class DriverFactory {
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 			//capabilities.setCapability("noReset", true);
 			//capabilities.setCapability("fullReset", false);
-			//capabilities.setCapability("xcodeOrgId", "8X6MKF8VCN");
-			//capabilities.setCapability("xcodeSigningId", "iPhone Developer");
+			capabilities.setCapability("xcodeOrgId", "8X6MKF8VCN");
+			capabilities.setCapability("xcodeSigningId", "iPhone Developer");
 		//	capabilities.setCapability("bundleid", config.getBundleId());
 			//
 			capabilities.setCapability("bundleid", config.getBundleId());
 			
-			capabilities.setCapability("xcodesigningId", config.getxcodesignId());
+			//capabilities.setCapability("xcodesigningId", config.getxcodesignId());
 			
-			capabilities.setCapability("xcodeorgId", config.getxcodeorgId());
+			//capabilities.setCapability("xcodeorgId", config.getxcodeorgId());
 			
 			
 			IOSDriver<IOSElement> iOSDriver = new IOSDriver<IOSElement>(new URL(config.getAppiumServerUrl()), capabilities);

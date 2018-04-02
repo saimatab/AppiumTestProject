@@ -25,8 +25,8 @@ public class Constants {
 	// mac setup
 	
 	// final IOS
-
-public static final String APPIUM_NODE_PATH ="/usr/local/bin/node.exe";
+//jj
+public static final String APPIUM_NODE_PATH ="/usr/local/bin/node";
 	public static final String APPIUM_JS_PATH ="/usr/local/lib/node_modules/appium/build/lib/main.js";
 
 
