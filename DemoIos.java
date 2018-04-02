@@ -294,18 +294,25 @@ public class DemoIos {
 		    
 		    
 		    
+
+							String appcode = properties.getProperty("appcode");
+							
+							String username = properties.getProperty("username");
+							
+							String password = properties.getProperty("password");
+							
 		    
 		    
+		    //form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
 		    
-		    form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
+						form.findElementById("Allow").click();
+						    
 		    
 		    
-		    
-		    
-		        appCodePage.enterAppCodeAndProceed("automation");
+		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
-				loginPage.Login1("abc","abc");
+				loginPage.Login1(username,password);
 				Thread.sleep(5000);
 				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
 			    catPage.selectCategoryListView("test",config);
