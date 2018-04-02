@@ -304,7 +304,8 @@ public class DemoIos {
 		    
 		    
 		    //form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
-		    
+		    //
+						form.findElementById("Allow").click();
 						form.findElementById("Allow").click();
 						    
 		    //
