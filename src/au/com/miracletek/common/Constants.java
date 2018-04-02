@@ -26,8 +26,8 @@ public class Constants {
 	
 	// final IOS
 
-public static final String APPIUM_NODE_PATH="/usr/local/bin/node";
-	public static final String APPIUM_JS_PATH="/usr/local/lib/node_modules/appium/build/lib/main.js";
+public static final String APPIUM_NODE_PATH ="/usr/local/bin/node.exe";
+	public static final String APPIUM_JS_PATH ="/usr/local/lib/node_modules/appium/build/lib/main.js";
 
 
 	//taptoLogin
