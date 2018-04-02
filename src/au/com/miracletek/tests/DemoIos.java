@@ -104,13 +104,16 @@ public class DemoIos {
 		 String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
 		
 		
-			appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
+			/*appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
 					.usingPort(port).usingDriverExecutable(new File("/usr/local/bin/node.exe"))
 					.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")).withLogFile(new  File(appiumlog)));
+			appiumService.start();*/
+		
+		
+			appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
+					.usingPort(port).usingDriverExecutable(new File(Constants.APPIUM_NODE_PATH))
+					.withAppiumJS(new File(Constants.APPIUM_JS_PATH)).withLogFile(new  File(appiumlog)));
 			appiumService.start();
-		
-		
-		
 		
 		
 		
