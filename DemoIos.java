@@ -307,7 +307,7 @@ public class DemoIos {
 		    
 						form.findElementById("Allow").click();
 						    
-		    
+		    //
 		    
 		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
