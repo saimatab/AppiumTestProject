@@ -9,7 +9,7 @@
 		
 		<parameter name="device_name" value="iPhone 6 Plus" /> <!-- iPhone/Simulator name -->
 		
-		<parameter name="app_path" value="ipa/MiracleMobile.ipa" />
+		<parameter name="app_path" value="MiracleMobile.ipa" />
 		
 		<parameter name="app_package" value="" />  
 		<parameter name="app_activity" value="" ><!--  for android use only --></parameter> <!--  for android use only -->
