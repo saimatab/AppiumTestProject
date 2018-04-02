@@ -102,7 +102,7 @@ public class DemoIos {
 		 String dtime =df.format(new Date());
 		
 		// String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
-		 String appiumlog= System.getProperty("user.home")+"\\Logs\\Appium\\appiumServer_logs_" +dtime+".log";
+		 String appiumlog= System.getProperty("user.home")+"/Logs/Appium/appiumServer_logs_" +dtime+".log";
 			
 		
 			appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
@@ -148,7 +148,7 @@ public class DemoIos {
 		
 		try{
 		BasePage bp=new 	BasePage();
-		 String testout= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/test-output";
+		 String testout= System.getProperty("user.home")+"/test-output";
 			
 			
 		
@@ -202,7 +202,7 @@ public class DemoIos {
 	                .addSystemInfo("Host Name", "Saima Tabassum")
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
 	                .addSystemInfo("User Name", "Saima");
-        extent.loadConfig(new File(System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/extent-config.xml"));
+        extent.loadConfig(new File(System.getProperty("user.home")+"/extent-config.xml"));
 			
 			
 			
@@ -281,9 +281,10 @@ public class DemoIos {
 					      
 					      
 					      
-					 	 String scshot= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/ScreenShots/";
+					// 	 String scshot= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/ScreenShots/";
 							
-					 	   String scrFolder = scshot
+						  	 	 String scshot= System.getProperty("user.home")+"/ScreenShots/";
+								 	   String scrFolder = scshot
 						              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
 						                      Calendar.getInstance().getTime()).toString();
 					      new File(scrFolder).mkdir();
@@ -296,7 +297,7 @@ public class DemoIos {
 		    
 		    
 		    
-		    
+		    form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
 		    
 		    
 		    
