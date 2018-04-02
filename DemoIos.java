@@ -305,11 +305,12 @@ public class DemoIos {
 		    
 		    //form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
 		    //
-						form.findElementById("Allow").click();
-						form.findElementById("Allow").click();
+						//form.findElementById("Allow").click();
+						//form.findElementById("Allow").click();
 						    
 		    //
-		    
+						form.findElementById("Allow").click();
+					//	form.findElementById("Allow").click();
 		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
