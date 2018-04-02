@@ -139,14 +139,10 @@
     <outputDirectory>target/classes</outputDirectory>
     <testOutputDirectory>target/test-classes</testOutputDirectory>
     <resources>
-      <resource>
-   
-      </resource>
+    
     </resources>
     <testResources>
-      <testResource>
-
-      </testResource>
+     
     </testResources>
     <directory>/Users/miracletek/Documents/GitHub/AppiumTestProject/target</directory>
 
