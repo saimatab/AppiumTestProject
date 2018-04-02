@@ -105,7 +105,7 @@ public class DemoIos {
 		
 		
 			appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
-					.usingPort(port).usingDriverExecutable(new File("/usr/local/bin/node"))
+					.usingPort(port).usingDriverExecutable(new File("/usr/local/bin/node.exe"))
 					.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")).withLogFile(new  File(appiumlog)));
 			appiumService.start();
 		
