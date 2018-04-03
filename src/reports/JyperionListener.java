@@ -188,7 +188,7 @@ public class JyperionListener  implements ITestListener {
 			this.nbExceptions++;
 			
 			// Chunk imdb = new Chunk("[SCREEN SHOT]", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.UNDERLINE));
-		       String file = "screenshot"+(new Random().nextInt())+".png";
+		      // String file = "screenshot"+(new Random().nextInt())+".png";
 			imdb.setAction(new PdfAction("file:///"+file));
 		        Paragraph  excep = new Paragraph(
 		            throwable.toString());
