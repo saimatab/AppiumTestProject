@@ -289,6 +289,18 @@
                     <include>**/Demo-*/</include>
                 </includes>
             </fileset>
+		   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/DEmo-*/</include>
+                </includes>
+            </fileset>
+		  <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/SmokeTests*/</include>
+                </includes>
+            </fileset>
         </filesets>
     </configuration>
 		
