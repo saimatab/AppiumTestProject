@@ -315,19 +315,20 @@ public class DemoIos {
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
 				loginPage.Login1(username,password);
+				form.takeSnapShotIos();
 				Thread.sleep(5000);
-				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
-			    catPage.selectCategoryListView("test",config);
+				//form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
+			    /*catPage.selectCategoryListView("test",config);
 			  	Thread.sleep(2000);
 		        formList.selectForm("auto",config);
 		        Thread.sleep(3000);
 		     	form.takeSnapShotIos();
 	            form.fillForm(config);
-	            form.saveDraftIos();
+	            form.saveDraftIos();*/
 	            
 		        
-				form.findElementById("test").click();
-				form.navigateUp(config);
+				//form.findElementById("test").click();
+				//form.navigateUp(config);
 		 
 	     
 		  	/*shell.clickDrafts(config);
