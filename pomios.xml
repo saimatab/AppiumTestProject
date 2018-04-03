@@ -292,7 +292,7 @@
 		   <fileset>
                 <directory>./</directory>
                 <includes>
-                    <include>**/DEmo-*/</include>
+                    <include>**/DEmoIOS*/</include>
                 </includes>
             </fileset>
 		  <fileset>
