@@ -909,7 +909,7 @@ public void takeSnapShotIos() throws Exception {
       
     	//FileUtils.copyFile(scrFile, new File("//Users//miracletek//Documents//GitHub//AppiumTestProject//"+fileName+".jpg"));
       FileUtils.copyFile(scrFile, new File(scrFolder   + "/" +fileName+".jpg"));
-      System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".jpg" );
+      System.out.println("FINAL SCREEEN SHOT FOLDDER*************************** "+scrFolder   + "/" +fileName+".jpg" );
 
 
 }

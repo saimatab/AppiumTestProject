@@ -103,9 +103,10 @@ public class DemoIos {
 
 		 SimpleDateFormat  df = new SimpleDateFormat("dd MMM yyyy HH_mm_ss");
 		 String dtime =df.format(new Date());
-		
-		 String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
-		
+	
+
+		 String appiumlog= System.getProperty("user.home")+"/Logs/Appium/appiumServer_logs_" +dtime+".log";
+		 System.out.println("appiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOG" +appiumlog);
 		
 			/*appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
 					.usingPort(port).usingDriverExecutable(new File("/usr/local/bin/node.exe"))
@@ -153,7 +154,7 @@ public class DemoIos {
 		
 		try{
 		BasePage bp=new 	BasePage();
-		 String testout= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/test-output";
+		 String testout= System.getProperty("user.home")+"/test-output";
 			
 			
 		
@@ -212,7 +213,7 @@ public class DemoIos {
 	                .addSystemInfo("Host Name", "Saima Tabassum")
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
 	                .addSystemInfo("User Name", "Saima");
-        extent.loadConfig(new File(System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/extent-config.xml"));
+        extent.loadConfig(new File(System.getProperty("user.home")+"/extent-config.xml"));
 			
 			
 			
@@ -291,14 +292,14 @@ public class DemoIos {
 					      
 					      
 					      
-					 	 String scshot= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/ScreenShots/";
+					 	 String scshot= System.getProperty("user.home")+"/ScreenShots/";
 							
 					 	   String scrFolder = scshot
 						              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
 						                      Calendar.getInstance().getTime()).toString();
 					      new File(scrFolder).mkdir();
 					      System.setProperty("scr.folder", scrFolder);
-		    
+					      System.out.println("SCR FOLDER ^^^^^^^^^^#################" +scrFolder);
 					      File file = new File("app.xml");
 							FileInputStream fileInput = new FileInputStream(file);
 							Properties properties = new Properties();
@@ -317,16 +318,16 @@ public class DemoIos {
 		    
 		    
 		    
+		    form.findElementById("Allow").click();
 		    
 		    
 		    
 		    
-		    
-		        appCodePage.enterAppCodeAndProceed("automation");
+		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
-				loginPage.Login1("abc","abc");
-				Thread.sleep(5000);
+				loginPage.Login1("username","password");
+				/*Thread.sleep(5000);
 				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
 			    catPage.selectCategoryListView("test",config);
 			  	Thread.sleep(2000);
@@ -338,7 +339,7 @@ public class DemoIos {
 	            
 		        
 				form.findElementById("test").click();
-				form.navigateUp(config);
+				form.navigateUp(config);*/
 		 
 	     
 		  	/*shell.clickDrafts(config);
@@ -358,7 +359,6 @@ public class DemoIos {
 			
 				  subQueue.ViewsubmittedForms("1",config);
 				    Thread.sleep(3000);
-
 					form.findElementById("Submission Queue").click();
 					   subQueue.editSubmittedForm("1",config);
 					   form.findElementById("Submission Queue").click();
