@@ -137,6 +137,7 @@ public class JyperionListener  implements ITestListener {
 
 		
 		log("onTestFailure("+result+")");
+		    String file = "screenshot"+(new Random().nextInt())+".png";
 		//String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
 		try {
 			
@@ -187,7 +188,8 @@ public class JyperionListener  implements ITestListener {
 			this.nbExceptions++;
 			
 			// Chunk imdb = new Chunk("[SCREEN SHOT]", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.UNDERLINE));
-		     //   imdb.setAction(new PdfAction("file:///"+file));
+		       String file = "screenshot"+(new Random().nextInt())+".png";
+			imdb.setAction(new PdfAction("file:///"+file));
 		        Paragraph  excep = new Paragraph(
 		            throwable.toString());
 		        //excep.add(imdb);
