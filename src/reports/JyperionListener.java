@@ -1,5 +1,6 @@
 package reports;
 import au.com.miracletek.tests.Demo;
+import au.com.miracletek.tests.DemoIos;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -220,8 +221,9 @@ public class JyperionListener  implements ITestListener {
 		log("onStart("+context+")");
 		try {
 		    String date= new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
-		   Demo.fileName=context.getName()+"-"+date;
-			PdfWriter.getInstance(this.document, new FileOutputStream(Demo.fileName+".pdf"));
+		  // Demo.fileName=context.getName()+"-"+date;
+				  // DemoIos.fileName=context.getName()+"-"+date;
+			PdfWriter.getInstance(this.document, new FileOutputStream(DemoIos.fileName+".pdf"));
 		
 		} catch (Exception e) {
 			e.printStackTrace();
