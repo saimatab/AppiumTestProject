@@ -21,7 +21,7 @@
 		<parameter name="ip_address" value="0.0.0.0"></parameter>
 		<parameter name="port" value="4725"></parameter>
 			
-		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bundle id h-->
+		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bund;;le id h-->
 		
 		
 	<listeners>
