@@ -1322,7 +1322,7 @@ public void takeSnapShotIos() throws Exception {
 
 
   String  var=DemoIos.fileName;
-    // System.out.println("#######################################################"+var);
+    System.out.println("#######################################################"+var);
 	String filename1 = var+ ".pdf";
 
 
@@ -1351,7 +1351,8 @@ public void takeSnapShotIos() throws Exception {
     // System.out.println("#######################################################"+var);
 
 	String var1="STMExtentReport";
-	
+	System.out.println("############################################VAR1###########"+var1);
+
  	//String filename2 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + var1+ ".html";
 			String filename2 = var1+ ".html";
 	//Create data source to attach the file in mail
