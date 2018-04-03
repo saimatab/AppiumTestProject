@@ -300,7 +300,7 @@ public class DemoIos {
 							String username = properties.getProperty("username");
 							
 							String password = properties.getProperty("password");
-							
+							//
 		    
 		    
 		    //form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
