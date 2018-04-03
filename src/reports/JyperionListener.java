@@ -190,7 +190,7 @@ public class JyperionListener  implements ITestListener {
 			
 			// Chunk imdb = new Chunk("[SCREEN SHOT]", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.UNDERLINE));
 		      // String file = "screenshot"+(new Random().nextInt())+".png";
-			imdb.setAction(new PdfAction("file:///"+file));
+			//imdb.setAction(new PdfAction("file:///"+file));
 		        Paragraph  excep = new Paragraph(
 		            throwable.toString());
 		        //excep.add(imdb);
@@ -222,8 +222,8 @@ public class JyperionListener  implements ITestListener {
 		try {
 		    String date= new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		  // Demo.fileName=context.getName()+"-"+date;
-				  // DemoIos.fileName=context.getName()+"-"+date;
-	System.out.println("DemoIos.fileNameDemoIos.fileNameDemoIos.fileNameDemoIos.fileName"+DemoIos.fileName);
+				   DemoIos.fileName=context.getName()+"-"+date;
+	System.out.println("DemoIos.fileNameDemoIos.fileName"+DemoIos.fileName);
 			PdfWriter.getInstance(this.document, new FileOutputStream(DemoIos.fileName+".pdf"));
 		
 		} catch (Exception e) {
