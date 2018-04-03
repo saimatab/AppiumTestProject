@@ -324,9 +324,10 @@ public class DemoIos {
 		    
 		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
+			form.takeSnapShotIos();
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
-				loginPage.Login1("username","password");
-			   	form.takeSnapShotIos();
+				loginPage.Login1(username,password);
+		
 				/*Thread.sleep(5000);
 				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
 			    catPage.selectCategoryListView("test",config);
