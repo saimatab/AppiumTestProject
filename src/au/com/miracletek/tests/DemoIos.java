@@ -105,7 +105,7 @@ public class DemoIos {
 		 String dtime =df.format(new Date());
 	
 
-		 String appiumlog= System.getProperty("user.home")+"/Logs/Appium/appiumServer_logs_" +dtime+".log";
+		 String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
 		 System.out.println("appiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOG" +appiumlog);
 		
 			/*appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
@@ -208,7 +208,7 @@ public class DemoIos {
 			manager.startDriver(config);
 			
 			
-			extent = new ExtentReports (System.getProperty("user.dir") +"/STMExtentReport.html", true);
+			extent = new ExtentReports (System.getProperty("user.home") +"/STMExtentReport.html", true);
 		extent
 	                .addSystemInfo("Host Name", "Saima Tabassum")
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
@@ -292,7 +292,7 @@ public class DemoIos {
 					      
 					      
 					      
-					 	 String scshot= System.getProperty("user.home")+"/ScreenShots/";
+					 	 String scshot= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/ScreenShots/";
 							
 					 	   String scrFolder = scshot
 						              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
