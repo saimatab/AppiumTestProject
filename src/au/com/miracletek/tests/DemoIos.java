@@ -208,12 +208,12 @@ public class DemoIos {
 			manager.startDriver(config);
 			
 			
-			extent = new ExtentReports (System.getProperty("user.home") +"/STMExtentReport.html", true);
+			extent = new ExtentReports ("/STMExtentReport.html", true);
 		extent
 	                .addSystemInfo("Host Name", "Saima Tabassum")
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
 	                .addSystemInfo("User Name", "Saima");
-        extent.loadConfig(new File(System.getProperty("user.home")+"/extent-config.xml"));
+        extent.loadConfig(new File("/extent-config.xml"));
 			
 			
 			
