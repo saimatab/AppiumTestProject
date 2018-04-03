@@ -1321,9 +1321,9 @@ public void takeSnapShotIos() throws Exception {
 
 
 
-  String  var=Demo.fileName;
+  String  var=DemoIos.fileName;
     // System.out.println("#######################################################"+var);
-	String filename1 = Demoios.fileName+ ".pdf";
+	String filename1 = var+ ".pdf";
 
 
 	//Create data source to attach the file in mail
