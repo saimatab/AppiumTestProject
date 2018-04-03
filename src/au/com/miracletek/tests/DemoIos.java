@@ -157,7 +157,8 @@ public class DemoIos {
 		
 		try{
 		BasePage bp=new 	BasePage();
-		 String testout= System.getProperty("user.home")+"/test-output";
+		 //String testout= System.getProperty("user.home")+"/test-output";
+			 String testout= "test-output";
 			
 			
 		
