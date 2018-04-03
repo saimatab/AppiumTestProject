@@ -302,18 +302,12 @@ public class DemoIos {
 							String password = properties.getProperty("password");
 							//
 		    
-		    
-		    //form.findElementByXpath("//XCUIElementTypeButton[@name='Allow']").click();
-		    //
-						//form.findElementById("Allow").click();
-						//form.findElementById("Allow").click();
-						    
-		    //
+		 		    
+	
 						form.findElementById("Allow").click();
-					//	form.findElementById("Allow").click();
 		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
-		    	//form.waitForVisibilityOf(By.id(Constants.userName));
+
 				loginPage.Login1(username,password);
 				form.takeSnapShotIos();
 				Thread.sleep(5000);
@@ -324,14 +318,14 @@ public class DemoIos {
 		        Thread.sleep(3000);
 		     	form.takeSnapShotIos();
 	            form.fillForm(config);
-	            form.saveDraftIos();*/
+	            form.saveDraftIos();
 	            
 		        
-				//form.findElementById("test").click();
-				//form.navigateUp(config);
+				form.findElementById("test").click();
+				form.navigateUp(config);
 		 
 	     
-		  	/*shell.clickDrafts(config);
+		  	shell.clickDrafts(config);
 		  	drafts.Edit("1", config);
 		  	form.findElementById("Drafts").click();
 		  	drafts.Remove("1", config);
