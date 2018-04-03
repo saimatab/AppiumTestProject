@@ -62,7 +62,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class DemoIos {
 	private static Logger log = Logger.getLogger("testlogger");
 	ExtentReports extent;
-    public static String filename;
+    public static String fileName;
 	SoftAssert  s_assert = new SoftAssert();
 	ExtentTest extlogger;
 	private DriverManager manager;
