@@ -223,7 +223,7 @@ public class JyperionListener  implements ITestListener {
 		    String date= new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		  // Demo.fileName=context.getName()+"-"+date;
 				  // DemoIos.fileName=context.getName()+"-"+date;
-			System.out.println("DemoIos.fileNameDemoIos.fileNameDemoIos.fileNameDemoIos.fileName"+DemoIos.fileName)
+	System.out.println("DemoIos.fileNameDemoIos.fileNameDemoIos.fileNameDemoIos.fileName"+DemoIos.fileName);
 			PdfWriter.getInstance(this.document, new FileOutputStream(DemoIos.fileName+".pdf"));
 		
 		} catch (Exception e) {
