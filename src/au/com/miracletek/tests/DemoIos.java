@@ -105,7 +105,7 @@ public class DemoIos {
 		 String dtime =df.format(new Date());
 	
 
-		 String appiumlog= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/Logs/Appium/appiumServer_logs_" +dtime+".log";
+		 String appiumlog= "Logs/Appium/appiumServer_logs_" +dtime+".log";
 		 System.out.println("appiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOGappiumlogLOGAPPIUMLOG" +appiumlog);
 		
 			/*appiumService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip_address)
@@ -292,7 +292,7 @@ public class DemoIos {
 					      
 					      
 					      
-					 	 String scshot= System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/ScreenShots/";
+					 	 String scshot= "ScreenShots/";
 							
 					 	   String scrFolder = scshot
 						              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
