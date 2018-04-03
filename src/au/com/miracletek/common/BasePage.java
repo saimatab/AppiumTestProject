@@ -35,6 +35,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.*;
 import java.util.stream.*;
 import au.com.miracletek.tests.Demo;
+import au.com.miracletek.tests.DemoIos;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -1322,7 +1323,7 @@ public void takeSnapShotIos() throws Exception {
 
   String  var=Demo.fileName;
     // System.out.println("#######################################################"+var);
-	String filename1 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + Demo.fileName+ ".pdf";
+	String filename1 = Demoios.fileName+ ".pdf";
 
 
 	//Create data source to attach the file in mail
@@ -1351,7 +1352,8 @@ public void takeSnapShotIos() throws Exception {
 
 	String var1="STMExtentReport";
 	
- 	String filename2 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + var1+ ".html";
+ 	//String filename2 = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + var1+ ".html";
+			String filename2 = var1+ ".html";
 	//Create data source to attach the file in mail
 
 	FileDataSource source2 = new FileDataSource(filename2);
