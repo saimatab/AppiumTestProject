@@ -319,17 +319,14 @@ public class DemoIos {
 		    
 		    
 		    form.findElementById("Allow").click();
-<<<<<<< HEAD
-		    
-=======
->>>>>>> 213381c424921f9c287452a4ff7bfb8206b2ff55
-		    
+
 		    
 		    
 		        appCodePage.enterAppCodeAndProceed(appcode);
 		    	Thread.sleep(5000);
 		    	//form.waitForVisibilityOf(By.id(Constants.userName));
 				loginPage.Login1("username","password");
+			   	form.takeSnapShotIos();
 				/*Thread.sleep(5000);
 				form.waitForVisibilityOf(By.xpath("//XCUIElementTypeApplication[@name='Miracle']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]"));
 			    catPage.selectCategoryListView("test",config);
