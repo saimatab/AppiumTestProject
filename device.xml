@@ -24,11 +24,14 @@
 		<parameter name="bundle_id" value="co.miracletek.miracle.appstore" /> <!-- application bundle id -->
 		
 		
+	<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>	
 		
 		
 		
-		
-	<test name="SmokeTests">
+	<test name="DEmoIOS">
 		<classes>
 			<class name="au.com.miracletek.tests.DemoIos" />
 		</classes>
