@@ -327,6 +327,98 @@ public class FinalSmokeTests {
 						fileInput.close();
 
 						
+			//excel file 
+			      File file = new File("DatabaseResults.xlsx");
+			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
+			FileOutputStream fileOut = new FileOutputStream(file);
+			 FileInputStream inputStream = new FileInputStream(file);
+        Workbook Workbookexcel =null;
+			Workbookexcel = new XSSFWorkbook(inputStream);
+		
+				//Connection URL Syntax: "jdbc:mysql://ipaddress:portnumber/db_name"		
+                String dbUrl = "jdbc:mysql://bgc.db.miracletek.co:3306/bgc_qa";					
+
+				//Database Username		
+				String username = "bgc_qa";	
+                
+				//Database Password		
+				String password = "BGC!@#123";				
+
+				//Query to Execute		
+				String query = "select *  from auto;";	
+                
+         	    //Load mysql jdbc driver		
+           	    Class.forName("com.mysql.jdbc.Driver");			
+           
+           		//Create Connection to DB		
+            	Connection con = DriverManager.getConnection(dbUrl,username,password);
+          
+          		//Create Statement Object		
+        	   Statement stmt = con.createStatement();					
+       
+       			// Execute the SQL Query. Store results in ResultSet		
+         		ResultSet rs= stmt.executeQuery(query);							
+         int row = 1;
+			
+			Sheet personSheet = wb.createSheet("auto");
+Row headerRow = personSheet.createRow(0);
+Cell nameHeaderCell = headerRow.createCell(0);
+Cell addressHeaderCell = headerRow.createCell(1);
+			
+         		// While Loop to iterate through all data and print results		
+				while (rs.next()){
+			        		String a= rs.getString(0);								        
+                            String b= rs.getString(1);
+					String c= rs.getString(2);								        
+                            String d= rs.getString(3);
+String e= rs.getString(4);								        
+                          
+					
+					
+					
+				Row dataRow = personSheet.createRow(row);
+
+    Cell Cell1 = dataRow.createCell(0);
+    Cell1.setCellValue(a);
+
+    Cell Cell2 = dataRow.createCell(1);
+   Cell2.setCellValue(baddress);
+					
+   Cell Cell3 = dataRow.createCell(2);
+    Cell.setCellValue(c);
+					   Cell Cell4 = dataRow.createCell(3);
+    Cell4.setCellValue(d);
+					Cell Cell5 = dataRow.createCell(4);
+    Cell5.setCellValue(e);
+    row = row + 1;	
+                            //System.out.println(myName+"  "+myAge);
+					
+					
+				
+					
+					
+					
+                    }	
+			 Workbookexcel.write(fileOut);
+      			 // closing DB Connection		
+      			con.close();	
+			fileOut.close();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 				
 						String appcode = properties.getProperty("appcode");
 						
