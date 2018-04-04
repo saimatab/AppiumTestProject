@@ -462,9 +462,7 @@ String e= rs1.getString(4);
     rowtest = rowtest + 1;	
                             //System.out.println(myName+"  "+myAge);
 					
-		Workbookexcel.write(fileOut);
-      			 	
-			fileOut.close();			
+					
 				
 					
 					
