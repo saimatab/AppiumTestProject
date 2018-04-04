@@ -327,7 +327,7 @@ public class FinalSmokeTests {
 
 						
 			//excel file 
-			      File file1 = new File("DatabaseResults.xlsx");
+			      File file1 = new File("DbResults.xls");
 			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			 FileInputStream inputStream = new FileInputStream(file1);
