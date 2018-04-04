@@ -327,10 +327,10 @@ public class FinalSmokeTests {
 
 						
 			//excel file 
-			      File file = new File("DatabaseResults.xlsx");
+			      File file1 = new File("DatabaseResults.xlsx");
 			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
-			FileOutputStream fileOut = new FileOutputStream(file);
-			 FileInputStream inputStream = new FileInputStream(file);
+			FileOutputStream fileOut = new FileOutputStream(file1);
+			 FileInputStream inputStream = new FileInputStream(file1);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
@@ -342,7 +342,7 @@ public class FinalSmokeTests {
      						
          int row = 1;
 			
-			Sheet personSheet = wb.createSheet("auto");
+			Sheet personSheet = Workbookexcel.createSheet("auto");
 Row headerRow = personSheet.createRow(0);
 Cell headercell0 = headerRow.createCell(0);
 Cell headercell1 = headerRow.createCell(1);
