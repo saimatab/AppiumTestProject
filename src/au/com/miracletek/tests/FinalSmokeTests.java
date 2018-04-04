@@ -383,7 +383,7 @@ public class FinalSmokeTests {
 		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
 
 
-        for(String mapping : resultArray) {
+        for(String mapping : resultSetArray) {
             fileWriter.write(mapping + "\n");
          }
 
