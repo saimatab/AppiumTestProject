@@ -32,6 +32,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import org.apache.poi.ss.usermodel.Row;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 
 import org.apache.poi.ss.usermodel.Workbook;
@@ -121,7 +122,7 @@ public class FinalSmokeTests {
 	AutomationTestForm4  form4;
 	AutomationTestForm5  form5;
 	AutomationTestForm6  form6;
-	DriverManager dm;
+	DatabaseDriver dm;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -333,6 +334,7 @@ public class FinalSmokeTests {
 			 FileInputStream inputStream = new FileInputStream(file1);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
+			dm= new dm();
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
