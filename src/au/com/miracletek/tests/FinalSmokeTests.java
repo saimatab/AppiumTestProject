@@ -333,7 +333,7 @@ public class FinalSmokeTests {
 			 FileInputStream inputStream = new FileInputStream(file);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
-		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;" )
+		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
          	   			
@@ -350,12 +350,12 @@ Cell headercell2 = headerRow.createCell(2);
 Cell headercell3 = headerRow.createCell(3);
 Cell headercell4 = headerRow.createCell(4);			
          		// While Loop to iterate through all data and print results		
-				while (rs.next()){
-			        		String a= rs.getString(0);								        
-                            String b= rs.getString(1);
-					String c= rs.getString(2);								        
-                            String d= rs.getString(3);
-String e= rs.getString(4);								        
+				while (rs1.next()){
+			        		String a= rs1.getString(0);								        
+                            String b= rs1.getString(1);
+					String c= rs1.getString(2);								        
+                            String d= rs1.getString(3);
+String e= rs1.getString(4);								        
                           
 					
 					
