@@ -371,7 +371,7 @@ String e= rs1.getString(4);
    Cell2.setCellValue(b);
 					
    Cell Cell3 = dataRow.createCell(2);
-    Cell.setCellValue(c);
+    Cell3.setCellValue(c);
 					   Cell Cell4 = dataRow.createCell(3);
     Cell4.setCellValue(d);
 					Cell Cell5 = dataRow.createCell(4);
