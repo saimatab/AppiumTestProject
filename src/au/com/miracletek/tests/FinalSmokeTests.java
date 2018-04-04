@@ -1,6 +1,7 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
+import java.io.FileWriter;
 import java.sql.*;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
@@ -328,7 +329,7 @@ public class FinalSmokeTests {
 
 						
 			//excel file 
-			    File file1 = new File("DbResults.xls");
+			    File file1 = new File("auto_output.xls");
 		
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			// FileInputStream inputStream = new FileInputStream(file1);
@@ -345,7 +346,7 @@ public class FinalSmokeTests {
 			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
     HSSFSheet xlsSheet = xlsWorkbook.createSheet("auto");
     short rowIndex = 0;
- 
+ private List<String> resultSetArray=new ArrayList<>();
 
     // Get the list of column names and store them as the first
     // row of the spreadsheet.
@@ -362,20 +363,32 @@ public class FinalSmokeTests {
  
     // Save all the data from the database table rows
     while (rs1.next()) {
+	        StringBuilder sb = new StringBuilder();
       HSSFRow dataRow = xlsSheet.createRow(rowIndex++);
       short colIndex = 0;
       for (String colName : colNames) {
         dataRow.createCell(colIndex++).setCellValue(
           new HSSFRichTextString(rs1.getString(colName)));
+	       sb.append(String.format(String.valueOf(rs1.getString(colName))) + " ");
+
       }
+	       resultSetArray.add(sb.toString());
     }
  
     // Write to disk
     xlsWorkbook.write(fileOut);
 			fileOut.close();
 			
-			
-			
+		   File csvOutputFile = new File("auto1_output.xls")	
+		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
+
+
+        for(String mapping : resultArray) {
+            fileWriter.write(mapping + "\n");
+         }
+
+        fileWriter.close();
+	
 			
 			
 			
