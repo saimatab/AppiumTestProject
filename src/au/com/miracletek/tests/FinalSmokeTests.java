@@ -334,7 +334,7 @@ public class FinalSmokeTests {
 			 FileInputStream inputStream = new FileInputStream(file1);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
-			dm= new dm();
+	
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
@@ -368,7 +368,7 @@ String e= rs1.getString(4);
     Cell1.setCellValue(a);
 
     Cell Cell2 = dataRow.createCell(1);
-   Cell2.setCellValue(baddress);
+   Cell2.setCellValue(b);
 					
    Cell Cell3 = dataRow.createCell(2);
     Cell.setCellValue(c);
