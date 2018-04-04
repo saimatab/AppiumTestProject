@@ -32,6 +32,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import org.apache.poi.ss.usermodel.Row;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 
 import org.apache.poi.ss.usermodel.Workbook;
@@ -121,7 +122,7 @@ public class FinalSmokeTests {
 	AutomationTestForm4  form4;
 	AutomationTestForm5  form5;
 	AutomationTestForm6  form6;
-	DriverManager dm;
+	DatabaseDriver dm;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -327,13 +328,14 @@ public class FinalSmokeTests {
 
 						
 			//excel file 
-			      File file = new File("DatabaseResults.xlsx");
+			      File file1 = new File("DatabaseResults.xlsx");
 			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
-			FileOutputStream fileOut = new FileOutputStream(file);
-			 FileInputStream inputStream = new FileInputStream(file);
+			FileOutputStream fileOut = new FileOutputStream(file1);
+			 FileInputStream inputStream = new FileInputStream(file1);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
-		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;" )
+	
+		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
          	   			
@@ -342,7 +344,7 @@ public class FinalSmokeTests {
      						
          int row = 1;
 			
-			Sheet personSheet = wb.createSheet("auto");
+			Sheet personSheet = Workbookexcel.createSheet("auto");
 Row headerRow = personSheet.createRow(0);
 Cell headercell0 = headerRow.createCell(0);
 Cell headercell1 = headerRow.createCell(1);
@@ -350,12 +352,12 @@ Cell headercell2 = headerRow.createCell(2);
 Cell headercell3 = headerRow.createCell(3);
 Cell headercell4 = headerRow.createCell(4);			
          		// While Loop to iterate through all data and print results		
-				while (rs.next()){
-			        		String a= rs.getString(0);								        
-                            String b= rs.getString(1);
-					String c= rs.getString(2);								        
-                            String d= rs.getString(3);
-String e= rs.getString(4);								        
+				while (rs1.next()){
+			        		String a= rs1.getString(0);								        
+                            String b= rs1.getString(1);
+					String c= rs1.getString(2);								        
+                            String d= rs1.getString(3);
+String e= rs1.getString(4);								        
                           
 					
 					
@@ -366,10 +368,10 @@ String e= rs.getString(4);
     Cell1.setCellValue(a);
 
     Cell Cell2 = dataRow.createCell(1);
-   Cell2.setCellValue(baddress);
+   Cell2.setCellValue(b);
 					
    Cell Cell3 = dataRow.createCell(2);
-    Cell.setCellValue(c);
+    Cell3.setCellValue(c);
 					   Cell Cell4 = dataRow.createCell(3);
     Cell4.setCellValue(d);
 					Cell Cell5 = dataRow.createCell(4);
