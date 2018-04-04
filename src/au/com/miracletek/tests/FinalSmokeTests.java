@@ -338,7 +338,7 @@ public class FinalSmokeTests {
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
-         	   			String fileNameext="DatabaseResults.xlsx"
+         	   			String fileNameext="DatabaseResults.xlsx";
         
            		//Create Connection to DB		
      						
