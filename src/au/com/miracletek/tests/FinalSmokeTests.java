@@ -345,7 +345,7 @@ public class FinalSmokeTests {
          int row = 1;
 			
 			Sheet personSheet = Workbookexcel.getSheet("auto");
-			int rowCount = personSheet.getLastRowNum()-sheet.getFirstRowNum();
+			int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
 
     //Get the first row from the sheet
 
