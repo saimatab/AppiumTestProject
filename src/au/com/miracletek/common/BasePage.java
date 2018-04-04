@@ -1002,10 +1002,11 @@ public void takeSnapShotIos() throws Exception {
 
     
 
-       String  var=Demo.fileName;
+       String  var=DemoIos.fileName;
          // System.out.println("#######################################################"+var);
     
-    	String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
+    	//String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
+String filename1 =var+ ".pdf";
 
     	//Create data source to attach the file in mail
 
@@ -1032,7 +1033,8 @@ public void takeSnapShotIos() throws Exception {
          // System.out.println("#######################################################"+var);
     
     	String var1="STMExtentReport";
-    	String filename2 = System.getProperty("user.dir")+"\\" +var1+ ".html";
+    	//String filename2 = System.getProperty("user.dir")+"\\" +var1+ ".html";
+String filename2 =var1+ ".html";
 
     	//Create data source to attach the file in mail
 
