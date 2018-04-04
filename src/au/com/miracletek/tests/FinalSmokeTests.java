@@ -352,7 +352,7 @@ public class FinalSmokeTests {
     List colNames = new ArrayList();
     HSSFRow titleRow = xlsSheet.createRow(rowIndex++);
  
-    for (int i = 1; i &lt;= colInfo.getColumnCount(); i++) {
+    for (int i = 1; i <= colInfo.getColumnCount(); i++) {
       colNames.add(colInfo.getColumnName(i));
       titleRow.createCell((short) (i-1)).setCellValue(
         new HSSFRichTextString(colInfo.getColumnName(i)));
