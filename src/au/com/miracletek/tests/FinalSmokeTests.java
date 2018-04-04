@@ -354,23 +354,8 @@ public class FinalSmokeTests {
         //If it is xlsx file then create object of XSSFWorkbook class
 XSSFWorkbook Workbookexcel = new XSSFWorkbook(inputStream);
 			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
-
-        }
-
-        //Check condition if the file is xls file
-
-        else if(fileExtensionName.equals(".xls")){
-
-            //If it is xls file then create object of XSSFWorkbook class
-
-    HSSFWorkbook      Workbookexcel = new HSSFWorkbook(inputStream);
-  HSSFSheet personSheet = Workbookexcel.getSheet("auto");
-        }
-
-        
-			
-			//Sheet personSheet = Workbookexcel.getSheet("auto");
-			int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
+		
+				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
 
     //Get the first row from the sheet
 
@@ -422,6 +407,129 @@ String e= rs1.getString(4);
 			 Workbookexcel.write(fileOut);
       			 	
 			fileOut.close();
+
+        }
+
+        //Check condition if the file is xls file
+
+        else if(fileExtensionName.equals(".xls")){
+
+            //If it is xls file then create object of XSSFWorkbook class
+
+    HSSFWorkbook      Workbookexcel = new HSSFWorkbook(inputStream);
+  HSSFSheet personSheet = Workbookexcel.getSheet("auto");
+		
+				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
+
+    //Get the first row from the sheet
+
+    Row row = personSheet.getRow(0);
+
+    //Create a new row and append it at last of sheet
+
+   
+Row headerRow = personSheet.createRow(1);
+Cell headercell0 = headerRow.createCell(0);
+Cell headercell1 = headerRow.createCell(1);
+Cell headercell2 = headerRow.createCell(2);
+Cell headercell3 = headerRow.createCell(3);
+Cell headercell4 = headerRow.createCell(4);			
+         		// While Loop to iterate through all data and print results		
+				while (rs1.next()){
+			        		String a= rs1.getString(0);								        
+                            String b= rs1.getString(1);
+					String c= rs1.getString(2);								        
+                            String d= rs1.getString(3);
+String e= rs1.getString(4);								        
+                          
+					
+					
+					
+				Row dataRow = personSheet.createRow(rowtest);
+
+    Cell Cell1 = dataRow.createCell(0);
+    Cell1.setCellValue(a);
+
+    Cell Cell2 = dataRow.createCell(1);
+   Cell2.setCellValue(b);
+					
+   Cell Cell3 = dataRow.createCell(2);
+    Cell3.setCellValue(c);
+					   Cell Cell4 = dataRow.createCell(3);
+    Cell4.setCellValue(d);
+					Cell Cell5 = dataRow.createCell(4);
+    Cell5.setCellValue(e);
+    rowtest = rowtest + 1;	
+                            //System.out.println(myName+"  "+myAge);
+					
+		Workbookexcel.write(fileOut);
+      			 	
+			fileOut.close();			
+				
+					
+					
+					
+                    }	
+			 Workbookexcel.write(fileOut);
+      			 	
+			fileOut.close();
+        }
+
+        
+			
+			//Sheet personSheet = Workbookexcel.getSheet("auto");
+			/*int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
+
+    //Get the first row from the sheet
+
+    Row row = personSheet.getRow(0);
+
+    //Create a new row and append it at last of sheet
+
+   
+Row headerRow = personSheet.createRow(1);
+Cell headercell0 = headerRow.createCell(0);
+Cell headercell1 = headerRow.createCell(1);
+Cell headercell2 = headerRow.createCell(2);
+Cell headercell3 = headerRow.createCell(3);
+Cell headercell4 = headerRow.createCell(4);			
+         		// While Loop to iterate through all data and print results		
+				while (rs1.next()){
+			        		String a= rs1.getString(0);								        
+                            String b= rs1.getString(1);
+					String c= rs1.getString(2);								        
+                            String d= rs1.getString(3);
+String e= rs1.getString(4);								        
+                          
+					
+					
+					
+				Row dataRow = personSheet.createRow(rowtest);
+
+    Cell Cell1 = dataRow.createCell(0);
+    Cell1.setCellValue(a);
+
+    Cell Cell2 = dataRow.createCell(1);
+   Cell2.setCellValue(b);
+					
+   Cell Cell3 = dataRow.createCell(2);
+    Cell3.setCellValue(c);
+					   Cell Cell4 = dataRow.createCell(3);
+    Cell4.setCellValue(d);
+					Cell Cell5 = dataRow.createCell(4);
+    Cell5.setCellValue(e);
+    rowtest = rowtest + 1;	
+                            //System.out.println(myName+"  "+myAge);
+					
+					
+				
+					
+					
+					
+                    }	
+			 Workbookexcel.write(fileOut);
+      			 	
+			fileOut.close();*/
 			
 			
 			
