@@ -22,11 +22,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 import  java.sql.Connection;		
 import  java.sql.Statement;		
 import  java.sql.ResultSet;		
-import  java.sql.DriverManager;		
+	import  java.sql.DriverManager;		
 import  java.sql.SQLException;	
 import java.io.File;
 
-import java.io.FileInputStream;
+
 import java.io.FileOutputStream;
 
 import java.io.IOException;
@@ -349,9 +349,9 @@ public class FinalSmokeTests {
                 
          	    //Load mysql jdbc driver		
            	    Class.forName("com.mysql.jdbc.Driver");			
-           
+        
            		//Create Connection to DB		
-            	Connection con = DriverManager.getConnection(dbUrl,username,password);
+            	Connection con = Java.sql.DriverManager.getConnection(dbUrl,username,password);
           
           		//Create Statement Object		
         	   Statement stmt = con.createStatement();					
