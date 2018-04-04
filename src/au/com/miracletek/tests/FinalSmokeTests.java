@@ -333,7 +333,7 @@ public class FinalSmokeTests {
 			 FileInputStream inputStream = new FileInputStream(file1);
         //Workbook Workbookexcel =null;
 			//Workbookexcel = new XSSFWorkbook(inputStream);
-	 dm=new dm();
+	 dm=new DatabaseDriver();
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
