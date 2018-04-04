@@ -334,16 +334,16 @@ public class FinalSmokeTests {
 			// FileInputStream inputStream = new FileInputStream(file1);
        
 	 dm=new DatabaseDriver();
-		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
+		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			
                 
-         	   			String fileName="DbResults.xls";
+         	   			String fileName="auto.xls";
 			
 			
 			
 			
 			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
-    HSSFSheet xlsSheet = xlsWorkbook.createSheet();
+    HSSFSheet xlsSheet = xlsWorkbook.createSheet("auto");
     short rowIndex = 0;
  
 
