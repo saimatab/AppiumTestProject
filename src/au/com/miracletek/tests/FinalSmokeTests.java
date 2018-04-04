@@ -1,6 +1,7 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
+import java.sql.*;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -333,23 +334,23 @@ public class FinalSmokeTests {
 			// FileInputStream inputStream = new FileInputStream(file1);
        
 	 dm=new DatabaseDriver();
-		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
+		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			
                 
-         	   			String fileName="DbResults.xls";
+         	   			String fileName="auto.xls";
 			
 			
 			
 			
 			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
-    HSSFSheet xlsSheet = xlsWorkbook.createSheet();
+    HSSFSheet xlsSheet = xlsWorkbook.createSheet("auto");
     short rowIndex = 0;
  
 
     // Get the list of column names and store them as the first
     // row of the spreadsheet.
     ResultSetMetaData colInfo = rs1.getMetaData();
-    List colNames = new ArrayList();
+    List<String> colNames = new ArrayList();
     HSSFRow titleRow = xlsSheet.createRow(rowIndex++);
  
     for (int i = 1; i <= colInfo.getColumnCount(); i++) {

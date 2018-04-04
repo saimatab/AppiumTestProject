@@ -41,7 +41,7 @@ public class DatabaseDriver {
 
 		// Execute the SQL Query. Store results in ResultSet		
 		ResultSet rs= stmt.executeQuery(query);	
-		con.close();
+		//con.close();
 		return rs;
 	}
 	
