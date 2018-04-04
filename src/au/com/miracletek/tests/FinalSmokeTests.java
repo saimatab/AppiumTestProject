@@ -333,7 +333,7 @@ public class FinalSmokeTests {
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			 FileInputStream inputStream = new FileInputStream(file1);
         Workbook Workbookexcel =null;
-			Workbookexcel = new XSSFWorkbook(inputStream);
+			//Workbookexcel = new XSSFWorkbook(inputStream);
 	
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
@@ -354,6 +354,7 @@ public class FinalSmokeTests {
 
         //If it is xlsx file then create object of XSSFWorkbook class
 Workbookexcel = new XSSFWorkbook(inputStream);
+			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
 
         }
 
@@ -364,12 +365,12 @@ Workbookexcel = new XSSFWorkbook(inputStream);
             //If it is xls file then create object of XSSFWorkbook class
 
           Workbookexcel = new HSSFWorkbook(inputStream);
-
+  HSSFSheet personSheet = Workbookexcel.getSheet("auto");
         }
 
         
 			
-			Sheet personSheet = Workbookexcel.getSheet("auto");
+			//Sheet personSheet = Workbookexcel.getSheet("auto");
 			int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
 
     //Get the first row from the sheet
