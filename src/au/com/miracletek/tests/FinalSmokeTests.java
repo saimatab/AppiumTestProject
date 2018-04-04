@@ -342,7 +342,7 @@ public class FinalSmokeTests {
         
            		//Create Connection to DB		
      						
-         int row = 1;
+         int rowtest = 2;
 			
 			Sheet personSheet = Workbookexcel.getSheet("auto");
 			int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
@@ -371,7 +371,7 @@ String e= rs1.getString(4);
 					
 					
 					
-				Row dataRow = personSheet.createRow(row);
+				Row dataRow = personSheet.createRow(rowtest);
 
     Cell Cell1 = dataRow.createCell(0);
     Cell1.setCellValue(a);
@@ -385,7 +385,7 @@ String e= rs1.getString(4);
     Cell4.setCellValue(d);
 					Cell Cell5 = dataRow.createCell(4);
     Cell5.setCellValue(e);
-    row = row + 1;	
+    rowtest = rowtest + 1;	
                             //System.out.println(myName+"  "+myAge);
 					
 					
