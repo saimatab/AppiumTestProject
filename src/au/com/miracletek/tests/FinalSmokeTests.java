@@ -331,7 +331,7 @@ public class FinalSmokeTests {
 			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			 FileInputStream inputStream = new FileInputStream(file1);
-        Workbook Workbookexcel =null;
+        //Workbook Workbookexcel =null;
 			//Workbookexcel = new XSSFWorkbook(inputStream);
 	
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
@@ -352,7 +352,7 @@ public class FinalSmokeTests {
         if(fileExtensionName.equals(".xlsx")){
 
         //If it is xlsx file then create object of XSSFWorkbook class
-Workbookexcel = new XSSFWorkbook(inputStream);
+XSSFWorkbook Workbookexcel = new XSSFWorkbook(inputStream);
 			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
 
         }
@@ -363,7 +363,7 @@ Workbookexcel = new XSSFWorkbook(inputStream);
 
             //If it is xls file then create object of XSSFWorkbook class
 
-          Workbookexcel = new HSSFWorkbook(inputStream);
+    HSSFWorkbook      Workbookexcel = new HSSFWorkbook(inputStream);
   HSSFSheet personSheet = Workbookexcel.getSheet("auto");
         }
 
