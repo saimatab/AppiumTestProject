@@ -55,6 +55,14 @@
                  <groupId>org.apache.poi</groupId>
                  <artifactId>poi-ooxml-schemas</artifactId>
                  <version>3.9</version>
+		  
+		  
+		  <exclusions>
+        <exclusion>
+            <artifactId>xml-apis</artifactId>
+            <groupId>xml-apis</groupId>
+        </exclusion>        
+    </exclusions>
           </dependency>
           <dependency>
                  <groupId>org.apache.poi</groupId>
