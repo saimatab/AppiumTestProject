@@ -346,7 +346,7 @@ public class FinalSmokeTests {
 			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
     HSSFSheet xlsSheet = xlsWorkbook.createSheet("auto");
     short rowIndex = 0;
- private List<String> resultSetArray=new ArrayList<>();
+ List<String> resultSetArray=new ArrayList<>();
 
     // Get the list of column names and store them as the first
     // row of the spreadsheet.
@@ -379,7 +379,7 @@ public class FinalSmokeTests {
     xlsWorkbook.write(fileOut);
 			fileOut.close();
 			
-		   File csvOutputFile = new File("auto1_output.xls")	
+		   File csvOutputFile = new File("auto1_output.xls")	;
 		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
 
 
