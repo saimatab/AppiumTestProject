@@ -344,8 +344,17 @@ public class FinalSmokeTests {
      						
          int row = 1;
 			
-			Sheet personSheet = Workbookexcel.createSheet("auto");
-Row headerRow = personSheet.createRow(0);
+			Sheet personSheet = Workbookexcel.getSheet("auto");
+			int rowCount = personSheet.getLastRowNum()-sheet.getFirstRowNum();
+
+    //Get the first row from the sheet
+
+    Row row = personSheet.getRow(0);
+
+    //Create a new row and append it at last of sheet
+
+   
+Row headerRow = personSheet.createRow(1);
 Cell headercell0 = headerRow.createCell(0);
 Cell headercell1 = headerRow.createCell(1);
 Cell headercell2 = headerRow.createCell(2);
