@@ -337,7 +337,7 @@ public class FinalSmokeTests {
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
-         	   			String fileNameext="DatabaseResults.xlsx";
+         	   			String fileNameext="DbResults.xls";
         
            		//Create Connection to DB		
      						
@@ -355,7 +355,7 @@ public class FinalSmokeTests {
 XSSFWorkbook Workbookexcel = new XSSFWorkbook(inputStream);
 		 System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@****");
 			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
-		 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		// System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
 
     //Get the first row from the sheet
@@ -416,8 +416,10 @@ String e= rs1.getString(4);
         else if(fileExtensionName.equals(".xls")){
 
             //If it is xls file then create object of XSSFWorkbook class
-
+ System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%$$%");
     HSSFWorkbook      Workbookexcel = new HSSFWorkbook(inputStream);
+		
+		 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%((__");
   HSSFSheet personSheet = Workbookexcel.getSheet("auto");
 		
 				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
