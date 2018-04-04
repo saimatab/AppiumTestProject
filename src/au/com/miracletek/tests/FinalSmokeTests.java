@@ -337,7 +337,7 @@ public class FinalSmokeTests {
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			
                 
-         	   			String fileName="auto.xls";
+         	   			String fileName="auto_output.xls";
 			
 			
 			
