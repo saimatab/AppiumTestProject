@@ -350,7 +350,7 @@ public class FinalSmokeTests {
     // Get the list of column names and store them as the first
     // row of the spreadsheet.
     ResultSetMetaData colInfo = rs1.getMetaData();
-    List colNames = new ArrayList();
+    List<String> colNames = new ArrayList();
     HSSFRow titleRow = xlsSheet.createRow(rowIndex++);
  
     for (int i = 1; i <= colInfo.getColumnCount(); i++) {
