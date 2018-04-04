@@ -350,11 +350,11 @@ public class FinalSmokeTests {
         //Check condition if the file is xlsx file
 
         if(fileExtensionName.equals(".xlsx")){
-
+    System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         //If it is xlsx file then create object of XSSFWorkbook class
 XSSFWorkbook Workbookexcel = new XSSFWorkbook(inputStream);
 			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
-		
+		 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
 
     //Get the first row from the sheet
