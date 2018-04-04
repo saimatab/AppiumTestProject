@@ -327,21 +327,73 @@ public class FinalSmokeTests {
 
 						
 			//excel file 
-			      File file1 = new File("DbResults.xls");
-			//String outputDirPath = System.getProperty("user.dir")+"\\DatabaseResults.xlsx";
+			    File file1 = new File("DbResults.xls");
+		
 			FileOutputStream fileOut = new FileOutputStream(file1);
-			 FileInputStream inputStream = new FileInputStream(file1);
-        //Workbook Workbookexcel =null;
-			//Workbookexcel = new XSSFWorkbook(inputStream);
+			// FileInputStream inputStream = new FileInputStream(file1);
+       
 	 dm=new DatabaseDriver();
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
-         	   			String fileNameext="DbResults.xls";
+         	   			String fileName="DbResults.xls";
+			
+			
+			
+			
+			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
+    HSSFSheet xlsSheet = xlsWorkbook.createSheet();
+    short rowIndex = 0;
+ 
+    // Execute SQL query
+    PreparedStatement stmt =
+ 
+    // Get the list of column names and store them as the first
+    // row of the spreadsheet.
+    ResultSetMetaData colInfo = rs1.getMetaData();
+    List colNames = new ArrayList();
+    HSSFRow titleRow = xlsSheet.createRow(rowIndex++);
+ 
+    for (int i = 1; i &lt;= colInfo.getColumnCount(); i++) {
+      colNames.add(colInfo.getColumnName(i));
+      titleRow.createCell((short) (i-1)).setCellValue(
+        new HSSFRichTextString(colInfo.getColumnName(i)));
+      xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
+    }
+ 
+    // Save all the data from the database table rows
+    while (rs1.next()) {
+      HSSFRow dataRow = xlsSheet.createRow(rowIndex++);
+      short colIndex = 0;
+      for (String colName : colNames) {
+        dataRow.createCell(colIndex++).setCellValue(
+          new HSSFRichTextString(rs1.getString(colName)));
+      }
+    }
+ 
+    // Write to disk
+    xlsWorkbook.write(fileOut);
+			fileOut.close();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
         
            		//Create Connection to DB		
      						
-         int rowtest = 2;
+       /*  int rowtest = 2;
 			
 			//Find the file extension by splitting  file name in substring and getting only extension name
 
@@ -474,7 +526,7 @@ String e= rs1.getString(4);
 			 Workbookexcel.write(fileOut);
       			 	
 			fileOut.close();
-        }
+        }*/
 
         
 			
