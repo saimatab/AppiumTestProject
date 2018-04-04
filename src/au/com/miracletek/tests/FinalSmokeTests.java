@@ -20,7 +20,7 @@ import java.util.Date;
 import org.testng.asserts.SoftAssert;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.File;
 
 
@@ -338,11 +338,36 @@ public class FinalSmokeTests {
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;");
 			
                 
-         	   			
+         	   			String fileNameext="DatabaseResults.xlsx"
         
            		//Create Connection to DB		
      						
          int rowtest = 2;
+			
+			//Find the file extension by splitting  file name in substring and getting only extension name
+
+        String fileExtensionName = fileNameext.substring(fileNameext.indexOf("."));
+
+        //Check condition if the file is xlsx file
+
+        if(fileExtensionName.equals(".xlsx")){
+
+        //If it is xlsx file then create object of XSSFWorkbook class
+Workbookexcel = new XSSFWorkbook(inputStream);
+
+        }
+
+        //Check condition if the file is xls file
+
+        else if(fileExtensionName.equals(".xls")){
+
+            //If it is xls file then create object of XSSFWorkbook class
+
+          Workbookexcel = new HSSFWorkbook(inputStream);
+
+        }
+
+        
 			
 			Sheet personSheet = Workbookexcel.getSheet("auto");
 			int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
