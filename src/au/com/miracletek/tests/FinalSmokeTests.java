@@ -5,6 +5,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.io.File;
+import  java.sql.ResultSet;
 import static org.apache.commons.io.comparator.LastModifiedFileComparator.*;
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,11 +20,7 @@ import java.util.Date;
 import org.testng.asserts.SoftAssert;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import  java.sql.Connection;		
-import  java.sql.Statement;		
-import  java.sql.ResultSet;		
-	import  java.sql.DriverManager;		
-import  java.sql.SQLException;	
+
 import java.io.File;
 
 
@@ -71,6 +68,7 @@ import au.com.miracletek.forms.AutomationTestForm4;
 import au.com.miracletek.forms.AutomationTestForm5;
 import au.com.miracletek.forms.AutomationTestForm6;
 import au.com.miracletek.pages.AdvancedSettingsPage;
+import au.com.miracletek.common.DatabaseDriver;
 import au.com.miracletek.pages.AppCodePage;
 import au.com.miracletek.pages.CategoryPage;
 import au.com.miracletek.pages.DraftsPage;
@@ -123,6 +121,7 @@ public class FinalSmokeTests {
 	AutomationTestForm4  form4;
 	AutomationTestForm5  form5;
 	AutomationTestForm6  form6;
+	DriverManager dm;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -334,37 +333,22 @@ public class FinalSmokeTests {
 			 FileInputStream inputStream = new FileInputStream(file);
         Workbook Workbookexcel =null;
 			Workbookexcel = new XSSFWorkbook(inputStream);
-		
-				//Connection URL Syntax: "jdbc:mysql://ipaddress:portnumber/db_name"		
-                String dbUrl = "jdbc:mysql://bgc.db.miracletek.co:3306/bgc_qa";					
-
-				//Database Username		
-				String username = "bgc_qa";	
+		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto;" )
+			
                 
-				//Database Password		
-				String password = "BGC!@#123";				
-
-				//Query to Execute		
-				String query = "select *  from auto;";	
-                
-         	    //Load mysql jdbc driver		
-           	    Class.forName("com.mysql.jdbc.Driver");			
+         	   			
         
            		//Create Connection to DB		
-            	Connection con = Java.sql.DriverManager.getConnection(dbUrl,username,password);
-          
-          		//Create Statement Object		
-        	   Statement stmt = con.createStatement();					
-       
-       			// Execute the SQL Query. Store results in ResultSet		
-         		ResultSet rs= stmt.executeQuery(query);							
+     						
          int row = 1;
 			
 			Sheet personSheet = wb.createSheet("auto");
 Row headerRow = personSheet.createRow(0);
-Cell nameHeaderCell = headerRow.createCell(0);
-Cell addressHeaderCell = headerRow.createCell(1);
-			
+Cell headercell0 = headerRow.createCell(0);
+Cell headercell1 = headerRow.createCell(1);
+Cell headercell2 = headerRow.createCell(2);
+Cell headercell3 = headerRow.createCell(3);
+Cell headercell4 = headerRow.createCell(4);			
          		// While Loop to iterate through all data and print results		
 				while (rs.next()){
 			        		String a= rs.getString(0);								        
@@ -400,8 +384,7 @@ String e= rs.getString(4);
 					
                     }	
 			 Workbookexcel.write(fileOut);
-      			 // closing DB Connection		
-      			con.close();	
+      			 	
 			fileOut.close();
 			
 			
