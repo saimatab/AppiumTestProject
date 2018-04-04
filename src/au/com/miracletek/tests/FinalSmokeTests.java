@@ -345,9 +345,7 @@ public class FinalSmokeTests {
     HSSFSheet xlsSheet = xlsWorkbook.createSheet();
     short rowIndex = 0;
  
-    // Execute SQL query
-    PreparedStatement stmt =
- 
+
     // Get the list of column names and store them as the first
     // row of the spreadsheet.
     ResultSetMetaData colInfo = rs1.getMetaData();
