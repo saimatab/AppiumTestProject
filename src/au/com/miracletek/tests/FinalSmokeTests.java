@@ -379,7 +379,7 @@ public class FinalSmokeTests {
     xlsWorkbook.write(fileOut);
 			fileOut.close();
 			
-		   File csvOutputFile = new File("auto1_output.xls")	;
+		   File csvOutputFile = new File("auto1_output.csv")	;
 		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
 
 
