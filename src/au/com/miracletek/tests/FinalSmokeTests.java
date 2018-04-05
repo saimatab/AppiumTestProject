@@ -409,10 +409,10 @@ public class FinalSmokeTests {
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
         Iterator<Row> rowIterator1 = sheet1.iterator();
-        Iterator<FRow> rowIterator2 = sheet2.iterator();
+        Iterator<Row> rowIterator2 = sheet2.iterator();
         while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
-            HSSFRow currentRow1 = rowIterator1.next();
-            HSSFRow currentRow2 = rowIterator1.next();
+            currentRow1 = rowIterator1.next();
+             currentRow2 = rowIterator1.next();
             Iterator<Cell> cellIterartor1 = currentRow1.iterator();
             Iterator<Cell> cellIterator2 = currentRow2.iterator();
             while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
