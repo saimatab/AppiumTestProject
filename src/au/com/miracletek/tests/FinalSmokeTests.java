@@ -416,7 +416,7 @@ public class FinalSmokeTests {
 			
 
 
-		for (int row = 0; row < 5; row++) {
+		for (int row = 0; row < 2; row++) {
 
 			for (int col = 0; col < 2; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
