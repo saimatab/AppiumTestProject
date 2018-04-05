@@ -432,7 +432,7 @@ public class FinalSmokeTests {
 				  System.out.println("lastcellnum"+r4.getLastCellNum());
 		for (int row = firstRow1; row <= lastRow1; row++) {
 
-			for (int col = firstCell1; col <= lastCell1; col++) {
+			for (int col = firstCell1; col < lastCell1; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
