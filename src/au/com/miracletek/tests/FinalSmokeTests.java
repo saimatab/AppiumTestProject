@@ -461,7 +461,7 @@ public class FinalSmokeTests {
 				
 			
 	 fileInputStream1.close();
-			fileInputStream2.close(): 
+			fileInputStream2.close(); 
 
 	
 			
