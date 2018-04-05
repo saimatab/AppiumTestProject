@@ -6,7 +6,7 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-import org.apache.poi.hssf.usermodel.HSSFIndexedColors;
+
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
 import java.util.Iterator;
@@ -416,7 +416,9 @@ public class FinalSmokeTests {
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
 			//int totalNoOfRows1 = sheet1.getRows();
 	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
-	int firstRow1=sheet1.getFirstRowNum();		
+	int firstRow1=sheet1.getFirstRowNum();
+				  System.out.println("fristrownum"+sheet1.getFirstRowNum());
+                              
         int lastRow1 = sheet1.getLastRowNum();
 			  int firstCell1 = Integer.toString(firstRow1.getFirstCellNum());
                         int lastCell1 = Integer.toString(firstRow1.getLastCellNum());
@@ -435,7 +437,7 @@ public class FinalSmokeTests {
 				
 				 if (df.formatCellValue(cA1).equals(cA2)){
            HSSFCellStyle style = workbook1.createCellStyle();
-					   style.setFillForegroundColor(HSSFIndexedColors.GREEN.getIndex());
+					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
        // HSSFFont font = workbook1.createFont();
        // font.setColor(HSSFColor.GREEN.index);
@@ -455,7 +457,7 @@ public class FinalSmokeTests {
         //  HSSFFont font = workbook1.createFont();
         //font.setColor(HSSFColor.RED.index);
        // style.setFont(font);
-	     style.setFillForegroundColor(HSSFIndexedColors.RED.getIndex());
+	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("%%%%%%%%%%%%%%%%%%"+cA1);
 			 	  
