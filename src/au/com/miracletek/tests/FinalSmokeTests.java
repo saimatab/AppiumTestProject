@@ -408,16 +408,16 @@ public class FinalSmokeTests {
 		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
-			int totalNoOfRows1 = sheet1.getRows();
+			//int totalNoOfRows1 = sheet1.getRows();
 	       
 			
 			
 		// To get the number of columns present in sheet
-		int totalNoOfCols = sheet1.getColumns();
+		//int totalNoOfCols = sheet1.getColumns();
 
-		for (int row = 0; row < totalNoOfRows; row++) {
+		for (int row = 0; row < 20; row++) {
 
-			for (int col = 0; col < totalNoOfCols; col++) {
+			for (int col = 0; col < 20; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
                                 Cell cA1 = r1.getCell(col);
@@ -431,14 +431,14 @@ public class FinalSmokeTests {
         HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.GREEN.index);
         style.setFont(font);
-      currentCell1.setCellStyle(style);
+      cA1.setCellStyle(style);
     } else
     {
 	      HSSFCellStyle style = workbook1.createCellStyle();
           HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.RED.index);
         style.setFont(font);
-      currentCell1.setCellStyle(style);
+      cA1.setCellStyle(style);
     }
 		
 			}
