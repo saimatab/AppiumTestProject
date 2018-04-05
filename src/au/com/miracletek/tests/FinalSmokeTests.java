@@ -345,7 +345,7 @@ public class FinalSmokeTests {
 			//excel file 
 			    File file1 = new File("auto_output.xls");
 			    File file2 = new File("auto_input.xls");
-		       
+		     
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			// FileInputStream inputStream = new FileInputStream(file1);
        
@@ -403,7 +403,9 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
-				FileOutputStream fileOut1 = new FileOutputStream(file1);
+			 
+				
+			
 	DataFormatter df = new DataFormatter();
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
@@ -439,7 +441,7 @@ public class FinalSmokeTests {
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@6");
                                 Cell cA2 = r2.getCell(col);
 				
-				
+				  
 				
 				 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
            HSSFCellStyle style = workbook1.createCellStyle();
@@ -448,6 +450,8 @@ public class FinalSmokeTests {
        // HSSFFont font = workbook1.createFont();
        // font.setColor(HSSFColor.GREEN.index);
        // style.setFont(font);
+					 
+					
 					   System.out.println("EQUALS@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
 			 	  
 			
@@ -466,8 +470,9 @@ public class FinalSmokeTests {
 	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
-			 	  
-			
+		 	  
+				  color.Add(row)
+						    color1.Add(col)
       cA1.setCellStyle(style);
 	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
 	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
@@ -479,23 +484,17 @@ public class FinalSmokeTests {
 			}
 		}
 				
-				
-			workbook1.write(fileOut1);
-			fileOut1.close();
+			workbook1.write(new FileOutputStream("output.xls"));
+	workbook2.write(new FileOutputStream("input"));
+
+			
 	 fileInputStream1.close();
 			fileInputStream2.close(); 
 
 	
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
+	
 			
         
            		//Create Connection to DB		
