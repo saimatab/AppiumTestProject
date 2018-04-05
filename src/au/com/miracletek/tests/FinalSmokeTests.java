@@ -2,8 +2,10 @@ package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
 import java.io.FileWriter;
-
-
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.usermodel.HSSFRichTextString;
   import  org.apache.poi.ss.usermodel.DataFormatter;
 
 
@@ -395,14 +397,14 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
-	
+	DataFormatter df = new DataFormatter();
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 		FileInputStream fileInputStream2 = new FileInputStream(file2);
 			
-            Workbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1);
-			  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
-        Sheet sheet1 = workbook1.getSheetAt(0);
-        Sheet sheet2 = workbook2.getSheetAt(0);
+            HSSFWorkbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1);
+		HSSFWorkbook	  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
+       HSSFSheet sheet1 = workbook1.getSheetAt(0);
+      HSSFSheet sheet2 = workbook2.getSheetAt(0);
         Iterator<Row> rowIterator1 = sheet1.iterator();
         Iterator<Row> rowIterator2 = sheet2.iterator();
         while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
@@ -413,8 +415,7 @@ public class FinalSmokeTests {
             while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
                 Cell currentCell1 = cellIterartor1.next();
                 Cell currentCell2 = cellIterartor2.next();
-		    
-		     Cell cell = sheet.getRow(i).getCell(i);
+		
     if (df.formatCellValue(currentCell1).equals(currentCell2))
     {     CellStyle style = workbook1.createCellStyle();
         Font font = workbook1.createFont();
