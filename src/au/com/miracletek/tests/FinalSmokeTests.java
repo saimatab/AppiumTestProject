@@ -430,9 +430,9 @@ public class FinalSmokeTests {
 				  System.out.println("fristcellnum"+r4.getFirstCellNum());
                         short lastCell1 = r4.getLastCellNum();
 				  System.out.println("lastcellnum"+r4.getLastCellNum());
-		/*for (int row = firstRow1; row < 2; row++) {
+		for (int row = 0; row < 2; row++) {
 
-			for (int col = firstCell1; col < 5; col++) {
+			for (int col = 0; col < 5; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
@@ -487,7 +487,7 @@ public class FinalSmokeTests {
 	
 			
 	 fileInputStream1.close();
-			fileInputStream2.close(); */
+			fileInputStream2.close(); 
 
 	
 			
