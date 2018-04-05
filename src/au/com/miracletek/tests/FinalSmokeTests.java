@@ -417,15 +417,15 @@ public class FinalSmokeTests {
                 Cell currentCell2 = cellIterartor2.next();
 		
     if (df.formatCellValue(currentCell1).equals(currentCell2))
-    {     CellStyle style = workbook1.createCellStyle();
-        Font font = workbook1.createFont();
+    {       HSSFCellStyle style = workbook1.createCellStyle();
+        HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.GREEN.index);
         style.setFont(font);
       currentCell1.setCellStyle(style);
     } else
     {
-	    CellStyle style = workbook1.createCellStyle();
-        Font font = workbook1.createFont();
+	      HSSFCellStyle style = workbook1.createCellStyle();
+          HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.RED.index);
         style.setFont(font);
       currentCell1.setCellStyle(style);
