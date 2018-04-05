@@ -416,8 +416,8 @@ public class FinalSmokeTests {
             Iterator<Cell> cellIterator1 = currentRow1.iterator();
             Iterator<Cell> cellIterator2 = currentRow2.iterator();
             while (cellIterator1.hasNext() && cellIterator2.hasnext()) {
-               Cell currentCell1 = cellIterartor1.next();
-                Cell currentCell2 = cellIterartor2.next();
+               Cell currentCell1 = cellIterator1.next();
+                Cell currentCell2 = cellIterator2.next();
 		
     if (df.formatCellValue(currentCell1).equals(currentCell2))
     {       HSSFCellStyle style = workbook1.createCellStyle();
