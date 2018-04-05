@@ -6,7 +6,7 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-  import  org.apache.poi.ss.usermodel.DataFormatter;
+  import  org.apache.poi.hssf.usermodel.DataFormatter;
 import java.util.Iterator;
 
 import java.util.*;
@@ -34,6 +34,8 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.File;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFCell;
 import java.io.FileOutputStream;
 
 import java.io.IOException;
@@ -408,13 +410,13 @@ public class FinalSmokeTests {
         Iterator<Row> rowIterator1 = sheet1.iterator();
         Iterator<Row> rowIterator2 = sheet2.iterator();
         while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
-            Row currentRow1 = rowIterator1.next();
-            Row currentRow2 = rowIterator1.next();
+            HSSFRow currentRow1 = rowIterator1.next();
+            HSSFRow currentRow2 = rowIterator1.next();
             Iterator<Cell> cellIterartor1 = currentRow1.iterator();
             Iterator<Cell> cellIterator2 = currentRow2.iterator();
             while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
-                Cell currentCell1 = cellIterartor1.next();
-                Cell currentCell2 = cellIterartor2.next();
+                HSSFCell currentCell1 = cellIterartor1.next();
+                HSSFCell currentCell2 = cellIterartor2.next();
 		
     if (df.formatCellValue(currentCell1).equals(currentCell2))
     {       HSSFCellStyle style = workbook1.createCellStyle();
