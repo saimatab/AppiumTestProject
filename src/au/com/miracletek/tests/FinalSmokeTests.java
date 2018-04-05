@@ -400,7 +400,7 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
-	/*DataFormatter df = new DataFormatter();
+	DataFormatter df = new DataFormatter();
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
@@ -416,9 +416,9 @@ public class FinalSmokeTests {
 			
 
 
-		for (int row = 0; row < 20; row++) {
+		for (int row = 0; row < 5; row++) {
 
-			for (int col = 0; col < 20; col++) {
+			for (int col = 0; col < 2; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
@@ -437,7 +437,10 @@ public class FinalSmokeTests {
 					   System.out.println("FFF64@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
 			 	  
 			
-      cA1.setCellStyle(style);}
+      cA1.setCellStyle(style);
+				   System.out.println("FFF641@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  	 
+				 }
     else{
     
 	      HSSFCellStyle style = workbook1.createCellStyle();
@@ -448,6 +451,8 @@ public class FinalSmokeTests {
 			 	  
 			
       cA1.setCellStyle(style);
+	     System.out.println("FFFdvsdfsd4@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+		
     }
 				 
 			}
@@ -456,7 +461,7 @@ public class FinalSmokeTests {
 				
 			
 	 
-*/
+
 	
 			
 			
