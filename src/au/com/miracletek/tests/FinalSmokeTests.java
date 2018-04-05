@@ -403,6 +403,7 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
+				FileOutputStream fileOut1 = new FileOutputStream(file1);
 	DataFormatter df = new DataFormatter();
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
@@ -479,7 +480,8 @@ public class FinalSmokeTests {
 		}
 				
 				
-			
+			workbook1.write(fileOut1);
+			fileOut1.close();
 	 fileInputStream1.close();
 			fileInputStream2.close(); 
 
