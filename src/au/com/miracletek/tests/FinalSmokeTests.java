@@ -2,6 +2,12 @@ package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
 import java.io.FileWriter;
+
+
+  import  org.apache.poi.ss.usermodel.DataFormatter;
+
+
+import java.util.*;
 import java.sql.*;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
@@ -330,7 +336,8 @@ public class FinalSmokeTests {
 						
 			//excel file 
 			    File file1 = new File("auto_output.xls");
-		
+			    File file2 = new File("auto_input.xls");
+		       
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			// FileInputStream inputStream = new FileInputStream(file1);
        
@@ -379,7 +386,7 @@ public class FinalSmokeTests {
     xlsWorkbook.write(fileOut);
 			fileOut.close();
 			
-		   File csvOutputFile = new File("auto1_output.csv")	;
+		  /* File csvOutputFile = new File("auto1_output.csv")	;
 		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
 
 
@@ -387,9 +394,44 @@ public class FinalSmokeTests {
             fileWriter.write(mapping + "\n");
          }
 
-        fileWriter.close();
+        fileWriter.close();*/
 	
+		FileInputStream fileInputStream1 = new FileInputStream(file1);
+		FileInputStream fileInputStream2 = new FileInputStream(file2);
 			
+            Workbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1));
+			  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2)) 
+        Sheet sheet1 = workbook1.getSheetAt(0);
+        Sheet sheet2 = workbook2.getSheetAt(0);
+        Iterator<Row> rowIterator1 = sheet1.iterator();
+        Iterator<Row> rowIterator2 = sheet2.iterator();
+        while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
+            Row currentRow1 = rowIterator1.next();
+            Row currentRow2 = rowIterator2.next();
+            Iterator<Cell> cellIterartor1 = currentRow1.iterator();
+            Iterator<Cell> cellIterator2 = currentRow2.iterator();
+            while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
+                Cell currentCell1 = cellIterartor1.next();
+                Cell currentCell2 = cellIterartor2.next();
+		    
+		     Cell cell = sheet.getRow(i).getCell(i);
+    if (df.formatCellValue(currentCell1).equals(currentCell2))
+    {     CellStyle style = workbook1.createCellStyle();
+        Font font = workbook1.createFont();
+        font.setColor(HSSFColor.GREEN.index);
+        style.setFont(font);
+      currentCell1.setCellStyle(style);
+    } else
+    {
+	    CellStyle style = workbook1.createCellStyle();
+        Font font = workbook1.createFont();
+        font.setColor(HSSFColor.RED.index);
+        style.setFont(font);
+      currentCell1.setCellStyle(style);
+    }
+                     //logic to compare values
+            }
+        }	
 			
 			
 			
