@@ -329,7 +329,19 @@
                     <include>**/2018*/</include>
                 </includes>
             </fileset>
-			
+				
+			   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/auto_output_results*/</include>
+                </includes>
+            </fileset>
+		   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/auto1*/</include>
+                </includes>
+            </fileset>
 			   <fileset>
                 <directory>./</directory>
                 <includes>
