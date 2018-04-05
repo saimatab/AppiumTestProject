@@ -400,7 +400,7 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
-	DataFormatter df = new DataFormatter();
+	/*DataFormatter df = new DataFormatter();
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
@@ -414,9 +414,7 @@ public class FinalSmokeTests {
 			//int totalNoOfRows1 = sheet1.getRows();
 	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
 			
-			
-		// To get the number of columns present in sheet
-		//int totalNoOfCols = sheet1.getColumns();
+
 
 		for (int row = 0; row < 20; row++) {
 
@@ -458,7 +456,7 @@ public class FinalSmokeTests {
 				
 			
 	 
-
+*/
 	
 			
 			
