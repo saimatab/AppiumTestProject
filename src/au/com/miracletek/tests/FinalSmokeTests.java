@@ -6,10 +6,13 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
+
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
 import java.util.Iterator;
-
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import java.util.*;
 import java.sql.*;
 import org.testng.ITestResult;
@@ -332,17 +335,17 @@ public class FinalSmokeTests {
 			                      Calendar.getInstance().getTime()).toString();*/
 			      
 			      
-				      File file = new File("app.xml");
-						FileInputStream fileInput = new FileInputStream(file);
+				      File file4 = new File("app.xml");
+						FileInputStream fileInput = new FileInputStream(file4);
 						Properties properties = new Properties();
 						properties.loadFromXML(fileInput);
-						fileInput.close();
+					
 
 						
 			//excel file 
 			    File file1 = new File("auto_output.xls");
 			    File file2 = new File("auto_input.xls");
-		       
+		     
 			FileOutputStream fileOut = new FileOutputStream(file1);
 			// FileInputStream inputStream = new FileInputStream(file1);
        
@@ -400,53 +403,97 @@ public class FinalSmokeTests {
          }
 
         fileWriter.close();*/
-	DataFormatter df = new DataFormatter();
-		FileInputStream fileInputStream1 = new FileInputStream(file1);
-		FileInputStream fileInputStream2 = new FileInputStream(file2);
+			 
+				
 			
+	DataFormatter df = new DataFormatter();
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
+		FileInputStream fileInputStream1 = new FileInputStream(file1);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
+		FileInputStream fileInputStream2 = new FileInputStream(file2);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
             HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
 		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
-        Iterator<Row> rowIterator1 = sheet1.iterator();
-        Iterator<Row> rowIterator2 = sheet2.iterator();
-        while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
-            Row currentRow1 = rowIterator1.next();
-             Row currentRow2 = rowIterator2.next();
-            Iterator<Cell> cellIterartor1 = currentRow1.iterator();
-            Iterator<Cell> cellIterator2 = currentRow2.iterator();
-            while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
-               Cell currentCell1 = cellIterartor1.next();
-                Cell currentCell2 = cellIterartor2.next();
-		
-    if (df.formatCellValue(currentCell1).equals(currentCell2))
-    {       HSSFCellStyle style = workbook1.createCellStyle();
-        HSSFFont font = workbook1.createFont();
-        font.setColor(HSSFColor.GREEN.index);
-        style.setFont(font);
-      currentCell1.setCellStyle(style);
-    } else
-    {
+			//int totalNoOfRows1 = sheet1.getRows();
+	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
+	int firstRow1=sheet1.getFirstRowNum();
+				  System.out.println("fristrownum"+sheet1.getFirstRowNum());
+                              
+        int lastRow1 = sheet1.getLastRowNum();
+				  System.out.println("lastrownum"+sheet1.getLastRowNum());
+			Row r4 = sheet1.getRow(firstRow1);
+			
+			  short firstCell1 = r4.getFirstCellNum();
+				  System.out.println("fristcellnum"+r4.getFirstCellNum());
+                        short lastCell1 = r4.getLastCellNum();
+				  System.out.println("lastcellnum"+r4.getLastCellNum());
+		for (int row = firstRow1; row < lastRow1; row++) {
+
+			for (int col = firstCell1; col < lastCell1; col++) {
+				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
+				Row r1 = sheet1.getRow(row);
+				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
+                                Cell cA1 = r1.getCell(col);
+					Row r2 = sheet2.getRow(row);
+				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@6");
+                                Cell cA2 = r2.getCell(col);
+				
+				  
+				
+				 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
+           HSSFCellStyle style = workbook1.createCellStyle();
+					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+       // HSSFFont font = workbook1.createFont();
+       // font.setColor(HSSFColor.GREEN.index);
+       // style.setFont(font);
+					 
+					
+					   System.out.println("EQUALS@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
+			 	  
+			
+      cA1.setCellStyle(style);
+				   System.out.println("@@@@@@@@@v"+cA2);
+					    System.out.println("@@@@@@@@@format"+df.formatCellValue(cA1));
+					    System.out.println("@@@@@@@@@froamt"+df.formatCellValue(cA2));
+			 	  	 
+				 }
+    else{
+    
 	      HSSFCellStyle style = workbook1.createCellStyle();
-          HSSFFont font = workbook1.createFont();
-        font.setColor(HSSFColor.RED.index);
-        style.setFont(font);
-      currentCell1.setCellStyle(style);
+        //  HSSFFont font = workbook1.createFont();
+        //font.setColor(HSSFColor.RED.index);
+       // style.setFont(font);
+	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
+	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
+		 	  
+				
+      cA1.setCellStyle(style);
+	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
+	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
+					    System.out.println("%%%%%%%%fromat"+df.formatCellValue(cA2));
+			 	  	 
+		
     }
-                     //logic to compare values
-            }
-        }	
+				 
+			}
+		}
+				
+			workbook1.write(new FileOutputStream("output.xls"));
+	workbook2.write(new FileOutputStream("input"));
+
+			
+	 fileInputStream1.close();
+			fileInputStream2.close(); 
+
+	
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+	
 			
         
            		//Create Connection to DB		
@@ -654,25 +701,30 @@ String e= rs1.getString(4);
 			
 			
 			
-			
+				  System.out.println("FFF@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
 			
 			
 				
 						String appcode = properties.getProperty("appcode");
-						
+				  System.out.println("FFF1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
+					
 						String username = properties.getProperty("username");
 						
 						String password = properties.getProperty("password");
-						
+							fileInput.close();
 						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
-					
+					  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
 			 	   String scrFolder = scshot
 				              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
 				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@f");
 		        appCodePage.enterAppCodeAndProceed(appcode);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@r");
 		    	Thread.sleep(5000);
 
 				loginPage.Login1(username,password);
