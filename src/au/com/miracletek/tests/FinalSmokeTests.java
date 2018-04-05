@@ -6,7 +6,7 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
 import java.util.Iterator;
 
