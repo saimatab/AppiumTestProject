@@ -483,7 +483,7 @@ public class FinalSmokeTests {
 			}
 		}
 				
-			workbook1.write(new FileOutputStream("auto_output_results_final.xls"));
+			workbook1.write(new FileOutputStream("auto_output.xls"));
 	//workbook2.write(new FileOutputStream("auto_input.xls"));
 
 			
