@@ -401,12 +401,15 @@ public class FinalSmokeTests {
 
         fileWriter.close();*/
 	DataFormatter df = new DataFormatter();
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
 		FileInputStream fileInputStream2 = new FileInputStream(file2);
-			
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
             HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
 		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
 			//int totalNoOfRows1 = sheet1.getRows();
 	       
@@ -447,18 +450,7 @@ public class FinalSmokeTests {
 				
 			
 	 
-	
-			
-        /*Iterator<Row> rowIterator1 = sheet1.iterator();
-        Iterator<Row> rowIterator2 = sheet2.iterator();
-        while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
-            Row currentRow1 = rowIterator1.next();
-             Row currentRow2 = rowIterator2.next();
-            Iterator<Cell> cellIterator1 = currentRow1.iterator();
-            Iterator<Cell> cellIterator2 = currentRow2.iterator();
-            while (cellIterator1.hasNext() && cellIterator2.hasnext()) {
-               Cell currentCell1 = cellIterator1.next();
-                Cell currentCell2 = cellIterator2.next();*/
+
 	
 			
 			
