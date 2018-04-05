@@ -463,16 +463,16 @@ public class FinalSmokeTests {
 				 }
     else{
     
-	      HSSFCellStyle style = workbook1.createCellStyle();
+	      HSSFCellStyle style1 = workbook1.createCellStyle();
         //  HSSFFont font = workbook1.createFont();
         //font.setColor(HSSFColor.RED.index);
        // style.setFont(font);
-	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
-	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+	     style1.setFillForegroundColor(IndexedColors.RED.getIndex());
+	    style1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
 		 	  
 				
-      cA1.setCellStyle(style);
+      cA1.setCellStyle(style1);
 	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
 	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
 					    System.out.println("%%%%%%%%fromat"+df.formatCellValue(cA2));
