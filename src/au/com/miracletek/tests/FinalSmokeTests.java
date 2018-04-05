@@ -447,7 +447,7 @@ public class FinalSmokeTests {
        // HSSFFont font = workbook1.createFont();
        // font.setColor(HSSFColor.GREEN.index);
        // style.setFont(font);
-					   System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
+					   System.out.println("EQUALS@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
 			 	  
 			
       cA1.setCellStyle(style);
@@ -464,7 +464,7 @@ public class FinalSmokeTests {
        // style.setFont(font);
 	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
-	      System.out.println("%%%%%%%%%%%%%%%%%%"+cA1);
+	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
 			 	  
 			
       cA1.setCellStyle(style);
