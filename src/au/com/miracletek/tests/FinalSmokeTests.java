@@ -402,7 +402,7 @@ public class FinalSmokeTests {
 		FileInputStream fileInputStream2 = new FileInputStream(file2);
 			
             HSSFWorkbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1);
-		HSSFWorkbook	  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
+		HSSFWorkbook	  workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
         Iterator<Row> rowIterator1 = sheet1.iterator();
