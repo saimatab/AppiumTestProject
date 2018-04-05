@@ -440,7 +440,7 @@ public class FinalSmokeTests {
 				
 				
 				
-				 if (df.formatCellValue(cA1).equals(cA2)){
+				 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
            HSSFCellStyle style = workbook1.createCellStyle();
 					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
