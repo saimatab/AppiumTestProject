@@ -413,9 +413,9 @@ public class FinalSmokeTests {
         while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
             Row currentRow1 = rowIterator1.next();
              Row currentRow2 = rowIterator2.next();
-            Iterator<Cell> cellIterartor1 = currentRow1.iterator();
+            Iterator<Cell> cellIterator1 = currentRow1.iterator();
             Iterator<Cell> cellIterator2 = currentRow2.iterator();
-            while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
+            while (cellIterator1.hasNext() && cellIterator2.hasnext()) {
                Cell currentCell1 = cellIterartor1.next();
                 Cell currentCell2 = cellIterartor2.next();
 		
