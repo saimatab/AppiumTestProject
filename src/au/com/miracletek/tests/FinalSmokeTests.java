@@ -683,13 +683,15 @@ String e= rs1.getString(4);
 						
 						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
-					
+					  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
 			 	   String scrFolder = scshot
 				              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
 				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@f");
 		        appCodePage.enterAppCodeAndProceed(appcode);
+			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@r");
 		    	Thread.sleep(5000);
 
 				loginPage.Login1(username,password);
