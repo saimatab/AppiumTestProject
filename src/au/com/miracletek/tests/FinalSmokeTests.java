@@ -406,7 +406,7 @@ public class FinalSmokeTests {
 			 
 				
 			
-	DataFormatter df = new DataFormatter();
+	/*DataFormatter df = new DataFormatter();
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
@@ -484,11 +484,10 @@ public class FinalSmokeTests {
 		}
 				
 			workbook1.write(new FileOutputStream("auto_output.xls"));
-	//workbook2.write(new FileOutputStream("auto_input.xls"));
-
+	
 			
 	 fileInputStream1.close();
-			fileInputStream2.close(); 
+			fileInputStream2.close(); */
 
 	
 			
@@ -701,15 +700,9 @@ String e= rs1.getString(4);
 			
 			
 			
-				  System.out.println("FFF@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
-			 	  
-			
-			
 				
 						String appcode = properties.getProperty("appcode");
-				  System.out.println("FFF1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
-			 	  
-					
+				
 						String username = properties.getProperty("username");
 						
 						String password = properties.getProperty("password");
