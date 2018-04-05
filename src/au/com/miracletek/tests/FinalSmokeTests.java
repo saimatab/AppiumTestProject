@@ -7,7 +7,7 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
   import  org.apache.poi.ss.usermodel.DataFormatter;
-
+import java.util.Iterator;
 
 import java.util.*;
 import java.sql.*;
@@ -401,15 +401,15 @@ public class FinalSmokeTests {
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 		FileInputStream fileInputStream2 = new FileInputStream(file2);
 			
-            HSSFWorkbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1);
-		HSSFWorkbook	  workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
+            HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
+		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
         Iterator<Row> rowIterator1 = sheet1.iterator();
         Iterator<Row> rowIterator2 = sheet2.iterator();
         while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
             Row currentRow1 = rowIterator1.next();
-            Row currentRow2 = rowIterator2.next();
+            Row currentRow2 = rowIterator1.next();
             Iterator<Cell> cellIterartor1 = currentRow1.iterator();
             Iterator<Cell> cellIterator2 = currentRow2.iterator();
             while (cellIterartor1.hasNext() && cellIterator2.hasnext()) {
