@@ -432,20 +432,26 @@ public class FinalSmokeTests {
 				
 				
 				 if (df.formatCellValue(cA1).equals(cA2)){
-    {       HSSFCellStyle style = workbook1.createCellStyle();
+           HSSFCellStyle style = workbook1.createCellStyle();
         HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.GREEN.index);
         style.setFont(font);
+					   System.out.println("FFF64@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
+			
       cA1.setCellStyle(style);}
-    } else{
-    {
+    else{
+    
 	      HSSFCellStyle style = workbook1.createCellStyle();
           HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.RED.index);
         style.setFont(font);
+	      System.out.println("FFFdvsdfsd@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
+			
       cA1.setCellStyle(style);
     }
-				 }
+				 
 			}
 		}
 				
@@ -671,12 +677,15 @@ String e= rs1.getString(4);
 			
 			
 			
-			
+				  System.out.println("FFF@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
 			
 			
 				
 						String appcode = properties.getProperty("appcode");
-						
+				  System.out.println("FFF1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+			 	  
+					
 						String username = properties.getProperty("username");
 						
 						String password = properties.getProperty("password");
