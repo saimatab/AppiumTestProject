@@ -6,10 +6,13 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
+import org.apache.poi.hssf.usermodel.HSSFIndexedColors;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
 import java.util.Iterator;
-
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import java.util.*;
 import java.sql.*;
 import org.testng.ITestResult;
@@ -415,8 +418,8 @@ public class FinalSmokeTests {
 	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
 	int firstRow1=sheet1.getFirstRowNum();		
         int lastRow1 = sheet1.getLastRowNum();
-			  int firstCell1 = firstRow1.getFirstCellNum();
-                        int lastCell1 = firstRow1.getLastCellNum();
+			  int firstCell1 = Integer.toString(firstRow1.getFirstCellNum());
+                        int lastCell1 = Integer.toString(firstRow1.getLastCellNum());
 		for (int row = firstRow1; row <= lastRow1; row++) {
 
 			for (int col = firstCell1; col <= lastCell1; col++) {
@@ -432,8 +435,8 @@ public class FinalSmokeTests {
 				
 				 if (df.formatCellValue(cA1).equals(cA2)){
            HSSFCellStyle style = workbook1.createCellStyle();
-					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-	    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+					   style.setFillForegroundColor(HSSFIndexedColors.GREEN.getIndex());
+	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
        // HSSFFont font = workbook1.createFont();
        // font.setColor(HSSFColor.GREEN.index);
        // style.setFont(font);
@@ -452,8 +455,8 @@ public class FinalSmokeTests {
         //  HSSFFont font = workbook1.createFont();
         //font.setColor(HSSFColor.RED.index);
        // style.setFont(font);
-	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
-	    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+	     style.setFillForegroundColor(HSSFIndexedColors.RED.getIndex());
+	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("%%%%%%%%%%%%%%%%%%"+cA1);
 			 	  
 			
