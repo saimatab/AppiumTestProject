@@ -412,7 +412,7 @@ public class FinalSmokeTests {
 			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
 			//int totalNoOfRows1 = sheet1.getRows();
-	       
+	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
 			
 			
 		// To get the number of columns present in sheet
@@ -423,19 +423,21 @@ public class FinalSmokeTests {
 			for (int col = 0; col < 20; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
+				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
                                 Cell cA1 = r1.getCell(col);
 					Row r2 = sheet2.getRow(row);
+				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@6");
                                 Cell cA2 = r2.getCell(col);
 				
 				
 				
-				 if (df.formatCellValue(cA1).equals(cA2))
+				 if (df.formatCellValue(cA1).equals(cA2)){
     {       HSSFCellStyle style = workbook1.createCellStyle();
         HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.GREEN.index);
         style.setFont(font);
-      cA1.setCellStyle(style);
-    } else
+      cA1.setCellStyle(style);}
+    } else{
     {
 	      HSSFCellStyle style = workbook1.createCellStyle();
           HSSFFont font = workbook1.createFont();
@@ -443,7 +445,7 @@ public class FinalSmokeTests {
         style.setFont(font);
       cA1.setCellStyle(style);
     }
-		
+				 }
 			}
 		}
 				
