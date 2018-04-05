@@ -413,12 +413,13 @@ public class FinalSmokeTests {
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
 			//int totalNoOfRows1 = sheet1.getRows();
 	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
-			
+	int firstRow1=sheet1.getFirstRowNum();		
+        int lastRow1 = sheet1.getLastRowNum();
+			  int firstCell1 = firstRow1.getFirstCellNum();
+                        int lastCell1 = firstRow1.getLastCellNum();
+		for (int row = firstRow1; row <= lastRow1; row++) {
 
-
-		for (int row = 0; row < 2; row++) {
-
-			for (int col = 0; col < 2; col++) {
+			for (int col = firstCell1; col <= lastCell1; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
@@ -431,27 +432,36 @@ public class FinalSmokeTests {
 				
 				 if (df.formatCellValue(cA1).equals(cA2)){
            HSSFCellStyle style = workbook1.createCellStyle();
-        HSSFFont font = workbook1.createFont();
-        font.setColor(HSSFColor.GREEN.index);
-        style.setFont(font);
-					   System.out.println("FFF64@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
+					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+	    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+       // HSSFFont font = workbook1.createFont();
+       // font.setColor(HSSFColor.GREEN.index);
+       // style.setFont(font);
+					   System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
 			 	  
 			
       cA1.setCellStyle(style);
-				   System.out.println("FFF641@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
+				   System.out.println("@@@@@@@@@v"+cA2);
+					    System.out.println("@@@@@@@@@format"+df.formatCellValue(cA1));
+					    System.out.println("@@@@@@@@@froamt"+df.formatCellValue(cA2));
 			 	  	 
 				 }
     else{
     
 	      HSSFCellStyle style = workbook1.createCellStyle();
-          HSSFFont font = workbook1.createFont();
-        font.setColor(HSSFColor.RED.index);
-        style.setFont(font);
-	      System.out.println("FFFdvsdfsd@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v"+cA2);
+        //  HSSFFont font = workbook1.createFont();
+        //font.setColor(HSSFColor.RED.index);
+       // style.setFont(font);
+	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
+	    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+	      System.out.println("%%%%%%%%%%%%%%%%%%"+cA1);
 			 	  
 			
       cA1.setCellStyle(style);
-	     System.out.println("FFFdvsdfsd4@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v"+cA2);
+	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
+	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
+					    System.out.println("%%%%%%%%fromat"+df.formatCellValue(cA2));
+			 	  	 
 		
     }
 				 
