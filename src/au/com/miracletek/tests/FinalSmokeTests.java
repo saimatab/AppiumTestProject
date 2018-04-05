@@ -399,8 +399,8 @@ public class FinalSmokeTests {
 		FileInputStream fileInputStream1 = new FileInputStream(file1);
 		FileInputStream fileInputStream2 = new FileInputStream(file2);
 			
-            Workbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1));
-			  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2)) 
+            Workbook workbook1= StreamingReader.builder().bufferSize(4096).open(fileInputStream1);
+			  Workbook workbook2 = StreamingReader.builder().bufferSize(4096).open(fileInputStream2); 
         Sheet sheet1 = workbook1.getSheetAt(0);
         Sheet sheet2 = workbook2.getSheetAt(0);
         Iterator<Row> rowIterator1 = sheet1.iterator();
