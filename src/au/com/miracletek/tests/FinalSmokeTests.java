@@ -420,13 +420,16 @@ public class FinalSmokeTests {
 				  System.out.println("fristrownum"+sheet1.getFirstRowNum());
                               
         int lastRow1 = sheet1.getLastRowNum();
+				  System.out.println("lastrownum"+sheet1.getLastRowNum());
 			Row r4 = sheet1.getRow(firstRow1);
 			
 			  short firstCell1 = r4.getFirstCellNum();
+				  System.out.println("fristcellnum"+r4.getFirstCellNum());
                         short lastCell1 = r4.getLastCellNum();
-		for (int row = firstRow1; row <= lastRow1; row++) {
+				  System.out.println("lastcellnum"+r4.getLastCellNum());
+		for (int row = firstRow1; row < lastRow1; row++) {
 
-			for (int col = firstCell1; col <= lastCell1; col++) {
+			for (int col = firstCell1; col < lastCell1; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
