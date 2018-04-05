@@ -420,8 +420,8 @@ public class FinalSmokeTests {
 				  System.out.println("fristrownum"+sheet1.getFirstRowNum());
                               
         int lastRow1 = sheet1.getLastRowNum();
-			  int firstCell1 = Integer.parseInt(firstRow1.getFirstCellNum());
-                        int lastCell1 = Integer.parseInt(firstRow1.getLastCellNum());
+			  short firstCell1 = firstRow1.getFirstCellNum();
+                        short lastCell1 = firstRow1.getLastCellNum();
 		for (int row = firstRow1; row <= lastRow1; row++) {
 
 			for (int col = firstCell1; col <= lastCell1; col++) {
