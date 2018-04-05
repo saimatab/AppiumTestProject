@@ -408,18 +408,25 @@ public class FinalSmokeTests {
 		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
        HSSFSheet sheet1 = workbook1.getSheetAt(0);
       HSSFSheet sheet2 = workbook2.getSheetAt(0);
-        Iterator<Row> rowIterator1 = sheet1.iterator();
-        Iterator<Row> rowIterator2 = sheet2.iterator();
-        while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
-            Row currentRow1 = rowIterator1.next();
-             Row currentRow2 = rowIterator2.next();
-            Iterator<Cell> cellIterator1 = currentRow1.iterator();
-            Iterator<Cell> cellIterator2 = currentRow2.iterator();
-            while (cellIterator1.hasNext() && cellIterator2.hasnext()) {
-               Cell currentCell1 = cellIterator1.next();
-                Cell currentCell2 = cellIterator2.next();
-		
-    if (df.formatCellValue(currentCell1).equals(currentCell2))
+			int totalNoOfRows1 = sheet1.getRows();
+	       
+			
+			
+		// To get the number of columns present in sheet
+		int totalNoOfCols = sheet1.getColumns();
+
+		for (int row = 0; row < totalNoOfRows; row++) {
+
+			for (int col = 0; col < totalNoOfCols; col++) {
+				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
+				Row r1 = sheet1.getRow(row);
+                                Cell cA1 = r1.getCell(col);
+					Row r2 = sheet2.getRow(row);
+                                Cell cA2 = r2.getCell(col);
+				
+				
+				
+				 if (df.formatCellValue(cA1).equals(cA2))
     {       HSSFCellStyle style = workbook1.createCellStyle();
         HSSFFont font = workbook1.createFont();
         font.setColor(HSSFColor.GREEN.index);
@@ -433,10 +440,26 @@ public class FinalSmokeTests {
         style.setFont(font);
       currentCell1.setCellStyle(style);
     }
-                     //logic to compare values
-            }
-        }	
+		
+			}
+		}
+				
+				
 			
+	 
+	
+			
+        /*Iterator<Row> rowIterator1 = sheet1.iterator();
+        Iterator<Row> rowIterator2 = sheet2.iterator();
+        while (rowIterator1.hasNext() && rowIterator2.hasNext()) {
+            Row currentRow1 = rowIterator1.next();
+             Row currentRow2 = rowIterator2.next();
+            Iterator<Cell> cellIterator1 = currentRow1.iterator();
+            Iterator<Cell> cellIterator2 = currentRow2.iterator();
+            while (cellIterator1.hasNext() && cellIterator2.hasnext()) {
+               Cell currentCell1 = cellIterator1.next();
+                Cell currentCell2 = cellIterator2.next();*/
+	
 			
 			
 			
