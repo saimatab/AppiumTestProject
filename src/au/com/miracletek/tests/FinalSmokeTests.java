@@ -332,11 +332,11 @@ public class FinalSmokeTests {
 			                      Calendar.getInstance().getTime()).toString();*/
 			      
 			      
-				      File file = new File("app.xml");
-						FileInputStream fileInput = new FileInputStream(file);
+				      File file4 = new File("app.xml");
+						FileInputStream fileInput = new FileInputStream(file4);
 						Properties properties = new Properties();
 						properties.loadFromXML(fileInput);
-						fileInput.close();
+					
 
 						
 			//excel file 
@@ -693,7 +693,7 @@ String e= rs1.getString(4);
 						String username = properties.getProperty("username");
 						
 						String password = properties.getProperty("password");
-						
+							fileInput.close();
 						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
 					  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
