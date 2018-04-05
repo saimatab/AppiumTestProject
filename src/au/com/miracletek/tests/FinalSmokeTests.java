@@ -471,8 +471,7 @@ public class FinalSmokeTests {
 	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
 		 	  
-				  color.Add(row)
-						    color1.Add(col)
+				
       cA1.setCellStyle(style);
 	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
 	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
