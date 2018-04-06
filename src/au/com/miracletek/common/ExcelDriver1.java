@@ -176,13 +176,13 @@ xlsWorkbook.write(fileOut);
 	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
 		
-		 Workbook workbook = WorkbookFactory.create(new File("SAMPLE.xlsx"));
+		XSSFWorkbook workbook = WorkbookFactory.create(new File("SAMPLE.xlsx"));
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
-		 Workbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
+		 XSSFWorkbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
 		
-		  Sheet sheet1 = workbook.getSheetAt(sheetId);
-		  Sheet sheet2 =workbook1.getSheetAt(sheetId);
+		  XSSFSheet sheet1 = workbook.getSheetAt(sheetId);
+		  XSSFSheet sheet2 =workbook1.getSheetAt(sheetId);
 				  
 				  
 				  
@@ -204,7 +204,7 @@ int firstRow1=sheet1.getFirstRowNum();
                           
     int lastRow1 = sheet1.getLastRowNum();
 	
-		Row r4 = sheet1.getRow(firstRow1);
+		XSSFRow r4 = sheet1.getRow(firstRow1);
 		
 		  short firstCell1 = r4.getFirstCellNum();
 	
@@ -215,16 +215,16 @@ int firstRow1=sheet1.getFirstRowNum();
 		for (int col = 0; col < colnum; col++) {
 			//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 		Row r1 = sheet1.getRow(row);
-			              Cell cA1 = r1.getCell(col);
+			              XSSFCell cA1 = r1.getCell(col);
 		Row r2 = sheet2.getRow(row);
-		           Cell cA2 = r2.getCell(col);
+		          XSSFCell cA2 = r2.getCell(col);
 			
 			  
 			
 			 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
-       CellStyle style = workbook.createCellStyle();
+       XSSFCellStyle style = workbook.createCellStyle();
 				   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+    style.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);
 
 		
   cA1.setCellStyle(style);
@@ -234,9 +234,9 @@ int firstRow1=sheet1.getFirstRowNum();
 			 }
 else{
 
-    CellStyle style1 = workbook.createCellStyle();
+	 XSSFCellStyle style1 = workbook.createCellStyle();
 				   style1.setFillForegroundColor(IndexedColors.RED.getIndex());
- style1.setFillPattern(CellStyle.SOLID_FOREGROUND);;
+ style1.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);;
      
 			
   cA1.setCellStyle(style1);
