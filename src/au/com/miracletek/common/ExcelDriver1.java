@@ -53,7 +53,7 @@ import java.util.Properties;
 import java.util.Map;
 import java.io.File;
 import java.io.FileWriter;
-import org.apache.poi.ss.util.Color;
+
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
