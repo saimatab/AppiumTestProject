@@ -547,40 +547,40 @@ ex.saveQueryResultToExcel(rs8, "auto_output.xls","reppager_repeater1","auto_outp
 
         
 			      	ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
-			 			ex1=new ExcelDriver();
+			 			ex1=new ExcelDriver1();
 			 		ex1.saveQueryResultToExcel(rs1, "auto_output1.xlsx","auto","auto_output1.xlsx", "auto_input.xls",0,2,5 );
 			         
 			         
 			 	  	ResultSet rs2 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
-		 			ex1=new ExcelDriver();
+		 			ex1=new ExcelDriver1();
 		 		ex1.saveQueryResultToExcel(rs2, "auto_output1.xlsx","camera","auto_output1.xlsx", "camera_input.xls",2,2,2 );
 		         
 		 	 	ResultSet rs3 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
-	 			ex1=new ExcelDriver();
+	 			ex1=new ExcelDriver1();
 	 		ex1.saveQueryResultToExcel(rs3, "auto_output1.xlsx","gallary","auto_output1.xlsx", "gallary_input.xls",2,2,2 );
 			         
 	 	     
 	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from testsig  ORDER BY id DESC LIMIT 1;");
-			ex1=new ExcelDriver();
+			ex1=new ExcelDriver(1);
 		ex1.saveQueryResultToExcel(rs4, "auto_output1.xlsx","signature","auto_output1.xlsx", "signature_input.xls",3 ,2,2);
 		         
 		         
 		
      
 ResultSet rs6 =dm.db("bgc_qa", "BGC!@#123", "select *  from upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
-	ex1=new ExcelDriver();
+	ex1=new ExcelDriver1();
 ex1.saveQueryResultToExcel(rs6, "auto_output1.xlsx","upload_datetime_autocom","auto_output1.xlsx", "upload_datetime_autocom_input.xls",4 ,2,8);
  
    
 	           
 
 ResultSet rs7 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager  ORDER BY id DESC LIMIT 1;");
-ex1=new ExcelDriver();
+ex1=new ExcelDriver1();
 ex1.saveQueryResultToExcel(rs7, "auto_output1.xlsx","reppager","auto_output1.xlsx", "reppager_input.xls",5,2,2 );
 
 
 ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager_repeater1  ORDER BY id DESC LIMIT 1;");
-ex1=new ExcelDriver();
+ex1=new ExcelDriver1();
 ex1.saveQueryResultToExcel(rs8, "auto_output1.xlsx","reppager_repeater1","auto_output1.xlsx", "reppager_repeater1_input.xls",6,2,3 );
 
 			         
