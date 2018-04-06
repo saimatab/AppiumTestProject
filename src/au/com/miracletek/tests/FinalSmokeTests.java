@@ -141,7 +141,7 @@ public class FinalSmokeTests {
 	AutomationTestForm6  form6;
 	DatabaseDriver dm;
 	ExcelDriver ex;
-	ExcelDriver ex1;
+	ExcelDriver1 ex1;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
