@@ -156,7 +156,7 @@ FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
+	//CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
 	
 	
 		
