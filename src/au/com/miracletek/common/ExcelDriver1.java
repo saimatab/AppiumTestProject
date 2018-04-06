@@ -162,8 +162,8 @@ xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	
 
-    File file1a = new File("SAMPLE.xlsx");
-    File file2a = new File("auto_input.xlsx");
+    File file1a = new File(filea);
+    File file2a = new File(fileb);
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
 	
