@@ -125,7 +125,7 @@ public class ExcelDriver1 {
 
 
 org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
-
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
 short rowIndex = 0;
 List<String> resultSetArray=new ArrayList<>();
 
@@ -157,7 +157,9 @@ while (rs.next()) {
 }
 
 // Write to disk
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%NNNN");
 FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%OOOO");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	
