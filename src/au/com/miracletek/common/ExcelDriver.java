@@ -60,7 +60,7 @@ import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 public class ExcelDriver {
 	
 	
-	public void saveQueryResultToExcel(ResultSet rs, String fileName,String sheetName,String filea, String fileb )throws Exception{
+	public void saveQueryResultToExcel(ResultSet rs, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
 	
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
@@ -101,8 +101,7 @@ while (rs.next()) {
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	
-	CompareResults(file1, file2 ,2, 5,filea);
-	
+	CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
 	
 	
 		
@@ -114,7 +113,7 @@ xlsWorkbook.write(fileOut);
       fileWriter.write(mapping + "\n");
    }fileWriter.close();*/
 	
-	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename)throws Exception{
+	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws Exception{
 		
 		
 
@@ -126,8 +125,8 @@ DataFormatter df = new DataFormatter();
 FileInputStream fileInputStream2 = new FileInputStream(fileb);
 		HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
 	HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
-   HSSFSheet sheet1 = workbook1.getSheetAt(0);
-HSSFSheet sheet2 = workbook2.getSheetAt(0);
+   HSSFSheet sheet1 = workbook1.getSheetAt(sheetId);
+HSSFSheet sheet2 = workbook2.getSheetAt(sheetId);
 		//int totalNoOfRows1 = sheet1.getRows();
 int firstRow1=sheet1.getFirstRowNum();
 			
