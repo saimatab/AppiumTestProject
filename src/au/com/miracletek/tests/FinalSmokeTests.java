@@ -391,7 +391,465 @@ public class FinalSmokeTests {
 
 				loginPage.Login1(username,password);
 				Thread.sleep(5000);
+				form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
+			    catPage.selectCategoryListView("test",config);
+			  	Thread.sleep(2000);
+			  	
+			  	
+			  	
+			  	
+		        formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+		        Thread.sleep(3000);
+	            form1.fillForm(config);
+	            form1.submit();
+	          
+	          
+	          
+	            Thread.sleep(2000);
+		        formList.selectForm("camera",config);//  camera
+		        Thread.sleep(3000);
+	            form2.fillForm(config);
+	            form2.scrollToText("Label");
+	    		form2.submit();
+	          
+	    	
+	    	  	Thread.sleep(2000);
+	    		  formList.selectForm("gallery",config);//gallary 
+	  	        Thread.sleep(3000);
+	  	     	form3.takescreenshot1();
+	              form3.fillForm(config);
+	          	Thread.sleep(5000);
+	              form2.scrollToText("Label");
+	          	Thread.sleep(5000);
+	              form3.annotation(config);
+	          	Thread.sleep(5000);
+	          	   form2.scrollToText("Label");
+	      		form3.submit();
+	      		
+	          
+	     	  	Thread.sleep(2000);
+	          
+	          
+	         
+	          
+	     	  
+		        formList.selectForm("sig",config);//signature
+		    	Thread.sleep(2000);
+		        form4.clickSign();
+		       form4.signature(config);
+		     
+		        Thread.sleep(7000);
+		        form4.save(config);
+		        form4.submit();
+	      
+		         	
+		      //------------------date time pciker , file uplloader , auto compelte ------------------
+		        
+		        
+		        
+		        formList.selectForm("dtimeupAuto",config);
+		        Thread.sleep(6000);
+                 form5.clickDatePicker(config, "datepicker1");
+	
+			    form5.Date(config,"Apr","03","2018");
+			    Thread.sleep(3000);
+				form5.ok();
+			      Thread.sleep(3000);
+			        form5.clickTimePicker(config, "timepicker1");
+			 
+			        form5.Time(config,"3","22","PM");
+					form5.ok();
+				    Thread.sleep(3000);
 				
+				
+				
+				
+				form5.clickDateTimePickerDate(config, "datetimepicker1");
+			    Thread.sleep(3000);
+			    form5.Date(config,"Jan","03","2018");
+			    Thread.sleep(6000);
+				form5.ok();
+		//
+				form5.clickDateTimePickerTime(config, "datetimepicker1");
+			        Thread.sleep(3000);
+			    form5.Time(config,"3","22","AM");
+				form5.ok();
+			 
+			    Thread.sleep(3000);
+	      
+	      
+		         form5.fileUploader("Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
+		         			    Thread.sleep(3000);
+		             form5.autoComplete(config,"autocomplete1");
+		        Thread.sleep(6000);
+		        
+		        form5.clickslider(config);
+		        form5.clickswitch(config,"switch1","0");
+		         form5.submit();   
+		        
+		        // repeater pager
+		        
+		         Thread.sleep(2000);
+				        formList.selectForm("reppager",config);
+		        
+		         formList.selectForm("reppager",config);
+		        
+		        
+		        
+		         form6.clickRepeaterSelectSwitch(config,"pagerview1","repeater1","0","switch1");
+			        Thread.sleep(3000);
+			    	
+			        form6.clickRepeaterSelectSwitch(config,"pagerview1","repeater1","1","switch1");
+			        form6.clickTab(config, "Tab1");
+	              form6.clicktextbox(config, "textbox1");
+	              form6.clickTab(config, "Tab");
+			         form6.submit();
+			         ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+			 			ex1=new ExcelDriver1();
+			 		ex1.saveQueryResultToExcel(rs1, "SAMPLE.xlsx","auto","SAMPLE.xlsx", "auto_input.xls",0,2,5 );
+			         
+			         
+			 	  	ResultSet rs2 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
+		 			ex1=new ExcelDriver1();
+		 		ex1.saveQueryResultToExcel(rs2, "SAMPLE.xlsx","camera","SAMPLE.xlsx", "camera_input.xls",2,2,2 );
+		         
+		 	 	ResultSet rs3 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
+	 			ex1=new ExcelDriver1();
+	 		ex1.saveQueryResultToExcel(rs3, "SAMPLE.xlsx","gallary","SAMPLE.xlsx", "gallary_input.xls",2,2,2 );
+			         
+	 	     
+	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from testsig  ORDER BY id DESC LIMIT 1;");
+			ex1=new ExcelDriver1();
+		ex1.saveQueryResultToExcel(rs4, "SAMPLE.xlsx","signature","SAMPLE.xlsx", "signature_input.xls",3 ,2,2);
+		         
+		         
+		
+  
+ResultSet rs6 =dm.db("bgc_qa", "BGC!@#123", "select *  from upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
+	ex1=new ExcelDriver1();
+ex1.saveQueryResultToExcel(rs6, "SAMPLE.xlsx","upload_datetime_autocom","SAMPLE.xlsx", "upload_datetime_autocom_input.xls",4 ,2,8);
+
+
+	           
+
+ResultSet rs7 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager  ORDER BY id DESC LIMIT 1;");
+ex1=new ExcelDriver1();
+ex1.saveQueryResultToExcel(rs7, "SAMPLE.xlsx","reppager","SAMPLE.xlsx", "reppager_input.xls",5,2,2 );
+
+
+ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager_repeater1  ORDER BY id DESC LIMIT 1;");
+ex1=new ExcelDriver1();
+ex1.saveQueryResultToExcel(rs8, "SAMPLE.xlsx","reppager_repeater1","SAMPLE.xlsx", "reppager_repeater1_input.xls",6,2,3 );
+		         
+		
+			        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Thread.sleep(2000);    
+		         	
+			         formList.selectForm("auto",config);   // check save draft icon  on  form level 
+				        Thread.sleep(3000);
+				   	form1.takescreenshotAndroid();
+			          form1.fillForm(config);
+			        	form1.saveDraft();
+			        
+						form1.navigateUp(config);
+				         	form1.navigateUp(config);
+				         	
+				         	
+				         	shell.clickSync(config);   // sync all forms 
+				         	Thread.sleep(3000);
+				         	sync.syncForms("1", config);
+					        
+				         	
+				      
+				         	WebDriverWait wait = new WebDriverWait(manager.getDriver(), 300);
+				         	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
+				        	Thread.sleep(3000);
+					        sync.openPendingSubmittedForms("1", config);
+					    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
+							
+					        
+					        
+			
+					        subQueue.clickonsubmittedTab(config);
+
+					        subQueue.opensubmittedDetailInfoPage("1",config);
+						    Thread.sleep(3000); 
+						
+						    
+						    form1.navigateUp(config);
+						    
+						    
+						    
+						    // view al submitted forms and take snapshot 
+						    
+						    subQueue.ViewsubmittedForms("1",config);
+						    Thread.sleep(3000);
+						
+							form1.takescreenshotAndroid();
+				         	
+				         	form1.navigateUp(config);
+				         	
+						    subQueue.ViewsubmittedForms("2",config);
+						    Thread.sleep(3000);
+						
+							form1.takescreenshotAndroid();
+				         	
+				         	form1.navigateUp(config);
+				         	
+							 subQueue.ViewsubmittedForms("3",config);
+							    Thread.sleep(3000);
+							
+								form1.takescreenshotAndroid();
+					         	
+					         	form1.navigateUp(config);
+				         	
+					       	 subQueue.ViewsubmittedForms("4",config);
+							    Thread.sleep(3000);
+							
+								form1.takescreenshotAndroid();
+					         	
+					         	form1.navigateUp(config);
+					         	
+					         	
+					         	
+						       	 subQueue.ViewsubmittedForms("5",config);
+								    Thread.sleep(3000);
+								
+									form1.takescreenshotAndroid();
+						         	
+						         	form1.navigateUp(config);
+						         	
+						         	
+						         	
+							       	 subQueue.ViewsubmittedForms("6",config);
+									    Thread.sleep(3000);
+									
+										form1.takescreenshotAndroid();
+							         	
+							         	form1.navigateUp(config);
+							         	
+							         	
+							         	 Thread.sleep(3000);
+					         	
+					         	// Edit all forms and save form one by one in draft 
+							         	
+							         	
+							         	
+							         	 subQueue.editSubmittedForm("1",config);
+							 		    
+							     		
+							 			form1.saveDraft();
+							         	
+							         	form1.navigateUp(config);
+							         	
+							 		   	 subQueue.editSubmittedForm("2",config);
+								 		    
+								     		
+								 			form1.saveDraft();
+							         	
+								         	form1.navigateUp(config);
+								         	
+								 	    	
+								 		   	 subQueue.editSubmittedForm("3",config);
+									 		    
+									     		
+									 			form1.saveDraft();
+								         	
+									         	form1.navigateUp(config);
+									         	
+					         	
+									         	
+									 	    	
+									 		   	 subQueue.editSubmittedForm("4",config);
+										 		    
+										     		
+										 			form1.saveDraft();
+					         	
+					         	
+										         	form1.navigateUp(config);
+										         	
+										         	
+										 	    	
+										 		   	 subQueue.editSubmittedForm("5",config);
+											 		    
+											     		
+											 			form1.saveDraft();
+					         	
+											         	form1.navigateUp(config);
+											         	
+											         	
+											 	    	
+											 		   	 subQueue.editSubmittedForm("6",config);
+												 		    
+												     		
+												 			form1.saveDraft();
+					         	
+												         	form1.navigateUp(config);
+												         	
+												         	
+												      // delete  form from submitted forms 
+												         	
+												         	
+												         	
+												         	  subQueue.removeSubmittedForm("1",config);
+												  	        subQueue.popup1("Yes"); 	
+												  
+															
+												         	
+												  	      subQueue.removeAllSubmittedForm("1",config);
+												  	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.Button[@text='Yes']")));
+											         	
+												  	      
+												  	        subQueue.popup("Yes"); 	
+												         	
+														    Thread.sleep(3000);
+															
+												         	
+
+												         	form1.navigateUp(config);
+												         	
+												         	
+												         	//perform syncing of all entiteis 
+												         	 Thread.sleep(3000);
+												 		    sync.syncRole("2",config);
+												         	
+												         	
+												         	
+												 		    Thread.sleep(3000);
+														    sync.syncUser("3",config);
+												         	
+													    	form1.navigateUp(config);
+												         	
+															shell.clickDrafts(config);  //drafts 
+												         	
+															drafts.Edit("1",config);
+															form1.submit(); 
+															
+													      	 Thread.sleep(3000);
+															
+															drafts.Edit("2",config);
+															form3.submit(); 
+															
+															
+												         	
+														    Thread.sleep(3000);
+															drafts.Edit("3",config);// eidt and save draft
+															form1.saveDraft();
+															form1.navigateUp(config);
+												         	
+														    Thread.sleep(3000);
+															drafts.Remove("3",config); //remove
+															  subQueue.popup1("Yes"); 
+												         	form1.navigateUp(config);
+												        	
+												         	shell.clickSync(config);   // sync all forms 
+													        Thread.sleep(3000);
+												         	
+												         	
+												         	
+													        sync.openPendingSubmittedForms("1",config);
+														    Thread.sleep(3000); 
+													
+														    subQueue.openPendingDetailInfoPage("1",config);
+														    Thread.sleep(3000);
+												         	form1.navigateUp(config);
+														    subQueue.submitPendingForm("2",config);
+														    Thread.sleep(3000);
+														    subQueue.RemovePendingForm("1", config);
+															  subQueue.popup1("Yes"); 
+															  
+															  
+															  //settings 
+															  
+															  
+															  
+															  
+															  form1.navigateUp(config);
+															  form1.navigateUp(config);
+															     Thread.sleep(2000);
+															   shell.clickSettings(config);
+															    Thread.sleep(3000);
+															    settings.clickAdvanced();   
+															 	advSettings.SelectPageToUpdateAndroid("2",config);
+															 	advSettings.updateSelectedPage();
+															  
+															    Thread.sleep(3000);
+															    advSettings.updateMetaData();
+															  
+																Thread.sleep(4000);
+																
+															    form1.navigateUp(config);
+																settings.updateApp();
+																settings.clickProceedAndroid();
+															
+																
+																		Thread.sleep(5000);
+											
+															    Thread.sleep(5000);
+															  
+				AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
+		    	d.setConnection(Connection.AIRPLANE);
+		    										    //offline login 
+															    
+				shell.clickSettings(config);
+																settings.Logout();
+																settings.sureLogout(config);
+															//	AndroidDriver  d=((AndroidDriver<MobileElement>)manager.getDriver());
+														    //	d.setConnection(Connection.NONE);
+														    	
+														    	
+
+															    Thread.sleep(5000);
+														    	
+																loginPage.Login1("abc","abc");
+												AndroidDriver  d1=((AndroidDriver<MobileElement>)manager.getDriver());
+															  	d1.setConnection(Connection.ALL);
+															  	Thread.sleep(3000);
+																
+															    
+															    
+															    
+															    
+															    
+																 log.debug("DEBBGUG" );	 log.debug("DEBBGUG" );	 log.info("DEBBGUG" );	 log.info("DEBBGUG" );	 log.info("DEBBGUG" );
+															    
+															    
+															    
+															    
+															    
+															    
+																extlogger.log(LogStatus.PASS, "Test Cases");
+															  
+															  
+															  
+													//notificaiton , my tasks , pull to refresh , search ,scrol ,  offline user login , logging , screenshot , report running , try catch assertion if possible 	  
+															  
+															  
+															  //searhc , my tasks ,  offline user logging
+
 			
 		         	
 			         //
