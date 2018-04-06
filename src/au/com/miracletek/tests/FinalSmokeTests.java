@@ -85,6 +85,7 @@ import au.com.miracletek.forms.AutomationTestForm5;
 import au.com.miracletek.forms.AutomationTestForm6;
 import au.com.miracletek.pages.AdvancedSettingsPage;
 import au.com.miracletek.common.DatabaseDriver;
+import au.com.miracletek.common.ExcelDriver;
 import au.com.miracletek.pages.AppCodePage;
 import au.com.miracletek.pages.CategoryPage;
 import au.com.miracletek.pages.DraftsPage;
@@ -138,6 +139,7 @@ public class FinalSmokeTests {
 	AutomationTestForm5  form5;
 	AutomationTestForm6  form6;
 	DatabaseDriver dm;
+	ExcelDriver ex;
 	SyncPageBlank  sync;
 	SubmissionQueuePage  subQueue;
 	SettingsPage  settings;
@@ -341,354 +343,18 @@ public class FinalSmokeTests {
 						properties.loadFromXML(fileInput);
 					
 
-						
-			//excel file 
-			    File file1 = new File("auto_output.xls");
-			    File file2 = new File("auto_input.xls");
-		     
-			FileOutputStream fileOut = new FileOutputStream(file1);
-			// FileInputStream inputStream = new FileInputStream(file1);
+			
+		
        
 	 dm=new DatabaseDriver();
 		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
-			
-                
-         	   			String fileName="auto_output.xls";
-			
-			
+			ex=new ExcelDriver();
+		ex.saveQueryResultToExcel(rs1, "auto_output.xls","auto","auto_output.xls", "auto_input.xls" );
+         	
 			
 			
-			HSSFWorkbook xlsWorkbook = new HSSFWorkbook();
-    HSSFSheet xlsSheet = xlsWorkbook.createSheet("auto");
-    short rowIndex = 0;
- List<String> resultSetArray=new ArrayList<>();
-
-    // Get the list of column names and store them as the first
-    // row of the spreadsheet.
-    ResultSetMetaData colInfo = rs1.getMetaData();
-    List<String> colNames = new ArrayList();
-    HSSFRow titleRow = xlsSheet.createRow(rowIndex++);
- 
-    for (int i = 1; i <= colInfo.getColumnCount(); i++) {
-      colNames.add(colInfo.getColumnName(i));
-      titleRow.createCell((short) (i-1)).setCellValue(
-        new HSSFRichTextString(colInfo.getColumnName(i)));
-      xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
-    }
- 
-    // Save all the data from the database table rows
-    while (rs1.next()) {
-	        StringBuilder sb = new StringBuilder();
-      HSSFRow dataRow = xlsSheet.createRow(rowIndex++);
-      short colIndex = 0;
-      for (String colName : colNames) {
-        dataRow.createCell(colIndex++).setCellValue(
-          new HSSFRichTextString(rs1.getString(colName)));
-	       sb.append(String.format(String.valueOf(rs1.getString(colName))) + " ");
-
-      }
-	       resultSetArray.add(sb.toString());
-    }
- 
-    // Write to disk
-    xlsWorkbook.write(fileOut);
-			fileOut.close();
 			
-		  /* File csvOutputFile = new File("auto1_output.csv")	;
-		  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
-
-
-        for(String mapping : resultSetArray) {
-            fileWriter.write(mapping + "\n");
-         }
-
-        fileWriter.close();*/
-			 
-				
-			
-	DataFormatter df = new DataFormatter();
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0");
-		FileInputStream fileInputStream1 = new FileInputStream(file1);
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
-		FileInputStream fileInputStream2 = new FileInputStream(file2);
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
-            HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
-		HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
-       HSSFSheet sheet1 = workbook1.getSheetAt(0);
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
-      HSSFSheet sheet2 = workbook2.getSheetAt(0);
-			//int totalNoOfRows1 = sheet1.getRows();
-	         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");
-	int firstRow1=sheet1.getFirstRowNum();
-				  System.out.println("fristrownum"+sheet1.getFirstRowNum());
-                              
-        int lastRow1 = sheet1.getLastRowNum();
-				  System.out.println("lastrownum"+sheet1.getLastRowNum());
-			Row r4 = sheet1.getRow(firstRow1);
-			
-			  short firstCell1 = r4.getFirstCellNum();
-				  System.out.println("fristcellnum"+r4.getFirstCellNum());
-                        short lastCell1 = r4.getLastCellNum();
-				  System.out.println("lastcellnum"+r4.getLastCellNum());
-		for (int row = 0; row < 2; row++) {
-
-			for (int col = 0; col < 5; col++) {
-				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
-				Row r1 = sheet1.getRow(row);
-				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
-                                Cell cA1 = r1.getCell(col);
-					Row r2 = sheet2.getRow(row);
-				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@6");
-                                Cell cA2 = r2.getCell(col);
-				
-				  
-				
-				 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
-           HSSFCellStyle style = workbook1.createCellStyle();
-					   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
-       // HSSFFont font = workbook1.createFont();
-       // font.setColor(HSSFColor.GREEN.index);
-       // style.setFont(font);
-					 
-					
-					   System.out.println("EQUALS@@@@@@@@@@@@@@@@@@@@@@@@v"+cA1);
-			 	  
-			
-      cA1.setCellStyle(style);
-				   System.out.println("@@@@@@@@@v"+cA2);
-					    System.out.println("@@@@@@@@@format"+df.formatCellValue(cA1));
-					    System.out.println("@@@@@@@@@froamt"+df.formatCellValue(cA2));
-			 	  	 
-				 }
-    else{
-    
-	      HSSFCellStyle style1 = workbook1.createCellStyle();
-        //  HSSFFont font = workbook1.createFont();
-        //font.setColor(HSSFColor.RED.index);
-       // style.setFont(font);
-	     style1.setFillForegroundColor(IndexedColors.RED.getIndex());
-	    style1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
-	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
-		 	  
-				
-      cA1.setCellStyle(style1);
-	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
-	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
-					    System.out.println("%%%%%%%%fromat"+df.formatCellValue(cA2));
-			 	  	 
 		
-    }
-				 
-			}
-		}
-				
-			workbook1.write(new FileOutputStream("auto_output.xls"));
-	
-			
-	 fileInputStream1.close();
-			fileInputStream2.close(); 
-
-	
-			
-			
-	
-			
-        
-           		//Create Connection to DB		
-     						
-       /*  int rowtest = 2;
-			
-			//Find the file extension by splitting  file name in substring and getting only extension name
-
-        String fileExtensionName = fileNameext.substring(fileNameext.indexOf("."));
-
-        //Check condition if the file is xlsx file
-
-        if(fileExtensionName.equals(".xlsx")){
-    System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        //If it is xlsx file then create object of XSSFWorkbook class
-XSSFWorkbook Workbookexcel = new XSSFWorkbook(inputStream);
-		 System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@****");
-			XSSFSheet personSheet = Workbookexcel.getSheet("auto");
-		// System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
-
-    //Get the first row from the sheet
-
-    Row row = personSheet.getRow(0);
-
-    //Create a new row and append it at last of sheet
-
-   
-Row headerRow = personSheet.createRow(1);
-Cell headercell0 = headerRow.createCell(0);
-Cell headercell1 = headerRow.createCell(1);
-Cell headercell2 = headerRow.createCell(2);
-Cell headercell3 = headerRow.createCell(3);
-Cell headercell4 = headerRow.createCell(4);			
-         		// While Loop to iterate through all data and print results		
-				while (rs1.next()){
-			        		String a= rs1.getString(0);								        
-                            String b= rs1.getString(1);
-					String c= rs1.getString(2);								        
-                            String d= rs1.getString(3);
-String e= rs1.getString(4);								        
-                          
-					
-					
-					
-				Row dataRow = personSheet.createRow(rowtest);
-
-    Cell Cell1 = dataRow.createCell(0);
-    Cell1.setCellValue(a);
-
-    Cell Cell2 = dataRow.createCell(1);
-   Cell2.setCellValue(b);
-					
-   Cell Cell3 = dataRow.createCell(2);
-    Cell3.setCellValue(c);
-					   Cell Cell4 = dataRow.createCell(3);
-    Cell4.setCellValue(d);
-					Cell Cell5 = dataRow.createCell(4);
-    Cell5.setCellValue(e);
-    rowtest = rowtest + 1;	
-                            //System.out.println(myName+"  "+myAge);
-					
-					
-				
-					
-					
-					
-                    }	
-			 Workbookexcel.write(fileOut);
-      			 	
-			fileOut.close();
-
-        }
-
-        //Check condition if the file is xls file
-
-        else if(fileExtensionName.equals(".xls")){
-
-            //If it is xls file then create object of XSSFWorkbook class
- System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%$$%");
-    HSSFWorkbook      Workbookexcel = new HSSFWorkbook(inputStream);
-		
-		 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%((__");
-  HSSFSheet personSheet = Workbookexcel.getSheet("auto");
-		
-				int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
-
-    //Get the first row from the sheet
-
-    Row row = personSheet.getRow(0);
-
-    //Create a new row and append it at last of sheet
-
-   
-Row headerRow = personSheet.createRow(1);
-Cell headercell0 = headerRow.createCell(0);
-Cell headercell1 = headerRow.createCell(1);
-Cell headercell2 = headerRow.createCell(2);
-Cell headercell3 = headerRow.createCell(3);
-Cell headercell4 = headerRow.createCell(4);			
-         		// While Loop to iterate through all data and print results		
-				while (rs1.next()){
-			        		String a= rs1.getString(0);								        
-                            String b= rs1.getString(1);
-					String c= rs1.getString(2);								        
-                            String d= rs1.getString(3);
-String e= rs1.getString(4);								        
-                          
-					
-					
-					
-				Row dataRow = personSheet.createRow(rowtest);
-
-    Cell Cell1 = dataRow.createCell(0);
-    Cell1.setCellValue(a);
-
-    Cell Cell2 = dataRow.createCell(1);
-   Cell2.setCellValue(b);
-					
-   Cell Cell3 = dataRow.createCell(2);
-    Cell3.setCellValue(c);
-					   Cell Cell4 = dataRow.createCell(3);
-    Cell4.setCellValue(d);
-					Cell Cell5 = dataRow.createCell(4);
-    Cell5.setCellValue(e);
-    rowtest = rowtest + 1;	
-                            //System.out.println(myName+"  "+myAge);
-					
-					
-				
-					
-					
-					
-                    }	
-			 Workbookexcel.write(fileOut);
-      			 	
-			fileOut.close();
-        }*/
-
-        
-			
-			//Sheet personSheet = Workbookexcel.getSheet("auto");
-			/*int rowCount = personSheet.getLastRowNum()-personSheet.getFirstRowNum();
-
-    //Get the first row from the sheet
-
-    Row row = personSheet.getRow(0);
-
-    //Create a new row and append it at last of sheet
-
-   
-Row headerRow = personSheet.createRow(1);
-Cell headercell0 = headerRow.createCell(0);
-Cell headercell1 = headerRow.createCell(1);
-Cell headercell2 = headerRow.createCell(2);
-Cell headercell3 = headerRow.createCell(3);
-Cell headercell4 = headerRow.createCell(4);			
-         		// While Loop to iterate through all data and print results		
-				while (rs1.next()){
-			        		String a= rs1.getString(0);								        
-                            String b= rs1.getString(1);
-					String c= rs1.getString(2);								        
-                            String d= rs1.getString(3);
-String e= rs1.getString(4);								        
-                          
-					
-					
-					
-				Row dataRow = personSheet.createRow(rowtest);
-
-    Cell Cell1 = dataRow.createCell(0);
-    Cell1.setCellValue(a);
-
-    Cell Cell2 = dataRow.createCell(1);
-   Cell2.setCellValue(b);
-					
-   Cell Cell3 = dataRow.createCell(2);
-    Cell3.setCellValue(c);
-					   Cell Cell4 = dataRow.createCell(3);
-    Cell4.setCellValue(d);
-					Cell Cell5 = dataRow.createCell(4);
-    Cell5.setCellValue(e);
-    rowtest = rowtest + 1;	
-                            //System.out.println(myName+"  "+myAge);
-					
-					
-				
-					
-					
-					
-                    }	
-			 Workbookexcel.write(fileOut);
-      			 	
-			fileOut.close();*/
-			
-			
 			
 			
 			
@@ -709,15 +375,14 @@ String e= rs1.getString(4);
 							fileInput.close();
 						
 			 	 String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
-					  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
 			 	   String scrFolder = scshot
 				              + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
 				                      Calendar.getInstance().getTime()).toString();
 			      new File(scrFolder).mkdir();
 			      System.setProperty("scr.folder", scrFolder);
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@f");
+
 		        appCodePage.enterAppCodeAndProceed(appcode);
-			  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@r");
+			 
 		    	Thread.sleep(5000);
 
 				loginPage.Login1(username,password);
