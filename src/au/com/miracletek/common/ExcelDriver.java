@@ -16,7 +16,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import au.com.miracletek.tests.HSSFRichTextString;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 
 import java.io.IOException;
 import  java.sql.Connection;	
