@@ -157,7 +157,7 @@ FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	//CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
+	CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
 	
 	
 		
@@ -172,7 +172,7 @@ xlsWorkbook.write(fileOut);
 	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
 		
-		 Workbook workbook = WorkbookFactory.create(new File("auto_output1.xlsx"));
+		 Workbook workbook = WorkbookFactory.create(new File("SAMPLE.xlsx"));
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
 		 Workbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
@@ -246,7 +246,7 @@ else{
 		}
 	}
 			
-		workbook1.write(new FileOutputStream("auto_output1.xlsx"));
+		workbook1.write(new FileOutputStream("SAMPLE.xlsx"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
 		
  //fileInputStream1.close();
