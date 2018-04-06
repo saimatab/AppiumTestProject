@@ -363,9 +363,9 @@ public class FinalSmokeTests {
 			
 			
 			
-				      	ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+				      	ResultSet rs11 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			 			ex1=new ExcelDriver1();
-			 		ex1.saveQueryResultToExcel(rs1, "auto_output1.xlsx","auto","auto_output1.xlsx", "auto_input.xls",0,2,5 );
+			 		ex1.saveQueryResultToExcel(rs11, "auto_output1.xlsx","auto","auto_output1.xlsx", "auto_input.xls",0,2,5 );
 			
 			
 			
