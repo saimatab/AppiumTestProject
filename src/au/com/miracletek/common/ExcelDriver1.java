@@ -152,6 +152,7 @@ while (rs.next()) {
 }
 
 // Write to disk
+FileOutputStream fileOut = new FileOutputStream(file1);
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
