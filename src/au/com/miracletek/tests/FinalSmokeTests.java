@@ -347,9 +347,9 @@ public class FinalSmokeTests {
 		
        
 	 dm=new DatabaseDriver();
-		ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
-			ex=new ExcelDriver();
-		ex.saveQueryResultToExcel(rs1, "auto_output.xls","auto","auto_output.xls", "auto_input.xls" );
+		//ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+		//	ex=new ExcelDriver();
+	//	ex.saveQueryResultToExcel(rs1, "auto_output.xls","auto","auto_output.xls", "auto_input.xls" );
          	
 			
 			
@@ -504,6 +504,56 @@ public class FinalSmokeTests {
 	              form6.clickTab(config, "Tab");
 			         form6.submit();
 		         	
+			         //
+			     	ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+			 			ex=new ExcelDriver();
+			 		ex.saveQueryResultToExcel(rs1, "auto_output.xls","auto","auto_output.xls", "auto_input.xls",0 );
+			         
+			         
+			 	  	ResultSet rs2 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;",1);
+		 			ex=new ExcelDriver();
+		 		ex.saveQueryResultToExcel(rs2, "auto_output.xls","camera","auto_output.xls", "camera_input.xls" );
+		         
+		 	 	ResultSet rs3 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
+	 			ex=new ExcelDriver();
+	 		ex.saveQueryResultToExcel(rs3, "auto_output.xls","gallary","auto_output.xls", "gallary_input.xls",2 );
+			         
+	 	     
+	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from signature  ORDER BY id DESC LIMIT 1;");
+ 			ex=new ExcelDriver();
+ 		ex.saveQueryResultToExcel(rs4, "auto_output.xls","signature","auto_output.xls", "signature_input.xls",3 );
+		         
+		         
+		
+        
+ResultSet rs6 =dm.db("bgc_qa", "BGC!@#123", "select *  from upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
+	ex=new ExcelDriver();
+ex.saveQueryResultToExcel(rs6, "auto_output.xls","upload_datetime_autocom","auto_output.xls", "upload_datetime_autocom_input.xls",4 );
+    
+      
+	           
+
+ResultSet rs7 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager  ORDER BY id DESC LIMIT 1;");
+ex=new ExcelDriver();
+ex.saveQueryResultToExcel(rs7, "auto_output.xls","reppager","auto_output.xls", "reppager_input.xls",5 );
+
+
+ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager_repeater1  ORDER BY id DESC LIMIT 1;");
+ex=new ExcelDriver();
+ex.saveQueryResultToExcel(rs8, "auto_output.xls","reppager_repeater1","auto_output.xls", "reppager_repeater1_input.xls",6 );
+
+
+        
+          
+			         
+			         
+			         
+			         
+			         
+			         
+			         
+			         
+			         
 		         	
 			         Thread.sleep(2000);    
 		         	
