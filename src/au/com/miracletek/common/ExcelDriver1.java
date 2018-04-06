@@ -76,7 +76,7 @@ public class ExcelDriver1 {
 		
 					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =null;
 					
-				    FileInputStream inputStream = new FileInputStream(file1);
+				   // FileInputStream inputStream = new FileInputStream(file1);
 					
 					String fileExtensionName = fileName.substring(fileName.indexOf("."));
 
@@ -86,7 +86,7 @@ public class ExcelDriver1 {
 
 			        //If it is xlsx file then create object of XSSFWorkbook class
 
-			        	xlsWorkbook = new XSSFWorkbook(inputStream);
+			        	xlsWorkbook = new XSSFWorkbook();
 			        	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
 			        }
 
@@ -96,7 +96,7 @@ public class ExcelDriver1 {
 
 			            //If it is xls file then create object of XSSFWorkbook class
 
-			        	xlsWorkbook = new HSSFWorkbook(inputStream);
+			        	xlsWorkbook = new HSSFWorkbook();
 			         	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
 			        }
 					
