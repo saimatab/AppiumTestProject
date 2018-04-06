@@ -257,7 +257,7 @@ else{
 		}
 	}
 			
-		workbook1.write(new FileOutputStream("SAMPLE1.xlsx"));
+		workbook.write(new FileOutputStream("SAMPLE1.xlsx"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
 		
  //fileInputStream1.close();
