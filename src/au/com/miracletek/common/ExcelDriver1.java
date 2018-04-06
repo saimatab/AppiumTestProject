@@ -53,10 +53,12 @@ import java.util.Properties;
 import java.util.Map;
 import java.io.File;
 import java.io.FileWriter;
-import org.apache.poi.xssf.util.XSSFColor;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFRichTextString;
+import org.apache.poi.ss.util.Color;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.usermodel.HSSFRichTextString;
+import org.apache.poi.ss.usermodel.RichTextString;
 public class ExcelDriver1 {
 	
 	
