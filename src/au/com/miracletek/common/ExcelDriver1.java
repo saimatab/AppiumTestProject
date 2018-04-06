@@ -73,7 +73,46 @@ public class ExcelDriver1 {
 					FileOutputStream fileOut = new FileOutputStream(file1);
 		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
 		
-					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =WorkbookFactory.create(file1);
+					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =null;
+					
+				    FileInputStream inputStream = new FileInputStream(file1);
+					
+					String fileExtensionName = fileName.substring(fileName.indexOf("."));
+
+			        //Check condition if the file is xlsx file
+
+			        if(fileExtensionName.equals(".xlsx")){
+
+			        //If it is xlsx file then create object of XSSFWorkbook class
+
+			        	xlsWorkbook = new XSSFWorkbook(inputStream);
+			        	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
+			        }
+
+			        //Check condition if the file is xls file
+
+			        else if(fileExtensionName.equals(".xls")){
+
+			            //If it is xls file then create object of XSSFWorkbook class
+
+			        	xlsWorkbook = new HSSFWorkbook(inputStream);
+			         	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
+			        }
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					
 		
 //XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
