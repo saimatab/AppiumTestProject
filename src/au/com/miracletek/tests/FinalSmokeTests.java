@@ -519,7 +519,7 @@ public class FinalSmokeTests {
 	 		ex.saveQueryResultToExcel(rs3, "auto_output.xls","gallary","auto_output.xls", "gallary_input.xls",2,2,2 );
 			         
 	 	     
-	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from signature  ORDER BY id DESC LIMIT 1;");
+	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from testsig  ORDER BY id DESC LIMIT 1;");
  			ex=new ExcelDriver();
  		ex.saveQueryResultToExcel(rs4, "auto_output.xls","signature","auto_output.xls", "signature_input.xls",3 ,2,2);
 		         
