@@ -160,8 +160,12 @@ while (rs.next()) {
 FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
+	
+
+    File file1a = new File("SAMPLE.xlsx");
+    File file2a = new File("auto_input.xlsx");
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
+	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
 	
 	
 		
@@ -175,11 +179,16 @@ xlsWorkbook.write(fileOut);
 	
 	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
+		FileInputStream fileInputStream1 = new FileInputStream(filea);
+		FileInputStream fileInputStream2 = new FileInputStream(fileb);
+		XSSFWorkbook workbook=new XSSFWorkbook(fileInputStream1);
+		XSSFWorkbook workbook1=new XSSFWorkbook(fileInputStream2);
 		
-		XSSFWorkbook workbook = WorkbookFactory.create(new File("SAMPLE.xlsx"));
-			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
-		 XSSFWorkbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
-			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
+		
+		//XSSFWorkbook workbook = WorkbookFactory.create(new File("SAMPLE.xlsx"));
+		//	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
+		 //XSSFWorkbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
+			//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
 		
 		  XSSFSheet sheet1 = workbook.getSheetAt(sheetId);
 		  XSSFSheet sheet2 =workbook1.getSheetAt(sheetId);
