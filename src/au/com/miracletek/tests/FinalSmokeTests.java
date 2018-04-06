@@ -561,7 +561,7 @@ ex.saveQueryResultToExcel(rs8, "auto_output.xls","reppager_repeater1","auto_outp
 			         
 	 	     
 	 	 	ResultSet rs4 =dm.db("bgc_qa", "BGC!@#123", "select *  from testsig  ORDER BY id DESC LIMIT 1;");
-			ex1=new ExcelDriver(1);
+			ex1=new ExcelDriver1();
 		ex1.saveQueryResultToExcel(rs4, "auto_output1.xlsx","signature","auto_output1.xlsx", "signature_input.xls",3 ,2,2);
 		         
 		         
