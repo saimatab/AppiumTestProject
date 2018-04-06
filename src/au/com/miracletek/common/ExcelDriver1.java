@@ -53,7 +53,7 @@ import java.util.Properties;
 import java.util.Map;
 import java.io.File;
 import java.io.FileWriter;
-import org.apache.poi.xssf.util.HSSFColor;
+import org.apache.poi.xssf.util.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRichTextString;
