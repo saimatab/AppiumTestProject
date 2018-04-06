@@ -168,27 +168,38 @@ xlsWorkbook.write(fileOut);
       fileWriter.write(mapping + "\n");
    }fileWriter.close();*/
 	
-	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws Exception{
+	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
 		
-
-		 
+		 Workbook workbook = WorkbookFactory.create(new File("auto_output1.xlsx"));
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
+		 Workbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
 		
-		
+		  Sheet sheet1 = workbook.getSheetAt(sheetId);
+		  Sheet sheet2 =workbook1.getSheetAt(sheetId);
+				  
+				  
+				  
 DataFormatter df = new DataFormatter();
-	FileInputStream fileInputStream1 = new FileInputStream(filea);
-FileInputStream fileInputStream2 = new FileInputStream(fileb);
-		XSSFWorkbook workbook1= new XSSFWorkbook(fileInputStream1);
-	XSSFWorkbook	  workbook2 = new XSSFWorkbook(fileInputStream2);
-   XSSFSheet sheet1 = workbook1.getSheetAt(sheetId);
-XSSFSheet sheet2 = workbook2.getSheetAt(sheetId);
+	// fileInputStream1 = new FileInputStream(filea);
+//FileInputStream fileInputStream2 = new FileInputStream(fileb);
+		//XSSFWorkbook workbook1= new XSSFWorkbook(fileInputStream1);
+	//XSSFWorkbook	  workbook2 = new XSSFWorkbook(fileInputStream2);
+	
+	
+	
+	
+	
+   //XSSFSheet sheet1 = workbook1.getSheetAt(sheetId);
+//XSSFSheet sheet2 = workbook2.getSheetAt(sheetId);
 		//int totalNoOfRows1 = sheet1.getRows();
 int firstRow1=sheet1.getFirstRowNum();
 			
                           
     int lastRow1 = sheet1.getLastRowNum();
 	
-		XSSFRow r4 = sheet1.getRow(firstRow1);
+		Row r4 = sheet1.getRow(firstRow1);
 		
 		  short firstCell1 = r4.getFirstCellNum();
 	
@@ -198,17 +209,17 @@ int firstRow1=sheet1.getFirstRowNum();
 
 		for (int col = 0; col < colnum; col++) {
 			//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
-			XSSFRow r1 = sheet1.getRow(row);
-			               XSSFCell cA1 = r1.getCell(col);
-				XSSFRow r2 = sheet2.getRow(row);
-		            XSSFCell cA2 = r2.getCell(col);
+		Row r1 = sheet1.getRow(row);
+			              Cell cA1 = r1.getCell(col);
+		Row r2 = sheet2.getRow(row);
+		           Cell cA2 = r2.getCell(col);
 			
 			  
 			
 			 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
-       XSSFCellStyle style = workbook1.createCellStyle();
+       CellStyle style = workbook1.createCellStyle();
 				   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-    style.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);
+    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
 		
   cA1.setCellStyle(style);
@@ -218,10 +229,10 @@ int firstRow1=sheet1.getFirstRowNum();
 			 }
 else{
 
-      XSSFCellStyle style1 = workbook1.createCellStyle();
+     CellStyle style1 = workbook1.createCellStyle();
 
      style1.setFillForegroundColor(IndexedColors.RED.getIndex());
-    style1.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);
+    style1.setFillPattern(CellStyle.SOLID_FOREGROUND);
      
 	 	  
 			
@@ -234,11 +245,11 @@ else{
 		}
 	}
 			
-		workbook1.write(new FileOutputStream(filea));
-
+		workbook1.write(new FileOutputStream("auto_output1.xlsx"));
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
 		
- fileInputStream1.close();
-		fileInputStream2.close(); 
+ //fileInputStream1.close();
+	//.close(); 
 
 
 		
