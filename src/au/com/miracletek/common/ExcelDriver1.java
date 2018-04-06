@@ -71,7 +71,7 @@ public class ExcelDriver1 {
 	
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
-					FileOutputStream fileOut = new FileOutputStream(file1);
+					//FileOutputStream fileOut = new FileOutputStream(file1);
 		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
 		
 					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =null;
