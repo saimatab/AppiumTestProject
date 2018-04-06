@@ -223,9 +223,9 @@ int firstRow1=sheet1.getFirstRowNum();
 
 		for (int col = 0; col < colnum; col++) {
 			//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
-		Row r1 = sheet1.getRow(row);
+		XSSFRow r1 = sheet1.getRow(row);
 			              XSSFCell cA1 = r1.getCell(col);
-		Row r2 = sheet2.getRow(row);
+		XSSFRow r2 = sheet2.getRow(row);
 		          XSSFCell cA2 = r2.getCell(col);
 			
 			  
