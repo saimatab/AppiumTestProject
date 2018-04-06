@@ -222,9 +222,9 @@ int firstRow1=sheet1.getFirstRowNum();
 			  
 			
 			 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
-       HSSFCellStyle style = workbook.createCellStyle();
+       XSSFCellStyle style = workbook.createCellStyle();
 				   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+    style.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);
 
 		
   cA1.setCellStyle(style);
@@ -234,10 +234,9 @@ int firstRow1=sheet1.getFirstRowNum();
 			 }
 else{
 
-     HSSFCellStyle style1 = workbook.createCellStyle();
-
-     style1.setFillForegroundColor(IndexedColors.RED.getIndex());
-    style1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+    XSSFCellStyle style1 = workbook.createCellStyle();
+				   style1.setFillForegroundColor(IndexedColors.RED.getIndex());
+ style1.setFillPattern(XSSFCellStyle.SOLID_FOREGROUND);;
      
 			
   cA1.setCellStyle(style1);
