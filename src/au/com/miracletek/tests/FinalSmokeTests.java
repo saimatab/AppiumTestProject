@@ -248,7 +248,7 @@ public class FinalSmokeTests {
 		try {
 			manager.startDriver(config);
 			//extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
-			extent = new ExtentReports (System.getProperty("user.dir") +"/STMExtentReport.html", true);
+			extent = new ExtentReports ("STMExtentReport.html", true);
 		extent
 	                .addSystemInfo("Host Name", "Saima Tabassum")
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
@@ -430,9 +430,9 @@ public class FinalSmokeTests {
 				  System.out.println("fristcellnum"+r4.getFirstCellNum());
                         short lastCell1 = r4.getLastCellNum();
 				  System.out.println("lastcellnum"+r4.getLastCellNum());
-		for (int row = firstRow1; row < lastRow1; row++) {
+		for (int row = 0; row < 2; row++) {
 
-			for (int col = firstCell1; col < lastCell1; col++) {
+			for (int col = 0; col < 5; col++) {
 				//System.out.print(sh1eet1.getCell(col, row).getContents() + "\t");
 				Row r1 = sheet1.getRow(row);
 				  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
@@ -463,16 +463,16 @@ public class FinalSmokeTests {
 				 }
     else{
     
-	      HSSFCellStyle style = workbook1.createCellStyle();
+	      HSSFCellStyle style1 = workbook1.createCellStyle();
         //  HSSFFont font = workbook1.createFont();
         //font.setColor(HSSFColor.RED.index);
        // style.setFont(font);
-	     style.setFillForegroundColor(IndexedColors.RED.getIndex());
-	    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+	     style1.setFillForegroundColor(IndexedColors.RED.getIndex());
+	    style1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 	      System.out.println("NOT EQUALS%%%%%%%%%%%%%%%%%%"+cA1);
 		 	  
 				
-      cA1.setCellStyle(style);
+      cA1.setCellStyle(style1);
 	     System.out.println("%%%%%%%%%%%%%%%"+cA2);
 	        System.out.println("%%%%%froamt"+df.formatCellValue(cA1));
 					    System.out.println("%%%%%%%%fromat"+df.formatCellValue(cA2));
@@ -483,9 +483,8 @@ public class FinalSmokeTests {
 			}
 		}
 				
-			workbook1.write(new FileOutputStream("output.xls"));
-	workbook2.write(new FileOutputStream("input"));
-
+			workbook1.write(new FileOutputStream("auto_output.xls"));
+	
 			
 	 fileInputStream1.close();
 			fileInputStream2.close(); 
@@ -701,15 +700,9 @@ String e= rs1.getString(4);
 			
 			
 			
-				  System.out.println("FFF@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
-			 	  
-			
-			
 				
 						String appcode = properties.getProperty("appcode");
-				  System.out.println("FFF1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v");
-			 	  
-					
+				
 						String username = properties.getProperty("username");
 						
 						String password = properties.getProperty("password");
