@@ -548,7 +548,7 @@ ex.saveQueryResultToExcel(rs8, "auto_output.xls","reppager_repeater1","auto_outp
 
 
         
-			      	ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+			      /*	ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			 			ex1=new ExcelDriver1();
 			 		ex1.saveQueryResultToExcel(rs1, "auto_output1.xlsx","auto","auto_output1.xlsx", "auto_input.xls",0,2,5 );
 			         
@@ -583,7 +583,7 @@ ex1.saveQueryResultToExcel(rs7, "auto_output1.xlsx","reppager","auto_output1.xls
 
 ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager_repeater1  ORDER BY id DESC LIMIT 1;");
 ex1=new ExcelDriver1();
-ex1.saveQueryResultToExcel(rs8, "auto_output1.xlsx","reppager_repeater1","auto_output1.xlsx", "reppager_repeater1_input.xls",6,2,3 );
+ex1.saveQueryResultToExcel(rs8, "auto_output1.xlsx","reppager_repeater1","auto_output1.xlsx", "reppager_repeater1_input.xls",6,2,3 );*/
 
 			         
 			         
