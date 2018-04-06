@@ -42,6 +42,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.io.File;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.Sheet;
 import  java.sql.ResultSet;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -67,8 +70,16 @@ public class ExcelDriver1 {
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
 					FileOutputStream fileOut = new FileOutputStream(file1);
-		XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
-XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
+		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
+		
+					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =WorkbookFactory.create(fileOut);
+					
+		
+//XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
+
+
+org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
+
 short rowIndex = 0;
 List<String> resultSetArray=new ArrayList<>();
 
