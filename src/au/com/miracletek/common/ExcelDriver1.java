@@ -132,6 +132,7 @@ List<String> resultSetArray=new ArrayList<>();
 // Get the list of column names and store them as the first
 // row of the spreadsheet.
 ResultSetMetaData colInfo = rs.getMetaData();
+System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPr");
 List<String> colNames = new ArrayList();
 Row titleRow = xlsSheet.createRow(rowIndex++);
 
@@ -140,6 +141,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
   titleRow.createCell((short) (i-1)).setCellValue(
     new XSSFRichTextString(colInfo.getColumnName(i)));
   xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1");
 }
 
 // Save all the data from the database table rows
@@ -151,6 +153,7 @@ while (rs.next()) {
     dataRow.createCell(colIndex++).setCellValue(
       new XSSFRichTextString(rs.getString(colName)));
        sb.append(String.format(String.valueOf(rs.getString(colName))) + " ");
+   	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP2");
 
   }
        //resultSetArray.add(sb.toString());
