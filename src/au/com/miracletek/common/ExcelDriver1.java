@@ -45,6 +45,7 @@ import java.io.File;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.*;
 import  java.sql.ResultSet;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -72,7 +73,7 @@ public class ExcelDriver1 {
 					FileOutputStream fileOut = new FileOutputStream(file1);
 		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
 		
-					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =WorkbookFactory.create(fileOut);
+					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =WorkbookFactory.create(file1);
 					
 		
 //XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
@@ -87,7 +88,7 @@ List<String> resultSetArray=new ArrayList<>();
 // row of the spreadsheet.
 ResultSetMetaData colInfo = rs.getMetaData();
 List<String> colNames = new ArrayList();
-XSSFRow titleRow = xlsSheet.createRow(rowIndex++);
+Row titleRow = xlsSheet.createRow(rowIndex++);
 
 for (int i = 1; i <= colInfo.getColumnCount(); i++) {
   colNames.add(colInfo.getColumnName(i));
@@ -99,7 +100,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 // Save all the data from the database table rows
 while (rs.next()) {
         StringBuilder sb = new StringBuilder();
-  XSSFRow dataRow = xlsSheet.createRow(rowIndex++);
+  Row dataRow = xlsSheet.createRow(rowIndex++);
   short colIndex = 0;
   for (String colName : colNames) {
     dataRow.createCell(colIndex++).setCellValue(
@@ -113,7 +114,7 @@ while (rs.next()) {
 // Write to disk
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
-	
+	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 	CompareResults(file1, file2 ,rowvar, colvar,filea, sheetId);
 	
 	
