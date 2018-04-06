@@ -6,6 +6,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import java.io.FileOutputStream;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -218,28 +222,27 @@ int firstRow1=sheet1.getFirstRowNum();
 			  
 			
 			 if (df.formatCellValue(cA1).equals(df.formatCellValue(cA2))){
-       CellStyle style = workbook.createCellStyle();
+       HSSFCellStyle style = workbook.createCellStyle();
 				   style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 
 		
   cA1.setCellStyle(style);
-			
+	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");	
 				    
 		 	  	 
 			 }
 else{
 
-     CellStyle style1 = workbook.createCellStyle();
+     HSSFCellStyle style1 = workbook.createCellStyle();
 
      style1.setFillForegroundColor(IndexedColors.RED.getIndex());
-    style1.setFillPattern(CellStyle.SOLID_FOREGROUND);
+    style1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
      
-	 	  
 			
   cA1.setCellStyle(style1);
    
-		 	  	 
+	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@4");	 	  	 
 	
 }
 			 
@@ -247,7 +250,7 @@ else{
 	}
 			
 		workbook1.write(new FileOutputStream("SAMPLE.xlsx"));
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3");
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
 		
  //fileInputStream1.close();
 	//.close(); 
