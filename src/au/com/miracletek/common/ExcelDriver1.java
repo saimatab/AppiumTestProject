@@ -280,7 +280,21 @@ xlsWorkbook.write(fileOut);
     File file1a = new File(filea);
     File file2a = new File(fileb);
 
-	//CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
+	CompareResults(file1a, "auto_input.xlsx" ,2, 5,filea, 0);
+
+	CompareResults(file1a, "camera_input.xlsx" ,2, 2,filea, 1);
+
+	CompareResults(file1a, "gallary_input.xlsx" ,2, 2,filea, 2);
+
+	CompareResults(file1a, "signature_input.xlsx" ,2, 2,filea, 3);
+
+	CompareResults(file1a, "upload_datetime_autocom_input.xlsx",2 ,5,filea, 4);
+	
+	CompareResults(file1a, "reppager_input.xlsx" ,2, 2,filea, 5);
+	CompareResults(file1a, "reppager_repeater1_input.xlsx" ,2,3,filea, 6);
+	
+	
+	
 	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		
@@ -426,190 +440,6 @@ xlsWorkbook.write(fileOut);
 		
 	}
 	
-	public void saveQueryResultToExcel1(ResultSet rs,ResultSet rs1,ResultSet rs2, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
-		
-	    File file1 = new File(filea);
-	    File file2 = new File(fileb);
-	    Row dataRow4=null;
-					//FileOutputStream fileOut = new FileOutputStream(file1);
-		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
-		
-					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =null;
-					
-				   // FileInputStream inputStream = new FileInputStream(file1);
-					
-					String fileExtensionName = fileName.substring(fileName.indexOf("."));
-
-			        //Check condition if the file is xlsx file
-
-			        if(fileExtensionName.equals(".xlsx")){
-
-			        //If it is xlsx file then create object of XSSFWorkbook class
-
-			        	xlsWorkbook = new XSSFWorkbook();
-			        	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
-			        }
-
-			        //Check condition if the file is xls file
-
-			        else if(fileExtensionName.equals(".xls")){
-
-			            //If it is xls file then create object of XSSFWorkbook class
-
-			        	xlsWorkbook = new HSSFWorkbook();
-			         	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
-			        }
-					
-
-
-org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
-short rowIndex = 0;
-List<String> resultSetArray=new ArrayList<>();
-
-// Get the list of column names and store them as the first
-// row of the spreadsheet.
-ResultSetMetaData colInfo = rs.getMetaData();
-System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPr");
-List<String> colNames = new ArrayList();
-Row titleRow = xlsSheet.createRow(rowIndex++);
-
-for (int i = 1; i <= colInfo.getColumnCount(); i++) {
-  colNames.add(colInfo.getColumnName(i));
-  titleRow.createCell((short) (i-1)).setCellValue(
-    new XSSFRichTextString(colInfo.getColumnName(i)));
-  xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
-
-}
-
-// Save all the data from the database table rows
-System.out.println("rowindex"+rowIndex);
-System.out.println("rs1getstring");
-
-
-ResultSetMetaData colInfo1 = rs1.getMetaData();
-
-  List<String> colNames1 = new ArrayList();
-
-
-  for (int i = 1; i <= colInfo1.getColumnCount(); i++) {
-    colNames1.add(colInfo1.getColumnName(i));
-
-  }
-  while (rs1.next()) {
-  dataRow4 = xlsSheet.createRow(1);
- 
-	  for (String colName : colNames1) {
-		  
-		  
-
-		    dataRow4.createCell(0).setCellValue(
-		      new XSSFRichTextString(rs1.getString(colName)));
-		      
-			
-		  }
-		       //resultSetArray.add(sb.toString());
-	
-  }
-	
-	
-  ResultSetMetaData colInfo2 = rs2.getMetaData();
-
-  List<String> colNames2 = new ArrayList();
-
-  for (int i = 1; i <= colInfo2.getColumnCount(); i++) {
-	    colNames2.add(colInfo2.getColumnName(i));
-	
-	  }
-  
-  while (rs2.next()) {
-	
-	 
-		  for (String colName : colNames1) {
-			  
-			  if (rs2.wasNull()) {
-			        System.out.println("was NULL");
-			        
-	
-			     
-			        dataRow4.createCell(1).setCellValue("not exists");
-			      
-
-			        
-			        
-			      } else {
-			        System.out.println("not NULL");
-			        if(rs2.getString(colName) != null)
-			        {
-			     
-			        dataRow4.createCell(1).setCellValue("exists");
-			        }
-			      
-			      }
-
-		
-			      
-				
-			  }
-			       //resultSetArray.add(sb.toString());
-		
-	  }
-		
-	 /* if (rs2.wasNull()) {
-	        System.out.println("was NULL");
-	        
-	    	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPb");
-	     
-	        dataRow4.createCell(1).setCellValue("not exists");
-	      
-
-	        
-	        
-	      } else {
-	        System.out.println("not NULL");
-	        
-	    	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1OOOO");
-		     
-	        dataRow4.createCell(1).setCellValue("exists");
-	      
-	      }*/
-    
-
-   //resultSetArray.add(sb.toString());
-
-
-
-
-
-
-// Write to disk
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%NNNN");
-FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%OOOO");
-xlsWorkbook.write(fileOut);
-	fileOut.close();	
-	
-
-    File file1a = new File(filea);
-    File file2a = new File(fileb);
-	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-//	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
-	
-	
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -639,7 +469,7 @@ xlsWorkbook.write(fileOut);
 
 		  XSSFSheet sheet1 = workbook.getSheetAt(sheetId);
 
-		  XSSFSheet sheet2 =workbook1.getSheetAt(sheetId);
+		  XSSFSheet sheet2 =workbook1.getSheetAt(0);
 				  
 				  
 				  
