@@ -45,7 +45,7 @@ public class AutomationTestForm5 extends BasePage{
 			{
 				slide=findElementByXpath("//*[@class='android.widget.SeekBar']");// slider
 						
-				slide.click();
+				slide.sendKeys("2");
 			}
 			else
 			{
