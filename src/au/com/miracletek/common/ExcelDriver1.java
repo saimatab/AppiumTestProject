@@ -123,16 +123,16 @@ public class ExcelDriver1 {
 		
 //XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
 
-
+int t=0;
 org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
+
 short rowIndex = 0;
 List<String> resultSetArray=new ArrayList<>();
 
 // Get the list of column names and store them as the first
 // row of the spreadsheet.
 ResultSetMetaData colInfo = rs.getMetaData();
-System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPr");
+
 List<String> colNames = new ArrayList();
 Row titleRow = xlsSheet.createRow(rowIndex++);
 
@@ -141,7 +141,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
   titleRow.createCell((short) (i-1)).setCellValue(
     new XSSFRichTextString(colInfo.getColumnName(i)));
   xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1");
+
 }
 
 // Save all the data from the database table rows
@@ -153,26 +153,24 @@ while (rs.next()) {
     dataRow.createCell(colIndex++).setCellValue(
       new XSSFRichTextString(rs.getString(colName)));
        sb.append(String.format(String.valueOf(rs.getString(colName))) + " ");
-   	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP2");
+  
 
   }
        //resultSetArray.add(sb.toString());
 }
 
-// Write to disk
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%NNNN");
+// W
 FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%OOOO");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	
 
     File file1a = new File(filea);
     File file2a = new File(fileb);
+
+	//CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
+	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
-	
-	
 		
 	}
 	
@@ -308,7 +306,7 @@ xlsWorkbook.write(fileOut);
     File file1a = new File(filea);
     File file2a = new File(fileb);
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
+//	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
 	
 	
 		
@@ -351,9 +349,9 @@ xlsWorkbook.write(fileOut);
 		//	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@1");
 		 //XSSFWorkbook workbook1 = WorkbookFactory.create(new File("auto_input.xlsx"));
 			//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@13214214");
+
 		  XSSFSheet sheet1 = workbook.getSheetAt(sheetId);
-		  System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@gggg");
+
 		  XSSFSheet sheet2 =workbook1.getSheetAt(sheetId);
 				  
 				  
