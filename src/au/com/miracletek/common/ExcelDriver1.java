@@ -235,8 +235,8 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 }
 
 // Save all the data from the database table rows
-while (rs1.next()) {
-        StringBuilder sb = new StringBuilder();
+
+      
   Row dataRow = xlsSheet.createRow(1);
 
     dataRow.createCell(0).setCellValue(
@@ -244,9 +244,9 @@ while (rs1.next()) {
      
   
        //resultSetArray.add(sb.toString());
-}
 
-while (rs2.next()) {
+
+
 	
 	  if (rs2.wasNull()) {
 	        System.out.println("was NULL");
@@ -269,7 +269,7 @@ while (rs2.next()) {
 	      
 	      }
     
-}
+
    //resultSetArray.add(sb.toString());
 
 
