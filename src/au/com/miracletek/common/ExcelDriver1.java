@@ -270,7 +270,7 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
 
 
 	
-	  if (rs2.wasNull()) {
+	 /* if (rs2.wasNull()) {
 	        System.out.println("was NULL");
 	        
 	    	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPb");
@@ -287,7 +287,7 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
 		     
 	        dataRow4.createCell(1).setCellValue("exists");
 	      
-	      }
+	      }*/
     
 
    //resultSetArray.add(sb.toString());
