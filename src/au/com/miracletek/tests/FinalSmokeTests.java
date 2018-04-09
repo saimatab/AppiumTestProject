@@ -506,7 +506,7 @@ public class FinalSmokeTests {
 	              form6.clicktextbox(config, "textbox1");
 	              form6.clickTab(config, "Tab");
 			         form6.submit();
-			         ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+			        /* ResultSet rs1 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 			 			ex1=new ExcelDriver1();
 			 		ex1.saveQueryResultToExcel(rs1, "SAMPLE.xlsx","auto","SAMPLE.xlsx", "auto_input.xlsx",0,2,5 );
 			         
@@ -541,7 +541,7 @@ ex1.saveQueryResultToExcel(rs7, "SAMPLE.xlsx","reppager","SAMPLE.xlsx", "reppage
 
 ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from reppager_repeater1  ORDER BY id DESC LIMIT 1;");
 ex1=new ExcelDriver1();
-ex1.saveQueryResultToExcel(rs8, "SAMPLE.xlsx","reppager_repeater1","SAMPLE.xlsx", "reppager_repeater1_input.xlsx",6,2,3 );
+ex1.saveQueryResultToExcel(rs8, "SAMPLE.xlsx","reppager_repeater1","SAMPLE.xlsx", "reppager_repeater1_input.xlsx",6,2,3 );*/
 		         
 		
 			        
