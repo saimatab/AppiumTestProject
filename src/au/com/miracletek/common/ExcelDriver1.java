@@ -340,7 +340,7 @@ xlsWorkbook.write(fileOut);
 		
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
-	    Row dataRow4;
+	    Row dataRow4=null;
 					//FileOutputStream fileOut = new FileOutputStream(file1);
 		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
 		
