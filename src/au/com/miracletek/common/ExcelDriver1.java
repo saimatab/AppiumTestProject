@@ -237,11 +237,11 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 // Save all the data from the database table rows
 
       
-  Row dataRow4 = xlsSheet.createRow(1);
+  Row dataRow4 = xlsSheet.createRow(rowIndex++);
 
     dataRow4.createCell(0).setCellValue(
       rs1.getString("ID"));
-     
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPn");
   
        //resultSetArray.add(sb.toString());
 
@@ -251,7 +251,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 	  if (rs2.wasNull()) {
 	        System.out.println("was NULL");
 	        
-	       
+	    	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPb");
 	     
 	        dataRow4.createCell(1).setCellValue("not exists");
 	      
@@ -261,7 +261,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 	      } else {
 	        System.out.println("not NULL");
 	        
-		       
+	    	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1OOOO");
 		     
 	        dataRow4.createCell(1).setCellValue("exists");
 	      
