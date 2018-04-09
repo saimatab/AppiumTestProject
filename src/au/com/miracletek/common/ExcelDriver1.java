@@ -295,7 +295,7 @@ xlsWorkbook.write(fileOut);
 
 	CompareResults(file1a, file4b ,2, 2,filea, 3);
 
-	CompareResults(file1a, file5b,2 ,5,filea, 4);
+	CompareResults(file1a, file5b,2 ,8,filea, 4);
 	
 	CompareResults(file1a, file6b ,2, 2,filea, 5);
 	CompareResults(file1a, file7b ,2,3,filea, 6);
