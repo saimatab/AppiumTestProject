@@ -278,20 +278,27 @@ xlsWorkbook.write(fileOut);
 	
 
     File file1a = new File(filea);
-    File file2a = new File(fileb);
+    File file1b = new File("auto_input.xlsx");
+    File file2b = new File("camera_input.xlsx");
+    File file3b = new File("gallary_input.xlsx");
+    File file4b = new File("signature_input.xlsx");
+    File file5b = new File("upload_datetime_autocom_input.xlsx");
+    File file6b = new File("reppager_input.xlsx");
+    File file7b = new File("reppager_repeater1_input.xlsx");
 
-	CompareResults(file1a, "auto_input.xlsx" ,2, 5,filea, 0);
 
-	CompareResults(file1a, "camera_input.xlsx" ,2, 2,filea, 1);
+	CompareResults(file1a, file1b ,2, 5,filea, 0);
 
-	CompareResults(file1a, "gallary_input.xlsx" ,2, 2,filea, 2);
+	CompareResults(file1a, file2b ,2, 2,filea, 1);
 
-	CompareResults(file1a, "signature_input.xlsx" ,2, 2,filea, 3);
+	CompareResults(file1a, file3b ,2, 2,filea, 2);
 
-	CompareResults(file1a, "upload_datetime_autocom_input.xlsx",2 ,5,filea, 4);
+	CompareResults(file1a, file4b ,2, 2,filea, 3);
+
+	CompareResults(file1a, file5b,2 ,5,filea, 4);
 	
-	CompareResults(file1a, "reppager_input.xlsx" ,2, 2,filea, 5);
-	CompareResults(file1a, "reppager_repeater1_input.xlsx" ,2,3,filea, 6);
+	CompareResults(file1a, file6b ,2, 2,filea, 5);
+	CompareResults(file1a, file7b ,2,3,filea, 6);
 	
 	
 	
