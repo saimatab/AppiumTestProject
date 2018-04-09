@@ -289,7 +289,7 @@ xlsWorkbook.write(fileOut);
 	
 	
 	
-	public org.apache.poi.ss.usermodel.Workbook  helper(org.apache.poi.ss.usermodel.Workbook wb1,ResultSet rs1, ResultSet rs2, ResultSet rs3, String sheetName){
+	public org.apache.poi.ss.usermodel.Workbook  helper(org.apache.poi.ss.usermodel.Workbook wb1,ResultSet rs1, ResultSet rs2, ResultSet rs3, String sheetName)throws Exception{
 		
 	    Row dataRow4=null;
 		org.apache.poi.ss.usermodel.Sheet xlsSheet = wb1.createSheet(sheetName);
