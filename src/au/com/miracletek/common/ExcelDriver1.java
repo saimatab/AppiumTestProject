@@ -237,15 +237,12 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 // Save all the data from the database table rows
 while (rs1.next()) {
         StringBuilder sb = new StringBuilder();
-  Row dataRow = xlsSheet.createRow(rowIndex++);
-  short colIndex = 0;
-  for (String colName : colNames) {
-    dataRow.createCell(colIndex++).setCellValue(
-      new XSSFRichTextString(rs1.getString(colName)));
-       sb.append(String.format(String.valueOf(rs1.getString(colName))) + " ");
-   	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP2");
+  Row dataRow = xlsSheet.createRow(1);
 
-  }
+    dataRow.createCell(0).setCellValue(
+      rs1.getString("ID"));
+     
+  
        //resultSetArray.add(sb.toString());
 }
 
@@ -258,7 +255,7 @@ while (rs2.next()) {
 	        Row dataRow = xlsSheet.createRow(1);
 	       
 	     
-	        dataRow.createCell(1).setCellValue("not exists ");
+	        dataRow.createCell(1).setCellValue("not exists");
 	      
 
 	        
