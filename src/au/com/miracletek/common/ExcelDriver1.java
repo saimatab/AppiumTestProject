@@ -72,7 +72,7 @@ import org.apache.poi.ss.usermodel.RichTextString;
 public class ExcelDriver1 {
 	
 	
-	public void saveQueryResultToExcel(ResultSet rs, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
+	public void saveQueryResultToExcel(ResultSet rs,ResultSet rs1,ResultSet rs2,ResultSet rs3, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
 	
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
@@ -106,19 +106,7 @@ public class ExcelDriver1 {
 			        }
 					
 					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+		
 					
 		
 //XSSFSheet xlsSheet = xlsWorkbook.createSheet(sheetName);
@@ -164,6 +152,182 @@ FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
 	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+
+org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
+short rowIndexa = 0;
+
+
+// Get the list of column names and store them as the first
+// row of the spreadsheet.
+ResultSetMetaData colInfoa = rs1.getMetaData();
+System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPr");
+List<String> colNamesa = new ArrayList();
+Row titleRowa = xlsSheet.createRow(rowIndexa++);
+
+for (int i = 1; i <= colInfoa.getColumnCount(); i++) {
+  colNamesa.add(colInfoa.getColumnName(i));
+  titleRowa.createCell((short) (i-1)).setCellValue(
+    new XSSFRichTextString(colInfoa.getColumnName(i)));
+  xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
+
+}
+
+// Save all the data from the database table rows
+System.out.println("rowindex"+rowIndex);
+System.out.println("rs1getstring");
+
+
+ResultSetMetaData colInfo1b = rs2.getMetaData();
+
+  List<String> colNames1b = new ArrayList();
+
+
+  for (int i = 1; i <= colInfo1b.getColumnCount(); i++) {
+    colNames1b.add(colInfo1b.getColumnName(i));
+
+  }
+  while (rs2.next()) {
+  dataRow4 = xlsSheet.createRow(1);
+ 
+	  for (String colNameb : colNames1b) {
+		  
+		  
+
+		    dataRow4.createCell(0).setCellValue(
+		      new XSSFRichTextString(rs2.getString(colNameb)));
+		      
+			
+		  }
+		       //resultSetArray.add(sb.toString());
+	
+  }
+	
+	
+  ResultSetMetaData colInfo2c = rs3.getMetaData();
+
+  List<String> colNamesc = new ArrayList();
+
+  for (int i = 1; i <= colInfo2c.getColumnCount(); i++) {
+	    colNamesc.add(colInfo2c.getColumnName(i));
+	
+	  }
+  
+  while (rs3.next()) {
+	
+	 
+		  for (String colNamec : colNamesc) {
+			  
+			  if (rs3.wasNull()) {
+			        System.out.println("was NULL");
+			        
+	
+			     
+			        dataRow4.createCell(1).setCellValue("not exists");
+			      
+
+			        
+			        
+			      } else {
+			        System.out.println("not NULL");
+			        if(rs3.getString(colNamec) != null)
+			        {
+			     
+			        dataRow4.createCell(1).setCellValue("exists");
+			        }
+			      
+			      }
+
+		
+			      
+				
+			  }
+			       //resultSetArray.add(sb.toString());
+		
+	  }
+		
+	 
+
+
+
+
+
+// Write to disk
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%NNNN");
+FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%OOOO");
+xlsWorkbook.write(fileOut);
+	fileOut.close();	
+	
+
+    //File file1a = new File(filea);
+   // File file2a = new File(fileb);
+	//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     File file1a = new File(filea);
     File file2a = new File(fileb);
@@ -181,6 +345,7 @@ xlsWorkbook.write(fileOut);
 		
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
+	    Row dataRow4;
 					//FileOutputStream fileOut = new FileOutputStream(file1);
 		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
 		
@@ -229,7 +394,7 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
   titleRow.createCell((short) (i-1)).setCellValue(
     new XSSFRichTextString(colInfo.getColumnName(i)));
   xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1");
+
 }
 
 // Save all the data from the database table rows
@@ -244,30 +409,67 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
 
   for (int i = 1; i <= colInfo1.getColumnCount(); i++) {
     colNames1.add(colInfo1.getColumnName(i));
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPP223242PP1");
+
   }
   while (rs1.next()) {
-  Row dataRow4 = xlsSheet.createRow(1);
-  System.out.println("%%%%%%%%%%%%@@@@@@@########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1");
-  
+  dataRow4 = xlsSheet.createRow(1);
+ 
 	  for (String colName : colNames1) {
 		  
 		  
 
-			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1"+ rs1.getString(colName));
 		    dataRow4.createCell(0).setCellValue(
 		      new XSSFRichTextString(rs1.getString(colName)));
 		      
-			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPP24235235356346PP1");
+			
 		  }
 		       //resultSetArray.add(sb.toString());
 	
   }
 	
 	
+  ResultSetMetaData colInfo2 = rs2.getMetaData();
 
+  List<String> colNames2 = new ArrayList();
 
+  for (int i = 1; i <= colInfo2.getColumnCount(); i++) {
+	    colNames2.add(colInfo2.getColumnName(i));
 	
+	  }
+  
+  while (rs2.next()) {
+	
+	 
+		  for (String colName : colNames1) {
+			  
+			  if (rs2.wasNull()) {
+			        System.out.println("was NULL");
+			        
+	
+			     
+			        dataRow4.createCell(1).setCellValue("not exists");
+			      
+
+			        
+			        
+			      } else {
+			        System.out.println("not NULL");
+			        if(rs2.getString(colName) != null)
+			        {
+			     
+			        dataRow4.createCell(1).setCellValue("exists");
+			        }
+			      
+			      }
+
+		
+			      
+				
+			  }
+			       //resultSetArray.add(sb.toString());
+		
+	  }
+		
 	 /* if (rs2.wasNull()) {
 	        System.out.println("was NULL");
 	        
