@@ -429,7 +429,7 @@ public class FinalSmokeTests {
 		        
 		        
 		        
-		        formList.selectForm("dtimeupAuto",config);
+		      /*  formList.selectForm("dtimeupAuto",config);
 		        Thread.sleep(6000);
                  form5.clickDatePicker(config, "datepicker1");
 	
@@ -462,7 +462,7 @@ public class FinalSmokeTests {
 	      
 		         form5.fileUploader("Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
 		         			    Thread.sleep(3000);
-		             form5.autoComplete(config,"autocomplete1");
+		             form5.autoComplete(config,"autocomplete1");*/
 		        Thread.sleep(6000);
 		        
 		        form5.clickslider(config);
