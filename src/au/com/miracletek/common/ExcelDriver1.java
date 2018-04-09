@@ -164,7 +164,7 @@ while (rs.next()) {
 //////////////////////////////////////////////////
 
 
- org.apache.poi.ss.usermodel.Sheet  xlsSheet = xlsWorkbook.createSheet("reppager");
+ xlsSheet = xlsWorkbook.createSheet("reppager");
 
 short rowIndexa = 0;
 
@@ -203,8 +203,7 @@ while (rs7.next()) {
 	
 	////////////////////////////
 	
-	
-org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet("reppager_repeater");
+ xlsSheet = xlsWorkbook.createSheet("reppager_repeater");
 
 short rowIndexb = 0;
 
@@ -228,7 +227,7 @@ for (int i = 1; i <= colInfob.getColumnCount(); i++) {
 while (rs8.next()) {
        
   Row dataRowb = xlsSheet.createRow(rowIndexb++);
-  short colIndexa = 0;
+  short colIndexb = 0;
   for (String colNameb : colNamesb) {
     dataRowb.createCell(colIndexb++).setCellValue(
       new XSSFRichTextString(rs8.getString(colNameb)));
