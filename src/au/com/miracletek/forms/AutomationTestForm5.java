@@ -62,7 +62,12 @@ public class AutomationTestForm5 extends BasePage{
 		       // int moveTo=(int)(end*0.4);
 		        
 		        
-		        
+		        	slide.click();
+		          Dimension size = slide.getSize();
+
+		            TouchAction swipe = new TouchAction(driver).press(slide, 0, size.height / 2).waitAction(2000)
+		                    .moveTo(slide, size.width / 2, size.height / 2).release();
+		    swipe.perform();
 		        
 		        
 		        
