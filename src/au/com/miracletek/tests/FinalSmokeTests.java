@@ -364,7 +364,7 @@ public class FinalSmokeTests {
 			
 			
 		ex1=new ExcelDriver1();
-	ex1.saveQueryResultToExcel1(rs21,rs21a,rs21b, "SAMPLE.xlsx","camera","SAMPLE.xlsx", "camera_input.xlsx",2,2,2 );
+	ex1.saveQueryResultToExcel1(rs21,rs21a,rs21b, "SAMPLE.xlsx","camera","SAMPLE.xlsx", "camera_input.xlsx",2,2,1 );
 			
 		
     
