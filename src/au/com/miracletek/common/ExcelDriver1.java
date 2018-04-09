@@ -235,6 +235,9 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 }
 
 // Save all the data from the database table rows
+System.out.println("rowindex"+rowIndex);
+
+System.out.println("rs1getstring"+  rs1.getString("ID"));
 
       
   Row dataRow4 = xlsSheet.createRow(rowIndex++);
