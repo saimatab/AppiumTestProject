@@ -147,17 +147,17 @@ while (rs.next()) {
        //resultSetArray.add(sb.toString());
 }
 
-helper(xlsWorkbook,rs1,rs1a,rs1b,"camera");
+ xlsWorkbook=helper(xlsWorkbook,rs1,rs1a,rs1b,"camera");
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-helper(xlsWorkbook,rs31,rs31a,rs31b,"gallary");
+ xlsWorkbook=helper(xlsWorkbook,rs31,rs31a,rs31b,"gallary");
 
 
 	
-helper(xlsWorkbook,rs41,rs41a,rs41b,"signature");
+ xlsWorkbook=helper(xlsWorkbook,rs41,rs41a,rs41b,"signature");
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-helper(xlsWorkbook,rs61,rs61a,rs61b,"datetimeupload");
+ xlsWorkbook=helper(xlsWorkbook,rs61,rs61a,rs61b,"datetimeupload");
 
 
 
@@ -290,7 +290,7 @@ xlsWorkbook.write(fileOut);
 	
 	
 	
-	public void helper(org.apache.poi.ss.usermodel.Workbook wb1,ResultSet rs1, ResultSet rs2, ResultSet rs3, String sheetName){
+	public org.apache.poi.ss.usermodel.Workbook  helper(org.apache.poi.ss.usermodel.Workbook wb1,ResultSet rs1, ResultSet rs2, ResultSet rs3, String sheetName){
 		
 	    Row dataRow4=null;
 		org.apache.poi.ss.usermodel.Sheet xlsSheet = wb1.createSheet(sheetName);
@@ -384,7 +384,7 @@ xlsWorkbook.write(fileOut);
 				
 			  }
 				
-			 
+			 return wb1;
 		
 		
 		
