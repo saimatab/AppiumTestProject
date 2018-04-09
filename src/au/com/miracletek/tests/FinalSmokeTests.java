@@ -521,73 +521,7 @@ public class FinalSmokeTests {
 			        
 						form1.navigateUp(config);
 				         	form1.navigateUp(config);
-	/////////////////////////////////////////////////////
-				 	       ResultSet rs11 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
-						   	ResultSet rs21 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
-						  	ResultSet rs21a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
-
-						  	ResultSet rs21b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.camera  ORDER BY id DESC LIMIT 1;");
-							
-						  	
-						  	
-							ResultSet rs31 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.gallary ORDER BY id DESC LIMIT 1;");
-						  	ResultSet rs31a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.gallary ORDER BY id DESC LIMIT 1;");
-
-						  	ResultSet rs31b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.gallary  ORDER BY id DESC LIMIT 1;");
-							
-						  	
-
-						  	
-							ResultSet rs41 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.testsig ORDER BY id DESC LIMIT 1;");
-						  	ResultSet rs41a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.testsig ORDER BY id DESC LIMIT 1;");
-
-						  	ResultSet rs41b =dm.db("bgc_qa", "BGC!@#123", "SELECT signature1 FROM bgc_qa.testsig  ORDER BY id DESC LIMIT 1;");
-							
-						  	
-						  	
-						  	
-					
-							ResultSet rs61 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
-						  	ResultSet rs61a =dm.db("bgc_qa", "BGC!@#123", "select ID,datepicker1,timepicker1,datetimepicker1,autocomplete1,switch1,slider1  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
-
-						  	ResultSet rs61b =dm.db("bgc_qa", "BGC!@#123", "SELECT uploader1 FROM bgc_qa.upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
-							
-						  	
-						  	
-						  	
-						  	
-						  	
-						  	
-						  	
-
-						  	ResultSet rs7 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.reppager  ORDER BY id DESC LIMIT 1;");
-			
-						  	ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.reppager_repeater1  ORDER BY id DESC LIMIT 1;");
-							
-						  				        
-
-
-						  	
-						  	
-						  	
-						  	
-						  	
-						  	
-								
-					 			ex1=new ExcelDriver1();
-					 		ex1.saveQueryResultToExcel(rs11,rs21,rs21a,rs21b,rs31,rs31a,rs31b,rs41,rs41a,rs41b,rs61,rs61a,rs61b,rs7,rs8, "SAMPLE.xlsx","auto","SAMPLE.xlsx", "auto_input.xlsx",0,2,5 );
-					         
-	         		         	
 				         	
-				         	
-				         	
-				         	
-				         	
-				         	
-				         	
-				         	
-				         	
-////////////////////////////////////////////////////////////				         	
 				         	
 				         	
 				         	
@@ -858,7 +792,56 @@ public class FinalSmokeTests {
 															  															  
 															  
 															  
-					         	
+			////////////////////
+																
+																
+																
+																 ResultSet rs11 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
+																   	ResultSet rs21 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
+																  	ResultSet rs21a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
+
+																  	ResultSet rs21b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.camera  ORDER BY id DESC LIMIT 1;");
+																	
+																  	
+																  	
+																	ResultSet rs31 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.gallary ORDER BY id DESC LIMIT 1;");
+																  	ResultSet rs31a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.gallary ORDER BY id DESC LIMIT 1;");
+
+																  	ResultSet rs31b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.gallary  ORDER BY id DESC LIMIT 1;");
+																	
+																  	
+
+																  	
+																	ResultSet rs41 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.testsig ORDER BY id DESC LIMIT 1;");
+																  	ResultSet rs41a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.testsig ORDER BY id DESC LIMIT 1;");
+
+																  	ResultSet rs41b =dm.db("bgc_qa", "BGC!@#123", "SELECT signature1 FROM bgc_qa.testsig  ORDER BY id DESC LIMIT 1;");
+																	
+																  	
+																  	
+																  	
+															
+																	ResultSet rs61 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
+																  	ResultSet rs61a =dm.db("bgc_qa", "BGC!@#123", "select ID,datepicker1,timepicker1,datetimepicker1,autocomplete1,switch1,slider1  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
+
+																  	ResultSet rs61b =dm.db("bgc_qa", "BGC!@#123", "SELECT uploader1 FROM bgc_qa.upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
+															
+
+																  	ResultSet rs7 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.reppager  ORDER BY id DESC LIMIT 1;");
+													
+																  	ResultSet rs8 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.reppager_repeater1  ORDER BY id DESC LIMIT 1;");
+																	
+												
+																		
+															 			ex1=new ExcelDriver1();
+															 		ex1.saveQueryResultToExcel(rs11,rs21,rs21a,rs21b,rs31,rs31a,rs31b,rs41,rs41a,rs41b,rs61,rs61a,rs61b,rs7,rs8, "SAMPLE.xlsx","auto","SAMPLE.xlsx", "auto_input.xlsx",0,2,5 );
+															         
+										
+																
+																
+																
+																
+																////////////
 				         	
 		         	
 	/////////////	
