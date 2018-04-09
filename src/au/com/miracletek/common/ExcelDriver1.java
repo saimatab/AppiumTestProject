@@ -463,7 +463,7 @@ xlsWorkbook.write(fileOut);
       fileWriter.write(mapping + "\n");
    }fileWriter.close();*/
 	
-	public org.apache.poi.ss.usermodel.Workbook  CompareResults( org.apache.poi.ss.usermodel.Workbook workbook,File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
+	public XSSFWorkbook  CompareResults( XSSFWorkbook workbook,File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
 	//	FileInputStream fileInputStream1 = new FileInputStream(filea);
 		FileInputStream fileInputStream2 = new FileInputStream(fileb);
