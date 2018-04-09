@@ -505,7 +505,7 @@ public void autoComplete(DriverConfig config, String autocomp1) {
 		
 		if(platformName.contentEquals("Android"))
 		{
-			autocomp= ((IOSDriver<MobileElement>)driver).findElement(By.xpath("//*[@content-desc='" +autocomp1+"']"));
+			autocomp= ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@content-desc='" +autocomp1+"']"));
 		autocomp.sendKeys("b");
 		
 	
