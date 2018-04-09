@@ -126,7 +126,7 @@ FileInputStream fileInputStream2 = new FileInputStream(fileb);
 		HSSFWorkbook workbook1= new HSSFWorkbook(fileInputStream1);
 	HSSFWorkbook	  workbook2 = new HSSFWorkbook(fileInputStream2);
    HSSFSheet sheet1 = workbook1.getSheetAt(sheetId);
-HSSFSheet sheet2 = workbook2.getSheetAt(sheetId);
+HSSFSheet sheet2 = workbook2.getSheetAt(0);
 		//int totalNoOfRows1 = sheet1.getRows();
 int firstRow1=sheet1.getFirstRowNum();
 			
