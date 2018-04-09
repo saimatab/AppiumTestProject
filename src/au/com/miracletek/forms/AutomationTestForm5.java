@@ -51,7 +51,7 @@ public class AutomationTestForm5 extends BasePage{
 			{
 				slide=findElementByXpath("//XCUIElementTypeOther[@name='slider1']/XCUIElementTypeOther[2]/XCUIElementTypeSlider");// slider
 				
-				slide.setValue("0.4");
+				slide.setValue("2");
 			}
 
 			
