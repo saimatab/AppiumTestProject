@@ -252,20 +252,18 @@ for (int i = 1; i <= colInfo.getColumnCount(); i++) {
 	        System.out.println("was NULL");
 	        
 	       
-	        Row dataRow2 = xlsSheet.createRow(1);
-	       
 	     
-	        dataRow2.createCell(1).setCellValue("not exists");
+	        dataRow4.createCell(1).setCellValue("not exists");
 	      
 
 	        
 	        
 	      } else {
 	        System.out.println("not NULL");
-	        Row dataRow3 = xlsSheet.createRow(1);
+	        
 		       
 		     
-	        dataRow3.createCell(1).setCellValue("exists");
+	        dataRow4.createCell(1).setCellValue("exists");
 	      
 	      }
     

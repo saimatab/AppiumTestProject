@@ -355,8 +355,8 @@ public class FinalSmokeTests {
          	
 			
      
-	  	ResultSet rs21 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
-	  	ResultSet rs21a =dm.db("bgc_qa", "BGC!@#123", "select ID  from camera ORDER BY id DESC LIMIT 1;");
+	  	ResultSet rs21 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
+	  	ResultSet rs21a =dm.db("bgc_qa", "BGC!@#123", "select ID  from bgc_qa.camera ORDER BY id DESC LIMIT 1;");
 
 	  	ResultSet rs21b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.camera  ORDER BY id DESC LIMIT 1;");
 		
