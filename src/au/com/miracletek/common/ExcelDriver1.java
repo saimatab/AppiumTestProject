@@ -246,12 +246,12 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
 
   for (int i = 1; i <= colInfo1.getColumnCount(); i++) {
     colNames1.add(colInfo1.getColumnName(i));
-    Row dataRow4 = xlsSheet.createRow(rowIndex++);
 	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPP223242PP1");
   }
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2432523536364747@@@@@%%%%%PPPPP1");
-  Row dataRow4 = xlsSheet.createRow(rowIndex++);
-	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$$$$$$$$$$$$$$$$$$@@@@@@@@@%%%%%PPPPP1");
+
+  Row dataRow4 = xlsSheet.createRow(1);
+  
+  
 	  for (String colName : colNames1) {
 		    dataRow4.createCell(0).setCellValue(
 		      new XSSFRichTextString(rs1.getString(colName)));
