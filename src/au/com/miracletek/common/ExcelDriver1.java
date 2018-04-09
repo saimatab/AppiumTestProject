@@ -289,6 +289,8 @@ xlsWorkbook.write(fileOut);
       fileInputStream1 = new FileInputStream(file1a);
 
 	XSSFWorkbook workbook=new XSSFWorkbook(fileInputStream1);
+	
+	
 	workbook =CompareResults(workbook,file1a, file1b ,2, 5,filea, 0);
 
 	workbook =CompareResults(workbook,file1a, file2b ,2, 2,filea, 1);
@@ -302,7 +304,7 @@ xlsWorkbook.write(fileOut);
 	workbook =CompareResults(workbook,file1a, file6b ,2, 2,filea, 5);
 	workbook =CompareResults(workbook,file1a, file7b ,2,3,filea, 6);
 	
-	
+	workbook.write(new FileOutputStream("SAMPLE1.xlsx"));
 	
 	
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
@@ -544,7 +546,7 @@ else{
 		}
 	}
 			
-		workbook.write(new FileOutputStream("SAMPLE1.xlsx"));
+	
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
 		return workbook;
 		
