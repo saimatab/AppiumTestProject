@@ -164,7 +164,7 @@ while (rs.next()) {
 //////////////////////////////////////////////////
 
 
- xlsSheet = xlsWorkbook.createSheet("reppager");
+ org.apache.poi.ss.usermodel.Sheet  xlsSheet = xlsWorkbook.createSheet("reppager");
 
 short rowIndexa = 0;
 
@@ -204,7 +204,7 @@ while (rs7.next()) {
 	////////////////////////////
 	
 	
- xlsSheet = xlsWorkbook.createSheet("reppager_repeater");
+org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet("reppager_repeater");
 
 short rowIndexb = 0;
 
