@@ -993,7 +993,7 @@ public void takeSnapShotIos() throws Exception {
     	BodyPart objMessageBodyPart = new MimeBodyPart();
     	BodyPart objMessageBodyPart2 = new MimeBodyPart();
     	BodyPart objMessageBodyPart3 = new MimeBodyPart();
-    	
+    	BodyPart objMessageBodyPart4 = new MimeBodyPart();
     	objMessageBodyPart.setText("Please Find The Attached Report File!");
 
     	Multipart multipart = new MimeMultipart();
@@ -1047,7 +1047,40 @@ String filename2 =var1+ ".html";
 
     	multipart.addBodyPart(objMessageBodyPart2);
 
-    
+    /////////////////////////////////////////////
+    	
+    	
+    	String  var3="SAMPLE1";
+        System.out.println("#######################################################"+var3);
+  
+  	//String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
+String filename3 =var3+ ".xlsx";
+System.out.println("#######################################################filename1"+filename3);
+  	//Create data source to attach the file in mail
+
+  	FileDataSource source3 = new FileDataSource(filename3);
+
+  	objMessageBodyPart4.setDataHandler(new DataHandler(source3));
+
+  	objMessageBodyPart4.setFileName(filename3);
+
+  	multipart.addBodyPart(objMessageBodyPart4);
+  	
+  	////////////////////////////////
+  	
+  	objMessageBodyPart4.setText("Please Find The Attached Report File2!");
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     	
     	
     	
