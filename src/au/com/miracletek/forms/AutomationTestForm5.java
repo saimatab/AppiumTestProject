@@ -44,8 +44,29 @@ public class AutomationTestForm5 extends BasePage{
 			if(platformName.contentEquals("Android"))
 			{
 				slide=findElementByXpath("//*[@class='android.widget.SeekBar']");// slider
-						
-				slide.sendKeys("2");
+					
+			
+		            // get start co-ordinate of seekbar
+		            int start=slide.getLocation().getX();
+		            //Get width of seekbar
+		            int end=slide.getSize().getWidth();
+		            //get location of seekbar vertically
+		            int y=slide.getLocation().getY();
+
+		        // Select till which position you want to move the seekbar
+		        	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver));
+		        
+		        int moveTo=(int)(end*0.4);
+		        action.press(start,y).moveTo(moveTo,y).release().perform();
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
 			}
 			else
 			{
