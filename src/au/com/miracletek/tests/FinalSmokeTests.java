@@ -345,7 +345,7 @@ public class FinalSmokeTests {
 						properties.loadFromXML(fileInput);
 					
 
-			
+			dm=new dm();
 		
 					       ResultSet rs11 =dm.db("bgc_qa", "BGC!@#123", "select *  from auto ORDER BY id DESC LIMIT 1;");
 				 			ex1=new ExcelDriver1();
