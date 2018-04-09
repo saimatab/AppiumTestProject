@@ -253,7 +253,7 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
   System.out.println("%%%%%%%%%%%%@@@@@@@########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1");
   
 	  for (String colName : colNames1) {
-			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1"+colname);
+			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1"+colName);
 		    dataRow4.createCell(0).setCellValue(
 		      new XSSFRichTextString(rs1.getString(colName)));
 		      
