@@ -326,13 +326,19 @@ xlsWorkbook.write(fileOut);
 		  }
 		  while (rs2.next()) {
 		  dataRow4 = xlsSheet.createRow(1);
-		 
+		  short colIndexb = 0;
 			  for (String colNameb : colNames1b) {
 				  
 				  
-
-				    dataRow4.createCell(0).setCellValue(
-				      new XSSFRichTextString(rs2.getString(colNameb)));
+				  if(colNameb.contentEquals("camera")|| colNameb.contentEquals("gallary") || colNameb.contentEquals("signature1") ||  colNameb.contentEquals("uploader1")){
+					  
+					  break;
+				  }
+					  
+					  
+				  else{
+				    dataRow4.createCell(colIndexb++).setCellValue(
+				      new XSSFRichTextString(rs2.getString(colNameb)));}
 				      
 					
 				  }
@@ -359,18 +365,30 @@ xlsWorkbook.write(fileOut);
 					        System.out.println("was NULL");
 					        
 			
-					     
-					        dataRow4.createCell(1).setCellValue("not exists");
+					      if (colNamec.contentEquals("uploader1"))
+					    	  
+					        {dataRow4.createCell(7).setCellValue("not exists");}
 					      
-
+					      else{
+					    	     dataRow4.createCell(1).setCellValue("not exists");
+					    	  
+					      }
 					        
 					        
 					      } else {
 					        System.out.println("not NULL");
 					        if(rs3.getString(colNamec) != null)
 					        {
-					     
-					        dataRow4.createCell(1).setCellValue("exists");
+
+							      if (colNamec.contentEquals("uploader1"))
+							    	  
+							        {dataRow4.createCell(7).setCellValue("exists");}
+							      
+							      else
+							    	     {dataRow4.createCell(1).setCellValue("exists");}
+							    	  
+							 }
+					      
 					        }
 					      
 					      }
@@ -378,7 +396,7 @@ xlsWorkbook.write(fileOut);
 				
 					      
 						
-					  }
+					  
 					       //resultSetArray.add(sb.toString());
 				
 			  }

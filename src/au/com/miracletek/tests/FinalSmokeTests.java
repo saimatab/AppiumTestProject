@@ -373,7 +373,7 @@ public class FinalSmokeTests {
 					  	
 				
 						ResultSet rs61 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
-					  	ResultSet rs61a =dm.db("bgc_qa", "BGC!@#123", "select datepicker1,timepicker1,datetimepicker1,autocomplete1,switch1,slider1  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
+					  	ResultSet rs61a =dm.db("bgc_qa", "BGC!@#123", "select ID,datepicker1,timepicker1,datetimepicker1,autocomplete1,switch1,slider1  from bgc_qa.upload_datetime_autocom ORDER BY id DESC LIMIT 1;");
 
 					  	ResultSet rs61b =dm.db("bgc_qa", "BGC!@#123", "SELECT uploader1 FROM bgc_qa.upload_datetime_autocom  ORDER BY id DESC LIMIT 1;");
 						
