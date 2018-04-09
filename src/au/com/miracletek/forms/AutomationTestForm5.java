@@ -54,11 +54,12 @@ public class AutomationTestForm5 extends BasePage{
 		            int y=slide.getLocation().getY();
 
 		        // Select till which position you want to move the seekbar
-		        	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver));
+		        	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver)).press(slide, 500, 10 ).waitAction()
+		        	         .release()
+		        	         .perform();
+		   		    
 		        
-		        int moveTo=(int)(end*0.4);
-		        action.press(start,y).moveTo(moveTo,y).release().perform();
-		        
+		       // int moveTo=(int)(end*0.4);
 		        
 		        
 		        
