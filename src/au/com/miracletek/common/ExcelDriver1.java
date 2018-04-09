@@ -73,7 +73,7 @@ public class ExcelDriver1 {
 	
 	
 	public void saveQueryResultToExcel(ResultSet rs,ResultSet rs1,ResultSet rs2,ResultSet rs3, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
-	
+	    Row dataRow4;
 	    File file1 = new File(filea);
 	    File file2 = new File(fileb);
 					//FileOutputStream fileOut = new FileOutputStream(file1);
@@ -147,15 +147,10 @@ while (rs.next()) {
        //resultSetArray.add(sb.toString());
 }
 
-// W
-FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
-xlsWorkbook.write(fileOut);
-	fileOut.close();	
-	
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-
-org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet("camera");
+ xlsSheet = xlsWorkbook.createSheet("camera");
 	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
 short rowIndexa = 0;
 
