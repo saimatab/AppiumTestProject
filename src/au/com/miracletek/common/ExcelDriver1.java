@@ -275,7 +275,7 @@ FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
 
 xlsWorkbook.write(fileOut);
 	fileOut.close();	
-	
+    FileInputStream fileInputStream1;
 
     File file1a = new File(filea);
     File file1b = new File("auto_input.xlsx");
@@ -286,19 +286,21 @@ xlsWorkbook.write(fileOut);
     File file6b = new File("reppager_input.xlsx");
     File file7b = new File("reppager_repeater1_input.xlsx");
 
+      fileInputStream1 = new FileInputStream(file1a);
 
-	CompareResults(file1a, file1b ,2, 5,filea, 0);
+	XSSFWorkbook workbook=new XSSFWorkbook(fileInputStream1);
+	workbook =CompareResults(workbook,file1a, file1b ,2, 5,filea, 0);
 
-	CompareResults(file1a, file2b ,2, 2,filea, 1);
+	workbook =CompareResults(workbook,file1a, file2b ,2, 2,filea, 1);
 
-	CompareResults(file1a, file3b ,2, 2,filea, 2);
+	workbook =CompareResults(workbook,file1a, file3b ,2, 2,filea, 2);
 
-	CompareResults(file1a, file4b ,2, 2,filea, 3);
+	workbook =CompareResults(workbook ,file1a, file4b ,2, 2,filea, 3);
 
-	CompareResults(file1a, file5b,2 ,8,filea, 4);
+	workbook =CompareResults(workbook,file1a, file5b,2 ,8,filea, 4);
 	
-	CompareResults(file1a, file6b ,2, 2,filea, 5);
-	CompareResults(file1a, file7b ,2,3,filea, 6);
+	workbook =CompareResults(workbook,file1a, file6b ,2, 2,filea, 5);
+	workbook =CompareResults(workbook,file1a, file7b ,2,3,filea, 6);
 	
 	
 	
@@ -461,7 +463,7 @@ xlsWorkbook.write(fileOut);
       fileWriter.write(mapping + "\n");
    }fileWriter.close();*/
 	
-	public void CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
+	public org.apache.poi.ss.usermodel.Workbook  CompareResults( File filea, File fileb ,int rownum, int colnum,String filename,int sheetId)throws InvalidFormatException, IOException {
 		
 		FileInputStream fileInputStream1 = new FileInputStream(filea);
 		FileInputStream fileInputStream2 = new FileInputStream(fileb);
@@ -544,6 +546,7 @@ else{
 			
 		workbook.write(new FileOutputStream("SAMPLE1.xlsx"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5");
+		return workbook;
 		
  //fileInputStream1.close();
 	//.close(); 
