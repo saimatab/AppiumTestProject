@@ -248,14 +248,13 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
     colNames1.add(colInfo1.getColumnName(i));
 	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPP223242PP1");
   }
-
+  while (rs1.next()) {
   Row dataRow4 = xlsSheet.createRow(1);
   System.out.println("%%%%%%%%%%%%@@@@@@@########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1");
   
 	  for (String colName : colNames1) {
 		  
 		  
-			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1"+ new XSSFRichTextString(rs1.getString(colName)));
 
 			System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^^^^^^^^@%%%%%PPP24235235356346PP1"+ rs1.getString(colName));
 		    dataRow4.createCell(0).setCellValue(
@@ -265,7 +264,7 @@ ResultSetMetaData colInfo1 = rs1.getMetaData();
 		  }
 		       //resultSetArray.add(sb.toString());
 	
-	
+  }
 	
 	
 
