@@ -464,7 +464,7 @@ public class FinalSmokeTests {
 		         			    Thread.sleep(3000);
 		             form5.autoComplete(config,"autocomplete1");*/
 		        Thread.sleep(6000);
-		        
+		        formList.selectForm("dtimeupAuto",config);
 		        form5.clickslider(config);
 		        form5.clickswitch(config,"switch1","0");
 		         form5.submit();   
