@@ -356,14 +356,19 @@ public class FinalSmokeTests {
 			
      
 	  	ResultSet rs21 =dm.db("bgc_qa", "BGC!@#123", "select *  from camera ORDER BY id DESC LIMIT 1;");
-		ex1=new ExcelDriver1();
-	ex1.saveQueryResultToExcel(rs21, "SAMPLE.xlsx","camera","SAMPLE.xlsx", "camera_input.xlsx",2,2,2 );
-			
+	  	ResultSet rs21a =dm.db("bgc_qa", "BGC!@#123", "select ID  from camera ORDER BY id DESC LIMIT 1;");
+
+	  	ResultSet rs21b =dm.db("bgc_qa", "BGC!@#123", "SELECT imagepicker1 FROM bgc_qa.camera  ORDER BY id DESC LIMIT 1;");
 		
 			
 			
 			
+		ex1=new ExcelDriver1();
+	ex1.saveQueryResultToExcel1(rs21,rs21a,rs21b, "SAMPLE.xlsx","camera","SAMPLE.xlsx", "camera_input.xlsx",2,2,2 );
 			
+		
+    
+	
 			
 			
 			

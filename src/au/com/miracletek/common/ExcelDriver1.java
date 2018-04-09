@@ -176,6 +176,146 @@ xlsWorkbook.write(fileOut);
 		
 	}
 	
+	
+	
+	
+	public void saveQueryResultToExcel1(ResultSet rs,ResultSet rs1,ResultSet rs2, String fileName,String sheetName,String filea, String fileb,int sheetId ,int rowvar, int colvar)throws Exception{
+		
+	    File file1 = new File(filea);
+	    File file2 = new File(fileb);
+					//FileOutputStream fileOut = new FileOutputStream(file1);
+		///XSSFWorkbook xlsWorkbook = new XSSFWorkbook();
+		
+					org.apache.poi.ss.usermodel.Workbook xlsWorkbook =null;
+					
+				   // FileInputStream inputStream = new FileInputStream(file1);
+					
+					String fileExtensionName = fileName.substring(fileName.indexOf("."));
+
+			        //Check condition if the file is xlsx file
+
+			        if(fileExtensionName.equals(".xlsx")){
+
+			        //If it is xlsx file then create object of XSSFWorkbook class
+
+			        	xlsWorkbook = new XSSFWorkbook();
+			        	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
+			        }
+
+			        //Check condition if the file is xls file
+
+			        else if(fileExtensionName.equals(".xls")){
+
+			            //If it is xls file then create object of XSSFWorkbook class
+
+			        	xlsWorkbook = new HSSFWorkbook();
+			         	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%");
+			        }
+					
+
+
+org.apache.poi.ss.usermodel.Sheet xlsSheet = xlsWorkbook.createSheet(sheetName);
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP");
+short rowIndex = 0;
+List<String> resultSetArray=new ArrayList<>();
+
+// Get the list of column names and store them as the first
+// row of the spreadsheet.
+ResultSetMetaData colInfo = rs.getMetaData();
+System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPPr");
+List<String> colNames = new ArrayList();
+Row titleRow = xlsSheet.createRow(rowIndex++);
+
+for (int i = 1; i <= colInfo.getColumnCount(); i++) {
+  colNames.add(colInfo.getColumnName(i));
+  titleRow.createCell((short) (i-1)).setCellValue(
+    new XSSFRichTextString(colInfo.getColumnName(i)));
+  xlsSheet.setColumnWidth((short) (i-1), (short) 4000);
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP1");
+}
+
+// Save all the data from the database table rows
+while (rs1.next()) {
+        StringBuilder sb = new StringBuilder();
+  Row dataRow = xlsSheet.createRow(rowIndex++);
+  short colIndex = 0;
+  for (String colName : colNames) {
+    dataRow.createCell(colIndex++).setCellValue(
+      new XSSFRichTextString(rs1.getString(colName)));
+       sb.append(String.format(String.valueOf(rs1.getString(colName))) + " ");
+   	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%PPPPP2");
+
+  }
+       //resultSetArray.add(sb.toString());
+}
+
+while (rs2.next()) {
+	
+	  if (rs2.wasNull()) {
+	        System.out.println("was NULL");
+	        
+	       
+	        Row dataRow = xlsSheet.createRow(1);
+	       
+	     
+	        dataRow.createCell(1).setCellValue("not exists ");
+	      
+
+	        
+	        
+	      } else {
+	        System.out.println("not NULL");
+	        Row dataRow = xlsSheet.createRow(1);
+		       
+		     
+	        dataRow.createCell(1).setCellValue("exists");
+	      
+	      }
+    
+}
+   //resultSetArray.add(sb.toString());
+
+
+
+
+
+
+// Write to disk
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%NNNN");
+FileOutputStream fileOut = new FileOutputStream("SAMPLE.xlsx");
+	System.out.println("%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%OOOO");
+xlsWorkbook.write(fileOut);
+	fileOut.close();	
+	
+
+    File file1a = new File(filea);
+    File file2a = new File(fileb);
+	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
+	
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	  /* File csvOutputFile = new File("auto1_output.csv")	;
 	  FileWriter fileWriter = new FileWriter(csvOutputFile, false);
   for(String mapping : resultSetArray) {
