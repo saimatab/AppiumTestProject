@@ -308,7 +308,7 @@ xlsWorkbook.write(fileOut);
     File file1a = new File(filea);
     File file2a = new File(fileb);
 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CompareResults(file1a, file2a ,rowvar, colvar,filea, 1);
+	CompareResults(file1a, file2a ,rowvar, colvar,filea, sheetId);
 	
 	
 		
