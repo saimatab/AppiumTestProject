@@ -374,6 +374,12 @@
                     <include>**/SAMPLE*/</include>
                 </includes>
             </fileset>
+						   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/SAMPLE1*/</include>
+                </includes>
+            </fileset>
         </filesets>
     </configuration>
         <executions>
