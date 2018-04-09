@@ -380,7 +380,7 @@ public class FinalSmokeTests {
 			  	
 			  	
 			  	
-		        formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+		       /* formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
 		        Thread.sleep(3000);
 	            form1.fillForm(config);
 	            form1.submit();
@@ -422,7 +422,7 @@ public class FinalSmokeTests {
 		     
 		        Thread.sleep(7000);
 		        form4.save(config);
-		        form4.submit();
+		        form4.submit();*/
 	      
 		         	
 		      //------------------date time pciker , file uplloader , auto compelte ------------------
