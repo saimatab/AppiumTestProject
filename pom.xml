@@ -368,6 +368,12 @@
                     <include>**/Demo-*/</include>
                 </includes>
             </fileset>
+				   <fileset>
+                <directory>./</directory>
+                <includes>
+                    <include>**/SAMPLE*/</include>
+                </includes>
+            </fileset>
         </filesets>
     </configuration>
         <executions>
