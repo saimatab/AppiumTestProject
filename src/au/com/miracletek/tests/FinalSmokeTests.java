@@ -373,7 +373,7 @@ public class FinalSmokeTests {
 		    //  File file5 = new File("chromedriver.exe");
 			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
 			  WebDriver driver3 = new ChromeDriver(chromeOptions);
-
+			    driver3.manage().window().maximize();
 
 			
 			
