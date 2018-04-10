@@ -479,12 +479,15 @@ public class FinalSmokeTests {
 				WebElement userName = driver3.findElement(By.name("uid"));
 				//Fill user name
 				userName.sendKeys("guru99");*/
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 		 WebDriver driver3;
  ChromeDriverService service;
 			 service = new ChromeDriverService.Builder()
 					         .usingDriverExecutable(new File("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe"))
 					         .usingAnyFreePort()
 					          .build();
+			
 					     service.start();
 					          driver3 = new RemoteWebDriver(service.getUrl(),
 					    		          DesiredCapabilities.chrome());
