@@ -5,6 +5,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import javax.activation.FileDataSource;
 import org.openqa.selenium.mobile.NetworkConnection;
 import org.openqa.selenium.mobile.NetworkConnection.ConnectionType;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.text.SimpleDateFormat;
 import org.openqa.selenium.JavascriptExecutor;
 import io.appium.java_client.TouchAction;
