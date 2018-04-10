@@ -482,10 +482,11 @@ public class FinalSmokeTests {
 				userName.sendKeys("guru99");*/
 			ChromeOptions chromeOptions= new ChromeOptions();
 			chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-		 WebDriver driver3;
+		
  ChromeDriverService service;
 	
 	DesiredCapabilities capabilities=null;
+
 	
 	chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 	
@@ -507,9 +508,9 @@ public class FinalSmokeTests {
 					     
 					     
 			
-					          driver3 = new RemoteWebDriver(new URL("192.168.9.149:5556/wd/hub"),
+					         WebDriver driver4 = new RemoteWebDriver(new URL("192.168.9.149:5556/wd/hub"),
 					        		  capabilities);
-					          driver3.get("http://www.google.com");
+					          driver4.get("http://www.google.com");
 					  
 			
 			  
