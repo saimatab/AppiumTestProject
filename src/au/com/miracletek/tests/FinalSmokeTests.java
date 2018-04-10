@@ -483,14 +483,22 @@ public class FinalSmokeTests {
 			chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 		 WebDriver driver3;
  ChromeDriverService service;
+	
+	DesiredCapabilities capabilities=null;
+	
+	chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+	
 			 service = new ChromeDriverService.Builder()
 					         .usingDriverExecutable(new File("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe"))
 					         .usingAnyFreePort()
 					          .build();
 			
 					     service.start();
+					     //capabilities = {'chrome.binary': "C:\\Users\\stabassum\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"}
+					     capabilities.setCapability("chrome.binary", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+					     capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 					          driver3 = new RemoteWebDriver(service.getUrl(),
-					    		          DesiredCapabilities.chrome());
+					        		  capabilities);
 					          driver3.get("http://www.google.com");
 					  
 			
