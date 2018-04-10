@@ -497,7 +497,7 @@ public class FinalSmokeTests {
 					     //capabilities = {'chrome.binary': "C:\\Users\\stabassum\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"}
 					     capabilities.setCapability("chrome.binary", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 					     capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-					          driver3 = new RemoteWebDriver(service.getUrl(),
+					          driver3 = new RemoteWebDriver(new URL("http://127.0.0.1:4446/wd/hub"),
 					        		  capabilities);
 					          driver3.get("http://www.google.com");
 					  
