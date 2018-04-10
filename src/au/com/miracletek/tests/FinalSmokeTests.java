@@ -466,7 +466,10 @@ public class FinalSmokeTests {
 			   settings.deviceappswtich();*/
 			
 			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-			  WebDriver driver3 = new ChromeDriver();
+			
+				ChromeOptions chromeOptions= new ChromeOptions();
+				chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+				  WebDriver driver3 = new ChromeDriver(chromeOptions);
 			  driver3.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			  driver3.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
 				driver3.get("http://demo.guru99.com/V4/");
