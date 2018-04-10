@@ -16,6 +16,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.util.List;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
@@ -363,9 +365,15 @@ public class FinalSmokeTests {
 			FirefoxOptions options = new FirefoxOptions();
 			//FirefoxDriver driver3 = new FirefoxDriver(options);
 			
-			System.setProperty("webdriver.gecko.driver","geckodriver.exe");
-		    
-			WebDriver driver3 = new FirefoxDriver();
+		//	System.setProperty("webdriver.gecko.driver","geckodriver.exe");
+
+			
+			  System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+			  WebDriver driver3 = new ChromeDriver();
+
+
+			
+			
 			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
 			
 			driver3.findElement(By.id("Email")).click();
