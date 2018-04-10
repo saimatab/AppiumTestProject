@@ -376,10 +376,10 @@ public class FinalSmokeTests {
 			chromeOptions.setBinary("chromedriver.exe");
 		    //  File file5 = new File("chromedriver.exe");
 			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
-			//  WebDriver driver3 = new ChromeDriver(chromeOptions);
-			    //driver3.manage().window().maximize();
-			  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
-			    WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515/wd/hub"),dc);
+			  WebDriver driver3 = new ChromeDriver(chromeOptions);
+			    driver3.manage().window().maximize();
+			//  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
+			 //   WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515/wd/hub"),dc);
 			    driver3.manage().window().maximize();
 			
 			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
