@@ -43,6 +43,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 import java.util.Map;
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -388,12 +389,12 @@ public class FinalSmokeTests {
 			  
 			  WebDriver driver3 = new ChromeDriver();
 			    driver3.manage().window().maximize();
+			    driver3.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			//  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
 			 //   WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515/wd/hub"),dc);
-			    driver3.manage().window().maximize();
 			
 			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
-			
+	
 			driver3.findElement(By.id("Email")).click();
 		    driver3.findElement(By.id("Email")).clear();
 		    driver3.findElement(By.id("Email")).sendKeys("saima.tabassum+11@miracletek.com.au");
