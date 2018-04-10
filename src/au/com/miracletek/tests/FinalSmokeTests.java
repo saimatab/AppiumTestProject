@@ -361,11 +361,11 @@ public class FinalSmokeTests {
 			
      //////////////////////////////////
 			FirefoxOptions options = new FirefoxOptions();
-			FirefoxDriver driver3 = new FirefoxDriver(options);
+			//FirefoxDriver driver3 = new FirefoxDriver(options);
 			
 			System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 		    
-			
+			WebDriver driver3 = new FirefoxDriver();
 			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
 			
 			driver3.findElement(By.id("Email")).click();
