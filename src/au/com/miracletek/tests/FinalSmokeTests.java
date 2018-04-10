@@ -380,7 +380,7 @@ public class FinalSmokeTests {
 			  	
 			  	
 			  	
-		       /* formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+		       formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
 		        Thread.sleep(3000);
 	            form1.fillForm(config);
 	            form1.submit();
@@ -422,14 +422,14 @@ public class FinalSmokeTests {
 		     
 		        Thread.sleep(7000);
 		        form4.save(config);
-		        form4.submit();*/
+		        form4.submit();
 	      
 		         	
 		      //------------------date time pciker , file uplloader , auto compelte ------------------
 		        
 		        
 		        
-		      /*  formList.selectForm("dtimeupAuto",config);
+		        formList.selectForm("dtimeupAuto",config);
 		        Thread.sleep(6000);
                  form5.clickDatePicker(config, "datepicker1");
 	
@@ -462,7 +462,7 @@ public class FinalSmokeTests {
 	      
 		         form5.fileUploader("Photos","1","Camera","Photo taken on Sep 23, 2016 10:18:52 AM");//file uploader
 		         			    Thread.sleep(3000);
-		             form5.autoComplete(config,"autocomplete1");*/
+		             form5.autoComplete(config,"autocomplete1");
 		        Thread.sleep(6000);
 		        formList.selectForm("dtimeupAuto",config);
 		        form5.clickslider(config);
@@ -488,26 +488,7 @@ public class FinalSmokeTests {
 			         form6.submit();
 			   
 		         
-		
-			        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 
