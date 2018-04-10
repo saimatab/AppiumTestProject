@@ -23,6 +23,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -497,7 +498,10 @@ public class FinalSmokeTests {
 					     //capabilities = {'chrome.binary': "C:\\Users\\stabassum\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"}
 					     capabilities.setCapability("chrome.binary", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 					     capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-					          driver3 = new RemoteWebDriver(new URL("192.168.9.149::4446/wd/hub"),
+					     capabilities.setBrowserName("chrome");
+			               
+					     capabilities.setPlatform(Platform.WINDOWS);
+					          driver3 = new RemoteWebDriver(new URL("192.168.9.149:5556/wd/hub"),
 					        		  capabilities);
 					          driver3.get("http://www.google.com");
 					  
