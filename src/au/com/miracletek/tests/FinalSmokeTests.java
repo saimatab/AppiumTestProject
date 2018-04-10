@@ -368,7 +368,7 @@ public class FinalSmokeTests {
 		//	System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 
 			
-			  System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+			  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
 			  WebDriver driver3 = new ChromeDriver();
 
 
