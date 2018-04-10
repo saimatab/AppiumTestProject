@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.JavascriptExecutor;
-
+import java.time.Duration;
 import au.com.miracletek.common.BasePage;
 import au.com.miracletek.common.Constants;
 import au.com.miracletek.common.DriverConfig;
@@ -30,6 +30,7 @@ public class AutomationTestForm5 extends BasePage{
 	MobileElement savedraft;
 	MobileElement autocomp;
 	MobileElement projCode11;
+	Duration dur;
 	public AutomationTestForm5 (RemoteWebDriver driver, String platform) throws Exception {
 		super(driver, platform);
 	}
@@ -54,7 +55,7 @@ public class AutomationTestForm5 extends BasePage{
 		            int y=slide.getLocation().getY();
 
 		        // Select till which position you want to move the seekbar
-		        	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver)).press(slide, 500, 10 ).waitAction()
+		        	TouchAction action = new TouchAction (((AndroidDriver<MobileElement>)driver)).press(slide, 500, 10 ).waitAction(dur.ofMillis(3000))
 		        	         .release()
 		        	         .perform();
 		   		    
@@ -65,7 +66,7 @@ public class AutomationTestForm5 extends BasePage{
 		        	slide.click();
 		          Dimension size = slide.getSize();
 
-		            TouchAction swipe = new TouchAction(driver).press(slide, 0, size.height / 2).waitAction(2000)
+		            TouchAction swipe = new TouchAction(driver).press(slide, 0, size.height / 2).waitAction(dur.ofMillis(3000))
 		                    .moveTo(slide, size.width / 2+1, size.height / 2).release();
 		    swipe.perform();
 		        
