@@ -466,7 +466,9 @@ public class FinalSmokeTests {
 		        Thread.sleep(6000);
 		        formList.selectForm("dtimeupAuto",config);
 		        form5.clickslider(config);
+ 			    Thread.sleep(3000);
 		        form5.clickswitch(config,"switch1","0");
+ 			    Thread.sleep(3000);
 		         form5.submit();   
 		        
 		        // repeater pager
