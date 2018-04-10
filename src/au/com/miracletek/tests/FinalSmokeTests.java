@@ -377,7 +377,7 @@ public class FinalSmokeTests {
 
 			
 			
-			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
+			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
 			
 			driver3.findElement(By.id("Email")).click();
 		    driver3.findElement(By.id("Email")).clear();
