@@ -371,7 +371,7 @@ public class FinalSmokeTests {
 			ChromeOptions chromeOptions= new ChromeOptions();
 			chromeOptions.setBinary("chromedriver.exe");
 		    //  File file5 = new File("chromedriver.exe");
-			  System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
 			  WebDriver driver3 = new ChromeDriver(chromeOptions);
 
 
