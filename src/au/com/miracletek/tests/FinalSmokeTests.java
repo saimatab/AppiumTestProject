@@ -465,10 +465,19 @@ public class FinalSmokeTests {
 				
 			   settings.deviceappswtich();*/
 			
+			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+			  WebDriver driver3 = new ChromeDriver();
+			  driver3.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			  driver3.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
+				driver3.get("http://demo.guru99.com/V4/");
+				WebElement userName = driver3.findElement(By.name("uid"));
+				//Fill user name
+				userName.sendKeys("guru99");
 			
 			
-			
-			
+			  
+//AndroidDriver<MobileElement>   d1=((AndroidDriver<MobileElement>)manager.getDriver());
+//d1.openNotifications();
 			
 			
 			
@@ -790,12 +799,12 @@ public class FinalSmokeTests {
 												         	
 												         	//perform syncing of all entiteis 
 												         	 Thread.sleep(3000);
-												 		    sync.syncRole("2",config);
+												 		    sync.syncRole("3",config);
 												         	
 												         	
 												         	
 												 		    Thread.sleep(3000);
-														    sync.syncUser("3",config);
+														    sync.syncUser("4",config);
 												         	
 													    	form1.navigateUp(config);
 												         	
