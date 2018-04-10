@@ -7,6 +7,8 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
+importorg.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,6 +24,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
+import java.net.URL;
 import java.util.Iterator;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -69,6 +72,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -360,7 +364,7 @@ public class FinalSmokeTests {
 
 			dm=new DatabaseDriver();
 		
-				
+			DesiredCapabilities dc=DesiredCapabilities.chrome();
 			
      //////////////////////////////////
 			FirefoxOptions options = new FirefoxOptions();
@@ -372,10 +376,11 @@ public class FinalSmokeTests {
 			chromeOptions.setBinary("chromedriver.exe");
 		    //  File file5 = new File("chromedriver.exe");
 			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
-			  WebDriver driver3 = new ChromeDriver(chromeOptions);
+			//  WebDriver driver3 = new ChromeDriver(chromeOptions);
+			    //driver3.manage().window().maximize();
+			  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
+			    WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515"),dc);
 			    driver3.manage().window().maximize();
-
-			
 			
 			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
 			
