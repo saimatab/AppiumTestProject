@@ -379,7 +379,7 @@ public class FinalSmokeTests {
 			//  WebDriver driver3 = new ChromeDriver(chromeOptions);
 			    //driver3.manage().window().maximize();
 			  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
-			    WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515"),dc);
+			    WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515/wd/hub"),dc);
 			    driver3.manage().window().maximize();
 			
 			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
