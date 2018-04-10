@@ -560,6 +560,15 @@
 						</includes>
 						<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
 						</fileSet>
+											<fileSet>
+						<!-- Report directory Path -->
+						<directory>./</directory>
+						<includes>
+							<!-- Report file name -->
+							<include>SAMPLE1.xlsx</include>
+						</includes>
+						<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
+						</fileSet>
 					</fileSets>				
 				
 				</configuration>
