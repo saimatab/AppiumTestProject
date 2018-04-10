@@ -500,7 +500,13 @@ public class FinalSmokeTests {
 					     capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 					     capabilities.setBrowserName("chrome");
 			               
-					     capabilities.setPlatform(Platform.WINDOWS);
+					    //.setPlatform(Platform.win);
+					     capabilities.setCapability("networkConnectionEnabled", true);
+					     capabilities.setCapability("browserConnectionEnabled", true);
+					     
+					     
+					     
+			
 					          driver3 = new RemoteWebDriver(new URL("192.168.9.149:5556/wd/hub"),
 					        		  capabilities);
 					          driver3.get("http://www.google.com");
