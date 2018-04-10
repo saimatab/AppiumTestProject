@@ -376,7 +376,7 @@ public class FinalSmokeTests {
 			ChromeOptions chromeOptions= new ChromeOptions();
 			chromeOptions.setBinary("chromedriver.exe");
 		    //  File file5 = new File("chromedriver.exe");
-			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
+			  //System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
 			  
 			  options.addArguments("start-maximized");
 				System.setProperty("webdriver.chrome.logfile", "C:\\chromedriver.log");
@@ -387,7 +387,7 @@ public class FinalSmokeTests {
 			  
 			  
 			  
-			  WebDriver driver3 = new ChromeDriver();
+			  WebDriver driver3 = new ChromeDriver(chromeOptions);
 			    driver3.manage().window().maximize();
 			    driver3.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			//  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
