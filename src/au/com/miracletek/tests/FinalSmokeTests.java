@@ -365,29 +365,29 @@ public class FinalSmokeTests {
 
 			dm=new DatabaseDriver();
 		
-			DesiredCapabilities dc=DesiredCapabilities.chrome();
+			//DesiredCapabilities dc=DesiredCapabilities.chrome();
 			
      //////////////////////////////////
-			FirefoxOptions options = new FirefoxOptions();
+		//	FirefoxOptions options = new FirefoxOptions();
 			//FirefoxDriver driver3 = new FirefoxDriver(options);
 			
 		//	System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 
-			ChromeOptions chromeOptions= new ChromeOptions();
-			chromeOptions.setBinary("chromedriver.exe");
+		//	ChromeOptions chromeOptions= new ChromeOptions();
+			//chromeOptions.setBinary("chromedriver.exe");
 		    //  File file5 = new File("chromedriver.exe");
 			  //System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
 			  
-			  options.addArguments("start-maximized");
-				System.setProperty("webdriver.chrome.logfile", "C:\\chromedriver.log");
-				System.setProperty("webdriver.chrome.verboseLogging", "true");
+			  //options.addArguments("start-maximized");
+				//System.setProperty("webdriver.chrome.logfile", "C:\\chromedriver.log");
+				//System.setProperty("webdriver.chrome.verboseLogging", "true");
 			  
 			  
 			  
 			  
 			  
 			  
-			  WebDriver driver3 = new ChromeDriver(chromeOptions);
+			 /* WebDriver driver3 = new ChromeDriver(chromeOptions);
 			    driver3.manage().window().maximize();
 			    driver3.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			//  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
@@ -463,7 +463,7 @@ public class FinalSmokeTests {
 			   
 				form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='A task (e) has been assigned to you.']")).click();
 				
-			   settings.deviceappswtich();
+			   settings.deviceappswtich();*/
 			
 			
 			
