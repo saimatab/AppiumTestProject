@@ -7,7 +7,10 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.remote.html5.*;
+import org.openqa.selenium.chrome.ChromeDriverService;
+ import org.openqa.selenium.remote.DesiredCapabilities;
+ import org.openqa.selenium.remote.RemoteWebDriver;
 //import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -465,7 +468,7 @@ public class FinalSmokeTests {
 				
 			   settings.deviceappswtich();*/
 			
-			  System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+			 /* System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 			
 				ChromeOptions chromeOptions= new ChromeOptions();
 				chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
@@ -475,8 +478,18 @@ public class FinalSmokeTests {
 				driver3.get("http://demo.guru99.com/V4/");
 				WebElement userName = driver3.findElement(By.name("uid"));
 				//Fill user name
-				userName.sendKeys("guru99");
-			
+				userName.sendKeys("guru99");*/
+		 WebDriver driver3;
+ ChromeDriverService service;
+			 service = new ChromeDriverService.Builder()
+					         .usingDriverExecutable(new File("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe"))
+					         .usingAnyFreePort()
+					          .build();
+					     service.start();
+					          driver3 = new RemoteWebDriver(service.getUrl(),
+					    		          DesiredCapabilities.chrome());
+					          driver3.get("http://www.google.com");
+					  
 			
 			  
 //AndroidDriver<MobileElement>   d1=((AndroidDriver<MobileElement>)manager.getDriver());
