@@ -363,7 +363,7 @@ public class FinalSmokeTests {
 			FirefoxOptions options = new FirefoxOptions();
 			FirefoxDriver driver3 = new FirefoxDriver(options);
 			
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 		    
 			
 			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
