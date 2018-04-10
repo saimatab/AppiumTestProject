@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -367,10 +368,11 @@ public class FinalSmokeTests {
 			
 		//	System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 
-		      
-		      File file5 = new File("chromedriver.exe");
-			  System.setProperty("webdriver.chrome.driver",file5.getAbsolutePath());
-			  WebDriver driver3 = new ChromeDriver();
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("chromedriver.exe");
+		    //  File file5 = new File("chromedriver.exe");
+			//  System.setProperty("webdriver.chrome.driver",file5.getAbsolutePath());
+			  WebDriver driver3 = new ChromeDriver(chromeOptions);
 
 
 			
