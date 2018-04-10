@@ -6,7 +6,17 @@ import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.io.File;
+import java.util.List;
+import org.openqa.selenium.support.ui.Select;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import java.lang.Object;
 import java.util.Iterator;
@@ -350,8 +360,97 @@ public class FinalSmokeTests {
 				
 			
      //////////////////////////////////
-
-			         
+			FirefoxOptions options = new FirefoxOptions();
+			FirefoxDriver driver3 = new FirefoxDriver(options);
+			
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
+		    
+			
+			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
+			
+			driver3.findElement(By.id("Email")).click();
+		    driver3.findElement(By.id("Email")).clear();
+		    driver3.findElement(By.id("Email")).sendKeys("saima.tabassum+11@miracletek.com.au");
+		    driver3.findElement(By.id("Password")).clear();
+		    driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
+		    driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
+		    Thread.sleep(3000);
+		    driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
+		    Thread.sleep(3000);
+		    driver3.findElement(By.id("createNewButton")).click();
+		    driver3.findElement(By.id("taskName")).clear();
+		    driver3.findElement(By.id("taskName")).sendKeys("simple");
+		    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).click();
+		    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
+		    driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
+		    driver3.findElement(By.id("SimpleTaskRadio")).click();
+		    driver3.findElement(By.id("taskDescription")).clear();
+		    driver3.findElement(By.id("taskDescription")).sendKeys("eee");
+		    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
+		    Thread.sleep(3000);
+		    driver3.findElement(By.id("createNewButton")).click();
+		    driver3.findElement(By.id("taskName")).clear();
+		    driver3.findElement(By.id("taskName")).sendKeys("form");
+		    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).click();
+		    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
+		    driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
+		    driver3.findElement(By.id("FormSelectionRadio")).click();
+		    driver3.findElement(By.cssSelector("span.select2-arrow")).click();
+		    new Select(driver3.findElement(By.id("formSelectionInput"))).selectByVisibleText("auto");
+		    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
+		    Thread.sleep(5000);
+		    driver3.findElement(By.id("item_Notifications")).click();
+		    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+		    driver3.findElement(By.id("notificationTitle")).clear();
+		    driver3.findElement(By.id("notificationTitle")).sendKeys("push");
+		    driver3.findElement(By.id("notificationBody")).clear();
+		    driver3.findElement(By.id("notificationBody")).sendKeys("ff");
+		    driver3.findElement(By.id("notificationBody")).clear();
+		    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
+		    driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
+		    Thread.sleep(3000);
+		    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+		    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+		    driver3.findElement(By.id("notificationTitle")).clear();
+		    driver3.findElement(By.id("notificationTitle")).sendKeys("pushlater");
+		    driver3.findElement(By.id("notificationBody")).clear();
+		    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
+		    driver3.findElement(By.id("sendTypeLater")).click();
+		    driver3.findElement(By.xpath(".//*[@id='sendDateTime']/div/span")).click();
+		    driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-time")).click();
+		    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
+		    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
+		    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
+		    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
+		    driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-remove")).click();
+		    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+			
+			driver3.close();
+			
+			
+			
+			
+			   settings.deviceHome();
+			   
+			   settings.opennotif();
+			   
+				form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='A task (e) has been assigned to you.']")).click();
+				
+			   settings.deviceappswtich();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//////////////////////////////////////
+			
+			
+			
+			
 			         
 				 		String appcode = properties.getProperty("appcode");
 						

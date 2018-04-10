@@ -254,7 +254,11 @@ public void pickerByText(String text) throws Exception
 		}
     	
     }
+    public void opennotif()
+    {
+    	 ((AndroidDriver<MobileElement>)driver).openNotifications();
     
+    }
     public void fileUploader(String googleDriveFolderName, String  folderIndex, String folderName, String photoName){
     	try {
     		
