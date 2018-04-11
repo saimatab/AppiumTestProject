@@ -469,19 +469,9 @@ public class FinalSmokeTests {
 				
 			   settings.deviceappswtich();*/
 			
-			 /* System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-			
-				ChromeOptions chromeOptions= new ChromeOptions();
-				chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-				  WebDriver driver3 = new ChromeDriver(chromeOptions);
-			  driver3.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			  driver3.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-				driver3.get("http://demo.guru99.com/V4/");
-				WebElement userName = driver3.findElement(By.name("uid"));
-				//Fill user name
-				userName.sendKeys("guru99");*/
+		
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+			/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 
 			WebDriver driver4 ;
 			URL url = new URL("http://192.168.9.149:5556/wd/hub");
@@ -500,15 +490,29 @@ public class FinalSmokeTests {
 								   
 								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-										driver4.navigate().to("http://demo.guru99.com/V4/");
+										driver4.navigate().to("http://demo.guru99.com/V4/");*/
 					  
+	
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+
 			
-			  
-//AndroidDriver<MobileElement>   d1=((AndroidDriver<MobileElement>)manager.getDriver());
-//d1.openNotifications();
-			
-			
-			
+			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
+			  WebDriver driver4 = new ChromeDriver();
+			  driver4.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
+				driver4.get("http://demo.guru99.com/V4/");		
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
 			
 			//////////////////////////////////////
 			
