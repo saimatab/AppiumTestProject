@@ -480,37 +480,27 @@ public class FinalSmokeTests {
 				WebElement userName = driver3.findElement(By.name("uid"));
 				//Fill user name
 				userName.sendKeys("guru99");*/
-			ChromeOptions chromeOptions= new ChromeOptions();
-			chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-		
- ChromeDriverService service;
-	
-	DesiredCapabilities capabilities=null;
 
-	
-	chromeOptions.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-	
-			 service = new ChromeDriverService.Builder()
-					         .usingDriverExecutable(new File("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe"))
-					         .usingAnyFreePort()
-					          .build();
-			
-					     service.start();
-					     //capabilities = {'chrome.binary': "C:\\Users\\stabassum\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"}
-					     capabilities.setCapability("chrome.binary", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-					     capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-					     capabilities.setBrowserName("chrome");
-			               
-					    //.setPlatform(Platform.win);
-					     capabilities.setCapability("networkConnectionEnabled", true);
-					     capabilities.setCapability("browserConnectionEnabled", true);
-					     
-					     
-					     
-			
-					         WebDriver driver4 = new RemoteWebDriver(new URL("192.168.9.149:5556/wd/hub"),
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+
+			WebDriver driver4 ;
+			URL url = new URL("http://192.168.9.149:5556/wd/hub");
+						
+				
+			DesiredCapabilities capabilities= DesiredCapabilities.chrome();
+
+
+
+
+
+	  capabilities.setBrowserName("chrome");
+						            capabilities.setPlatform(Platform.WINDOWS);
+	 driver4 = new RemoteWebDriver(url,
 					        		  capabilities);
-					          driver4.get("http://www.google.com");
+								   
+								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
+										driver4.navigate().to("http://demo.guru99.com/V4/");
 					  
 			
 			  
