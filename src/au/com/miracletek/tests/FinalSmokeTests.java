@@ -462,7 +462,7 @@ public class FinalSmokeTests {
 			
 			
 			
-			   settings.deviceHome();
+			  /* settings.deviceHome();
 			   
 			   settings.opennotif();
 			   
