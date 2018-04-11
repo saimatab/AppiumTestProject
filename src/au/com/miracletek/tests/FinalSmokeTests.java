@@ -493,9 +493,9 @@ options.setBinary("/path/to/chrome/binary");
 									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
 										driver4.navigate().to("http://demo.guru99.com/V4/");*/
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("chromedriver.exe");
+			options.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 	
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 
 			
 			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
