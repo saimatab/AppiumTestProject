@@ -493,7 +493,7 @@ public class FinalSmokeTests {
 										driver4.navigate().to("http://demo.guru99.com/V4/");*/
 					  
 	
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
 			
 			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
