@@ -420,7 +420,7 @@ public class FinalSmokeTests {
 		    driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
 		    Thread.sleep(3000);
 		    driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
-		    Thread.sleep(3000);
+		    Thread.sleep(8000);
 		    driver3.findElement(By.id("createNewButton")).click();
 		    driver3.findElement(By.id("taskName")).clear();
 		    driver3.findElement(By.id("taskName")).sendKeys("simple");
@@ -431,7 +431,7 @@ public class FinalSmokeTests {
 		    driver3.findElement(By.id("taskDescription")).clear();
 		    driver3.findElement(By.id("taskDescription")).sendKeys("eee");
 		    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
-		    Thread.sleep(3000);
+		    Thread.sleep(8000);
 		    driver3.findElement(By.id("createNewButton")).click();
 		    driver3.findElement(By.id("taskName")).clear();
 		    driver3.findElement(By.id("taskName")).sendKeys("form");
@@ -442,7 +442,7 @@ public class FinalSmokeTests {
 		    driver3.findElement(By.cssSelector("span.select2-arrow")).click();
 		    new Select(driver3.findElement(By.id("formSelectionInput"))).selectByVisibleText("auto");
 		    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
-		    Thread.sleep(5000);
+		    Thread.sleep(8000);
 		    driver3.findElement(By.id("item_Notifications")).click();
 		    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 		    driver3.findElement(By.id("notificationTitle")).clear();
