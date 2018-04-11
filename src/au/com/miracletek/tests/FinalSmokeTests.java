@@ -494,7 +494,8 @@ options.setBinary("/path/to/chrome/binary");
 										driver4.navigate().to("http://demo.guru99.com/V4/");*/
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-	
+			options.setCapability("browserName", "chrome");
+			options.setCapability("platformName", "WINDOWS");
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 
 			
