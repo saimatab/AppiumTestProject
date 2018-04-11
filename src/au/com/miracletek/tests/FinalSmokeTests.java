@@ -370,26 +370,38 @@ public class FinalSmokeTests {
 			dm=new DatabaseDriver();
 		
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-
-			WebDriver driver3 ;
-			URL url = new URL("http://192.168.9.149:5556/wd/hub");
-						
+			 System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
 				
-			DesiredCapabilities capabilities= DesiredCapabilities.chrome();
+				//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
+				WebDriver driver3 ;
+				URL url = new URL("http://192.168.9.149:5556/wd/hub");
+							
+					
+				DesiredCapabilities capabilities= DesiredCapabilities.firefox();
 
 
 
 
 
-	  capabilities.setBrowserName("chrome");
-						            capabilities.setPlatform(Platform.WINDOWS);
-	 driver3 = new RemoteWebDriver(url,
-					        		  capabilities);
-								   
-								   driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-										driver3.navigate().to("http://demo.guru99.com/V4/");
+		  capabilities.setBrowserName("firefox");
+							            capabilities.setPlatform(Platform.ANY);
+							            capabilities.setCapability("marionette", true);
+							            
+							            
+							            capabilities.setCapability("browserVersion", "54.0.1");
+							            
+							            capabilities.setCapability("platformVersion", "10.0");
+							            
+							            
+							            
+							            
+							            
+						
+		 driver3 = new RemoteWebDriver(url,
+						        		  capabilities);
+		 driver3.manage().window().maximize();
+									   
+									   driver3.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
 			
 			
 			
