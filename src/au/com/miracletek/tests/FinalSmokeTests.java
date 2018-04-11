@@ -369,33 +369,34 @@ public class FinalSmokeTests {
 
 			dm=new DatabaseDriver();
 		
-			//DesiredCapabilities dc=DesiredCapabilities.chrome();
-			
-     //////////////////////////////////
-		//	FirefoxOptions options = new FirefoxOptions();
-			//FirefoxDriver driver3 = new FirefoxDriver(options);
-			
-		//	System.setProperty("webdriver.gecko.driver","geckodriver.exe");
 
-		//	ChromeOptions chromeOptions= new ChromeOptions();
-			//chromeOptions.setBinary("chromedriver.exe");
-		    //  File file5 = new File("chromedriver.exe");
-			  //System.setProperty("webdriver.chrome.driver","C:\\Users\\stabassum\\Documents\\GitHub\\AppiumTestProject\\chromedriver.exe");
-			  
-			  //options.addArguments("start-maximized");
-				//System.setProperty("webdriver.chrome.logfile", "C:\\chromedriver.log");
-				//System.setProperty("webdriver.chrome.verboseLogging", "true");
-			  
-			  
-			  
-			  
-			  
-			  
-			 /* WebDriver driver3 = new ChromeDriver(chromeOptions);
-			    driver3.manage().window().maximize();
-			    driver3.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-			//  dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); 
-			 //   WebDriver driver3 = new RemoteWebDriver(new URL("http://localhost:9515/wd/hub"),dc);
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
+
+			WebDriver driver4 ;
+			URL url = new URL("http://192.168.9.149:5556/wd/hub");
+						
+				
+			DesiredCapabilities capabilities= DesiredCapabilities.chrome();
+
+
+
+
+
+	  capabilities.setBrowserName("chrome");
+						            capabilities.setPlatform(Platform.WINDOWS);
+	 driver4 = new RemoteWebDriver(url,
+					        		  capabilities);
+								   
+								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
+										driver4.navigate().to("http://demo.guru99.com/V4/");
+			
+			
+			
+			
+			
+			
+
 			
 			driver3.navigate().to("https://zon.miracletek.co/admin/1.0/Account/Login");
 	
@@ -471,43 +472,7 @@ public class FinalSmokeTests {
 			
 		
 
-			/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-
-			WebDriver driver4 ;
-			URL url = new URL("http://192.168.9.149:5556/wd/hub");
-						
-				
-			DesiredCapabilities capabilities= DesiredCapabilities.chrome();
-
-
-ChromeOptions options = new ChromeOptions();
-options.setBinary("/path/to/chrome/binary");
-
-
-	  capabilities.setBrowserName("chrome");
-						            capabilities.setPlatform(Platform.WINDOWS);
-	 driver4 = new RemoteWebDriver(url,
-					        		  capabilities);
-								   
-								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-										driver4.navigate().to("http://demo.guru99.com/V4/");*/
-			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-			options.setCapability("browserName", "chrome");
-			options.setCapability("platformName", "WINDOWS");
-			options.setCapability("--whitelisted-ips", "");
-			options.setCapability("chrome.switches", "--verbose");
-		//	options.setCapability("networkConnectionEnabled", true);
-		 //options.setCapability("browserConnectionEnabled", true);
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-			 // capabilities.setCapability("--whitelisted-ips", "");
 			
-			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
-			  WebDriver driver4 = new ChromeDriver(options);
-			  driver4.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-				driver4.get("http://demo.guru99.com/V4/");		
 										
 										
 										
