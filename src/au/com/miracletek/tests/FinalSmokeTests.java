@@ -372,7 +372,7 @@ public class FinalSmokeTests {
 
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 
-			WebDriver driver4 ;
+			WebDriver driver3 ;
 			URL url = new URL("http://192.168.9.149:5556/wd/hub");
 						
 				
@@ -384,12 +384,12 @@ public class FinalSmokeTests {
 
 	  capabilities.setBrowserName("chrome");
 						            capabilities.setPlatform(Platform.WINDOWS);
-	 driver4 = new RemoteWebDriver(url,
+	 driver3 = new RemoteWebDriver(url,
 					        		  capabilities);
 								   
-								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+								   driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
-										driver4.navigate().to("http://demo.guru99.com/V4/");
+										driver3.navigate().to("http://demo.guru99.com/V4/");
 			
 			
 			
