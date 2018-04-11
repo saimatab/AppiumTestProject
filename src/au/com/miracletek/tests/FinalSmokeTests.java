@@ -496,8 +496,12 @@ options.setBinary("/path/to/chrome/binary");
 			options.setBinary("C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
 			options.setCapability("browserName", "chrome");
 			options.setCapability("platformName", "WINDOWS");
+			options.setCapability("--whitelisted-ips", "");
+			options.setCapability("chrome.switches", "--verbose");
+			options.setCapability("networkConnectionEnabled", true);
+		 options.setCapability("browserConnectionEnabled", true);
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\chromedriver.exe");
-
+			 // capabilities.setCapability("--whitelisted-ips", "");
 			
 			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
 			  WebDriver driver4 = new ChromeDriver(options);
