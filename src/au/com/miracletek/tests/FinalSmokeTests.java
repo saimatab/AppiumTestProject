@@ -480,7 +480,8 @@ public class FinalSmokeTests {
 			DesiredCapabilities capabilities= DesiredCapabilities.chrome();
 
 
-
+ChromeOptions options = new ChromeOptions();
+options.setBinary("/path/to/chrome/binary");
 
 
 	  capabilities.setBrowserName("chrome");
@@ -491,13 +492,14 @@ public class FinalSmokeTests {
 								   driver4.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 									//  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
 										driver4.navigate().to("http://demo.guru99.com/V4/");*/
-					  
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("chromedriver.exe");
 	
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
 			
 			//  System.setProperty("webdriver.chrome.driver",".\\chromedriver.exe");
-			  WebDriver driver4 = new ChromeDriver();
+			  WebDriver driver4 = new ChromeDriver(options);
 			  driver4.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			  driver4.manage().timeouts().implicitlyWait(3600, TimeUnit.SECONDS);
 				driver4.get("http://demo.guru99.com/V4/");		
