@@ -401,7 +401,7 @@ public class FinalSmokeTests {
 						        		  capabilities);
 		 driver3.manage().window().maximize();
 									   
-									   driver3.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
+									   driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 			
 			
