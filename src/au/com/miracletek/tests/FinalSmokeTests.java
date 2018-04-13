@@ -716,8 +716,8 @@ public class FinalSmokeTests {
 					        
 				         	
 				      
-				         	WebDriverWait wait = new WebDriverWait(manager.getDriver(), 300);
-				         	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
+				         	WebDriverWait wait4 = new WebDriverWait(manager.getDriver(), 300);
+				         	wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
 				        	Thread.sleep(3000);
 					        sync.openPendingSubmittedForms("1", config);
 					    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
