@@ -420,10 +420,12 @@ public class FinalSmokeTests {
 									    driver3.findElement(By.id("Password")).clear();
 									    driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
 									    driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
-										WebDriverWait wait = new WebDriverWait(driver3, 300);
-							         	WebElement h=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='item_Tasks']/span")));
-							         	 driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
-									    driver3.findElement(By.id("createNewButton")).click();									    Thread.sleep(3000);
+										//WebDriverWait wait = new WebDriverWait(driver3, 300);
+									    driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
+							         //	WebElement h=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='item_Tasks']/span")));
+							         //.click();
+									    Thread.sleep(3000);
+									    driver3.findElement(By.id("createNewButton")).click();									   
 
 									    Thread.sleep(1000);
 									 //  driver3.findElement(By.id("taskName")).clear();
