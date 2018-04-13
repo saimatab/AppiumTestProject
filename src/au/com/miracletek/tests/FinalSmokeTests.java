@@ -410,9 +410,6 @@ public class FinalSmokeTests {
 			
 
 			
-										driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
-									
-							        	
 
 										driver3.findElement(By.id("Email")).click();
 									    driver3.findElement(By.id("Email")).clear();
@@ -420,101 +417,84 @@ public class FinalSmokeTests {
 									    driver3.findElement(By.id("Password")).clear();
 									    driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
 									    driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
-										//WebDriverWait wait = new WebDriverWait(driver3, 300);
-									    driver3.findElement(By.xpath(".//*[@id='item_Tasks']")).click();
-							         //	WebElement h=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='item_Tasks']/span")));
-							         //.click();
-									    Thread.sleep(3000);
-									    driver3.findElement(By.id("createNewButton")).click();									   
-
-									    Thread.sleep(1000);
+									    Thread.sleep(8000);
+									    driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
+									    Thread.sleep(8000);
+									    driver3.findElement(By.id("createNewButton")).click();
+									    Thread.sleep(8000);
 									 //  driver3.findElement(By.id("taskName")).clear();
 									    driver3.findElement(By.id("taskName")).sendKeys("simple1");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("input.tt-input")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("SimpleTaskRadio")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("taskDescription")).clear();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("taskDescription")).sendKeys("eee");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
-									    Thread.sleep(1000);
-									    
-									//	WebDriverWait wait1 = new WebDriverWait(driver3, 300);
-							         //	wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("createNewButton"))).click();
+									    Thread.sleep(8000);
 									    driver3.findElement(By.id("createNewButton")).click();
 									    
 									    Thread.sleep(3000);
 									    
 									   // driver3.findElement(By.id("taskName")).clear();
 									    driver3.findElement(By.id("taskName")).sendKeys("form");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("FormSelectionRadio")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("span.select2-arrow")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    new Select(driver3.findElement(By.id("formSelectionInput"))).selectByVisibleText("auto");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();	
 									    Thread.sleep(8000);
-									    
-									    
-									    
-									    
-										//WebDriverWait wait11 = new WebDriverWait(driver3, 300);
-							         //	wait11.until(ExpectedConditions.visibilityOfElementLocated(By.id("item_Notifications"))).click();
-								
-									    
-									    
-									    
-									    
-									    
 									    driver3.findElement(By.id("item_Notifications")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationTitle")).clear();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationTitle")).sendKeys("push");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationBody")).clear();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationBody")).sendKeys("ff");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationBody")).clear();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(8000);
 									    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-									    Thread.sleep(2000);
-									
+									    Thread.sleep(3000);
+									    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationTitle")).clear();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationTitle")).sendKeys("pushlater");
-									    Thread.sleep(1000);
-									    driver3.findElement(By.id("notificationBody")).clear();	    Thread.sleep(1000);
+									    Thread.sleep(3000);
+									    driver3.findElement(By.id("notificationBody")).clear();	    Thread.sleep(3000);
 									    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.id("sendTypeLater")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath(".//*[@id='sendDateTime']/div/span")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-time")).click();
-									    Thread.sleep(1000);
+									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
 									    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
 									    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
@@ -522,8 +502,10 @@ public class FinalSmokeTests {
 									    driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-remove")).click();
 									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-									    Thread.sleep(3000);
+									    Thread.sleep(8000);
 										driver3.close();
+										
+									   
 			
 			
 			
