@@ -407,7 +407,8 @@ public class FinalSmokeTests {
 			
 			
 			
-			
+										driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
+
 
 			
 
