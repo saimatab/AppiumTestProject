@@ -446,8 +446,8 @@ public class FinalSmokeTests {
 									    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
 									    Thread.sleep(1000);
 									    
-										WebDriverWait wait1 = new WebDriverWait(driver3, 300);
-							         	wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("createNewButton"))).click();
+									//	WebDriverWait wait1 = new WebDriverWait(driver3, 300);
+							         //	wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("createNewButton"))).click();
 									    driver3.findElement(By.id("createNewButton")).click();
 									    
 									    Thread.sleep(3000);
@@ -473,8 +473,8 @@ public class FinalSmokeTests {
 									    
 									    
 									    
-										WebDriverWait wait11 = new WebDriverWait(driver3, 300);
-							         	wait11.until(ExpectedConditions.visibilityOfElementLocated(By.id("item_Notifications"))).click();
+										//WebDriverWait wait11 = new WebDriverWait(driver3, 300);
+							         //	wait11.until(ExpectedConditions.visibilityOfElementLocated(By.id("item_Notifications"))).click();
 								
 									    
 									    
