@@ -723,7 +723,7 @@ public class FinalSmokeTests {
 				         	wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
 				        	Thread.sleep(3000);
 					        sync.openPendingSubmittedForms("1", config);
-					    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
+					    	wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
 							
 					        
 					        
@@ -855,7 +855,7 @@ public class FinalSmokeTests {
 															
 												         	
 												  	      subQueue.removeAllSubmittedForm("1",config);
-												  	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.Button[@text='Yes']")));
+												  	  	wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.Button[@text='Yes']")));
 											         	
 												  	      
 												  	        subQueue.popup("Yes"); 	
