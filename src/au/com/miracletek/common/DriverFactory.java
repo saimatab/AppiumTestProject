@@ -32,8 +32,9 @@ public class DriverFactory {
 			capabilities.setCapability("app", app.getAbsolutePath());
 			capabilities.setCapability("appPackage", config.getAppPackage());
 			capabilities.setCapability("appActivity", config.getAppActivity());
+			capabilities.setCapability("newCommandTimeout", 3000);
 			AndroidDriver<AndroidElement> androidDriver = new AndroidDriver<AndroidElement>(new URL(config.getAppiumServerUrl()), capabilities);
-			androidDriver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+			//androidDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			return androidDriver;
 			
 		case Constants.PLATFORM_IOS:
