@@ -1602,19 +1602,24 @@ log.error(exception);
 }
 
 
+
+
 @Test(enabled = true)
 public void Test32(){
 
 try{
-extlogger = extent.startTest("Test 31  started remove a form from draft  ");
-Thread.sleep(3000);
-drafts.Remove("3",config); //remove
-  subQueue.popup1("Yes"); 
-	form1.navigateUp(config);
- 	
+extlogger = extent.startTest("Test 32 started click advance settings/ update page   ");
+form1.navigateUp(config);
+form1.navigateUp(config);
+   Thread.sleep(2000);
+ shell.clickSettings(config);
+  Thread.sleep(3000);
+  settings.clickAdvanced();   
+	advSettings.SelectPageToUpdateAndroid("2",config);
+	advSettings.updateSelectedPage();
  	
   	
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test31");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test32");  
 
 
 } catch (Exception e) {
@@ -1633,19 +1638,20 @@ log.error(exception);
 }
 
 
+
+
+
 @Test(enabled = true)
 public void Test33(){
 
 try{
-extlogger = extent.startTest("Test 33 started click advance settings/ update page   ");
+extlogger = extent.startTest("Test 33 started click advance settings/ update meta data    ");
+Thread.sleep(3000);
+advSettings.updateMetaData();
+
+Thread.sleep(4000);
+
 form1.navigateUp(config);
-form1.navigateUp(config);
-   Thread.sleep(2000);
- shell.clickSettings(config);
-  Thread.sleep(3000);
-  settings.clickAdvanced();   
-	advSettings.SelectPageToUpdateAndroid("2",config);
-	advSettings.updateSelectedPage();
  	
   	
 	extlogger.log(LogStatus.PASS, "Test Case Passed is Test33");  
@@ -1674,13 +1680,12 @@ log.error(exception);
 public void Test34(){
 
 try{
-extlogger = extent.startTest("Test 34 started click advance settings/ update meta data    ");
-Thread.sleep(3000);
-advSettings.updateMetaData();
+extlogger = extent.startTest("Test 34 started click update app   ");
+settings.updateApp();
+settings.clickProceedAndroid();
 
-Thread.sleep(4000);
 
-form1.navigateUp(config);
+		Thread.sleep(5000);
  	
   	
 	extlogger.log(LogStatus.PASS, "Test Case Passed is Test34");  
@@ -1709,41 +1714,7 @@ log.error(exception);
 public void Test35(){
 
 try{
-extlogger = extent.startTest("Test 35 started click update app   ");
-settings.updateApp();
-settings.clickProceedAndroid();
-
-
-		Thread.sleep(5000);
- 	
-  	
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test35");  
-
-
-} catch (Exception e) {
-
-e.printStackTrace();
-log.error(e);
-
-StackTraceElement[] stack = e.getStackTrace();
-String exception = "";
-for (StackTraceElement s : stack) {
-exception = exception + s.toString() + "\n";
-}
-log.error(exception);
-}
-
-}
-
-
-
-
-
-@Test(enabled = true)
-public void Test36(){
-
-try{
-extlogger = extent.startTest("Test 36 started offline relogin   ");
+extlogger = extent.startTest("Test 35 started offline relogin   ");
 Thread.sleep(5000);
 
 AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
@@ -1768,7 +1739,7 @@ shell.clickSettings(config);
 												 log.debug("DEBBGUG" );						
 											    
 											    
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test36");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test35");  
 
 
 } catch (Exception e) {
@@ -1789,10 +1760,10 @@ log.error(exception);
 
 
 @Test(enabled = true)
-public void Test37(){
+public void Test36(){
 
 try{
-extlogger = extent.startTest("Test 37 database verification  ");
+extlogger = extent.startTest("Test 36 database verification  ");
 
 dm=new DatabaseDriver();
 
@@ -1838,7 +1809,7 @@ ResultSet rs61 =dm.db("bgc_qa", "BGC!@#123", "select *  from bgc_qa.upload_datet
  
 
 											    
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test37");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test36");  
 	String actualValue =form1.findElementByXpath("//android.widget.TextView[@text='dd']").getText();
     s_assert.assertEquals(actualValue, "dd");
 
@@ -1861,10 +1832,10 @@ log.error(exception);
 
 
 @Test(enabled = true)
-public void Test38(){
+public void Test37(){
 
 try{
-extlogger = extent.startTest("Test 38 started searching functionality   ");
+extlogger = extent.startTest("Test 37 started searching functionality   ");
 shell.clickSearch(config);
 form1.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']")).sendKeys("re");;
     form6.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
@@ -1878,7 +1849,7 @@ btn_category.click();
     form6.navigateUp(config);			
 											    
 											    
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test38");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test37");  
 
 
 } catch (Exception e) {
@@ -1899,10 +1870,10 @@ log.error(exception);
 
 
 @Test(enabled = false)
-public void Test39(){
+public void Test38(){
 
 try{
-extlogger = extent.startTest("Test 39 started creating  My task and Push notification creation from studio   ");
+extlogger = extent.startTest("Test 38 started creating  My task and Push notification creation from studio   ");
 System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
 	
 	//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
@@ -2061,7 +2032,7 @@ driver3.manage().window().maximize();
 
 
 											    
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test38");  
 
 
 } catch (Exception e) {
@@ -2084,10 +2055,10 @@ log.error(exception);
 
 
 @Test(enabled = false)
-public void Test40(){
+public void Test39(){
 
 try{
-extlogger = extent.startTest("Test 40 started  mytasks form submission  functionality   ");
+extlogger = extent.startTest("Test 39 started  mytasks form submission  functionality   ");
 
 /////////////////////mytasks 
 
@@ -2155,7 +2126,7 @@ Thread.sleep(5000);
 		   Thread.sleep(5000); 	
 											    
 											    
-	extlogger.log(LogStatus.PASS, "Test Case Passed is Test41");  
+	extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
 
 
 } catch (Exception e) {
