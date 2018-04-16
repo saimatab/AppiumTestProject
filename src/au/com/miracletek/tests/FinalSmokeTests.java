@@ -389,9 +389,9 @@ public class FinalSmokeTests {
 							            capabilities.setCapability("marionette", true);
 							            
 							            
-							            capabilities.setCapability("browserVersion", "54.0.1");
+							         //   capabilities.setCapability("browserVersion", "54.0.1");
 							            
-							            capabilities.setCapability("platformVersion", "10.0");
+							           // capabilities.setCapability("platformVersion", "10.0");
 							            
 							            
 							            System.out.print("baaaaaaaaaaaaaaaaaaaaaaaa");
