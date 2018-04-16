@@ -370,7 +370,7 @@ public class FinalSmokeTests {
 			dm=new DatabaseDriver();
 		
 
-			 System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
+			/* System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
 				
 				//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
 				WebDriver driver3 ;
@@ -509,7 +509,7 @@ public class FinalSmokeTests {
 									    Thread.sleep(3000);
 									    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 									    Thread.sleep(8000);
-										driver3.close();
+										driver3.close();*/
 										
 									   
 			
