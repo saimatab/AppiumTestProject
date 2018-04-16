@@ -1835,7 +1835,7 @@ form1.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']"))
     form6.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
     form6.navigateUp(config);
     form6.findElementByXpath("//android.widget.Button[@index='0']").click();
- 	MobileElement btn_category=form.findElementByXpath("//android.widget.TextView[@text='test']");
+ 	MobileElement btn_category=form6.findElementByXpath("//android.widget.TextView[@text='test']");
 btn_category.click();
 	form6.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']")).sendKeys("re");
 	
