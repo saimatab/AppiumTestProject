@@ -657,7 +657,7 @@ public class FinalSmokeTests {
 		         			    Thread.sleep(3000);
 		             form5.autoComplete(config,"autocomplete1");
 		        Thread.sleep(6000);
-		        formList.selectForm("dtimeupAuto",config);
+		      //  formList.selectForm("dtimeupAuto",config);
 		        form5.clickslider(config);
  			    Thread.sleep(3000);
 		        form5.clickswitch(config,"switch1","0");
@@ -669,7 +669,7 @@ public class FinalSmokeTests {
 		         Thread.sleep(2000);
 				        formList.selectForm("reppager",config);
 		        
-		         formList.selectForm("reppager",config);
+		      //   formList.selectForm("reppager",config);
 		        
 		        
 		        
