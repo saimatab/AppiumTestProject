@@ -177,41 +177,7 @@ public class FinalSmokeTests {
 	
 	public void FinalSmokeTests ()
 	{
-		try{
 		
-		 appCodePage= new AppCodePage(manager.getDriver(), config.getPlatform());
-	 shell=new ShellPage(manager.getDriver(), config.getPlatform());
-	  drafts=new DraftsPage(manager.getDriver(), config.getPlatform());
-	 tapToLogin=new TapToLoginPage(manager.getDriver(), config.getPlatform());
-	loginPage= new LoginPage(manager.getDriver(), config.getPlatform());
-	 catPage=new CategoryPage(manager.getDriver(), config.getPlatform());
-	 formList=new 	FormListPageBlankApp(manager.getDriver(), config.getPlatform());
-	  form1=new AutomationTestForm(manager.getDriver(), config.getPlatform());
-		  form2=new AutomationTestForm2(manager.getDriver(), config.getPlatform());
- form3=new AutomationTestForm3(manager.getDriver(), config.getPlatform());
-	  form4=new AutomationTestForm4(manager.getDriver(), config.getPlatform());
-  form5=new AutomationTestForm5(manager.getDriver(), config.getPlatform());
-  form6=new AutomationTestForm6(manager.getDriver(), config.getPlatform());
-
-	  sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());;
-  subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
-		  settings=new SettingsPage(manager.getDriver(), config.getPlatform());;
- advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());
-  notify  =new 	NotificationsPage(manager.getDriver(), config.getPlatform());
-	 mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
-		}
-		catch (Exception e) {
-
-			e.printStackTrace();
-            log.error(e);
-
-            StackTraceElement[] stack = e.getStackTrace();
-            String exception = "";
-            for (StackTraceElement s : stack) {
-                exception = exception + s.toString() + "\n";
-            }
-            log.error(exception);
-		}
 	}
 	
 	
@@ -330,6 +296,51 @@ public class FinalSmokeTests {
 	                .addSystemInfo("Environment", "Zon -Automation Testing")
 	                .addSystemInfo("User Name", "Saima");
         extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
+        
+        
+        
+        
+        
+        
+        
+        
+       
+    		
+   		 appCodePage= new AppCodePage(manager.getDriver(), config.getPlatform());
+   	 shell=new ShellPage(manager.getDriver(), config.getPlatform());
+   	  drafts=new DraftsPage(manager.getDriver(), config.getPlatform());
+   	 tapToLogin=new TapToLoginPage(manager.getDriver(), config.getPlatform());
+   	loginPage= new LoginPage(manager.getDriver(), config.getPlatform());
+   	 catPage=new CategoryPage(manager.getDriver(), config.getPlatform());
+   	 formList=new 	FormListPageBlankApp(manager.getDriver(), config.getPlatform());
+   	  form1=new AutomationTestForm(manager.getDriver(), config.getPlatform());
+   		  form2=new AutomationTestForm2(manager.getDriver(), config.getPlatform());
+    form3=new AutomationTestForm3(manager.getDriver(), config.getPlatform());
+   	  form4=new AutomationTestForm4(manager.getDriver(), config.getPlatform());
+     form5=new AutomationTestForm5(manager.getDriver(), config.getPlatform());
+     form6=new AutomationTestForm6(manager.getDriver(), config.getPlatform());
+
+   	  sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());;
+     subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
+   		  settings=new SettingsPage(manager.getDriver(), config.getPlatform());;
+    advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());
+     notify  =new 	NotificationsPage(manager.getDriver(), config.getPlatform());
+   	 mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
+   		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     	
 		} catch (Exception e) {
 			e.printStackTrace();
