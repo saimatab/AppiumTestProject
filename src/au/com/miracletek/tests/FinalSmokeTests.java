@@ -377,7 +377,7 @@ public class FinalSmokeTests {
 				URL url = new URL("http://192.168.9.149:5556/wd/hub");
 				 System.out.print("caaaaaaaaaaaaaaaaaaaaaaa");
 							
-				http://192.168.9.149:5556/wd/hub
+				//http://192.168.9.149:5556/wd/hub
 				DesiredCapabilities capabilities= DesiredCapabilities.firefox();
 
 
