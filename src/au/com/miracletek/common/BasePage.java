@@ -90,7 +90,7 @@ public class BasePage {
 	}//
 	
 	public MobileElement waitForVisibilityOf(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 300);
         return (MobileElement)wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 	protected void waitForInVisibilityOf(By locator) {
