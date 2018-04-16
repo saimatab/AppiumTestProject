@@ -1847,7 +1847,7 @@ btn_category.click();
     form6.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
     form6.navigateUp(config);			
 											    
-											    
+    form6.navigateUp(config);									    
 	extlogger.log(LogStatus.PASS, "Test Case Passed is Test37");  
 
 
@@ -2114,9 +2114,9 @@ try{
 extlogger = extent.startTest("Test 41 started  notification functionality   ");
 Thread.sleep(5000);
 /////////////////////notifcaiton
-		
+form1.navigateUp(config);
 		shell.clickNotifications(config);
-		
+	//form1.navigateUp(config);
 	notify.Remove("2", config);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
