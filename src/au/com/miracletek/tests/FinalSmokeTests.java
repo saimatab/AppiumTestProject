@@ -375,8 +375,9 @@ public class FinalSmokeTests {
 				//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
 				WebDriver driver3 ;
 				URL url = new URL("http://192.168.9.149:5556/wd/hub");
+				 System.out.print("caaaaaaaaaaaaaaaaaaaaaaa");
 							
-					
+				http://192.168.9.149:5556/wd/hub
 				DesiredCapabilities capabilities= DesiredCapabilities.firefox();
 
 
@@ -393,23 +394,27 @@ public class FinalSmokeTests {
 							            capabilities.setCapability("platformVersion", "10.0");
 							            
 							            
-							            
+							            System.out.print("baaaaaaaaaaaaaaaaaaaaaaaa");
+											            
 							            
 							            
 						
 		 driver3 = new RemoteWebDriver(url,
 						        		  capabilities);
+		 System.out.print("aaaaaaaaaaaaaaaaaaaaaaasdsfa");
+			
 		 driver3.manage().window().maximize();
 									   
 									   driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 			
 			
-			
+			        System.out.print("aaaaaaaaaaaaaaaaaaaaaaaa");
 			
 										driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
 
-
+										 System.out.print("caaaaaaaaaaaaaaaaaaaaaaaa");
+											
 			
 
 										driver3.findElement(By.id("Email")).click();
