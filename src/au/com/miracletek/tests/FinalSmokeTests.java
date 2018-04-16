@@ -150,33 +150,69 @@ public class FinalSmokeTests {
 	private DriverConfig config;
 	private AppiumDriverLocalService appiumService;
  
-	AppCodePage appCodePage= new AppCodePage(manager.getDriver(), config.getPlatform());
-	ShellPage shell=new ShellPage(manager.getDriver(), config.getPlatform());;
-	DraftsPage   drafts=new DraftsPage(manager.getDriver(), config.getPlatform());;
-	TapToLoginPage tapToLogin=new TapToLoginPage(manager.getDriver(), config.getPlatform());;
-	LoginPage loginPage= new LoginPage(manager.getDriver(), config.getPlatform());;
-	CategoryPage catPage=new CategoryPage(manager.getDriver(), config.getPlatform());;
-	FormListPageBlankApp formList=new 	FormListPageBlankApp(manager.getDriver(), config.getPlatform());
-	AutomationTestForm  form1=new AutomationTestForm(manager.getDriver(), config.getPlatform());;
-	AutomationTestForm2  form2=new AutomationTestForm2(manager.getDriver(), config.getPlatform());;
-	AutomationTestForm3  form3=new AutomationTestForm3(manager.getDriver(), config.getPlatform());;
-	AutomationTestForm4  form4=new AutomationTestForm4(manager.getDriver(), config.getPlatform());;
-	AutomationTestForm5  form5=new AutomationTestForm5(manager.getDriver(), config.getPlatform());;
-	AutomationTestForm6  form6=new AutomationTestForm6(manager.getDriver(), config.getPlatform());;
+	AppCodePage appCodePage;
+	ShellPage shell;
+	DraftsPage   drafts;
+	TapToLoginPage tapToLogin;
+	LoginPage loginPage;
+	CategoryPage catPage;
+	FormListPageBlankApp formList;
+	AutomationTestForm  form1;
+	AutomationTestForm2  form2;
+	AutomationTestForm3  form3;
+	AutomationTestForm4  form4;
+	AutomationTestForm5  form5;
+	AutomationTestForm6  form6;
 	DatabaseDriver dm;
 	ExcelDriver ex;
 	ExcelDriver1 ex1;
-	SyncPageBlank  sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());;
-	SubmissionQueuePage  subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());;
-	SettingsPage  settings=new SettingsPage(manager.getDriver(), config.getPlatform());;
-	AdvancedSettingsPage advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());;
+	SyncPageBlank  sync;
+	SubmissionQueuePage  subQueue;
+	SettingsPage  settings;
+	AdvancedSettingsPage advSettings;
 	NotificationsPage  notify;
 	static Map extentTestMap = new HashMap();
-	
-	Mytasks mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
-	
+	Mytasks mytask;
 	
 	
+	public void FinalSmokeTests ()
+	{
+		try{
+		
+		 appCodePage= new AppCodePage(manager.getDriver(), config.getPlatform());
+	 shell=new ShellPage(manager.getDriver(), config.getPlatform());
+	  drafts=new DraftsPage(manager.getDriver(), config.getPlatform());
+	 tapToLogin=new TapToLoginPage(manager.getDriver(), config.getPlatform());
+	loginPage= new LoginPage(manager.getDriver(), config.getPlatform());
+	 catPage=new CategoryPage(manager.getDriver(), config.getPlatform());
+	 formList=new 	FormListPageBlankApp(manager.getDriver(), config.getPlatform());
+	  form1=new AutomationTestForm(manager.getDriver(), config.getPlatform());
+		  form2=new AutomationTestForm2(manager.getDriver(), config.getPlatform());
+ form3=new AutomationTestForm3(manager.getDriver(), config.getPlatform());
+	  form4=new AutomationTestForm4(manager.getDriver(), config.getPlatform());
+  form5=new AutomationTestForm5(manager.getDriver(), config.getPlatform());
+  form6=new AutomationTestForm6(manager.getDriver(), config.getPlatform());
+
+	  sync=new  SyncPageBlank(manager.getDriver(), config.getPlatform());;
+  subQueue=new  SubmissionQueuePage(manager.getDriver(), config.getPlatform());
+		  settings=new SettingsPage(manager.getDriver(), config.getPlatform());;
+ advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());
+  notify  =new 	NotificationsPage(manager.getDriver(), config.getPlatform());
+	 mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
+		}
+		catch (Exception e) {
+
+			e.printStackTrace();
+            log.error(e);
+
+            StackTraceElement[] stack = e.getStackTrace();
+            String exception = "";
+            for (StackTraceElement s : stack) {
+                exception = exception + s.toString() + "\n";
+            }
+            log.error(exception);
+		}
+	}
 	
 	
 	
