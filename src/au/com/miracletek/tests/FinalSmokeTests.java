@@ -533,7 +533,7 @@ public void Test03(){
 public void Test04(){
 	
 	try{
-	 extlogger = extent.startTest("Test 04 started-Form submission  with gallary ");
+	 extlogger = extent.startTest("Test 04 started-Form submission  with gallary with annotation and color picker ");
 
 	
 			log.info("***********************************************************************************************************************************Entered Username......");
