@@ -562,7 +562,7 @@ public class FinalSmokeTests {
 			      Thread.sleep(5000);
 		        appCodePage.enterAppCodeAndProceed(appcode);
 			 
-		    	Thread.sleep(5000);
+		    	Thread.sleep(8000);
 
 				loginPage.Login1(username,password);
 				Thread.sleep(5000);
