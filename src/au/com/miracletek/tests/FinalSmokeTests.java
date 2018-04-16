@@ -1720,7 +1720,7 @@ AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDrive
 d.setConnection(Connection.AIRPLANE);
 									    //offline login 
 											    
-shell.clickSettings(config);
+
 												settings.Logout();
 												settings.sureLogout(config);
 											//	AndroidDriver  d=((AndroidDriver<MobileElement>)manager.getDriver());
