@@ -1609,8 +1609,7 @@ public void Test32(){
 
 try{
 extlogger = extent.startTest("Test 32 started click advance settings/ update page   ");
-form1.navigateUp(config);
-form1.navigateUp(config);
+
    Thread.sleep(2000);
  shell.clickSettings(config);
   Thread.sleep(3000);
