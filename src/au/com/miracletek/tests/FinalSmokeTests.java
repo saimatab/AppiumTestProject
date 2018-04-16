@@ -144,11 +144,12 @@ public class FinalSmokeTests {
 	
 	Logger log1 = Logger.getLogger("devpinoyLogger");
    
-	Mytasks mytask=new  Mytasks(manager.getDriver(), config.getPlatform());;
+	
 	private static Logger log = Logger.getLogger("testlogger");
 	private DriverManager manager;
 	private DriverConfig config;
 	private AppiumDriverLocalService appiumService;
+ 
 	AppCodePage appCodePage= new AppCodePage(manager.getDriver(), config.getPlatform());
 	ShellPage shell=new ShellPage(manager.getDriver(), config.getPlatform());;
 	DraftsPage   drafts=new DraftsPage(manager.getDriver(), config.getPlatform());;
@@ -171,7 +172,8 @@ public class FinalSmokeTests {
 	AdvancedSettingsPage advSettings  =new AdvancedSettingsPage(manager.getDriver(), config.getPlatform());;
 	NotificationsPage  notify;
 	static Map extentTestMap = new HashMap();
-
+	
+	Mytasks mytask=new  Mytasks(manager.getDriver(), config.getPlatform());
 	
 	
 	
