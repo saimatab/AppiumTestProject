@@ -1,5 +1,7 @@
 package au.com.miracletek.pages;
 
+import java.text.Normalizer.Form;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +18,7 @@ public class Mytasks extends BasePage {
 	MobileElement info;
 	MobileElement removeall;
 	MobileElement  refresh;
+	MobileElement navup;
 	MobileElement  switch1;
 	MobileElement  comptasks;
 	MobileElement  submit;
@@ -123,7 +126,9 @@ public class Mytasks extends BasePage {
 		  		showcompTask =findElementByXpath("//android.widget.Button[@text='auto']");  
 		  		showcompTask.click();
 		  	submit();
-		  	 
+		  	navigateUp(config);
+		  	 comptasks =findElementByXpath("//android.widget.Button[@text='Complete Task']");  
+			  	comptasks.click();
 		  	 
 		  	 }
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
@@ -136,7 +141,36 @@ public class Mytasks extends BasePage {
 
 	}
 	
+	public void navigateUp(DriverConfig config) {
+
+		try {
+		
+
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+		//	   navup=findElementById(Constants.navigateUp);
+			Thread.sleep(3000);
 	
+				if(platformName.contentEquals("Android"))
+				{
+			  navup=findElementById(Constants.navigateUp);
+			navup.click();
+				}
+				else
+				{
+					navup=findElementById("Back");
+					navup.click();
+				}
+
+			
+			  
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void Refresh(DriverConfig config) {
 
 		try {String platformName = config.getPlatformName();
