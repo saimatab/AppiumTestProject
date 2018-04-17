@@ -2107,7 +2107,7 @@ extlogger = extent.startTest("Test 41 started  notification functionality   ");
 Thread.sleep(5000);
 /////////////////////notifcaiton
 
-
+/*
 File file4 = new File("app.xml");
 FileInputStream fileInput = new FileInputStream(file4);
 Properties properties = new Properties();
@@ -2134,7 +2134,7 @@ appCodePage.enterAppCodeAndProceed(appcode);
 Thread.sleep(8000);
 
 loginPage.Login1(username,password);
-Thread.sleep(5000);
+Thread.sleep(5000);*/
 
 
 		shell.clickNotifications(config);
