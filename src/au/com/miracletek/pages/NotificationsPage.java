@@ -93,15 +93,15 @@ public class NotificationsPage extends BasePage {
 		try {String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
 	  	 if (platformName.contentEquals("Android"))
-			 	
+	  	 {	
 		 remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='2']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
 		// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonRemoveId']");
 		 
-	        
+	  	 }  
 	   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
-	     	
-			//new  remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonRemoveId']");
-		 
+	   	{
+			 remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonRemoveId']");
+	   	}
 			remove.click();
 
 
