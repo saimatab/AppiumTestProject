@@ -2056,9 +2056,7 @@ Thread.sleep(8000);
 
 loginPage.Login1(username,password);
 Thread.sleep(5000);
-form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
-catPage.selectCategoryListView("test",config);
-Thread.sleep(2000);
+
 
 
 shell.clickmyTasks(config);
