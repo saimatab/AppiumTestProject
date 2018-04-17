@@ -1961,7 +1961,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationTitle")).clear();
-						    Thread.sleep(3000);
+						    Thread.sleep(5000);
 						    driver3.findElement(By.id("notificationTitle")).sendKeys("pushlater");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationBody")).clear();	    Thread.sleep(3000);

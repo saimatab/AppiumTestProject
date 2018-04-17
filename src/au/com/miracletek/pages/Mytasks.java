@@ -127,8 +127,7 @@ public class Mytasks extends BasePage {
 		  		showcompTask.click();
 		  	submit();
 		  	
-		  	 comptasks =findElementByXpath("//android.widget.Button[@text='Complete Task']");  
-			  	comptasks.click();
+		  	
 		  	 
 		  	 }
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
