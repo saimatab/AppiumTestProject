@@ -1049,7 +1049,7 @@ String filename2 =var1+ ".html";
 
     /////////////////////////////////////////////
     	
-    	
+    	/*
     	String  var3="SAMPLE1";
         System.out.println("#######################################################"+var3);
   
@@ -1068,7 +1068,7 @@ System.out.println("#######################################################filen
   	
   	////////////////////////////////
   	
-  	objMessageBodyPart4.setText("Please Find The Attached Report File2!");
+  	objMessageBodyPart4.setText("Please Find The Attached Report File2!");*/
     	
     	
     	
