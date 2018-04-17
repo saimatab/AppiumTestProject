@@ -387,7 +387,7 @@ public class FinalSmokeTests {
 	    */
 	//------------------Forms - Submit Forms --------------------( test 01-10)
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test01() {
 		try {
 			
@@ -458,7 +458,7 @@ public class FinalSmokeTests {
 	
 	
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test02() {
 		try {
 			
@@ -496,7 +496,7 @@ public class FinalSmokeTests {
 }
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test03(){
 	
 	try{
@@ -529,11 +529,11 @@ public void Test03(){
 	
 }
 	            
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test04(){
 	
 	try{
-	 extlogger = extent.startTest("Test 04 started-Form submission  with gallary with annotation and color picker ");
+	 extlogger = extent.startTest("Test 04 started-Form submission  with gallary ");
 
 	
 			log.info("***********************************************************************************************************************************Entered Username......");
@@ -571,7 +571,7 @@ public void Test04(){
 	            
 	            
 	            
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test05(){
 	
 	try{
@@ -611,7 +611,7 @@ public void Test05(){
 }	            
 	  	            
 	            
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test06(){
 	
 	try{
@@ -702,7 +702,7 @@ public void Test06(){
 		            
 	            
 	            
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test07(){
 	
 	try{
@@ -742,7 +742,7 @@ public void Test07(){
 	            
 	          
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test08(){
 
 try{
@@ -774,7 +774,7 @@ log.error(exception);
 
 }	                        
            
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test09(){
 
 try{
@@ -813,7 +813,7 @@ log.error(exception);
 
 }		
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test10(){
 
 try{
@@ -847,7 +847,7 @@ log.error(exception);
 
 }		
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test11(){
 
 try{
@@ -885,7 +885,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test12(){
 
 try{
@@ -921,7 +921,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test13(){
 
 try{
@@ -957,7 +957,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test14(){
 
 try{
@@ -995,7 +995,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test15(){
 
 try{
@@ -1033,7 +1033,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test16(){
 
 try{
@@ -1074,7 +1074,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test17(){
 
 try{
@@ -1111,9 +1111,7 @@ log.error(exception);
 }
 
 }
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test18(){
 
 try{
@@ -1149,8 +1147,7 @@ log.error(exception);
 }
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test19(){
 
 try{
@@ -1188,8 +1185,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test20(){
 
 try{
@@ -1224,10 +1220,7 @@ log.error(exception);
 
 }
 
-
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test21(){
 
 try{
@@ -1263,8 +1256,7 @@ log.error(exception);
 }
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test22(){
 
 try{
@@ -1300,8 +1292,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test23(){
 
 try{
@@ -1334,9 +1325,7 @@ log.error(exception);
 }
 
 
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test24(){
 
 try{
@@ -1362,10 +1351,7 @@ log.error(exception);
 }
 
 }
-
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test25(){
 
 try{
@@ -1402,9 +1388,7 @@ log.error(exception);
 
 }
 
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test26(){
 
 try{
@@ -1435,9 +1419,7 @@ log.error(exception);
 }
 
 
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test27(){
 
 try{
@@ -1469,8 +1451,7 @@ log.error(exception);
 
 }
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test28(){
 
 try{
@@ -1505,8 +1486,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test29(){
 
 try{
@@ -1537,9 +1517,7 @@ log.error(exception);
 }
 
 }
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test30(){
 
 try{
@@ -1570,8 +1548,7 @@ log.error(exception);
 }
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test31(){
 
 try{
@@ -1601,10 +1578,7 @@ log.error(exception);
 
 }
 
-
-
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test32(){
 
 try{
@@ -1639,8 +1613,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test33(){
 
 try{
@@ -1674,8 +1647,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test34(){
 
 try{
@@ -1708,8 +1680,7 @@ log.error(exception);
 
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test35(){
 
 try{
@@ -1757,8 +1728,7 @@ log.error(exception);
 }
 
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test36(){
 
 try{
@@ -1829,8 +1799,7 @@ log.error(exception);
 
 }
 
-
-@Test(enabled = true)
+	@Test(enabled = false)
 public void Test37(){
 
 try{
@@ -2053,7 +2022,7 @@ log.error(exception);
 
 
 
-@Test(enabled = false)
+@Test(enabled = true)
 public void Test39(){
 
 try{
@@ -2107,7 +2076,7 @@ log.error(exception);
 
 
 
-@Test(enabled = false)
+@Test(enabled = true)
 public void Test41(){
 
 try{
