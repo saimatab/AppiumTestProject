@@ -76,7 +76,7 @@ public class NotificationsPage extends BasePage {
 		}
 
 	}
-	public void navigateToTasks(String linearLayoutIndex,DriverConfig config,String text) {
+	public void navigateToTasks(DriverConfig config,String text) {
 
 		try {	String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
@@ -148,7 +148,7 @@ public class NotificationsPage extends BasePage {
 
 	}
 	
-	public void Remove(String linearLayoutIndex,DriverConfig config,String a) {
+	public void Remove(DriverConfig config,String a) {
 
 		try {String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();

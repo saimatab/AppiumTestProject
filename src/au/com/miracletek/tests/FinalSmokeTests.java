@@ -1930,15 +1930,54 @@ driver3.manage().window().maximize();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("taskDescription")).clear();
 						    Thread.sleep(3000);
-						    driver3.findElement(By.id("taskDescription")).sendKeys("eee");
+						    driver3.findElement(By.id("taskDescription")).sendKeys("simple1");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.id("createNewButton")).click();
 						    
-						    Thread.sleep(4000);
 						    
-						   // driver3.findElement(By.id("taskName")).clear();
+						    
+						    
+						    
+						    
+						    
+						    
+						    driver3.findElement(By.id("taskName")).sendKeys("simple2");
+						    Thread.sleep(4000);
+						    driver3.findElement(By.cssSelector("input.tt-input")).click();
+						    Thread.sleep(3000);
+						    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
+						    Thread.sleep(3000);
+						    driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
+						    Thread.sleep(3000);
+						    driver3.findElement(By.id("SimpleTaskRadio")).click();
+						    Thread.sleep(3000);
+						    driver3.findElement(By.id("taskDescription")).clear();
+						    Thread.sleep(3000);
+						    driver3.findElement(By.id("taskDescription")).sendKeys("simple2");
+						    Thread.sleep(3000);
+						    
+						    
+						   
+						    
+						    
+						    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
+						    Thread.sleep(8000);
+						    driver3.findElement(By.id("createNewButton")).click();
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    Thread.sleep(4000);
+
 						    driver3.findElement(By.id("taskName")).sendKeys("form");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).click();
@@ -1962,14 +2001,11 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.id("notificationTitle")).clear();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationTitle")).sendKeys("push");
+				
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationBody")).clear();
 						    Thread.sleep(3000);
-						    driver3.findElement(By.id("notificationBody")).sendKeys("ff");
-						    Thread.sleep(3000);
-						    driver3.findElement(By.id("notificationBody")).clear();
-						    Thread.sleep(3000);
-						    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
+						    driver3.findElement(By.id("notificationBody")).sendKeys("push");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
@@ -1981,7 +2017,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.id("notificationTitle")).sendKeys("pushlater");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationBody")).clear();	    Thread.sleep(3000);
-						    driver3.findElement(By.id("notificationBody")).sendKeys("fff");
+						    driver3.findElement(By.id("notificationBody")).sendKeys("pushlater");
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("sendTypeLater")).click();
 						    Thread.sleep(3000);
@@ -2140,11 +2176,11 @@ Thread.sleep(5000);*/
 		shell.clickNotifications(config);
 		Thread.sleep(5000);
 	//form1.navigateUp(config);
-	notify.Remove("2", config,"push");
+	notify.Remove( config,"push");
 	Thread.sleep(5000);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
-		   notify.navigateToTasks("4", config,"A task (simple1) has been assigned to you.");
+		   notify.navigateToTasks(config,"A task (simple1) has been assigned to you.");
 		   mytask.Completetasks(config);
 		   notify.navigateUp(config);
 		   
