@@ -2138,11 +2138,14 @@ Thread.sleep(5000);
 
 
 		shell.clickNotifications(config);
+		Thread.sleep(5000);
 	//form1.navigateUp(config);
 	notify.Remove("1", config);
+	Thread.sleep(5000);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
 		notify.RemoveAll(config);
+		Thread.sleep(5000);
 		notify.popup("Yes");
 		   Thread.sleep(5000); 	
 											    
