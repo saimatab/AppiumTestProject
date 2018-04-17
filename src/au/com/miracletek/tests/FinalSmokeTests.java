@@ -2030,7 +2030,10 @@ extlogger = extent.startTest("Test 39 started  mytasks form submission  function
 
 /////////////////////mytasks 
 
-
+File file4 = new File("app.xml");
+				FileInputStream fileInput = new FileInputStream(file4);
+				Properties properties = new Properties();
+				properties.loadFromXML(fileInput);
 
 
 
