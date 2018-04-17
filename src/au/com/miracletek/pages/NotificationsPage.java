@@ -75,7 +75,7 @@ public class NotificationsPage extends BasePage {
 		}
 
 	}
-	public void navigateToTasks(String linearLayoutIndex,DriverConfig config) {
+	public void navigateToTasks(String linearLayoutIndex,DriverConfig config,String text) {
 
 		try {	String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
@@ -83,9 +83,15 @@ public class NotificationsPage extends BasePage {
 			
 			// nned to generate xpth 
 	     	 if (platformName.contentEquals("Android"))
-			info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");//new  info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[last()]");
-	     	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
-	     		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
+			//info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");//new  info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[last()]");
+	     	
+	     	 
+	     	info=findElementByXpath("//*[@text='"+text+"']");
+	     	 
+	     	 
+	     	 else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
+	     	 {}
+	     		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2")){}
 	     			 
 			
 		info.click();
