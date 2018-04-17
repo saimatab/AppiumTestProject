@@ -1956,8 +1956,7 @@ driver3.manage().window().maximize();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
-						    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-						    Thread.sleep(3000);
+						
 						    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.id("notificationTitle")).clear();
@@ -1979,7 +1978,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.xpath("//div[@id='sendDateTime']/div/ul/li[3]/div/div/table/tbody/tr/td[3]/a/span")).click();
 						    driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-remove")).click();
 						    Thread.sleep(3000);
-						    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+						    driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
 							driver3.close();
 							
