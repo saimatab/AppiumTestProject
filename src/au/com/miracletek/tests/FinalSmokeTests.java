@@ -1935,7 +1935,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.id("createNewButton")).click();
-						    
+						    Thread.sleep(8000);
 						    
 						    
 						    
