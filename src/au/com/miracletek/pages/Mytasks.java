@@ -63,7 +63,7 @@ public class Mytasks extends BasePage {
 		  		findElementByXpath("//android.widget.EditText[@text='Search']").sendKeys("new");
 		  		
 		  		
-		  		openTask("1",config);
+		  		//openTask("1",config);
 	}
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
 		     	
