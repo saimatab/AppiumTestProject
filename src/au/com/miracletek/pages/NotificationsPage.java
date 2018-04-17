@@ -45,6 +45,59 @@ public class NotificationsPage extends BasePage {
 
 	}
 	
+	public void navigateUp(DriverConfig config) {
+
+		try {
+		
+
+			String platformName = config.getPlatformName();
+			String platformVersion=config.getPlatformVersion();
+		//	   navup=findElementById(Constants.navigateUp);
+			Thread.sleep(3000);
+	
+				if(platformName.contentEquals("Android"))
+				{
+			  navup=findElementById(Constants.navigateUp);
+			navup.click();
+				}
+				else
+				{
+					navup=findElementById("Back");
+					navup.click();
+				}
+
+			
+			  
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public void navigateToTasks(String linearLayoutIndex,DriverConfig config) {
+
+		try {	String platformName = config.getPlatformName();
+		String platformVersion=config.getPlatformVersion();
+
+			
+			// nned to generate xpth 
+	     	 if (platformName.contentEquals("Android"))
+			info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']");//new  info=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[last()]");
+	     	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
+	     		else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("10.2"));
+	     			 
+			
+		info.click();
+
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void popup(String response) {
 
 		try {
@@ -88,7 +141,7 @@ public class NotificationsPage extends BasePage {
 
 	}
 	
-	public void Remove(String linearLayoutIndex,DriverConfig config) {
+	public void Remove(String linearLayoutIndex,DriverConfig config,String a) {
 
 		try {String platformName = config.getPlatformName();
 		String platformVersion=config.getPlatformVersion();
@@ -97,7 +150,7 @@ public class NotificationsPage extends BasePage {
 		// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='2']");
 		// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonRemoveId']");
 		 
-		 remove=findElementByXpath("//*[@content-desc='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='yyy']]]]]]");
+		 remove=findElementByXpath("//*[@content-desc='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='" +a+"']]]]]]");
 
 		 
 		 
