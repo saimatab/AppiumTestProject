@@ -2030,6 +2030,35 @@ extlogger = extent.startTest("Test 39 started  mytasks form submission  function
 
 /////////////////////mytasks 
 
+
+
+
+
+	String appcode = properties.getProperty("appcode");
+
+String username = properties.getProperty("username");
+
+String password = properties.getProperty("password");
+	fileInput.close();
+
+String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
+String scrFolder = scshot
+      + new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
+              Calendar.getInstance().getTime()).toString();
+new File(scrFolder).mkdir();
+System.setProperty("scr.folder", scrFolder);
+Thread.sleep(5000);
+appCodePage.enterAppCodeAndProceed(appcode);
+
+Thread.sleep(8000);
+
+loginPage.Login1(username,password);
+Thread.sleep(5000);
+form1.waitForVisibilityOf(By.xpath("//android.widget.TextView[@text='test']"));
+catPage.selectCategoryListView("test",config);
+Thread.sleep(2000);
+
+
 shell.clickmyTasks(config);
 
 mytask.openTask("2", config);
