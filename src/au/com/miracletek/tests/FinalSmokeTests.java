@@ -1837,43 +1837,13 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+@Test(enabled = false)
 public void Test38(){
 
 try{
 extlogger = extent.startTest("Test 38 started creating  My task and Push notification creation from studio   ");
 System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
 	
-
-
-
-File file4 = new File("app.xml");
-FileInputStream fileInput = new FileInputStream(file4);
-Properties properties = new Properties();
-properties.loadFromXML(fileInput);
-
-
-
-String appcode = properties.getProperty("appcode");
-
-String username = properties.getProperty("username");
-
-String password = properties.getProperty("password");
-fileInput.close();
-
-String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
-String scrFolder = scshot
-+ new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
-Calendar.getInstance().getTime()).toString();
-new File(scrFolder).mkdir();
-System.setProperty("scr.folder", scrFolder);
-Thread.sleep(5000);
-appCodePage.enterAppCodeAndProceed(appcode);
-
-Thread.sleep(8000);
-
-loginPage.Login1(username,password);
-Thread.sleep(5000);
 
 
 
@@ -2068,7 +2038,7 @@ log.error(exception);
 
 
 
-@Test(enabled = true)
+@Test(enabled = false)
 public void Test39(){
 
 try{
@@ -2136,10 +2106,40 @@ try{
 extlogger = extent.startTest("Test 41 started  notification functionality   ");
 Thread.sleep(5000);
 /////////////////////notifcaiton
-form1.navigateUp(config);
+
+
+File file4 = new File("app.xml");
+FileInputStream fileInput = new FileInputStream(file4);
+Properties properties = new Properties();
+properties.loadFromXML(fileInput);
+
+
+
+String appcode = properties.getProperty("appcode");
+
+String username = properties.getProperty("username");
+
+String password = properties.getProperty("password");
+fileInput.close();
+
+String scshot= System.getProperty("user.dir")+"\\ScreenShots\\";
+String scrFolder = scshot
++ new SimpleDateFormat("yyyy_MM_dd_HHmmss").format(
+Calendar.getInstance().getTime()).toString();
+new File(scrFolder).mkdir();
+System.setProperty("scr.folder", scrFolder);
+Thread.sleep(5000);
+appCodePage.enterAppCodeAndProceed(appcode);
+
+Thread.sleep(8000);
+
+loginPage.Login1(username,password);
+Thread.sleep(5000);
+
+
 		shell.clickNotifications(config);
 	//form1.navigateUp(config);
-	notify.Remove("2", config);
+	notify.Remove("1", config);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
 		notify.RemoveAll(config);
