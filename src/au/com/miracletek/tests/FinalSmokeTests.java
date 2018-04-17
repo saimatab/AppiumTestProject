@@ -1919,7 +1919,7 @@ driver3.manage().window().maximize();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.linkText("Add New Template")).click();
 						    Thread.sleep(8000);
-						    driver3.findElement(By.id("templateFile")).clear();
+						    //driver3.findElement(By.id("templateFile")).clear();
 						    driver3.findElement(By.id("templateFile")).sendKeys(appiumlog1);
 						    Thread.sleep(8000);
 						    driver3.findElement(By.xpath("(//button[@type='button'])[3]")).click();
