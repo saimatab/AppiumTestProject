@@ -126,7 +126,7 @@ public class Mytasks extends BasePage {
 		  		showcompTask =findElementByXpath("//android.widget.Button[@text='auto']");  
 		  		showcompTask.click();
 		  	submit();
-		  	navigateUp(config);
+		  	
 		  	 comptasks =findElementByXpath("//android.widget.Button[@text='Complete Task']");  
 			  	comptasks.click();
 		  	 

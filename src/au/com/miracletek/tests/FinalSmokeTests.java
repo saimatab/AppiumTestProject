@@ -2072,8 +2072,11 @@ mytask.openTask("1", config);
    Thread.sleep(5000); 
 mytask.CompleteFormtasks(config);
    Thread.sleep(5000); 
-
-
+   mytask.openTask("1", config);
+   Thread.sleep(5000);
+	 MobileElement comptasks =mytask.findElementByXpath("//android.widget.Button[@text='Complete Task']");  
+	  	comptasks.click();
+  
    Thread.sleep(5000); 
    mytask.showCompletedTasks(config);
    
@@ -2084,7 +2087,7 @@ mytask.Refresh(config);
 
 mytask.clearCompletedtasks( config);
 mytask.searchTasks(config);		
-											    
+					mytask.navigateUp(config);						    
 											    
 	extlogger.log(LogStatus.PASS, "Test Case Passed is Test40");  
 
