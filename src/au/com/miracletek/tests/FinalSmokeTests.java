@@ -1916,11 +1916,14 @@ driver3.manage().window().maximize();
 						    
 							 String appiumlog1= System.getProperty("user.dir")+"\\simpbulk.csv";
 						    driver3.findElement(By.cssSelector("#item_PDFTemplates > span.title")).click();
+						    Thread.sleep(8000);
 						    driver3.findElement(By.linkText("Add New Template")).click();
+						    Thread.sleep(8000);
 						    driver3.findElement(By.id("templateFile")).clear();
 						    driver3.findElement(By.id("templateFile")).sendKeys("simpbulk.csv");
+						    Thread.sleep(8000);
 						    driver3.findElement(By.xpath("(//button[@type='button'])[3]")).click();
-						    
+						    Thread.sleep(8000);
 						    
 						    
 						    
