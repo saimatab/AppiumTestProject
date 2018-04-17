@@ -1913,6 +1913,37 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
 						    driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
+						    
+							 String appiumlog1= System.getProperty("user.dir")+"\\simpbulk.csv";
+						    driver3.findElement(By.cssSelector("#item_PDFTemplates > span.title")).click();
+						    driver3.findElement(By.linkText("Add New Template")).click();
+						    driver3.findElement(By.id("templateFile")).clear();
+						    driver3.findElement(By.id("templateFile")).sendKeys("simpbulk.csv");
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
 						    driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.id("createNewButton")).click();
@@ -1958,10 +1989,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.id("taskDescription")).sendKeys("simple2");
 						    Thread.sleep(3000);
 						    
-						    
 						   
-						    
-						    
 						    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.id("createNewButton")).click();
@@ -1994,6 +2022,42 @@ driver3.manage().window().maximize();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();	
 						    Thread.sleep(8000);
+						    
+						    /*
+						    
+						    
+						       driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
+    driver.findElement(By.cssSelector("a.btn.uploadCSV > #text")).click();
+    driver.findElement(By.id("bulkTaskFile")).clear();
+    driver.findElement(By.id("bulkTaskFile")).sendKeys("C:\\Users\\stabassum\\Desktop\\\\simpbulk.csv");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.linkText("Back")).click();
+    driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
+    driver.findElement(By.cssSelector("a.btn.uploadCSV > #text")).click();
+    driver.findElement(By.id("bulkTaskFile")).clear();
+    driver.findElement(By.id("bulkTaskFile")).sendKeys("C:\\Users\\stabassum\\Desktop\\formbulk.csv");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.linkText("Back")).click();  Thread.sleep(8000);*/
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
+						    
 						    driver3.findElement(By.id("item_Notifications")).click();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
