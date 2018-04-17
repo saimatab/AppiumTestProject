@@ -1919,7 +1919,7 @@ driver3.manage().window().maximize();
 						    driver3.findElement(By.linkText("Add New Template")).click();
 						    driver3.findElement(By.id("templateFile")).clear();
 						    driver3.findElement(By.id("templateFile")).sendKeys("simpbulk.csv");
-						    
+						    driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
 						    
 						    
 						    
