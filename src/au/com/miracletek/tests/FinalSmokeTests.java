@@ -2180,7 +2180,7 @@ Thread.sleep(5000);*/
 	Thread.sleep(5000);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
-		   notify.navigateToTasks(config,"A task (simple1) has been assigned to you.");
+		   notify.navigateToTasks(config,"A task (simple2) has been assigned to you.");
 		   mytask.Completetasks(config);
 		   notify.navigateUp(config);
 		   
