@@ -97,7 +97,7 @@ public class NotificationsPage extends BasePage {
 		// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='2']");
 		// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following::*/*[@content-desc='buttonRemoveId']");
 		 
-		 remove=findElementByXpath("//*[@contentDescription='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='www']]]]]]");
+		 remove=findElementByXpath("//*[@content-desc='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='www']]]]]]");
 
 		 
 		 
