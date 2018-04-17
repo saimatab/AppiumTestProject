@@ -1368,7 +1368,7 @@ public class FinalSmokeTests {
 			String actualValue =form1.findElementByXpath("//android.widget.TextView[@text='dd']").getText();
 			s_assert.assertEquals(actualValue, "dd");
 
-			extent.endTest(extlogger);
+		
 
 		} catch (Exception e) {
 
@@ -1652,7 +1652,7 @@ public class FinalSmokeTests {
 
 
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
-
+			extent.endTest(extlogger);
 
 		} catch (Exception e) {
 
