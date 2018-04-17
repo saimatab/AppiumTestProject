@@ -1902,7 +1902,7 @@ driver3.manage().window().maximize();
 						    Thread.sleep(8000);
 						 //  driver3.findElement(By.id("taskName")).clear();
 						    driver3.findElement(By.id("taskName")).sendKeys("simple1");
-						    Thread.sleep(3000);
+						    Thread.sleep(4000);
 						    driver3.findElement(By.cssSelector("input.tt-input")).click();
 						    Thread.sleep(3000);
 						    driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
@@ -1919,7 +1919,7 @@ driver3.manage().window().maximize();
 						    Thread.sleep(8000);
 						    driver3.findElement(By.id("createNewButton")).click();
 						    
-						    Thread.sleep(3000);
+						    Thread.sleep(4000);
 						    
 						   // driver3.findElement(By.id("taskName")).clear();
 						    driver3.findElement(By.id("taskName")).sendKeys("form");
