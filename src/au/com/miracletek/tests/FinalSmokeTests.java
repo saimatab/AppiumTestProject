@@ -1837,7 +1837,7 @@ log.error(exception);
 
 
 
-@Test(enabled = false)
+@Test(enabled = true)
 public void Test38(){
 
 try{
@@ -2140,11 +2140,12 @@ Thread.sleep(5000);*/
 		shell.clickNotifications(config);
 		Thread.sleep(5000);
 	//form1.navigateUp(config);
-	notify.Remove("1", config,"push");
+	notify.Remove("2", config,"push");
 	Thread.sleep(5000);
 	notify.popup("Yes");
 		   Thread.sleep(5000); 
-		   notify.navigateToTasks("1", config,"A task (dd) has been assigned to you.");
+		   notify.navigateToTasks("4", config,"A task (simple1) has been assigned to you.");
+		   mytask.Completetasks(config);
 		   notify.navigateUp(config);
 		   
 		notify.RemoveAll(config);
