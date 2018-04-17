@@ -14,6 +14,7 @@ public class NotificationsPage extends BasePage {
 	MobileElement edit;
 	MobileElement remove;
 	MobileElement info;
+	MobileElement navup;
 	MobileElement removeall;
 	MobileElement yes;
 	MobileElement no;
