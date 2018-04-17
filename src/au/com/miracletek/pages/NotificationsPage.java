@@ -171,7 +171,7 @@ public class NotificationsPage extends BasePage {
 	  	 }  
 	   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"))
 	   	{
-			 remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonRemoveId']");
+			// remove=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "//following-sibling::*/*[@content-desc='buttonRemoveId']");
 	   	}
 			remove.click();
 

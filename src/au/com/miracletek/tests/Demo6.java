@@ -162,7 +162,7 @@ public class Demo6 {
 				
 				shell.clickNotifications(config);
 				
-			notify.Remove("2", config,"yyy");
+			notify.Remove(config,"yyy");
 			notify.popup("Yes");
 				   Thread.sleep(5000); 
 				notify.RemoveAll(config);
