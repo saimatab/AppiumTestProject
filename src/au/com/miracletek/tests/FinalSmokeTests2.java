@@ -389,7 +389,7 @@ public class FinalSmokeTests2 {
 			
 				
 					
-				DesiredCapabilities caps= DesiredCapabilities.phantomjs();
+				DesiredCapabilities caps= DesiredCapabilities.firefox();
 			
 				 caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs.exe");
 					caps.setBrowserName("phantomjs");
