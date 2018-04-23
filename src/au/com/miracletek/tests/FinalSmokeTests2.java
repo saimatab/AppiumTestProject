@@ -22,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
@@ -385,7 +386,7 @@ public class FinalSmokeTests2 {
 				
 				//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
 				WebDriver driver3 ;
-			\
+			
 				
 					
 				DesiredCapabilities caps= DesiredCapabilities.phantomjs();
