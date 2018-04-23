@@ -55,8 +55,8 @@
           </dependency>
           <!-- https://mvnrepository.com/artifact/com.github.klieber/phantomjs -->
 <dependency>
-    <groupId>com.github.klieber</groupId>
-    <artifactId>phantomjs</artifactId>
+    <groupId>ch.racic.selenium</groupId>
+    <artifactId>selenium-driver-helper-phantomjs</artifactId>
     <version>2.1.1</version>
 </dependency>
 
