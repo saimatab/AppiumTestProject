@@ -1,7 +1,7 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
-import java.io.FileWriter;
+import java.io.FileWriter;import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
