@@ -1425,17 +1425,35 @@ public class FinalSmokeTests {
 
 		try{
 			extlogger = extent.startTest("Test 38 started creating  My task and Push notification creation from studio   ");
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
-			//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Downloads\\geckodriver-v0.17.0-win32\\geckodriver.exe");
+			  System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs-2.1.1-windows-x86-workaround_issue_394\\phantomjs.exe");
+				
 			WebDriver driver3 ;
-			URL url = new URL("http://192.168.9.149:5556/wd/hub");
+			//URL url = new URL("http://192.168.9.149:5556/wd/hub");
 			//http://192.168.9.149:5556/wd/hub
 			DesiredCapabilities capabilities= DesiredCapabilities.firefox();
-			capabilities.setBrowserName("firefox");
+			/*capabilities.setBrowserName("firefox");
 			capabilities.setPlatform(Platform.ANY);
-			capabilities.setCapability("marionette", true);
-			driver3 = new RemoteWebDriver(url,
-					capabilities);
+			capabilities.setCapability("marionette", true);*/
+			
+			capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs.exe");
+			capabilities.setBrowserName("phantomjs");
+			capabilities.setPlatform(Platform.ANY);
+				
+			//driver3 = new RemoteWebDriver(url,
+					//capabilities);
+			
+			
+			 driver3 = new PhantomJSDriver(capabilities);
+			
+	 			URL url = new URL("http://192.168.9.149:5557/wd/hub");
+				driver3 = new RemoteWebDriver(url,
+						capabilities);
+			
+			
+			
+			
+			
 			driver3.manage().window().maximize();
 			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
