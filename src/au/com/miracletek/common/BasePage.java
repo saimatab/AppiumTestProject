@@ -1,6 +1,7 @@
 package au.com.miracletek.common;
 import io.appium.java_client.MultiTouchAction;
 import java.io.File;
+import java.util.HashMap ;
 import org.openqa.selenium.support.ui.FluentWait;
 import javax.activation.FileDataSource;
 import org.openqa.selenium.mobile.NetworkConnection;
@@ -21,6 +22,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.collections.Lists;
 import java.util.List;
+import java.util.*;
 import java.util.Properties;
 import java.time.Duration;
 import io.appium.java_client.FindsByAndroidUIAutomator;
