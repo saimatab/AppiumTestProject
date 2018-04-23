@@ -30,7 +30,7 @@
 	
 		<test name="Demo">
 		<classes>
-			<class name="au.com.miracletek.tests.FinalSmokeTests" />
+			<class name="au.com.miracletek.tests.FinalSmokeTests2" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
