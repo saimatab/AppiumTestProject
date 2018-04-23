@@ -1,7 +1,8 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
 import java.util.Calendar;
-import java.io.FileWriter;import org.openqa.selenium.remote.DesiredCapabilities;
+import java.io.FileWriter;
+
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -19,10 +20,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
@@ -386,8 +385,7 @@ public class FinalSmokeTests2 {
 				
 				//System.setProperty("webdriver.gecko.driver","C:\\Users\\stabassum\\Documents\\chromedriver_win32(2)\\geckodriver.exe");
 				WebDriver driver3 ;
-			
-				 // To declare and initialize PhantomJSDriver
+			\
 				
 					
 				DesiredCapabilities caps= DesiredCapabilities.phantomjs();
