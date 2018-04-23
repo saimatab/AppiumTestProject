@@ -19,7 +19,11 @@
   <version>1.4</version>
   <scope>test</scope>
 </dependency>
-	  
+	  <dependency><groupId>org.seleniumhq.selenium</groupId>
+		  <artifactId>selenium-remote-driver </artifactId>
+		  <version>3.8.1</version>
+		  <scope>compile</scope>
+	  </dependency>
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
@@ -30,11 +34,7 @@
             <artifactId>xml-apis</artifactId>
             <version>1.4.01</version>
         </dependency>
-	  <dependency>
-    <groupId>com.github.detro.ghostdriver</groupId>
-    <artifactId>phantomjsdriver</artifactId>
-    <version>1.1.0</version>
-</dependency>
+	
 <dependency>
         <groupId>org.uncommons</groupId>
         <artifactId>reportng</artifactId>
@@ -57,7 +57,25 @@
                  <artifactId>poi</artifactId>
                  <version>3.9</version>
           </dependency>
-          
+          <!-- https://mvnrepository.com/artifact/com.github.klieber/phantomjs -->
+  <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>phantomjsdriver</artifactId>
+      <version>1.4.1</version>
+   
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>selenium-java</artifactId>
+          <groupId>org.seleniumhq.selenium</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>selenium-remote-driver</artifactId>
+          <groupId>org.seleniumhq.selenium</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
         <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
@@ -182,12 +200,7 @@
       <version>6.0.0-BETA4</version>
       <scope>compile</scope>
 	    
-	            <exclusions>
-             <exclusion>
-                 <groupId>com.google.guava</groupId>
-                 <artifactId>guava</artifactId>
-             </exclusion>
-         </exclusions>
+	          
 	    
 	    
 	    
