@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.collections.Lists;
 import java.util.List;
+import java.util.Properties;
 import java.time.Duration;
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileDriver;
@@ -32,7 +33,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.events.api.general.*;
 import java.util.concurrent.TimeUnit;
-import java.util.*;
+
 import java.util.stream.*;
 import au.com.miracletek.tests.Demo;
 import au.com.miracletek.tests.DemoIos;

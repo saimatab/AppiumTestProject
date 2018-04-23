@@ -38,7 +38,7 @@ import java.util.Iterator;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.IndexedColors;
-import java.util.*;
+import java.util.Properties;
 import java.sql.*;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
