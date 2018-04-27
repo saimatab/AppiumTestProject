@@ -10,7 +10,7 @@
 		
 		<parameter name="app_package" value="co.miracletek.miracle.prd" />
 		<!--<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />-->
-			<parameter name="app_activity" value="md5416f8fc9705f945d05f173ad9594b81d.SplashActivity" />
+			<parameter name="app_activity" value="md5f9a72d14ea9ca2c9eed2755d5ca3ea46.SplashActivity" />
 		
 		
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
