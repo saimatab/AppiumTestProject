@@ -1467,7 +1467,8 @@ public class FinalSmokeTests {
 			driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
 			driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
 			Thread.sleep(8000);
-
+		    driver3.findElement(By.xpath("//div[@id='sidebar']/div[2]/div/ul/li/a/i")).click();
+		    driver3.findElement(By.linkText("Automation")).click();
 			/* String appiumlog1= System.getProperty("user.dir")+"\\simpbulk.csv";
 
 						    //driver3.findElement(By.id("templateFile")).clear();
@@ -1475,7 +1476,7 @@ public class FinalSmokeTests {
 						    Thread.sleep(8000);
 						    driver3.findElement(By.xpath("(//button[@type='button'])[3]")).click();
 						    Thread.sleep(8000);*/
-
+			Thread.sleep(8000);
 			driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
 			Thread.sleep(8000);
 			driver3.findElement(By.id("createNewButton")).click();
