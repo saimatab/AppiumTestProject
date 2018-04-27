@@ -1556,7 +1556,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
 			Thread.sleep(3000);
 			//driver3.findElement(By.id("FormSelectionRadio")).click();
-		    driver.findElement(By.id("attachForm")).click();
+		    driver3.findElement(By.id("attachForm")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("span.select2-arrow")).click();
 			Thread.sleep(3000);
