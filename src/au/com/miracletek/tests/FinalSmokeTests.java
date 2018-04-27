@@ -1459,7 +1459,7 @@ public class FinalSmokeTests {
 			
 			driver3.manage().window().maximize();
 			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			driver3.get("https://zon.miracletek.co/admin/1.0/Account/Login");
+			driver3.get("https://zon.miracletek.co/admin/1.1/");
 			driver3.findElement(By.id("Email")).click();
 			driver3.findElement(By.id("Email")).clear();
 			driver3.findElement(By.id("Email")).sendKeys("saima.tabassum+11@miracletek.com.au");
