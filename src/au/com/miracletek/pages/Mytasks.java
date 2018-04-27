@@ -114,7 +114,44 @@ public class Mytasks extends BasePage {
 		}
 
 	}
-	
+	public void Approvetasks(DriverConfig config) {
+
+		try {String platformName = config.getPlatformName();
+		String platformVersion=config.getPlatformVersion();
+		  	 if (platformName.contentEquals("Android"))
+		  	 {
+			 // removeall=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
+			  //new removeall=findElementByXpath("//*[@content-desc='btnRemoveAllId']");
+		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Approve Task']");  
+		  	comptasks.click();}
+		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
+		     	
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public void Rejecttasks(DriverConfig config) {
+
+		try {String platformName = config.getPlatformName();
+		String platformVersion=config.getPlatformVersion();
+		  	 if (platformName.contentEquals("Android"))
+		  	 {
+			 // removeall=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
+			  //new removeall=findElementByXpath("//*[@content-desc='btnRemoveAllId']");
+		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Reject Task']");  
+		  	comptasks.click();}
+		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
+		     	
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 	public void CompleteFormtasks(DriverConfig config) {
 
 		try {String platformName = config.getPlatformName();

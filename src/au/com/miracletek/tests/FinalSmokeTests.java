@@ -1519,8 +1519,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
 			Thread.sleep(3000);
 			driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
-			Thread.sleep(3000);
-			driver3.findElement(By.id("SimpleTaskRadio")).click();
+			
 			Thread.sleep(3000);
 			driver3.findElement(By.id("taskDescription")).clear();
 			Thread.sleep(3000);
@@ -1537,8 +1536,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
 			Thread.sleep(3000);
 			driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
-			Thread.sleep(3000);
-			driver3.findElement(By.id("SimpleTaskRadio")).click();
+	
 			Thread.sleep(3000);
 			driver3.findElement(By.id("taskDescription")).clear();
 			Thread.sleep(3000);
@@ -1565,6 +1563,31 @@ public class FinalSmokeTests {
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();	
 			Thread.sleep(8000);
+			
+		
+			driver3.findElement(By.id("createNewButton")).click();
+			Thread.sleep(8000);
+			driver3.findElement(By.id("taskName")).sendKeys("simple3");
+			Thread.sleep(4000);
+			driver3.findElement(By.cssSelector("input.tt-input")).click();
+			Thread.sleep(3000);
+			driver3.findElement(By.cssSelector("input.tt-input[autocomplete=off]")).sendKeys("a");
+			Thread.sleep(3000);
+			driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
+	
+			Thread.sleep(3000);
+			 driver3.findElement(By.id("isApprovalTask")).click();
+				Thread.sleep(3000);
+			
+			driver3.findElement(By.id("taskDescription")).clear();
+			Thread.sleep(3000);
+			driver3.findElement(By.id("taskDescription")).sendKeys("simple3");
+			Thread.sleep(3000);
+			driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
+			Thread.sleep(8000);
+			
+			
+			
 
 						       /*driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
     driver.findElement(By.cssSelector("a.btn.uploadCSV > #text")).click();
@@ -1644,15 +1667,22 @@ public class FinalSmokeTests {
 			extlogger = extent.startTest("Test 39 started  mytasks form submission  functionality   ");
 
 			shell.clickmyTasks(config);
-			mytask.openTask("3", config);
+			mytask.openTask("1", config);
+			Thread.sleep(5000); 
+			mytask.Approvetasks(config);
+			Thread.sleep(5000); 
+			
+			
+		
+			mytask.openTask("4", config);
 			Thread.sleep(5000); 
 			mytask.Completetasks(config);
 			Thread.sleep(5000); 
-			mytask.openTask("1", config);
+			mytask.openTask("2", config);
 			Thread.sleep(5000); 
 			mytask.CompleteFormtasks(config);
 			Thread.sleep(5000); 
-			mytask.openTask("1", config);
+			mytask.openTask("2", config);
 			Thread.sleep(5000);
 			MobileElement comptasks =mytask.findElementByXpath("//android.widget.Button[@text='Complete Task']");  
 			comptasks.click();
