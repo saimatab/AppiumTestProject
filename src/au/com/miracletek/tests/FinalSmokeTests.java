@@ -380,7 +380,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test02() {
 		try {
 			extlogger = extent.startTest("Test 02 started-Form submission  with Label, Textbox, Segment");
@@ -406,7 +406,8 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test03(){
 
 		try{
@@ -434,7 +435,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test04(){
 
 		try{
@@ -468,7 +470,8 @@ public class FinalSmokeTests {
 
 	}	            
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test05(){
 
 		try{
@@ -498,7 +501,8 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test06(){
 
 		try{
@@ -561,7 +565,8 @@ public class FinalSmokeTests {
 
 	}	            
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test07(){
 
 		try{
@@ -592,7 +597,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test08(){
 
 		try{
@@ -617,7 +622,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test09(){
 
 		try{
@@ -646,7 +651,8 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test10(){
 
 		try{
@@ -673,7 +679,8 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test11(){
 
 		try{
@@ -698,7 +705,8 @@ public class FinalSmokeTests {
 		}
 
 	}		
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test12(){
 
 		try{
@@ -725,7 +733,8 @@ public class FinalSmokeTests {
 		}
 
 	}		
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test13(){
 
 		try{
@@ -753,7 +762,8 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test14(){
 
 		try{
@@ -780,7 +790,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test15(){
 
 		try{
@@ -807,7 +818,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test16(){
 
 		try{
@@ -834,7 +846,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test17(){
 
 		try{
@@ -861,7 +874,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test18(){
 
 		try{
@@ -887,7 +901,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test19(){
 
 		try{
@@ -912,7 +926,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test20(){
 
 		try{
@@ -938,7 +953,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test21(){
 
 		try{
@@ -965,7 +981,8 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test22(){
 
 		try{
@@ -990,7 +1007,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test23(){
 
 		try{
@@ -1016,7 +1034,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test24(){
 
 		try{
@@ -1040,7 +1059,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test25(){
 
 		try{
@@ -1070,7 +1090,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test26(){
 
 		try{
@@ -1095,7 +1116,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test27(){
 
 		try{
@@ -1121,7 +1143,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test28(){
 
 		try{
@@ -1146,7 +1169,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test29(){
 
 		try{
@@ -1171,7 +1195,8 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test30(){
 
 		try{
@@ -1196,7 +1221,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test31(){
 
 		try{
@@ -1223,7 +1249,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test32(){
 
 		try{
@@ -1251,7 +1278,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test33(){
 
 		try{
@@ -1278,7 +1305,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test34(){
 
 		try{
@@ -1304,7 +1332,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test35(){
 
 		try{
@@ -1343,7 +1371,8 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+
+	@Test(enabled = false)
 	public void Test36(){
 
 		try{
@@ -1388,7 +1417,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test37(){
 
 		try{
@@ -1526,7 +1555,8 @@ public class FinalSmokeTests {
 			Thread.sleep(3000);
 			driver3.findElement(By.xpath(".//*[@id='pageEditView']/div[2]/form/div[2]/div/span/div/div/div")).click();
 			Thread.sleep(3000);
-			driver3.findElement(By.id("FormSelectionRadio")).click();
+			//driver3.findElement(By.id("FormSelectionRadio")).click();
+		    driver.findElement(By.id("attachForm")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("span.select2-arrow")).click();
 			Thread.sleep(3000);
