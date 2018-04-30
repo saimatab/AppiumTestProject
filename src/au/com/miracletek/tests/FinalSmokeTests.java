@@ -1587,36 +1587,7 @@ public class FinalSmokeTests {
 			Thread.sleep(16000);
 			
 		
-			WebElement we   = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
-		    Actions action = new Actions(driver3);
-		    action.moveToElement(we).perform();
-		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
-		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    Thread.sleep(8000);
-
-			WebElement we1 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]"));
-		    Actions action1 = new Actions(driver3);
-		    action1.moveToElement(we1).perform();
-		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
-		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    Thread.sleep(000);
-		    
-			WebElement we4 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
-		    Actions action4 = new Actions(driver3);
-		    action4.moveToElement(we4).perform();
-		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
-
-		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    Thread.sleep(8000);
-		    
-			WebElement we2 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]"));
-		    Actions action2 = new Actions(driver3);
-		    action2.moveToElement(we2).perform();
-		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]/div/button")).click();
-
-		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    Thread.sleep(8000);
-		    
+	
 			  
 			
 
@@ -1633,7 +1604,7 @@ public class FinalSmokeTests {
     driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
     driver.findElement(By.linkText("Back")).click();  Thread.sleep(8000);*/
 
-			/*driver3.findElement(By.id("item_Notifications")).click();
+			driver3.findElement(By.id("item_Notifications")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 			Thread.sleep(3000);
@@ -1671,7 +1642,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-remove")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
-			Thread.sleep(8000);*/
+			Thread.sleep(8000);
 			driver3.close();
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test38");  
 
@@ -1691,7 +1662,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test39(){
 
 		try{
@@ -1723,7 +1694,82 @@ public class FinalSmokeTests {
 			mytask.Refresh(config);
 			mytask.clearCompletedtasks( config);
 			mytask.searchTasks(config);		
-			mytask.navigateUp(config);						    
+			mytask.navigateUp(config);		
+			
+			
+			System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs-2.1.1-windows-x86-workaround_issue_394\\phantomjs.exe");
+			
+			WebDriver driver3 ;
+			//URL url = new URL("http://192.168.9.149:5556/wd/hub");
+			//http://192.168.9.149:5556/wd/hub
+			DesiredCapabilities capabilities= DesiredCapabilities.firefox();
+			/*capabilities.setBrowserName("firefox");
+			capabilities.setPlatform(Platform.ANY);
+			capabilities.setCapability("marionette", true);*/
+			
+			capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs.exe");
+			capabilities.setBrowserName("phantomjs");
+			capabilities.setPlatform(Platform.ANY);
+				
+			//driver3 = new RemoteWebDriver(url,
+					//capabilities);
+			
+			
+			 driver3 = new PhantomJSDriver(capabilities);
+			
+	 			URL url = new URL("http://192.168.9.149:5557/wd/hub");
+				driver3 = new RemoteWebDriver(url,
+						capabilities);
+			
+			
+			
+			
+			
+			driver3.manage().window().maximize();
+			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver3.get("https://admin.miracletek.co/admin/1.1/");
+			Thread.sleep(8000);
+			driver3.findElement(By.id("Email")).click();
+			driver3.findElement(By.id("Email")).clear();
+			driver3.findElement(By.id("Email")).sendKeys("saima.tabassum+11@miracletek.com.au");
+			driver3.findElement(By.id("Password")).clear();
+			driver3.findElement(By.id("Password")).sendKeys("Goodluck1@");
+			driver3.findElement(By.cssSelector("button.btn.btn-primary")).click();
+			Thread.sleep(8000);
+		    driver3.findElement(By.xpath("//div[@id='sidebar']/div[2]/div/ul/li/a/i")).click();
+		    driver3.findElement(By.linkText("Automation")).click();
+			/* String appiumlog1= System.getProperty("user.dir")+"\\simpbulk.csv";
+
+						    //driver3.findElement(By.id("templateFile")).clear();
+						    driver3.findElement(By.id("templateFile")).sendKeys(appiumlog1);
+						    Thread.sleep(8000);
+						    driver3.findElement(By.xpath("(//button[@type='button'])[3]")).click();
+						    Thread.sleep(8000);*/
+			Thread.sleep(8000);
+			driver3.findElement(By.xpath(".//*[@id='item_Tasks']/span")).click();
+			Thread.sleep(8000);
+			
+			
+			
+			for (int i=1; i<=4;i++)
+			{
+			WebElement we   = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
+		    Actions action = new Actions(driver3);
+		    action.moveToElement(we).perform();
+		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
+		    Thread.sleep(8000);
+		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
+		    
+		    Thread.sleep(8000);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test40");  
 
 
