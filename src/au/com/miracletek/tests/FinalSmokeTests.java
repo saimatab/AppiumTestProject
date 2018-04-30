@@ -1584,7 +1584,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.id("taskDescription")).sendKeys("simple3");
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
-			Thread.sleep(8000);
+			Thread.sleep(16000);
 			
 		
 			WebElement we   = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
@@ -1599,7 +1599,7 @@ public class FinalSmokeTests {
 		    action1.moveToElement(we1).perform();
 		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
 		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    Thread.sleep(8000);
+		    Thread.sleep(000);
 		    
 			WebElement we4 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
 		    Actions action4 = new Actions(driver3);
