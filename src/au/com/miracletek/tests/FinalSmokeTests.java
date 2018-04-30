@@ -1669,6 +1669,7 @@ public class FinalSmokeTests {
 			extlogger = extent.startTest("Test 39 started  mytasks form submission  functionality   ");
 
 			shell.clickmyTasks(config);
+			mytask.Refresh(config);
 			mytask.openTask("1", config);
 			Thread.sleep(5000); 
 			mytask.Approvetasks(config);
