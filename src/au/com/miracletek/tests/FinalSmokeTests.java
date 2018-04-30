@@ -1587,7 +1587,7 @@ public class FinalSmokeTests {
 			Thread.sleep(8000);
 			WebElement we;
 		
-			WebElement we  we = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
+			WebElement we   = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
 		    Actions action = new Actions(driver);
 		    action.moveToElement(we).perform();
 		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
@@ -1602,7 +1602,7 @@ public class FinalSmokeTests {
 		    
 			WebElement we4 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
 		    Actions action4 = new Actions(driver);
-		    action4.moveToElement(we1).perform();
+		    action4.moveToElement(we4).perform();
 		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
 
 		    Thread.sleep(8000);
