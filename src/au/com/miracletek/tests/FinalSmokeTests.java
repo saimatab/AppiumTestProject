@@ -1812,17 +1812,7 @@ System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\Git
 		    Thread.sleep(8000);
 			}
 			
-			for (int i=1; i<=5;i++)
-			{
-			WebElement we   = driver3.findElement(By.xpath(".//*[@id='notificationTemplateRow']/td[1]"));
-		    Actions action = new Actions(driver3);
-		    action.moveToElement(we).perform();
-		    driver3.findElement(By.xpath(".//*[@id='notificationTemplateRow']/td[1]/div/button[2]")).click();
-		    Thread.sleep(8000);
-		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
-		    
-		    Thread.sleep(8000);
-			}
+			
 		    Thread.sleep(8000);
 			driver3.findElement(By.id("item_Notifications")).click();
 			Thread.sleep(3000);	
