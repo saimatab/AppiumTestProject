@@ -1585,32 +1585,32 @@ public class FinalSmokeTests {
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("div.form-footer > button.btn.btn-primary")).click();
 			Thread.sleep(8000);
-			WebElement we;
+			
 		
-			WebElement we   = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
-		    Actions action = new Actions(driver);
+			WebElement we   = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]"));
+		    Actions action = new Actions(driver3);
 		    action.moveToElement(we).perform();
-		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
+		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
 		    Thread.sleep(8000);
 
-			WebElement we1 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]"));
-		    Actions action1 = new Actions(driver);
+			WebElement we1 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]"));
+		    Actions action1 = new Actions(driver3);
 		    action1.moveToElement(we1).perform();
-		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
+		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
 
 		    Thread.sleep(8000);
 		    
-			WebElement we4 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
-		    Actions action4 = new Actions(driver);
+			WebElement we4 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
+		    Actions action4 = new Actions(driver3);
 		    action4.moveToElement(we4).perform();
-		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
+		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
 
 		    Thread.sleep(8000);
 		    
-			WebElement we2 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]"));
-		    Actions action2 = new Actions(driver);
+			WebElement we2 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]"));
+		    Actions action2 = new Actions(driver3);
 		    action2.moveToElement(we2).perform();
-		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]/div/button")).click();
+		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]/div/button")).click();
 
 		
 		    
