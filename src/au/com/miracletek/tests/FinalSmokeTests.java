@@ -1591,13 +1591,14 @@ public class FinalSmokeTests {
 		    Actions action = new Actions(driver3);
 		    action.moveToElement(we).perform();
 		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
+		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
 		    Thread.sleep(8000);
 
 			WebElement we1 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]"));
 		    Actions action1 = new Actions(driver3);
 		    action1.moveToElement(we1).perform();
 		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
-
+		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
 		    Thread.sleep(8000);
 		    
 			WebElement we4 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
@@ -1605,6 +1606,7 @@ public class FinalSmokeTests {
 		    action4.moveToElement(we4).perform();
 		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
 
+		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
 		    Thread.sleep(8000);
 		    
 			WebElement we2 = driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]"));
@@ -1612,9 +1614,10 @@ public class FinalSmokeTests {
 		    action2.moveToElement(we2).perform();
 		    driver3.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]/div/button")).click();
 
-		
+		    driver3.findElement(By.cssSelector("i.fa.fa-check")).click();
+		    Thread.sleep(8000);
 		    
-			   Thread.sleep(8000);
+			  
 			
 
 						       /*driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
@@ -1630,7 +1633,7 @@ public class FinalSmokeTests {
     driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
     driver.findElement(By.linkText("Back")).click();  Thread.sleep(8000);*/
 
-			driver3.findElement(By.id("item_Notifications")).click();
+			/*driver3.findElement(By.id("item_Notifications")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 			Thread.sleep(3000);
@@ -1668,7 +1671,7 @@ public class FinalSmokeTests {
 			driver3.findElement(By.cssSelector("span.glyphicon.glyphicon-remove")).click();
 			Thread.sleep(3000);
 			driver3.findElement(By.cssSelector("div.form-group > button.btn.btn-primary")).click();
-			Thread.sleep(8000);
+			Thread.sleep(8000);*/
 			driver3.close();
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test38");  
 
@@ -1688,7 +1691,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Test39(){
 
 		try{
