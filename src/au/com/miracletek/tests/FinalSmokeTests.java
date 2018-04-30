@@ -378,9 +378,7 @@ public class FinalSmokeTests {
 		}
 	}
 
-
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test02() {
 		try {
 			extlogger = extent.startTest("Test 02 started-Form submission  with Label, Textbox, Segment");
@@ -407,7 +405,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test03(){
 
 		try{
@@ -435,8 +433,7 @@ public class FinalSmokeTests {
 
 	}
 
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test04(){
 
 		try{
@@ -471,7 +468,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test05(){
 
 		try{
@@ -502,7 +499,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test06(){
 
 		try{
@@ -566,7 +563,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test07(){
 
 		try{
@@ -597,7 +594,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test08(){
 
 		try{
@@ -622,7 +619,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test09(){
 
 		try{
@@ -652,7 +649,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test10(){
 
 		try{
@@ -680,7 +677,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test11(){
 
 		try{
@@ -706,7 +703,7 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test12(){
 
 		try{
@@ -734,7 +731,7 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test13(){
 
 		try{
@@ -763,7 +760,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test14(){
 
 		try{
@@ -791,7 +788,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test15(){
 
 		try{
@@ -819,7 +816,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test16(){
 
 		try{
@@ -847,7 +844,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test17(){
 
 		try{
@@ -875,7 +872,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test18(){
 
 		try{
@@ -901,7 +898,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test19(){
 
 		try{
@@ -927,7 +924,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test20(){
 
 		try{
@@ -954,7 +951,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test21(){
 
 		try{
@@ -982,7 +979,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test22(){
 
 		try{
@@ -1008,7 +1005,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test23(){
 
 		try{
@@ -1035,7 +1032,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test24(){
 
 		try{
@@ -1060,7 +1057,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test25(){
 
 		try{
@@ -1091,7 +1088,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test26(){
 
 		try{
@@ -1116,8 +1113,7 @@ public class FinalSmokeTests {
 
 	}
 
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test27(){
 
 		try{
@@ -1144,7 +1140,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test28(){
 
 		try{
@@ -1170,7 +1166,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test29(){
 
 		try{
@@ -1196,7 +1192,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test30(){
 
 		try{
@@ -1222,7 +1218,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test31(){
 
 		try{
@@ -1249,8 +1245,7 @@ public class FinalSmokeTests {
 
 	}
 
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test32(){
 
 		try{
@@ -1277,8 +1272,7 @@ public class FinalSmokeTests {
 		}
 
 	}
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test33(){
 
 		try{
@@ -1306,7 +1300,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test34(){
 
 		try{
@@ -1332,7 +1326,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test35(){
 
 		try{
@@ -1371,8 +1365,7 @@ public class FinalSmokeTests {
 
 	}
 
-
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test36(){
 
 		try{
@@ -1417,7 +1410,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test37(){
 
 		try{
@@ -1741,7 +1734,8 @@ public class FinalSmokeTests {
 			notify.navigateToTasks(config,"A task (simple2) has been assigned to you.");
 			mytask.Completetasks(config);
 			notify.navigateUp(config);
-
+			  shell.clickNotifications(config);
+				Thread.sleep(5000);
 			notify.RemoveAll(config);
 			Thread.sleep(5000);
 			notify.popup("Yes");
