@@ -1676,15 +1676,15 @@ public class FinalSmokeTests {
 			
 			
 		
-			mytask.openTask("4", config);
+			mytask.openTask("3", config);
 			Thread.sleep(5000); 
 			mytask.Completetasks(config);
 			Thread.sleep(5000); 
-			mytask.openTask("2", config);
+			mytask.openTask("1", config);
 			Thread.sleep(5000); 
 			mytask.CompleteFormtasks(config);
 			Thread.sleep(5000); 
-			mytask.openTask("2", config);
+			mytask.openTask("1", config);
 			Thread.sleep(5000);
 			MobileElement comptasks =mytask.findElementByXpath("//android.widget.Button[@text='Complete Task']");  
 			comptasks.click();
@@ -1697,7 +1697,56 @@ public class FinalSmokeTests {
 			mytask.navigateUp(config);		
 			
 			
-			System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs-2.1.1-windows-x86-workaround_issue_394\\phantomjs.exe");
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			extlogger.log(LogStatus.PASS, "Test Case Passed is Test40");  
+
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			log.error(e);
+
+			StackTraceElement[] stack = e.getStackTrace();
+			String exception = "";
+			for (StackTraceElement s : stack) {
+				exception = exception + s.toString() + "\n";
+			}
+			log.error(exception);
+		}
+
+	}
+
+	@Test(enabled = true)
+	public void Test41(){
+
+		try{
+			extlogger = extent.startTest("Test 41 started  notification functionality   ");
+			Thread.sleep(5000);
+            shell.clickNotifications(config);
+			Thread.sleep(5000);
+			//form1.navigateUp(config);
+			notify.Remove( config,"push");
+			Thread.sleep(5000);
+			notify.popup("Yes");
+			Thread.sleep(5000); 
+			notify.navigateToTasks(config,"A task (simple2) has been assigned to you.");
+			mytask.Completetasks(config);
+			notify.navigateUp(config);
+
+			notify.RemoveAll(config);
+			Thread.sleep(5000);
+			notify.popup("Yes");
+			Thread.sleep(5000); 	
+
+System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\GitHub\\aa\\phantomjs-2.1.1-windows-x86-workaround_issue_394\\phantomjs.exe");
 			
 			WebDriver driver3 ;
 			//URL url = new URL("http://192.168.9.149:5556/wd/hub");
@@ -1762,55 +1811,6 @@ public class FinalSmokeTests {
 		    
 		    Thread.sleep(8000);
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			extlogger.log(LogStatus.PASS, "Test Case Passed is Test40");  
-
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-			log.error(e);
-
-			StackTraceElement[] stack = e.getStackTrace();
-			String exception = "";
-			for (StackTraceElement s : stack) {
-				exception = exception + s.toString() + "\n";
-			}
-			log.error(exception);
-		}
-
-	}
-
-	@Test(enabled = true)
-	public void Test41(){
-
-		try{
-			extlogger = extent.startTest("Test 41 started  notification functionality   ");
-			Thread.sleep(5000);
-            shell.clickNotifications(config);
-			Thread.sleep(5000);
-			//form1.navigateUp(config);
-			notify.Remove( config,"push");
-			Thread.sleep(5000);
-			notify.popup("Yes");
-			Thread.sleep(5000); 
-			notify.navigateToTasks(config,"A task (simple2) has been assigned to you.");
-			mytask.Completetasks(config);
-			notify.navigateUp(config);
-
-			notify.RemoveAll(config);
-			Thread.sleep(5000);
-			notify.popup("Yes");
-			Thread.sleep(5000); 	
-
-
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
 			extent.endTest(extlogger);
 
