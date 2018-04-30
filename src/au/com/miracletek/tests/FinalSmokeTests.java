@@ -1591,21 +1591,21 @@ public class FinalSmokeTests {
 		    Actions action = new Actions(driver);
 		    action.moveToElement(we).perform();
 		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[2]/td[2]/div/button")).click();
-
+		    Thread.sleep(8000);
 
 			WebElement we1 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]"));
 		    Actions action1 = new Actions(driver);
 		    action1.moveToElement(we1).perform();
 		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[3]/td[2]/div/button")).click();
 
-		    
+		    Thread.sleep(8000);
 		    
 			WebElement we4 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]"));
 		    Actions action4 = new Actions(driver);
 		    action4.moveToElement(we1).perform();
 		    driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[4]/td[2]/div/button")).click();
 
-		    
+		    Thread.sleep(8000);
 		    
 			WebElement we2 = driver.findElement(By.xpath(".//*[@id='mmptasks-table']/tr[5]/td[2]"));
 		    Actions action2 = new Actions(driver);
