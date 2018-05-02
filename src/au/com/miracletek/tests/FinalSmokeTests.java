@@ -329,7 +329,7 @@ public class FinalSmokeTests {
 	 */
 	//------------------Forms - Submit Forms --------------------( test 01-10)
 
-	@Test(enabled = true)
+	@Test(enabled = true, description = "Enter App code , login , Navigate to category ")
 	public void Test01() {
 		try {
 
@@ -378,7 +378,7 @@ public class FinalSmokeTests {
 		}
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Submit form contains (Textbox , segmented, label and button control) ")
 	public void Test02() {
 		try {
 			extlogger = extent.startTest("Test 02 started-Form submission  with Label, Textbox, Segment");
@@ -405,7 +405,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Submit form contains ( camera) ")
 	public void Test03(){
 
 		try{
@@ -433,7 +433,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Submit form contains ( gallary ) ")
 	public void Test04(){
 
 		try{
@@ -468,7 +468,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Submit form contains signtaure  ")
 	public void Test05(){
 
 		try{
@@ -499,7 +499,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Submit form contains (date picker , time picker, date time picker , file uploader , auto complete ,switch , slider control, repeater , pager ")
 	public void Test06(){
 
 		try{
@@ -563,7 +563,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Save form draft with draft icon ")
 	public void Test07(){
 
 		try{
@@ -594,7 +594,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "sync all forms using sync icon on sync page ")
 	public void Test08(){
 
 		try{
@@ -619,7 +619,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "open submitted tab ")
 	public void Test09(){
 
 		try{
@@ -649,7 +649,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Open detail info page of last submitted form  ")
 	public void Test10(){
 
 		try{
@@ -677,7 +677,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form at index 1")
 	public void Test11(){
 
 		try{
@@ -703,7 +703,7 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form at index 2  ")
 	public void Test12(){
 
 		try{
@@ -731,13 +731,13 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form 3 ")
 	public void Test13(){
 
 		try{
 			extlogger = extent.startTest("Test 13 started open view submitted datetime form and take snapshot   ");
 
-			subQueue.ViewsubmittedForms("2",config);
+			subQueue.ViewsubmittedForms("3",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
@@ -760,13 +760,13 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form 4")
 	public void Test14(){
 
 		try{
 			extlogger = extent.startTest("Test 14 started open view submitted signature form and take snapshot   ");
 
-			subQueue.ViewsubmittedForms("3",config);
+			subQueue.ViewsubmittedForms("4",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
@@ -788,13 +788,13 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form 5 ")
 	public void Test15(){
 
 		try{
 			extlogger = extent.startTest("Test 15 started open view submitted gallary form and take snapshot   ");
 
-			subQueue.ViewsubmittedForms("4",config);
+			subQueue.ViewsubmittedForms("5",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
@@ -816,12 +816,12 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form 6")
 	public void Test16(){
 
 		try{
 			extlogger = extent.startTest("Test 16 started open view submitted camera form and take snapshot   ");
-			subQueue.ViewsubmittedForms("5",config);
+			subQueue.ViewsubmittedForms("6",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
@@ -844,12 +844,12 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "view submitted form 7 ")
 	public void Test17(){
 
 		try{
 			extlogger = extent.startTest("Test 17 started open view submitted label ,segment control form and take snapshot    ");
-			subQueue.ViewsubmittedForms("6",config);
+			subQueue.ViewsubmittedForms("7",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
@@ -872,7 +872,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 1 ")
 	public void Test18(){
 
 		try{
@@ -898,7 +898,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 2")
 	public void Test19(){
 
 		try{
@@ -924,7 +924,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 3")
 	public void Test20(){
 
 		try{
@@ -951,7 +951,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 4 ")
 	public void Test21(){
 
 		try{
@@ -979,7 +979,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 5 ")
 	public void Test22(){
 
 		try{
@@ -1005,7 +1005,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "edit submitted form 6 ")
 	public void Test23(){
 
 		try{
@@ -1032,7 +1032,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "delete form at index 1 ")
 	public void Test24(){
 
 		try{
@@ -1057,7 +1057,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true,description = "remove all submitted forms ")
 	public void Test25(){
 
 		try{
@@ -1088,7 +1088,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "sync role")
 	public void Test26(){
 
 		try{
@@ -1113,7 +1113,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "sync user ")
 	public void Test27(){
 
 		try{
@@ -1140,7 +1140,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "submit a form  from draft page ")
 	public void Test28(){
 
 		try{
@@ -1166,7 +1166,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = " Edit form in draft and submit a form  ")
 	public void Test29(){
 
 		try{
@@ -1192,7 +1192,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Edit a form from draft and  save draft from draft icon  ")
 	public void Test30(){
 
 		try{
@@ -1218,7 +1218,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Remove a form from draft  ")
 	public void Test31(){
 
 		try{
@@ -1245,7 +1245,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Update selected page from advance settings ")
 	public void Test32(){
 
 		try{
@@ -1272,7 +1272,7 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Update meta data from advance settings ")
 	public void Test33(){
 
 		try{
@@ -1300,7 +1300,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Update application from settings ")
 	public void Test34(){
 
 		try{
@@ -1326,7 +1326,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = " Change the device mode to air plane and check off line relogin case ")
 	public void Test35(){
 
 		try{
@@ -1365,7 +1365,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "verify submissions in database ")
 	public void Test36(){
 
 		try{
@@ -1410,7 +1410,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "search a page from main page as well as category list page ")
 	public void Test37(){
 
 		try{
@@ -1445,7 +1445,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Create my tasks and notificaitons (push , later) from studio ")
 	public void Test38(){
 
 		try{
@@ -1655,7 +1655,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "complete task , approve task ,  delete completed task ,search tasks")
 	public void Test39(){
 
 		try{
@@ -1718,7 +1718,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true ,description = "Notifications,complete task from notification tabs, delete notificaiton , delete all notification ")
 	public void Test41(){
 
 		try{
