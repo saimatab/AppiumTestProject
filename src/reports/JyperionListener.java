@@ -85,13 +85,11 @@ public class JyperionListener  implements ITestListener {
 			Paragraph p = new Paragraph("PASSED TESTS", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.BOLD));
 			p.setAlignment(Element.ALIGN_CENTER);
 			PdfPCell cell = new PdfPCell(p);
-			cell.setColspan(5);
+			cell.setColspan(4);
 			cell.setBackgroundColor(Color.GREEN);
 			this.successTable.addCell(cell);
 			
-			cell = new PdfPCell(new Paragraph("Class"));
-			cell.setBackgroundColor(Color.LIGHT_GRAY);
-			this.successTable.addCell(cell);
+		
 			cell = new PdfPCell(new Paragraph("Method"));
 			cell.setBackgroundColor(Color.LIGHT_GRAY);
 			this.successTable.addCell(cell);
@@ -106,14 +104,14 @@ public class JyperionListener  implements ITestListener {
 			this.successTable.addCell(cell);
 		}
 		
-		PdfPCell cell = new PdfPCell(new Paragraph(result.getTestClass().toString()));
-		this.successTable.addCell(cell);
-		cell = new PdfPCell(new Paragraph(result.getMethod().getMethodName().toString()));
-		this.successTable.addCell(cell);
-		cell = new PdfPCell(new Paragraph("" + (result.getEndMillis()-result.getStartMillis())));
+	
+		PdfPCell cell = new PdfPCell(new Paragraph(result.getMethod().getMethodName().toString()));
 		this.successTable.addCell(cell);
 		cell = new PdfPCell(new Paragraph("" + (result.getMethod().getDescription())));
 		this.successTable.addCell(cell);
+		cell = new PdfPCell(new Paragraph("" + (result.getEndMillis()-result.getStartMillis())));
+		this.successTable.addCell(cell);
+	
 		Throwable throwable = result.getThrowable();
 		if (throwable != null) {
 			this.throwableMap.put(new Integer(throwable.hashCode()), throwable);
@@ -163,10 +161,10 @@ public class JyperionListener  implements ITestListener {
 			cell.setBackgroundColor(Color.RED);
 			this.failTable.addCell(cell);
 			
-			cell = new PdfPCell(new Paragraph("Class"));
+			cell = new PdfPCell(new Paragraph("Method"));
 			cell.setBackgroundColor(Color.LIGHT_GRAY);
 			this.failTable.addCell(cell);
-			cell = new PdfPCell(new Paragraph("Method"));
+			cell = new PdfPCell(new Paragraph("Description"));
 			cell.setBackgroundColor(Color.LIGHT_GRAY);
 			this.failTable.addCell(cell);
 			cell = new PdfPCell(new Paragraph("Time (ms)"));
@@ -176,26 +174,20 @@ public class JyperionListener  implements ITestListener {
 			cell.setBackgroundColor(Color.LIGHT_GRAY);
 			this.failTable.addCell(cell);
 			
-			cell = new PdfPCell(new Paragraph("Description"));
-			cell.setBackgroundColor(Color.LIGHT_GRAY);
-			this.failTable.addCell(cell);
+		
 
 
 		
 		}
 		
-		PdfPCell cell = new PdfPCell(new Paragraph(result.getTestClass().toString()));
+		PdfPCell cell = new PdfPCell(new Paragraph(result.getMethod().getMethodName().toString()));
 		this.failTable.addCell(cell);
-		cell = new PdfPCell(new Paragraph(result.getMethod().getMethodName().toString()));
-		this.failTable.addCell(cell);
-		cell = new PdfPCell(new Paragraph("" + (result.getEndMillis()-result.getStartMillis())));
-		this.failTable.addCell(cell);
-		//String exception = result.getThrowable() == null ? "" : result.getThrowable().toString();
-		//cell = new PdfPCell(new Paragraph(exception));
-		//this.failTable.addCell(cell);
 		
 		cell = new PdfPCell(new Paragraph("" + (result.getMethod().getDescription())));
 		this.failTable.addCell(cell);
+		cell = new PdfPCell(new Paragraph("" + (result.getEndMillis()-result.getStartMillis())));
+		this.failTable.addCell(cell);
+
 		Throwable throwable = result.getThrowable();
 		if (throwable != null) {
 			this.throwableMap.put(new Integer(throwable.hashCode()), throwable);

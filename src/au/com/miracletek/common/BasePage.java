@@ -874,7 +874,7 @@ public void pickerwheelIos(){
     
     public void takeSnapShotAndroid() throws Exception {
         String scrFolder = System.getProperty("scr.folder");
-        System.out.println("SCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDER"+scrFolder );
+      
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
@@ -897,7 +897,7 @@ System.out.println("FINAL SCREEEN SHOT FOLDDER "+scrFolder   + "/" +fileName+".j
     }
 public void takeSnapShotIos() throws Exception {
     String scrFolder = System.getProperty("scr.folder");
-    System.out.println("SCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFOLDERSCRFIOSSOLDERSCRFOLDERSCRFOLDERSCRFOLDERIOS"+scrFolder );
+
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	
         
@@ -1050,47 +1050,7 @@ String filename2 =var1+ ".html";
 
     	multipart.addBodyPart(objMessageBodyPart2);
 
-    /////////////////////////////////////////////
-    	
-    	/*
-    	String  var3="SAMPLE1";
-        System.out.println("#######################################################"+var3);
   
-  	//String filename1 = System.getProperty("user.dir")+"\\" +var+ ".pdf";
-String filename3 =var3+ ".xlsx";
-System.out.println("#######################################################filename1"+filename3);
-  	//Create data source to attach the file in mail
-
-  	FileDataSource source3 = new FileDataSource(filename3);
-
-  	objMessageBodyPart4.setDataHandler(new DataHandler(source3));
-
-  	objMessageBodyPart4.setFileName(filename3);
-
-  	multipart.addBodyPart(objMessageBodyPart4);
-  	
-  	////////////////////////////////
-  	
-  	objMessageBodyPart4.setText("Please Find The Attached Report File2!");*/
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
 
     	message.setContent(multipart);
 
@@ -1222,92 +1182,7 @@ System.out.println("#######################################################filen
    
    public void sendPDFReportByGMailIos  (String from, String pass, String to, String subject, String body,String file) throws Exception{
 
-   /*	Properties props = System.getProperties();
-
-   	String host = "smtp.gmail.com";
-
-   	props.put("mail.smtp.starttls.enable", "true");
-
-   	props.put("mail.smtp.host", host);
-
-   	props.put("mail.smtp.user", from);
-
-   	props.put("mail.smtp.password", pass);
-
-   	props.put("mail.smtp.port", "587");
-
-   	props.put("mail.smtp.auth", "true");
-
-   	Session session = Session.getDefaultInstance(props);
-  
-   	MimeMessage message = new MimeMessage(session);
-
-   	try {
-
-   	    //Set from address
-
-   	message.setFrom(new InternetAddress(from));
-
-   	message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-
-   	//Set subject
-
-   	message.setSubject(subject);
-
-   	message.setText(body);
-
-   	BodyPart objMessageBodyPart = new MimeBodyPart();
-
-   	objMessageBodyPart.setText("Please Find The Attached Report File!");
-
-   	Multipart multipart = new MimeMultipart();
-
-   	multipart.addBodyPart(objMessageBodyPart);
-
-   	objMessageBodyPart = new MimeBodyPart();
-
-   	//Set path to the pdf report file
-   	
-	JyperionListener j=new JyperionListener();
-    
-   	String filename = System.getProperty("user.home")+"/Documents/GitHub/AppiumTestProject/" + Demo.fileName+ ".pdf";
-
-   	//Create data source to attach the file in mail
-
-   	DataSource source = new FileDataSource(filename);
-
-   	objMessageBodyPart.setDataHandler(new DataHandler(source));
-
-   	objMessageBodyPart.setFileName(filename);
-
-   	multipart.addBodyPart(objMessageBodyPart);
-
-   	message.setContent(multipart);
-
-   	Transport transport = session.getTransport("smtp");
-
-   	transport.connect(host, from, pass);
-
-   	transport.sendMessage(message, message.getAllRecipients());
-
-   	transport.close();
-
-   	}
-
-   	catch (AddressException ae) {
-
-   	ae.printStackTrace();
-
-   	}
-
-   	catch (MessagingException me) {
-
-   	me.printStackTrace();
-
-   	}
-
-   	}*/
-   
+ 
    
    
    ////
