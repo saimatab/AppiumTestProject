@@ -844,12 +844,12 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = true ,description = "view submitted form 7 ")
+	@Test(enabled = true ,description = "view submitted form 1 ")
 	public void Test17(){
 
 		try{
 			extlogger = extent.startTest("Test 17 started open view submitted label ,segment control form and take snapshot    ");
-			subQueue.ViewsubmittedForms("7",config);
+			subQueue.ViewsubmittedForms("1",config);
 			Thread.sleep(3000);
 			form1.takescreenshotAndroid();
 			form1.navigateUp(config);
