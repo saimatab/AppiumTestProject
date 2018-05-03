@@ -220,7 +220,7 @@ public class FinalSmokeTests {
 	public void endReport(){
 		extent.flush();
         
-        extent.close();
+       
 
 	}
 
