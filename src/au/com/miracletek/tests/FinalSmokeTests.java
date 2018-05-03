@@ -213,9 +213,14 @@ public class FinalSmokeTests {
 		}else if(result.getStatus() == ITestResult.SKIP){
 			extlogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
 		}
+		
+		extent.endTest(extlogger);
+	}
+	@AfterTest
+	public void endReport(){
 		extent.flush();
-		// ending test
-		//endTest(logger) : It ends the current test and prepares to create HTML report
+        
+        extent.close();
 
 	}
 
@@ -262,8 +267,8 @@ public class FinalSmokeTests {
 		manager = DriverManager.getInstance();
 		try {
 			manager.startDriver(config);
-			//extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
-			extent = new ExtentReports ("STMExtentReport.html", true);
+			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
+		//	extent = new ExtentReports ("STMExtentReport.html", true);
 			extent
 			.addSystemInfo("Host Name", "Saima Tabassum")
 			.addSystemInfo("Environment", "Zon -Automation Testing")
