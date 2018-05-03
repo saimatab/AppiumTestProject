@@ -218,7 +218,7 @@ public class FinalSmokeTests {
 	}
 	@AfterTest
 	public void endReport(){
-		extent.flush();
+	//	extent.flush();
         
        
 
@@ -267,8 +267,8 @@ public class FinalSmokeTests {
 		manager = DriverManager.getInstance();
 		try {
 			manager.startDriver(config);
-			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
-		//	extent = new ExtentReports ("STMExtentReport.html", true);
+			//extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
+		extent = new ExtentReports ("STMExtentReport.html", true);
 			extent
 			.addSystemInfo("Host Name", "Saima Tabassum")
 			.addSystemInfo("Environment", "Zon -Automation Testing")
