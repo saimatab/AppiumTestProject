@@ -213,16 +213,10 @@ public class FinalSmokeTests {
 		}else if(result.getStatus() == ITestResult.SKIP){
 			extlogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
 		}
-		
-		extent.endTest(extlogger);
+		extent.flush();
+	//	extent.endTest(extlogger);
 	}
-	@AfterTest
-	public void endReport(){
-	//	extent.flush();
-        
-       
-
-	}
+	
 
 	@AfterSuite
 	public void closeAppiumServer() {
