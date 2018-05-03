@@ -1036,8 +1036,8 @@ String filename1 =var+ ".pdf";
          // System.out.println("#######################################################"+var);
     
     	String var1="STMExtentReport";
-    	//String filename2 = System.getProperty("user.dir")+"\\" +var1+ ".html";
-String filename2 =var1+ ".html";
+    	String filename2 = System.getProperty("user.dir")+"\\test-output\\STMExtentReport.html" +var1+ ".html";
+//String filename2 =var1+ ".html";
 		  System.out.println("#######################################################filename2"+filename2);
 
     	//Create data source to attach the file in mail
