@@ -6,12 +6,17 @@
 		<parameter name="platform_version" value="6.0.1" />
 		<parameter name="device_name" value="0628a315002e172e" />
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
-			<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />
+				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
+			<parameter name="app_path" value="apk\\Devbuilds\\co.miracletek.miracle.work-Signed.apk" />
 		
-		<parameter name="app_package" value="co.miracletek.miracle.prd" />
+				<!--<parameter name="app_package" value="co.miracletek.miracle.prd" />-->
+					<parameter name="app_package" value="co.miracletek.miracle.work" />-->
+				
+				
 		<!--<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />-->
-			<parameter name="app_activity" value="md5f9a72d14ea9ca2c9eed2755d5ca3ea46.SplashActivity" />
+			<!--  --><parameter name="app_activity" value="md5f9a72d14ea9ca2c9eed2755d5ca3ea46.SplashActivity" />-->
 		
+			<parameter name="app_activity" value="md5433f8e7c6f4957c6d30100fa8fef3a73.SplashActivity" />
 		
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
 		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
