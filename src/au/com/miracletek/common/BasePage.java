@@ -984,8 +984,12 @@ public void takeSnapShotIos() throws Exception {
     	    //Set from address
 
     	message.setFrom(new InternetAddress(from));
-
-    	message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+    	//////////
+    	String to1 = "saimatab2016@gmail.com ,saima.tabassum@miracletek.com.au";
+    	InternetAddress[] parse = InternetAddress.parse(to1 , true);
+    	message.setRecipients(Message.RecipientType.TO,  parse);
+    	///////////////
+    	//message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
     	//Set subject
 
