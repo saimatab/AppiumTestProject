@@ -21,7 +21,7 @@
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
 		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
 		
-		<parameter name="ip_address" value="192.168.42.135"></parameter>
+		<parameter name="ip_address" value="192.168.9.149"></parameter>
 		<parameter name="port" value="4723"></parameter>
 		
 		
