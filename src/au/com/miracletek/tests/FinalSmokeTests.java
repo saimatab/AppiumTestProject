@@ -1771,7 +1771,7 @@ System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\Git
 			
 			driver3.manage().window().maximize();
 			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			driver3.get("https://admin.miracletek.co/admin/1.1/");
+			driver3.get("https://studio.miracletek.co");
 			Thread.sleep(8000);
 			driver3.findElement(By.id("Email")).click();
 			driver3.findElement(By.id("Email")).clear();
@@ -1828,7 +1828,7 @@ System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\Git
 			
 			
 			
-			extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
+			extlogger.log(LogStatus.PASS, "Test Case Passed is Test41");  
 
 		} catch (Exception e) {
 
