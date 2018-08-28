@@ -4,7 +4,7 @@
 		<parameter name="platform" value="PLATFORM_ANDROID" />
 		<parameter name="platform_name" value="Android" />
 		<parameter name="platform_version" value="4.4.2" />
-		<parameter name="device_name" value="emulator-5554" />
+		<parameter name="device_name" value="127.0.0.1:62001" />
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 			<parameter name="app_path" value="apk\\Prdbuilds\\co.miracletek.miracle.prd-Signed.apk" />
