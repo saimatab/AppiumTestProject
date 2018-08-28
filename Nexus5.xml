@@ -4,7 +4,7 @@
 		<parameter name="platform" value="PLATFORM_ANDROID" />
 		<parameter name="platform_name" value="Android" />
 		<parameter name="platform_version" value="6.0.1" />
-		<parameter name="device_name" value="0628a315002e172e" />
+		<parameter name="device_name" value="192.168.10.22:5555" />
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 			<parameter name="app_path" value="apk\\Prdbuilds\\co.miracletek.miracle.prd-Signed.apk" />
@@ -21,7 +21,7 @@
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
 		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
 		
-		<parameter name="ip_address" value="192.168.9.149"></parameter>
+		<parameter name="ip_address" value="127.0.0.1"></parameter>
 		<parameter name="port" value="4723"></parameter>
 		
 		
