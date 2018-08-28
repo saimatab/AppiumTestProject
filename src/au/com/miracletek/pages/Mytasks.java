@@ -122,7 +122,7 @@ public class Mytasks extends BasePage {
 		  	 {
 			 // removeall=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
 			  //new removeall=findElementByXpath("//*[@content-desc='btnRemoveAllId']");
-		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Approve Task']");  
+		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Approve']");  
 		  	comptasks.click();}
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
 		     	
@@ -141,7 +141,7 @@ public class Mytasks extends BasePage {
 		  	 {
 			 // removeall=findElementByXpath("//android.widget.LinearLayout[@index='" +linearLayoutIndex+"']" + "/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']");
 			  //new removeall=findElementByXpath("//*[@content-desc='btnRemoveAllId']");
-		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Reject Task']");  
+		  		 comptasks =findElementByXpath("//android.widget.Button[@text='Reject']");  
 		  	comptasks.click();}
 		   	else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("9.3"));
 		     	
