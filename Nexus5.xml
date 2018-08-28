@@ -7,7 +7,7 @@
 		<parameter name="device_name" value="0628a315002e172e" />
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
-			<parameter name="app_path" value="apk\\Devbuilds\\co.miracletek.miracle.prd-Signed.apk" />
+			<parameter name="app_path" value="apk\\Prdbuilds\\co.miracletek.miracle.prd-Signed.apk" />
 		
 				<!--<parameter name="app_package" value="co.miracletek.miracle.prd" />-->
 					<parameter name="app_package" value="co.miracletek.miracle.prd" />-->
