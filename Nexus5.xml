@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="false" >
 		<parameter name="platform" value="PLATFORM_ANDROID" />
 		<parameter name="platform_name" value="Android" />
-		<parameter name="platform_version" value="7.1.2" />
+		<parameter name="platform_version" value="7.0" />
 		<parameter name="device_name" value="emulator-5554" />
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
 				<!--<parameter name="app_path" value="apk\\co.miracletek.miracle.prd-Signed.apk" />-->
