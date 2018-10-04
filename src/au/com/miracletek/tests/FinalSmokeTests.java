@@ -1094,7 +1094,7 @@ public class FinalSmokeTests {
 		try{
 			extlogger = extent.startTest("Test 25 sync role started  ");
 			Thread.sleep(3000);
-			sync.syncRole("3",config);
+			sync.syncRole("2",config);
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test25");  
 
 
@@ -1119,7 +1119,7 @@ public class FinalSmokeTests {
 		try{
 			extlogger = extent.startTest("Test 27 sync user started  ");
 			Thread.sleep(3000);
-			sync.syncUser("4",config);
+			sync.syncUser("3",config);
 			form1.navigateUp(config);
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test27");  
 
