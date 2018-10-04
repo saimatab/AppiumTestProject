@@ -1471,7 +1471,9 @@ public class FinalSmokeTests {
 			
 			 driver3 = new PhantomJSDriver(capabilities);
 			
-	 			URL url = new URL("http://192.168.9.149:5557/wd/hub");
+	 		//	URL url = new URL("http://192.168.9.149:5557/wd/hub");
+					URL url = new URL("http://192.168.10.6:5557/wd/hub");
+			//http://192.168.10.6:5557/wd/hub
 				driver3 = new RemoteWebDriver(url,
 						capabilities);
 			
