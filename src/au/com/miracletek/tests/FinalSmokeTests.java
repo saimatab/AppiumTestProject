@@ -405,7 +405,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false ,description = "Submit form contains ( camera) ")
+	@Test(enabled = true ,description = "Submit form contains ( camera) ")
 	public void Test03(){
 
 		try{
@@ -433,7 +433,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "Submit form contains ( gallary ) ")
+	@Test(enabled =true ,description = "Submit form contains ( gallary ) ")
 	public void Test04(){
 
 		try{
@@ -468,7 +468,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled =false ,description = "Submit form contains signtaure  ")
+	@Test(enabled =true ,description = "Submit form contains signtaure  ")
 	public void Test05(){
 
 		try{
@@ -499,7 +499,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false,description = "Submit form contains (date picker , time picker, date time picker , file uploader , auto complete ,switch , slider control, repeater , pager ")
+	@Test(enabled = true,description = "Submit form contains (date picker , time picker, date time picker , file uploader , auto complete ,switch , slider control, repeater , pager ")
 	public void Test06(){
 
 		try{
@@ -563,7 +563,7 @@ public class FinalSmokeTests {
 	}	            
 
 
-	@Test(enabled = false,description = "Save form draft with draft icon ")
+	@Test(enabled = true,description = "Save form draft with draft icon ")
 	public void Test07(){
 
 		try{
@@ -594,7 +594,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = false ,description = "sync all forms using sync icon on sync page ")
+	@Test(enabled = true ,description = "sync all forms using sync icon on sync page ")
 	public void Test08(){
 
 		try{
@@ -619,7 +619,7 @@ public class FinalSmokeTests {
 
 	}	                        
 
-	@Test(enabled = false ,description = "open submitted tab ")
+	@Test(enabled =true,description = "open submitted tab ")
 	public void Test09(){
 
 		try{
@@ -649,7 +649,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false ,description = "Open detail info page of last submitted form  ")
+	@Test(enabled = true ,description = "Open detail info page of last submitted form  ")
 	public void Test10(){
 
 		try{
@@ -677,7 +677,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false ,description = "view submitted form at index 1")
+	@Test(enabled = true ,description = "view submitted form at index 1")
 	public void Test11(){
 
 		try{
@@ -703,7 +703,7 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = false,description = "view submitted form at index 2  ")
+	@Test(enabled = true,description = "view submitted form at index 2  ")
 	public void Test12(){
 
 		try{
@@ -731,7 +731,7 @@ public class FinalSmokeTests {
 
 	}		
 
-	@Test(enabled = false,description = "view submitted form 3 ")
+	@Test(enabled = true,description = "view submitted form 3 ")
 	public void Test13(){
 
 		try{
@@ -760,7 +760,7 @@ public class FinalSmokeTests {
 	}		
 
 
-	@Test(enabled = false,description = "view submitted form 4")
+	@Test(enabled = true,description = "view submitted form 4")
 	public void Test14(){
 
 		try{
@@ -788,7 +788,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "view submitted form 5 ")
+	@Test(enabled = true ,description = "view submitted form 5 ")
 	public void Test15(){
 
 		try{
@@ -816,7 +816,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "view submitted form 6")
+	@Test(enabled = true,description = "view submitted form 6")
 	public void Test16(){
 
 		try{
@@ -844,7 +844,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false ,description = "view submitted form 1 ")
+	@Test(enabled = true ,description = "view submitted form 1 ")
 	public void Test17(){
 
 		try{
@@ -872,7 +872,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false,description = "edit submitted form 1 ")
+	@Test(enabled = true,description = "edit submitted form 1 ")
 	public void Test18(){
 
 		try{
@@ -898,7 +898,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false ,description = "edit submitted form 2")
+	@Test(enabled =true ,description = "edit submitted form 2")
 	public void Test19(){
 
 		try{
@@ -924,7 +924,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = "edit submitted form 3")
+	@Test(enabled = true ,description = "edit submitted form 3")
 	public void Test20(){
 
 		try{
@@ -951,7 +951,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false  ,description = "edit submitted form 4 ")
+	@Test(enabled =true  ,description = "edit submitted form 4 ")
 	public void Test21(){
 
 		try{
@@ -979,7 +979,7 @@ public class FinalSmokeTests {
 
 
 
-	@Test(enabled = false  ,description = "edit submitted form 5 ")
+	@Test(enabled = true ,description = "edit submitted form 5 ")
 	public void Test22(){
 
 		try{
@@ -1005,7 +1005,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = "edit submitted form 6 ")
+	@Test(enabled = true  ,description = "edit submitted form 6 ")
 	public void Test23(){
 
 		try{
@@ -1032,7 +1032,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false  ,description = "delete form at index 1 ")
+	@Test(enabled = true  ,description = "delete form at index 1 ")
 	public void Test24(){
 
 		try{
@@ -1057,7 +1057,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "remove all submitted forms ")
+	@Test(enabled =true,description = "remove all submitted forms ")
 	public void Test25(){
 
 		try{
@@ -1088,7 +1088,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false  ,description = "sync role")
+	@Test(enabled =true  ,description = "sync role")
 	public void Test26(){
 
 		try{
@@ -1113,7 +1113,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = "sync user ")
+	@Test(enabled = true ,description = "sync user ")
 	public void Test27(){
 
 		try{
@@ -1140,7 +1140,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false  ,description = "submit a form  from draft page ")
+	@Test(enabled = true ,description = "submit a form  from draft page ")
 	public void Test28(){
 
 		try{
@@ -1166,7 +1166,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = " Edit form in draft and submit a form  ")
+	@Test(enabled = true  ,description = " Edit form in draft and submit a form  ")
 	public void Test29(){
 
 		try{
@@ -1192,7 +1192,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = "Edit a form from draft and  save draft from draft icon  ")
+	@Test(enabled = true ,description = "Edit a form from draft and  save draft from draft icon  ")
 	public void Test30(){
 
 		try{
@@ -1218,7 +1218,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false  ,description = "Remove a form from draft  ")
+	@Test(enabled = true,description = "Remove a form from draft  ")
 	public void Test31(){
 
 		try{
@@ -1245,7 +1245,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false  ,description = "Update selected page from advance settings ")
+	@Test(enabled =true  ,description = "Update selected page from advance settings ")
 	public void Test32(){
 
 		try{
@@ -1272,7 +1272,7 @@ public class FinalSmokeTests {
 		}
 
 	}
-	@Test(enabled = false  ,description = "Update meta data from advance settings ")
+	@Test(enabled =true  ,description = "Update meta data from advance settings ")
 	public void Test33(){
 
 		try{
@@ -1300,7 +1300,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = false ,description = "Update application from settings ")
+	@Test(enabled = true,description = "Update application from settings ")
 	public void Test34(){
 
 		try{
@@ -1326,7 +1326,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false,description = " Change the device mode to air plane and check off line relogin case ")
+	@Test(enabled = true,description = " Change the device mode to air plane and check off line relogin case ")
 	public void Test35(){
 
 		try{
@@ -1365,7 +1365,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "verify submissions in database ")
+	@Test(enabled = true ,description = "verify submissions in database ")
 	public void Test36(){
 
 		try{
@@ -1410,7 +1410,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "search a page from main page as well as category list page ")
+	@Test(enabled = true ,description = "search a page from main page as well as category list page ")
 	public void Test37(){
 
 		try{
@@ -1445,7 +1445,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "Create my tasks and notificaitons (push , later) from studio ")
+	@Test(enabled = true ,description = "Create my tasks and notificaitons (push , later) from studio ")
 	public void Test38(){
 
 		try{
@@ -1481,7 +1481,7 @@ public class FinalSmokeTests {
 			
 			driver3.manage().window().maximize();
 			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			driver3.get("https://admin.miracletek.co/admin/1.1/");
+			driver3.get("https://studio.miracletek.co");
 			Thread.sleep(8000);
 			driver3.findElement(By.id("Email")).click();
 			driver3.findElement(By.id("Email")).clear();
@@ -1655,7 +1655,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "complete task , approve task ,  delete completed task ,search tasks")
+	@Test(enabled = true ,description = "complete task , approve task ,  delete completed task ,search tasks")
 	public void Test39(){
 
 		try{
@@ -1718,7 +1718,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = false ,description = "Notifications,complete task from notification tabs, delete notificaiton , delete all notification ")
+	@Test(enabled = true ,description = "Notifications,complete task from notification tabs, delete notificaiton , delete all notification ")
 	public void Test41(){
 
 		try{
@@ -1771,7 +1771,7 @@ System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\Git
 			
 			driver3.manage().window().maximize();
 			driver3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			driver3.get("https://admin.miracletek.co/admin/1.1/");
+			driver3.get("https://studio.miracletek.co");
 			Thread.sleep(8000);
 			driver3.findElement(By.id("Email")).click();
 			driver3.findElement(By.id("Email")).clear();
@@ -1828,7 +1828,7 @@ System.setProperty("phantomjs.binary.path","C:\\Users\\stabassum\\Documents\\Git
 			
 			
 			
-			extlogger.log(LogStatus.PASS, "Test Case Passed is Test39");  
+			extlogger.log(LogStatus.PASS, "Test Case Passed is Test41");  
 
 		} catch (Exception e) {
 
