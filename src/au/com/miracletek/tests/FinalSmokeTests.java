@@ -628,7 +628,7 @@ public class FinalSmokeTests {
 			wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.LinearLayout[@index='1']//following-sibling::*/*[@content-desc='buttonPendingId']")));
 			Thread.sleep(3000);
 			sync.openPendingSubmittedForms("1", config);
-			wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Submitted']")));
+			wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='Sent']")));
 			subQueue.clickonsubmittedTab(config);
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test09");  
 
