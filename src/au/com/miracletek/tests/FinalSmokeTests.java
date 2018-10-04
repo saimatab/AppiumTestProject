@@ -1326,7 +1326,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true,description = " Change the device mode to air plane and check off line relogin case ")
+	@Test(enabled = false,description = " Change the device mode to air plane and check off line relogin case ")
 	public void Test35(){
 
 		try{
