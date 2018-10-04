@@ -16,7 +16,7 @@
 		<!--<parameter name="app_activity" value="md575fca4c6c096452ed4b2339158975521.SplashActivity" />-->
 			<!--  --><parameter name="app_activity" value="md5c540743240e697d2f7983560da3f5fe1.SplashActivity" />-->
 		
-			<parameter name="app_activity" value="md5c540743240e697d2f7983560da3f5fe1.SplashActivity" />
+			<parameter name="app_activity" value="md58e8bdf377b69252535929638e80e681c.SplashActivity" />
 		
 		<parameter name="ud_id" value="" /> <!-- for iOS use only -->
 		<parameter name="bundle_id" value="" /> <!-- for iOS use only -->
