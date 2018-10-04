@@ -46,7 +46,7 @@ public void fillForm(DriverConfig config) {
 		     gallary=waitForVisibilityOf(By.id("gallery_button2"));
 			 gallary.click();
 			  
-			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@index='0' and ./following-sibling::*[@text='Camera']]")).click();
+			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@index='0' and ./following-sibling::*[@text='Photos']]")).click();
 			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.RelativeLayout[@index='1']")).click(); nexus 5
 			 
 			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.RelativeLayout[@index='3']")).click();//nexus 6
