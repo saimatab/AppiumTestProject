@@ -131,7 +131,7 @@ public class SubmissionQueuePage extends BasePage {
 			
 			
 			 if (platformName.contentEquals("Android"))
-			submitTab=findElementByXpath("//android.widget.TextView[@text='Submitted']");
+			submitTab=findElementByXpath("//android.widget.TextView[@text='Sent']");
 		  
 			
 			 else if (platformName.contentEquals("iOS") && platformVersion.contentEquals("11.2"))
