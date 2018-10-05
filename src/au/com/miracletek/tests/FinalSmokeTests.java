@@ -1300,7 +1300,7 @@ public class FinalSmokeTests {
 	}
 
 
-	@Test(enabled = truee,description = "Update application from settings ")
+	@Test(enabled = true,description = "Update application from settings ")
 	public void Test34(){
 
 		try{
