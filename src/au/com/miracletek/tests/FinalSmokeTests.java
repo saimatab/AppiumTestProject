@@ -443,14 +443,10 @@ public class FinalSmokeTests {
 			//d.pressKeyCode(AndroidKeyCode.BACK);
 			
 			  shell.clickNotifications(config);
-				MobileElement remove;
-					Thread.sleep(5000);
-			String a="push";
-					 remove=findElementByXpath("//*[@content-desc='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='" +a+"']]]]]]");
-
-		 
+					notify.Remove( config,"push");
+			Thread.sleep(5000);
 		
-				Thread.sleep(5000);
+		
 			notify.popup("Yes");
 
 
