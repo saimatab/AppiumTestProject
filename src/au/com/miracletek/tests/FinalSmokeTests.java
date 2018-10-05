@@ -378,7 +378,7 @@ public class FinalSmokeTests {
 		}
 	}
 
-	@Test(enabled = true ,description = "Submit form contains (Textbox , segmented, label and button control) ")
+	@Test(enabled = false ,description = "Submit form contains (Textbox , segmented, label and button control) ")
 	public void Test02() {
 		try {
 			extlogger = extent.startTest("Test 02 started-Form submission  with Label, Textbox, Segment");
