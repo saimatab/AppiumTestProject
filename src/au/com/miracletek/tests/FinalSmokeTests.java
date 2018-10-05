@@ -397,50 +397,16 @@ public class FinalSmokeTests {
 			
 		
 			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-		
-			form1.submit();
 			
-			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-			
-			form1.submit();
-			
-
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-		
-			form1.submit();
-			
-			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-	
-			form1.submit();
-			
-		
-			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-		
-			form1.submit();
-			
+				  shell.clickNotifications(config);
 			
 			
 			form1.navigateUp(config);
 			AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
 		
-			//d.pressKeyCode(AndroidKeyCode.BACK);
+d.pressKeyCode(AndroidKeyCode.BACK);
 			
-			  shell.clickNotifications(config);
-					form2.scrollToText("push");
-					notify.Remove( config,"push");
-			Thread.sleep(5000);
-		
-		
-			notify.popup("Yes");
+			
 
 
 		} catch (Exception e) {
@@ -1779,11 +1745,19 @@ public class FinalSmokeTests {
 			extlogger = extent.startTest("Test 41 started  notification functionality   ");
 			Thread.sleep(5000);
             shell.clickNotifications(config);
+			form2.scrollToText("push");
+				Thread.sleep(5000);
+					notify.Remove( config,"push");
+		
 			Thread.sleep(5000);
-			//form1.navigateUp(config);
-			notify.Remove( config,"push");
-			Thread.sleep(5000);
+		
 			notify.popup("Yes");
+			
+			
+			
+			
+			
+			
 			Thread.sleep(5000); 
 			notify.navigateToTasks(config,"A task (simple2) has been assigned to you.");
 			mytask.Completetasks(config);
