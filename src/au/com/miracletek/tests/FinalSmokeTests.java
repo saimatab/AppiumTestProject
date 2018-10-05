@@ -1,5 +1,6 @@
 package au.com.miracletek.tests;
 import org.testng.Assert;
+import io.appium.java_client.android.AndroidKeyCode;
 import java.util.Calendar;
 import java.io.FileWriter;
 import org.apache.poi.hssf.util.HSSFColor;
@@ -389,6 +390,68 @@ public class FinalSmokeTests {
 			form1.fillForm(config);
 			form1.submit();
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test02");
+			
+			
+				//testcode 
+			
+			
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+			
+			form1.submit();
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+		
+			form1.submit();
+			
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+			
+			form1.submit();
+			
+
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+		
+			form1.submit();
+			
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+	
+			form1.submit();
+			
+		
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+		
+			form1.submit();
+			
+			
+			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
+			Thread.sleep(3000);
+		
+			form1.submit();
+			
+			form1.navigateUp(config);
+			AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
+		
+			//d.pressKeyCode(AndroidKeyCode.BACK);
+			
+			  shell.clickNotifications(config);
+				MobileElement remove;
+					Thread.sleep(5000);
+			String a="push";
+					 remove=findElementByXpath("//*[@content-desc='buttonRemoveId' and ./parent::*[./parent::*[./preceding-sibling::*[./*[./*[@text='" +a+"']]]]]]");
+
+		 
+		
+				Thread.sleep(5000);
+			notify.popup("Yes");
 
 
 		} catch (Exception e) {
