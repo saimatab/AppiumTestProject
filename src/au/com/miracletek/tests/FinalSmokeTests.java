@@ -395,11 +395,7 @@ public class FinalSmokeTests {
 				//testcode 
 			
 			
-			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-			
-			form1.submit();
+		
 			
 			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
 			Thread.sleep(3000);
@@ -432,10 +428,6 @@ public class FinalSmokeTests {
 			form1.submit();
 			
 			
-			formList.selectForm("auto",config);//  Label , TextBox,  Segmented 
-			Thread.sleep(3000);
-		
-			form1.submit();
 			
 			form1.navigateUp(config);
 			AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
@@ -443,6 +435,7 @@ public class FinalSmokeTests {
 			//d.pressKeyCode(AndroidKeyCode.BACK);
 			
 			  shell.clickNotifications(config);
+					form2.scrollToText("push");
 					notify.Remove( config,"push");
 			Thread.sleep(5000);
 		
