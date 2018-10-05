@@ -46,19 +46,19 @@ public void fillForm(DriverConfig config) {
 		     gallary=waitForVisibilityOf(By.id("gallery_button2"));
 			 gallary.click();
 			  
-			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@index='0' and ./following-sibling::*[@text='Photos']]")).click();
+			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@index='0' and ./following-sibling::*[@text='Photos']]")).click();
 			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.RelativeLayout[@index='1']")).click(); nexus 5
 			 
-			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.RelativeLayout[@index='3']")).click();//nexus 6
+			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.RelativeLayout[@index='3']")).click();//nexus 6
 			 
 			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.widget.LinearLayout[@index='0']")).click();///motog
 			 
 			
 	        //    ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//*[@content-desc='Photo taken on Sep 23, 2016 10:18:52 AM']")).click();
 	
-			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.view.ViewGroup[@index='2']")).click();//nexus 5
+			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.view.ViewGroup[@index='2']")).click();//nexus 5
 				
-			// ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.view.ViewGroup[@index='2']")).click();//nexus 6
+			 ((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.view.ViewGroup[@index='2']")).click();//nexus 6
 			 //((AndroidDriver<MobileElement>)driver).findElement(By.xpath("//android.view.View[@index='2']")).click();//motog
 			
 		} catch (Exception e) {
