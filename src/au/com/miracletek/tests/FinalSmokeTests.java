@@ -527,7 +527,7 @@ public class FinalSmokeTests {
 			form5.Time(config,"3","22","AM");
 			form5.ok();
 			Thread.sleep(3000);
-			form5.fileUploader("Photos","0","Photos","Photo taken on Oct 4, 2018 1:59:25 PM");//file uploader
+			form5.fileUploader("Photos","0","Photos","Photo taken on Oct 20, 2017 12:52:51 PM");//file uploader
 			Thread.sleep(3000);
 			form5.autoComplete(config,"autocomplete1");
 			Thread.sleep(6000);
