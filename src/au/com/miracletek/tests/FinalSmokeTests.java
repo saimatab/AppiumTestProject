@@ -392,19 +392,12 @@ public class FinalSmokeTests {
 			extlogger.log(LogStatus.PASS, "Test Case Passed is Test02");
 			
 			
-				//testcode 
+			 
+			
 			
 			
 		
-			
-			
-				  shell.clickNotifications(config);
-			
-			
-			form1.navigateUp(config);
-			AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
 		
-d.pressKeyCode(AndroidKeyCode.BACK);
 			
 			
 
@@ -1432,7 +1425,14 @@ d.pressKeyCode(AndroidKeyCode.BACK);
 	public void Test37(){
 
 		try{
+			
 			extlogger = extent.startTest("Test 37 started searching functionality   ");
+			AndroidDriver<MobileElement>   d=((AndroidDriver<MobileElement>)manager.getDriver());
+		
+d.pressKeyCode(AndroidKeyCode.BACK);
+			
+			
+			
 			shell.clickSearch(config);
 			form1.waitForVisibilityOf(By.xpath("//android.widget.EditText[@text='Search']")).sendKeys("re");;
 			form6.findElementByXpath("//android.widget.TextView[@text='" + Constants.repager+ "']").click();
