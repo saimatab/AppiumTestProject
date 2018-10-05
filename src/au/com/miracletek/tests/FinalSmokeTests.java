@@ -1410,7 +1410,7 @@ public class FinalSmokeTests {
 
 	}
 
-	@Test(enabled = true ,description = "search a page from main page as well as category list page ")
+	@Test(enabled = false ,description = "search a page from main page as well as category list page ")
 	public void Test37(){
 
 		try{
